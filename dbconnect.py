@@ -1,20 +1,25 @@
-import mysql.connector
-from flask import redirect, Flask, request
+import mysql.connector # pip3 install mysql-connector
+from flask import redirect, Flask, request # pip3 install flask
 import json
+import quickstart
 
 # https://stackoverflow.com/questions/10434599/how-to-get-data-received-in-flask-request 
 # http://flask.pocoo.org/docs/1.0/quickstart/
 
-# 1. machine learning algorithm
-# 2. implement algorithm
-# 3. blah blah blah
-
-# need company name as column entry?
-# First name, Last name
+# 1. test calendar api (add events)
+# 2. more columns? (First Name, Last Name, Company Name)
+# 3. choose machine learning algorithm
+# 4. implement algorithm (train, model, predict)
+# 5. deploy api? (before that use virtualenv)
+# use virtual environments (virtualenv)
+# https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ 
+# https://docs.python-guide.org/dev/virtualenvs/ 
 
 app = Flask(__name__)
 
-mydb = mysql.connector.connect(host="whynotworking.cyhofoocnvfm.us-east-1.rds.amazonaws.com", user="usernameMaster", passwd="password",database="DatabaseName")
+# connect to mysql database
+# change parameters as necessary
+mydb = mysql.connector.connect(host="whynotworking.cyhofoocnvfm.us-east-1.rds.amazonaws.com", user="usernameMaster", passwd="password", database="DatabaseName")
 mycursor = mydb.cursor()
 
 # get information of all members
@@ -40,6 +45,7 @@ def get_one(name):
     return j
 
 # create dictionary from given member info
+# used by get_all and get_one
 def create_info_dict(i):
     d = {}
     d['name'] = i[0]
@@ -70,6 +76,7 @@ def count_mem():
     return result
 
 # education and interests are lists
+# add new member information
 @app.route("/", methods=['POST'])
 def add_mem():
     name = request.form.get('name')
@@ -92,10 +99,12 @@ def add_mem():
     if interests is not None:
         for i in interests:
             mycursor.execute("insert into interests values ('" + name + "', '" + i.lower() + "')")
-    mydb.commit()
+    
+    mydb.commit() # <-- all changes to database need commit
+
     return redirect("/" + name + "/")
 
-# member information
+# update member information
 @app.route("/<string:name>/", methods=['POST'])
 def update_mem(name):
     # update one by one by checking if not None?
@@ -132,12 +141,14 @@ def update_mem(name):
     mydb.commit()
     return redirect("/" + name + "/")
 
+# get current education / interests information of member
 def get_item(name, item):
     mycursor.execute("select json_arrayagg(" + item + ") from " + item + " where name = '" + name + "'")
     result = mycursor.fetchone()[0]
     return result
 
-# need case sensitive? for now don't worry about it
+# determine differences between current and new lists
+# add new items and delete missing ones
 def get_add_del_lists(current, new):
     if current is not None:
         clist = json.loads(current)
@@ -148,7 +159,7 @@ def get_add_del_lists(current, new):
     delete = [item for item in clist if item not in nset]
     return [add, delete]
 
-# delete information for member
+# delete member information
 @app.route("/<string:name>/", methods = ['DELETE'])
 def delete_mem(name):
     mycursor.execute("delete from member where name = '" + name + "'")
@@ -186,6 +197,10 @@ def ml_model():
 #     # prediction = ...
 #     return json.dumps(prediction)
 
+def add_event(name, date, start, end):
+    quickstart.addevent(name, date, start, end)
+    return redirect("/")
+
 # for testing
 @app.route("/testing/")
 def test(): # (street, county, state, country)
@@ -195,30 +210,19 @@ def test(): # (street, county, state, country)
     # mycursor.execute("insert into interests values ('Anna', 'piano')")
     # mycursor.execute("alter table member add email varchar(50)")
     # mydb.commit()
-    return get_all()
+
+    return add_event('Testing', '2019-06-13', '19:00:00', '22:00:00')
+    # return None 
 
 # print(test())
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
-# SQL Statements https://www.w3schools.com/sql/default.asp
-
-# select * from student
-# insert into student values ('asdf','asdf'), ('fdsa','fdsa')
-# update student set name = 'aaaa', college = 'gggg' where name = 'asdf'
-# delete from student where name = 'asdf'
 # alter table student add four varchar(20)
 # alter table student drop column four
 # mycursor.execute("select * from member where not name = 'Anna'")
 # create table student(name varchar(20), college varchar(20));
-
-#mydb.commit() # <-- all changes to database needs commit
-
-# result = mycursor.fetchall()
-# result = mycursor.fetchone()
-
-# pip3 install mysql-connector
 
 # https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80 
 

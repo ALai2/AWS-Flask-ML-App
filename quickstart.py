@@ -1,3 +1,4 @@
+# pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 from __future__ import print_function
 import httplib2
 import os
@@ -15,12 +16,19 @@ try:
 except ImportError:
     flags = None
 
+# Use link below:
+# https://developers.google.com/calendar/quickstart/python 
+
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/calendar-python-quickstart.json heyo heyo heyo
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Google Calendar API Python Quickstart'
 
+# 1. use token.pickle to get credentials or create token
+# 2. use credentials to create one google calendar event
+# 3. make method to create list of events
+# 4. connect with flask
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -52,10 +60,11 @@ def get_credentials():
 
 def addeventlist():
     # add list of events to calendar
-    return None:
+    return None
 
-# https://developers.google.com/calendar/create-events
-def addevent(date,start,end):
+# https://developers.google.com/calendar/create-events 
+# http://wescpy.blogspot.com/2015/09/creating-events-in-google-calendar.html 
+def addevent(name, date,start,end):
     """Shows basic usage of the Google Calendar API.
 
     Creates a Google Calendar API service object and outputs a list of the next
@@ -66,7 +75,7 @@ def addevent(date,start,end):
     service = discovery.build('calendar', 'v3', http=http)
     GMT_OFF = '-05:00'    # PDT/MST/GMT-7
     EVENT = {
-        'summary': 'Coffee Break and Chat',
+        'summary': name,
         #'location': asdf,
         #datetime format:'2015-09-15T00:00:00%s' % GMT_OFF
         'start':   {'dateTime': date + 'T'+ start+ '%s' % GMT_OFF},
@@ -78,16 +87,8 @@ def addevent(date,start,end):
     }
     e = service.events().insert(calendarId='primary',
     sendNotifications=True, body=EVENT).execute()
-    # batch = service.new_batch_http_request(callback = cb_insert_event)
-    # batch.add(service.events()...body=EVENT)
-    # ...
-    # batch.execite(http=http)
-    # https://gist.github.com/afunTW/bf958eea15835d14aa976990d1f0bb88
-    # or do this one below
-    # http://wescpy.blogspot.com/2015/09/creating-events-in-google-calendar.html 
+
     print('''*** %r event added:
     Start: %s
     End:   %s''' % (e['summary'].encode('utf-8'),
         e['start']['dateTime'], e['end']['dateTime']))
-        
-run(host='localhost', port=8083, debug=True)
