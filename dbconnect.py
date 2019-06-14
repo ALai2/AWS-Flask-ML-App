@@ -1,14 +1,17 @@
 import mysql.connector # pip3 install mysql-connector
 from flask import redirect, Flask, request # pip3 install flask
 import json
-import quickstart
+# import quickstart
 # start virtual environment: .\env\Scripts\Activate
 # deactivate virutal environment: deactivate
 
-# https://stackoverflow.com/questions/10434599/how-to-get-data-received-in-flask-request 
-# http://flask.pocoo.org/docs/1.0/quickstart/
+# use below command to access installed modules
+# pip freeze
 
-# 1. more columns? (First Name, Last Name, Company Name)
+# Deploy a flask application on AWS
+# https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80 
+
+# 1. separate groups and members? add group then add member? or add group with member add?
 # 2. choose machine learning algorithm
 # 3. implement algorithm (train, model, predict)
 # 4. deploy api
@@ -20,21 +23,49 @@ app = Flask(__name__)
 mydb = mysql.connector.connect(host="whynotworking.cyhofoocnvfm.us-east-1.rds.amazonaws.com", user="usernameMaster", passwd="password", database="DatabaseName")
 mycursor = mydb.cursor()
 
-# get information of all members
+# get information of all members in all groups
 @app.route("/")
 def get_all():
     objects_list = []
-    mycursor.execute("select m.name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.name = m.name), (select json_arrayagg(i.interests) from interests i where i.name = m.name), m.street, m.county, m.state, m.country, m.email from member m order by m.name")
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m order by m.last_name and m.groups")
     for i in mycursor:
         d = create_info_dict(i)
         objects_list.append(d)
     j = json.dumps(objects_list)
     return j
 
+# get all groups
+@app.route("/groups/")
+def get_groups():
+    objects_list = []
+    mycursor.execute("select distinct groups from member")
+    for i in mycursor:
+        objects_list.append(i[0])
+    j = json.dumps(objects_list)
+    return j
+
+# get information of all members in group
+@app.route("/group/<string:group>/")
+def get_group_mems(group):
+    objects_list = []
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m where groups = '" + group + "' order by m.last_name")
+    for i in mycursor:
+        d = create_info_dict(i)
+        objects_list.append(d)
+    j = json.dumps(objects_list)
+    return j
+
+# add one year to age and years for all members in group
+@app.route("/group/<string:group>/add_year/")
+def add_year(group):
+    mycursor.execute("update member set age = age + 1, years = years + 1 where groups = '" + group + "'")
+    mydb.commit()
+    return redirect("/")
+
 # get information of one member
-@app.route("/<string:name>/")
-def get_one(name):
-    mycursor.execute("select m.name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.name = m.name), (select json_arrayagg(i.interests) from interests i where i.name = m.name), m.street, m.county, m.state, m.country, m.email from member m where name = '" + name + "'")
+@app.route("/<string:first_name>_<string:last_name>/")
+def get_one(first_name, last_name):
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     i = mycursor.fetchone()
     if i is not None:
         d = create_info_dict(i)
@@ -46,25 +77,27 @@ def get_one(name):
 # used by get_all and get_one
 def create_info_dict(i):
     d = {}
-    d['name'] = i[0]
-    d['job'] = i[1]
-    d['age'] = i[2]
-    d['years'] = i[3]
-    d['gender'] = i[4]
+    d['first_name'] = i[0]
+    d['last_name'] = i[1]
+    d['job'] = i[2]
+    d['age'] = i[3]
+    d['years'] = i[4]
+    d['gender'] = i[5]
     
-    if i[5] is not None: d['education'] = json.loads(i[5])
+    if i[6] is not None: d['education'] = json.loads(i[6])
     else: d['education'] = []
-    if i[6] is not None: d['interests'] = json.loads(i[6])
+    if i[7] is not None: d['interests'] = json.loads(i[7])
     else: d['interests'] = []
     
     mylist = {}
-    mylist['street'] = i[7]
-    mylist['county'] = i[8]
-    mylist['state'] = i[9]
-    mylist['country'] = i[10]
+    mylist['street'] = i[8]
+    mylist['county'] = i[9]
+    mylist['state'] = i[10]
+    mylist['country'] = i[11]
     d['hometown'] = mylist
     
-    d['email'] = i[11]
+    d['email'] = i[12]
+    d['group'] = i[13]
     return d
 
 # count how many members
@@ -77,7 +110,8 @@ def count_mem():
 # add new member information
 @app.route("/", methods=['POST'])
 def add_mem():
-    name = request.form.get('name')
+    first_name = request.form.get('first_name')
+    last_name = request.form.get('last_name')
     job = request.form.get('job')
     age = request.form.get('age')
     years = request.form.get('years')
@@ -89,23 +123,23 @@ def add_mem():
     state = request.form.get('state')
     country = request.form.get('country')
     email = request.form.get('email')
+    group = request.form.get('group')
 
-    mycursor.execute("insert into member values ('" + name + "', '" + job + "', " + age + ", " + years + ", '" + gender + "', '" + street + "', '" + county + "', '" + state + "', '" + country + "', '" + email + "')")
+    mycursor.execute("insert into member values ('" + first_name + "', '" + last_name + "', '" + job + "', " + age + ", " + years + ", '" + gender + "', '" + street + "', '" + county + "', '" + state + "', '" + country + "', '" + email + "', '" + group + "')")
     if education is not None:
         for i in education:
-            mycursor.execute("insert into education values ('" + name + "', '" + i + "')")
+            mycursor.execute("insert into education values ('" + first_name + "', '" + last_name + "', '" + i + "')")
     if interests is not None:
         for i in interests:
-            mycursor.execute("insert into interests values ('" + name + "', '" + i.lower() + "')")
+            mycursor.execute("insert into interests values ('" + first_name + "', '" + last_name + "', '" + i + "')")
     
     mydb.commit() # <-- all changes to database need commit
 
-    return redirect("/" + name + "/")
+    return redirect("/" + first_name + "_" + last_name + "/")
 
 # update member information
-@app.route("/<string:name>/", methods=['POST'])
-def update_mem(name):
-    # update one by one by checking if not None?
+@app.route("/<string:first_name>_<string:last_name>/", methods=['POST'])
+def update_mem(first_name, last_name):
     job = request.form.get('job')
     age = request.form.get('age')
     years = request.form.get('years')
@@ -117,31 +151,32 @@ def update_mem(name):
     state = request.form.get('state')
     country = request.form.get('country')
     email = request.form.get('email')
+    group = request.form.get('group')
     
-    mycursor.execute("update member set job = '" + job + "', age =" + age + ", years = " + years + ", gender = '" + gender + "', street = '" + street + "', county = '" + county + "', state = '" + state + "', country = '" + country + "', email = '" + email + "' where name = '" + name + "'")
+    mycursor.execute("update member set job = '" + job + "', age =" + age + ", years = " + years + ", gender = '" + gender + "', street = '" + street + "', county = '" + county + "', state = '" + state + "', country = '" + country + "', email = '" + email + "', groups = '" + group + "' where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     
-    edu_dict = get_add_del_lists(get_item(name, 'education'), education)
+    edu_dict = get_add_del_lists(get_item(first_name, last_name, 'education'), education)
     if edu_dict[0] is not None:
         for i in edu_dict[0]:
-            mycursor.execute("insert into education values ('" + name + "', '" + i + "')")
+            mycursor.execute("insert into education values ('" + first_name + "', '" + last_name + "', '" + i + "')")
     if edu_dict[1] is not None:
         for i in edu_dict[1]:
-            mycursor.execute("delete from education where name = '" + name + "' and education = '" + i + "'")
+            mycursor.execute("delete from education where first_name = '" + first_name + "' and last_name = '" + last_name + "' and education = '" + i + "'")
     
-    i_dict = get_add_del_lists(get_item(name, 'interests'), interests)
+    i_dict = get_add_del_lists(get_item(first_name, last_name, 'interests'), interests)
     if i_dict[0] is not None:
         for i in i_dict[0]:
-            mycursor.execute("insert into interests values ('" + name + "', '" + i + "')")
+            mycursor.execute("insert into interests values ('" + first_name + "', '" + last_name + "', '" + i + "')")
     if i_dict[1] is not None:
         for i in i_dict[1]:
-            mycursor.execute("delete from interests where name = '" + name + "' and interests = '" + i + "'")
+            mycursor.execute("delete from interests where first_name = '" + first_name + "' and last_name = '" + last_name + "' and interests = '" + i + "'")
     
     mydb.commit()
-    return redirect("/" + name + "/")
+    return redirect("/" + first_name + "_" + last_name + "/")
 
-# get current education / interests information of member
-def get_item(name, item):
-    mycursor.execute("select json_arrayagg(" + item + ") from " + item + " where name = '" + name + "'")
+# get education/interests information of member
+def get_item(first_name, last_name, item):
+    mycursor.execute("select json_arrayagg(" + item + ") from " + item + " where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     result = mycursor.fetchone()[0]
     return result
 
@@ -158,80 +193,58 @@ def get_add_del_lists(current, new):
     return [add, delete]
 
 # delete member information
-@app.route("/<string:name>/", methods = ['DELETE'])
-def delete_mem(name):
-    mycursor.execute("delete from member where name = '" + name + "'")
-    mycursor.execute("delete from education where name = '" + name + "'")
-    mycursor.execute("delete from interests where name = '" + name + "'")
+@app.route("/<string:first_name>_<string:last_name>/", methods = ['DELETE'])
+def delete_mem(first_name, last_name):
+    mycursor.execute("delete from member where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
+    mycursor.execute("delete from education where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
+    mycursor.execute("delete from interests where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     mydb.commit()
     return redirect("/")
 
-# https://towardsdatascience.com/designing-a-machine-learning-model-and-deploying-it-using-flask-on-heroku-9558ce6bde7b 
-# @app.route("/train")
-def ml_train():
-    # future stuff
-    return None
-
-# @app.route("/model")
-def ml_model():
-    # future stuff
-    return None
-
-# prediction function
-# import pickle
-# def value_predict(to_predict_list):
-#     to_predict = np.array(to_predict_list).reshape(1,12) # (1,12) number of columns
-#     loaded_model = pickle.load(open("model.pkl","rb"))
-#     result = loaded_model.predict(to_predict)
-#     return result[0]
-
-# @app.route("/predict", methods = ['POST'])
-# def ml_predict():
-#     to_predict_list = request.form.to_dict()
-#     to_predict_list = list(to_predict_list.values())
-#     to_predict_list = list(map(int, to_predict_list))
-#     result = value_predict(to_predict_list)
-#     # if condition
-#     # prediction = ...
-#     return json.dumps(prediction)
-
-def add_event(mylist):
-    quickstart.addevent(mylist)
-    return redirect("/")
+# def add_event(mylist):
+#     quickstart.addevent(mylist)
+#     return redirect("/")
 
 # for testing
-@app.route("/testing/", methods=['POST'])
-def test(): # (street, county, state, country)
+@app.route("/testing/")
+def test():
     # mycursor.execute("delete from education where name = 'Anna'")
     # mycursor.execute("insert into education values ('Anna', 'Carnegie Mellon')")
     # mycursor.execute("delete from interests where name = 'Anna'")
     # mycursor.execute("insert into interests values ('Anna', 'piano')")
-    # mycursor.execute("alter table member add email varchar(50)")
+    # mycursor.execute("alter table member add groups varchar(50)")
     # mydb.commit()
     
-    names = list(filter(None, request.form.getlist('name')))
-    dates = list(filter(None, request.form.getlist('date')))
-    starts = list(filter(None, request.form.getlist('start')))
-    ends = list(filter(None, request.form.getlist('end')))
-    email1s = list(filter(None, request.form.getlist('email1')))
-    email2s = list(filter(None, request.form.getlist('email2')))
+    # names = list(filter(None, request.form.getlist('name')))
+    # dates = list(filter(None, request.form.getlist('date')))
+    # starts = list(filter(None, request.form.getlist('start')))
+    # ends = list(filter(None, request.form.getlist('end')))
+    # email1s = list(filter(None, request.form.getlist('email1')))
+    # email2s = list(filter(None, request.form.getlist('email2')))
 
-    mylist = []
-    for i in range(0, len(names)):
-        d = {}
-        d['name'] = names[i]
-        d['date'] = dates[i]
-        d['start'] = starts[i]
-        d['end'] = ends[i]
-        d['email1'] = email1s[i]
-        d['email2'] = email2s[i]
+    # mylist = []
+    # for i in range(0, len(names)):
+    #     d = {}
+    #     d['name'] = names[i]
+    #     d['date'] = dates[i]
+    #     d['start'] = starts[i]
+    #     d['end'] = ends[i]
+    #     d['email1'] = email1s[i]
+    #     d['email2'] = email2s[i]
 
-        mylist.append(d)
+    #     mylist.append(d)
 
-    return add_event(mylist)
-    # return None 
-
-# print(test())
+    # return add_event(mylist)
+    
+    # mycursor.execute("drop table member")
+    # mycursor.execute("drop table education")
+    # mycursor.execute("drop table interests")
+    # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50))")
+    # mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
+    # mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
+    # mydb.commit()
+    
+    return get_all()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
@@ -240,9 +253,3 @@ if __name__ == '__main__':
 # alter table student drop column four
 # mycursor.execute("select * from member where not name = 'Anna'")
 # create table student(name varchar(20), college varchar(20));
-
-# https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80 
-
-# Data Matching
-# https://www.talend.com/blog/2016/12/13/data-matching-101-how-does-data-matching-work/ 
-# https://www.datasciencecentral.com/profiles/blogs/fuzzy-matching-algorithms-to-help-data-scientists-match-similar 
