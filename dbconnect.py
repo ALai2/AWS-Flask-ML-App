@@ -2,18 +2,16 @@ import mysql.connector # pip3 install mysql-connector
 from flask import redirect, Flask, request # pip3 install flask
 import json
 import quickstart
+# start virtual environment: .\env\Scripts\Activate
+# deactivate virutal environment: deactivate
 
 # https://stackoverflow.com/questions/10434599/how-to-get-data-received-in-flask-request 
 # http://flask.pocoo.org/docs/1.0/quickstart/
 
-# 1. test calendar api (add events)
-# 2. more columns? (First Name, Last Name, Company Name)
-# 3. choose machine learning algorithm
-# 4. implement algorithm (train, model, predict)
-# 5. deploy api? (before that use virtualenv)
-# use virtual environments (virtualenv)
-# https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ 
-# https://docs.python-guide.org/dev/virtualenvs/ 
+# 1. more columns? (First Name, Last Name, Company Name)
+# 2. choose machine learning algorithm
+# 3. implement algorithm (train, model, predict)
+# 4. deploy api
 
 app = Flask(__name__)
 
@@ -197,12 +195,12 @@ def ml_model():
 #     # prediction = ...
 #     return json.dumps(prediction)
 
-def add_event(name, date, start, end):
-    quickstart.addevent(name, date, start, end)
+def add_event(mylist):
+    quickstart.addevent(mylist)
     return redirect("/")
 
 # for testing
-@app.route("/testing/")
+@app.route("/testing/", methods=['POST'])
 def test(): # (street, county, state, country)
     # mycursor.execute("delete from education where name = 'Anna'")
     # mycursor.execute("insert into education values ('Anna', 'Carnegie Mellon')")
@@ -210,14 +208,33 @@ def test(): # (street, county, state, country)
     # mycursor.execute("insert into interests values ('Anna', 'piano')")
     # mycursor.execute("alter table member add email varchar(50)")
     # mydb.commit()
+    
+    names = list(filter(None, request.form.getlist('name')))
+    dates = list(filter(None, request.form.getlist('date')))
+    starts = list(filter(None, request.form.getlist('start')))
+    ends = list(filter(None, request.form.getlist('end')))
+    email1s = list(filter(None, request.form.getlist('email1')))
+    email2s = list(filter(None, request.form.getlist('email2')))
 
-    return add_event('Testing', '2019-06-13', '19:00:00', '22:00:00')
+    mylist = []
+    for i in range(0, len(names)):
+        d = {}
+        d['name'] = names[i]
+        d['date'] = dates[i]
+        d['start'] = starts[i]
+        d['end'] = ends[i]
+        d['email1'] = email1s[i]
+        d['email2'] = email2s[i]
+
+        mylist.append(d)
+
+    return add_event(mylist)
     # return None 
 
 # print(test())
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 # alter table student add four varchar(20)
 # alter table student drop column four
