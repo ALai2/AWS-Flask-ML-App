@@ -11,10 +11,7 @@ import json
 # Deploy a flask application on AWS
 # https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80 
 
-# 1. separate groups and members? add group then add member? or add group with member add?
-# 2. choose machine learning algorithm
-# 3. implement algorithm (train, model, predict)
-# 4. deploy api
+# create company table? (group, start, end, location)
 
 app = Flask(__name__)
 
@@ -229,10 +226,10 @@ def test():
     # mycursor.execute("drop table member")
     # mycursor.execute("drop table education")
     # mycursor.execute("drop table interests")
-    # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
-    # mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
-    # mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
-    # mydb.commit()
+    mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
+    mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
+    mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
+    mydb.commit()
     
     return get_all()
 

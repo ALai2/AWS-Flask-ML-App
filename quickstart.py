@@ -78,7 +78,8 @@ def addevent(mylist):
         # End:   %s''' % (e['summary'].encode('utf-8'),
         #     e['start']['dateTime'], e['end']['dateTime']))
 
-def get_incoming_events(email): # use events to find open time slots
+# input is list of emails
+def get_incoming_events(mylist): # use events to find open time slots
     creds = get_credentials()
 
     service = build('calendar', 'v3', credentials=creds)
@@ -88,27 +89,29 @@ def get_incoming_events(email): # use events to find open time slots
 
     # calendarId is email, in company calendars are connected
     # error 404: when accessing a calendar that the user can not access
-    try:
-        events_result = service.events().list(calendarId=email, timeMin=now,
-                                            maxResults=10, singleEvents=True,
-                                            orderBy='startTime').execute()
-        events = events_result.get('items', [])
+    all_lists = []
+    for email in mylist:
+        try:
+            events_result = service.events().list(calendarId=email, timeMin=now,
+                                                maxResults=10, singleEvents=True,
+                                                orderBy='startTime').execute()
+            events = events_result.get('items', [])
 
-        e_list = []
-        if not events:
-            print('No upcoming events found.')
-        for event in events:
-            start = event['start'].get('dateTime', event['start'].get('date'))
-            end = event['end'].get('dateTime', event['end'].get('date'))
-            date = start[0:10]
-            y, m, d = date.split('-')
-            # 'name': event['summary']
-            d = {'year': int(y), 'month': int(m), 'day': int(d), 'start': start[11:16], 'end': end[11:16]}
-            e_list.append(d)
-        print(json.dumps(e_list))
-        return e_list 
-    except:
-        print("User does not have access to target " + email + "'s calendar.")
+            e_list = []
+            if not events:
+                print('No upcoming events found.')
+            for event in events:
+                start = event['start'].get('dateTime', event['start'].get('date'))
+                end = event['end'].get('dateTime', event['end'].get('date'))
+                date = start[0:10]
+                y, m, d = date.split('-')
+                # 'name': event['summary']
+                d = {'year': int(y), 'month': int(m), 'day': int(d), 'start': start[11:16], 'end': end[11:16]}
+                e_list.append(d)
+            all_lists.append(e_list)
+        except:
+            print("User does not have access to target " + email + "'s calendar.")
+    return all_lists
 
 def get_now():
     now = datetime.datetime.now()
@@ -129,7 +132,10 @@ def min_to_str(time_min):
     else: m_str = str(m)
     return h_str + ":" + m_str 
 
-def unavailable_slot(events1, events2):
+# combine and order events in lists
+def unavailable_slot(list_of_lists):
+    events1 = list_of_lists[0]
+    events2 = list_of_lists[1]
     len1 = len(events1)
     len2 = len(events2)
     i = 0
@@ -207,7 +213,7 @@ def compare_times(time1, time2):
     else: return 0
 
 def find_free_slot(events):
-    e0 = get_now() # starting time for all coffee chats / current, input variable?
+    e0 = get_now() # current time, make input variable instead?
     slot_time = 60
     offset = 15
     total_time = slot_time + (2 * offset)
@@ -220,6 +226,7 @@ def find_free_slot(events):
         e1 = events[i]
         end_min = str_to_min(e0['end'])
         start_min = str_to_min(e1['start'])
+        nday = next_day(e0)
         if same_day(e0, e1):
             if (start_min - end_min > total_time):
                 time = end_min + offset
@@ -232,10 +239,9 @@ def find_free_slot(events):
                 e0['start'] = min_to_str(time)
                 e0['end'] = min_to_str(time + slot_time)
                 return e0 
-            elif (e1['year'] > e0['year'] or (e1['year'] == e0['year'] and e1['month'] > e0['month'])
-                or (e1['year'] == e0['year'] and e1['month'] == e0['month'] and e1['day'] - e0['day'] > 1)):
+            elif (not (nday['year'] == e1['year'] and nday['month'] == e1['month'] and nday['day'] == e1['day'])):
                 time = str_to_min(start_of_day) + offset
-                e0['day'] = e0['day'] + 1
+                e0 = nday
                 e0['end'] = min_to_str(time + slot_time)
                 e0['start'] = min_to_str(time)
                 return e0
@@ -247,10 +253,48 @@ def find_free_slot(events):
         e0 = e1
         i = i + 1  
     end_min = str_to_min(e0['end'])
-    time = end_min + offset
-    e0['start'] = min_to_str(time)
-    e0['end'] = min_to_str(time + slot_time)
+    if (str_to_min(end_of_day) - end_min > total_time):
+        time = end_min + offset
+        e0['start'] = min_to_str(time)
+        e0['end'] = min_to_str(time + slot_time)
+    else:
+        time = str_to_min(start_of_day) + offset
+        e0 = next_day(e0)
+        e0['end'] = min_to_str(time + slot_time)
+        e0['start'] = min_to_str(time)
     return e0
+
+def next_day(day):
+    nextday = {'year': day['year'], 'month': day['month'], 'day': day['day'], 'start': day['start'], 'end': day['end']}
+    if day['month'] == 1 or day['month'] == 3 or day['month'] == 5 or day['month'] == 7 or day['month'] == 8 or day['month'] == 10:
+        if day['day'] == 31:
+            nextday['month'] = day['month'] + 1
+            nextday['day'] = 1
+        else:
+            nextday['day'] = day['day'] + 1
+    elif day['month'] == 4 or day['month'] == 6 or day['month'] == 9 or day['month'] == 11:
+        if day['day'] == 31:
+            nextday['month'] = day['month'] + 1
+            nextday['day'] = 1
+        else:
+            nextday['day'] = day['day'] + 1
+    elif day['month'] == 2:
+        if day['year'] % 4 == 0 and day['day'] == 29:
+            nextday['month'] = day['month'] + 1
+            nextday['day'] = 1
+        elif day['year'] % 4 != 0 and day['day'] == 28:
+            nextday['month'] = day['month'] + 1
+            nextday['day'] = 1
+        else:
+            day['day'] = day['day'] + 1
+    elif day['month'] == 12:
+        if day['day'] == 31:
+            nextday['day'] = 1
+            nextday['month'] = 1
+            nextday['year'] = day['year'] + 1
+        else:
+            nextday['day'] = day['day'] + 1
+    return nextday
 
 def same_day(e1, e2):
     if e1['year'] == e2['year']:
@@ -260,13 +304,13 @@ def same_day(e1, e2):
     return False
 
 def pair(email1, email2):
-    d1 = get_incoming_events(email1)
-    d2 = get_incoming_events(email2)
-    mylist = unavailable_slot(d1, d2)
+    all_lists = get_incoming_events([email1, email2])
+    mylist = unavailable_slot(all_lists)
     free_slot = find_free_slot(mylist)
     return free_slot
+    # insert event to calendar with email1 and email2 as accomplices
 
-if __name__ == '__main__':
+if __name__ == '__main__': # For testing
     # mylist = []
     # d1 = {'name': 'Testing', 'date': '2019-06-17', 'start': '19:00:00', 'end': '23:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
     # # d2 = {'name': 'Testing', 'date': '2019-06-17', 'start': '15:00:00', 'end': '17:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
@@ -278,12 +322,13 @@ if __name__ == '__main__':
     events1 = []
     events2 = []
     d1 = {'year': 2019, 'month': 6, 'day': 17, 'start': "12:00", 'end': "13:00"}
-    d2 = {'year': 2019, 'month': 6, 'day': 17, 'start': "13:00", 'end': "18:30"}
-    d3 = {'year': 2020, 'month': 5, 'day': 17, 'start': "8:00", 'end': "10:00"}
+    d2 = {'year': 2019, 'month': 6, 'day': 17, 'start': "13:00", 'end': "19:30"}
+    d3 = {'year': 2019, 'month': 6, 'day': 19, 'start': "13:30", 'end': "16:00"}
     
     events1.append(d1)
     events2.append(d2)
     events1.append(d3)
-    mylist = unavailable_slot(events1, events2)
+    events2.append(d1)
+    mylist = unavailable_slot([events1, events2])
     print(json.dumps(mylist))
     print("\n" + json.dumps(find_free_slot(mylist)))
