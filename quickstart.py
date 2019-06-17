@@ -78,36 +78,212 @@ def addevent(mylist):
         # End:   %s''' % (e['summary'].encode('utf-8'),
         #     e['start']['dateTime'], e['end']['dateTime']))
 
-def get_incoming_events(): # use events to find open time slots
+def get_incoming_events(email): # use events to find open time slots
     creds = get_credentials()
 
     service = build('calendar', 'v3', credentials=creds)
 
     now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-    print(now)
     print('Getting the upcoming 10 events')
 
-    # calendarId is email
+    # calendarId is email, in company calendars are connected
     # error 404: when accessing a calendar that the user can not access
-    # oops, usage limit exceeded, how to avoid it?
-    events_result = service.events().list(calendarId='alisalai2011@gmail.com', timeMin=now,
-                                        maxResults=10, singleEvents=True,
-                                        orderBy='startTime').execute()
-    events = events_result.get('items', [])
+    try:
+        events_result = service.events().list(calendarId=email, timeMin=now,
+                                            maxResults=10, singleEvents=True,
+                                            orderBy='startTime').execute()
+        events = events_result.get('items', [])
 
-    if not events:
-        print('No upcoming events found.')
-    for event in events:
-        start = event['start'].get('dateTime', event['start'].get('date'))
-        end = event['end'].get('dateTime', event['end'].get('date'))
-        d = {'name': event['summary'], 'date': start[0:10], 'start': start[11:16], 'end': end[11:16]}
-        print(json.dumps(d))
+        e_list = []
+        if not events:
+            print('No upcoming events found.')
+        for event in events:
+            start = event['start'].get('dateTime', event['start'].get('date'))
+            end = event['end'].get('dateTime', event['end'].get('date'))
+            date = start[0:10]
+            y, m, d = date.split('-')
+            # 'name': event['summary']
+            d = {'year': int(y), 'month': int(m), 'day': int(d), 'start': start[11:16], 'end': end[11:16]}
+            e_list.append(d)
+        print(json.dumps(e_list))
+        return e_list 
+    except:
+        print("User does not have access to target " + email + "'s calendar.")
+
+def get_now():
+    now = datetime.datetime.now()
+    date_str = str(now.year) + "/" + str(now.month) + "/" + str(now.day) + " " + str(now.hour) + ":" + str(now.minute)
+    d = {'year': now.year, 'month': now.month, 'day': now.day, 'start': "", 'end': str(now.hour) + ":" + str(now.minute)}
+    return d
+
+def str_to_min(time_str):
+    h, m = time_str.split(':')
+    return (int(h) * 60) + int(m)
+
+def min_to_str(time_min):
+    m = time_min % 60
+    h = int((time_min - m) / 60)
+    if h < 10: h_str = "0" + str(h)
+    else: h_str = str(h)
+    if m < 10: m_str = "0" + str(m)
+    else: m_str = str(m)
+    return h_str + ":" + m_str 
+
+def unavailable_slot(events1, events2):
+    len1 = len(events1)
+    len2 = len(events2)
+    i = 0
+    j = 0
+    acc = []
+    while (i != len1 or j != len2):
+        if i == len1:
+            acc.append(events2[j])
+            j = j + 1
+        elif j == len2:
+            acc.append(events1[i])
+            i = i + 1
+        else:
+            e1 = events1[i]
+            e2 = events2[j]
+            compare = compare_events(e1, e2)
+                
+            if compare == 0: # equal times
+                acc.append(e2)
+            elif compare == 1: # (s1, e2)
+                e1['end'] = e2['end']
+                acc.append(e1)
+            elif compare == 2: # (s1, e1)
+                acc.append(e1)
+            elif compare == 3: # (s2, e1)
+                e2['end'] = e1['end']
+                acc.append(e2)
+            elif compare == 4: # (s2, e2)
+                acc.append(e2)
+            elif compare == -1:
+                acc.append(e1)
+                j = j - 1
+            else: # compare == -2
+                acc.append(e2)
+                i = i - 1
+            i = i + 1
+            j = j + 1
+    return acc
+
+def compare_events(event1, event2):
+    if event1['year'] < event2['year']: return -1
+    elif event1['year'] > event2['year']: return -2
+    else:
+        if event1['month'] < event2['month']: return -1
+        elif event1['month'] > event2['month']: return -2
+        else:
+            if event1['day'] < event2['day']: return -1
+            elif event1['day'] > event2['day']: return -2
+            else:
+                compare_1 = compare_times(event1['start'], event2['start'])
+                compare_2 = compare_times(event1['end'], event2['end'])
+                compare_3 = compare_times(event1['start'], event2['end'])
+                compare_4 = compare_times(event1['end'], event2['start'])
+
+                if compare_1 == 0 and compare_2 == 0:                       return 0
+                # (s1, e2) s1, s2, e1, e2
+                elif compare_1 <= 0 and compare_2 <= 0 and compare_4 >= 0:  return 1 
+                # (s1, e1) s1, s2, e2, e1
+                elif compare_1 <= 0 and compare_2 >= 0:                     return 2 
+                # (s2, e1) s2, s1, e2, e1
+                elif compare_1 >= 0 and compare_2 >= 0 and compare_3 <= 0:  return 3 
+                # (s2, e2) s2, s1, e1, e2
+                elif compare_1 >= 0 and compare_2 <= 0:                     return 4 
+                # (s1, e1) (s2, e2)
+                elif compare_4 <= 0:                                        return -1
+                # (s2, e2) (s1, e1)
+                # elif compare_3 >= 0:
+                else:                                                       return -2
+                
+def compare_times(time1, time2):
+    t1 = str_to_min(time1)
+    t2 = str_to_min(time2)
+    if t1 < t2: return -1
+    elif t1 > t2: return 1
+    else: return 0
+
+def find_free_slot(events):
+    e0 = get_now() # starting time for all coffee chats / current, input variable?
+    slot_time = 60
+    offset = 15
+    total_time = slot_time + (2 * offset)
+    start_of_day = "8:00"
+    end_of_day = "20:00"
+    e_len = len(events)
+    i = 0
+
+    while i != e_len:
+        e1 = events[i]
+        end_min = str_to_min(e0['end'])
+        start_min = str_to_min(e1['start'])
+        if same_day(e0, e1):
+            if (start_min - end_min > total_time):
+                time = end_min + offset
+                e0['start'] = min_to_str(time)
+                e0['end'] = min_to_str(time + slot_time)
+                return e0
+        else:
+            if (str_to_min(end_of_day) - end_min > total_time):
+                time = end_min + offset
+                e0['start'] = min_to_str(time)
+                e0['end'] = min_to_str(time + slot_time)
+                return e0 
+            elif (e1['year'] > e0['year'] or (e1['year'] == e0['year'] and e1['month'] > e0['month'])
+                or (e1['year'] == e0['year'] and e1['month'] == e0['month'] and e1['day'] - e0['day'] > 1)):
+                time = str_to_min(start_of_day) + offset
+                e0['day'] = e0['day'] + 1
+                e0['end'] = min_to_str(time + slot_time)
+                e0['start'] = min_to_str(time)
+                return e0
+            elif (str_to_min(e1['start']) - str_to_min(start_of_day) > total_time):
+                time = str_to_min(start_of_day) + offset
+                e1['end'] = min_to_str(time + slot_time)
+                e1['start'] = min_to_str(time)
+                return e1
+        e0 = e1
+        i = i + 1  
+    end_min = str_to_min(e0['end'])
+    time = end_min + offset
+    e0['start'] = min_to_str(time)
+    e0['end'] = min_to_str(time + slot_time)
+    return e0
+
+def same_day(e1, e2):
+    if e1['year'] == e2['year']:
+        if e1['month'] == e2['month']:
+            if e1['day'] == e2['day']:
+                return True 
+    return False
+
+def pair(email1, email2):
+    d1 = get_incoming_events(email1)
+    d2 = get_incoming_events(email2)
+    mylist = unavailable_slot(d1, d2)
+    free_slot = find_free_slot(mylist)
+    return free_slot
 
 if __name__ == '__main__':
-    get_incoming_events()
-#     mylist = []
-#     d1 = {'name': 'Testing', 'date': '2019-06-14', 'start': '19:00:00', 'end': '22:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
-#     d2 = {'name': 'Testing', 'date': '2019-06-14', 'start': '15:00:00', 'end': '17:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
-#     mylist.append(d1)
-#     mylist.append(d2)
-#     addevent(mylist)
+    # mylist = []
+    # d1 = {'name': 'Testing', 'date': '2019-06-17', 'start': '19:00:00', 'end': '23:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
+    # # d2 = {'name': 'Testing', 'date': '2019-06-17', 'start': '15:00:00', 'end': '17:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu'}
+    # mylist.append(d1)
+    # # mylist.append(d2)
+    # addevent(mylist)
+    # get_incoming_events("al766@cornell.edu")
+    # print("\nCurrent Time: " + json.dumps(get_now()))
+    events1 = []
+    events2 = []
+    d1 = {'year': 2019, 'month': 6, 'day': 17, 'start': "12:00", 'end': "13:00"}
+    d2 = {'year': 2019, 'month': 6, 'day': 17, 'start': "13:00", 'end': "18:30"}
+    d3 = {'year': 2020, 'month': 5, 'day': 17, 'start': "8:00", 'end': "10:00"}
+    
+    events1.append(d1)
+    events2.append(d2)
+    events1.append(d3)
+    mylist = unavailable_slot(events1, events2)
+    print(json.dumps(mylist))
+    print("\n" + json.dumps(find_free_slot(mylist)))

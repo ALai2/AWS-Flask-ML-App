@@ -27,7 +27,10 @@ mycursor = mydb.cursor()
 @app.route("/")
 def get_all():
     objects_list = []
-    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m order by m.last_name and m.groups")
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, "
+        + "(select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), "
+        + "(select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), "
+        + "m.street, m.county, m.state, m.country, m.email, m.groups from member m order by m.last_name and m.groups")
     for i in mycursor:
         d = create_info_dict(i)
         objects_list.append(d)
@@ -48,7 +51,10 @@ def get_groups():
 @app.route("/group/<string:group>/")
 def get_group_mems(group):
     objects_list = []
-    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m where groups = '" + group + "' order by m.last_name")
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, "
+        + "(select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), "
+        + "(select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), "
+        + "m.street, m.county, m.state, m.country, m.email, m.groups from member m where groups = '" + group + "' order by m.last_name")
     for i in mycursor:
         d = create_info_dict(i)
         objects_list.append(d)
@@ -65,7 +71,11 @@ def add_year(group):
 # get information of one member
 @app.route("/<string:first_name>_<string:last_name>/")
 def get_one(first_name, last_name):
-    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, (select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), (select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), m.street, m.county, m.state, m.country, m.email, m.groups from member m where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
+    mycursor.execute("select m.first_name, m.last_name, m.job, m.age, m.years, m.gender, "
+        + "(select json_arrayagg(e.education) from education e where e.first_name = m.first_name and e.last_name = m.last_name), "
+        + "(select json_arrayagg(i.interests) from interests i where i.first_name = m.first_name and i.last_name = m.last_name), "
+        + "m.street, m.county, m.state, m.country, m.email, m.groups from member m "
+        + "where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     i = mycursor.fetchone()
     if i is not None:
         d = create_info_dict(i)
@@ -125,7 +135,9 @@ def add_mem():
     email = request.form.get('email')
     group = request.form.get('group')
 
-    mycursor.execute("insert into member values ('" + first_name + "', '" + last_name + "', '" + job + "', " + age + ", " + years + ", '" + gender + "', '" + street + "', '" + county + "', '" + state + "', '" + country + "', '" + email + "', '" + group + "')")
+    mycursor.execute("insert into member values ('" + first_name + "', '" + last_name + "', '" + job 
+        + "', " + age + ", " + years + ", '" + gender + "', '" + street + "', '" + county + "', '" 
+        + state + "', '" + country + "', '" + email + "', '" + group + "')")
     if education is not None:
         for i in education:
             mycursor.execute("insert into education values ('" + first_name + "', '" + last_name + "', '" + i + "')")
@@ -153,7 +165,10 @@ def update_mem(first_name, last_name):
     email = request.form.get('email')
     group = request.form.get('group')
     
-    mycursor.execute("update member set job = '" + job + "', age =" + age + ", years = " + years + ", gender = '" + gender + "', street = '" + street + "', county = '" + county + "', state = '" + state + "', country = '" + country + "', email = '" + email + "', groups = '" + group + "' where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
+    mycursor.execute("update member set job = '" + job + "', age =" + age + ", years = " + years 
+        + ", gender = '" + gender + "', street = '" + street + "', county = '" + county + "', state = '" 
+        + state + "', country = '" + country + "', email = '" + email + "', groups = '" + group 
+        + "' where first_name = '" + first_name + "' and last_name = '" + last_name + "'")
     
     edu_dict = get_add_del_lists(get_item(first_name, last_name, 'education'), education)
     if edu_dict[0] is not None:
@@ -201,10 +216,6 @@ def delete_mem(first_name, last_name):
     mydb.commit()
     return redirect("/")
 
-# def add_event(mylist):
-#     quickstart.addevent(mylist)
-#     return redirect("/")
-
 # for testing
 @app.route("/testing/")
 def test():
@@ -215,31 +226,10 @@ def test():
     # mycursor.execute("alter table member add groups varchar(50)")
     # mydb.commit()
     
-    # names = list(filter(None, request.form.getlist('name')))
-    # dates = list(filter(None, request.form.getlist('date')))
-    # starts = list(filter(None, request.form.getlist('start')))
-    # ends = list(filter(None, request.form.getlist('end')))
-    # email1s = list(filter(None, request.form.getlist('email1')))
-    # email2s = list(filter(None, request.form.getlist('email2')))
-
-    # mylist = []
-    # for i in range(0, len(names)):
-    #     d = {}
-    #     d['name'] = names[i]
-    #     d['date'] = dates[i]
-    #     d['start'] = starts[i]
-    #     d['end'] = ends[i]
-    #     d['email1'] = email1s[i]
-    #     d['email2'] = email2s[i]
-
-    #     mylist.append(d)
-
-    # return add_event(mylist)
-    
     # mycursor.execute("drop table member")
     # mycursor.execute("drop table education")
     # mycursor.execute("drop table interests")
-    # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50))")
+    # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
     # mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
     # mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
     # mydb.commit()
@@ -248,8 +238,3 @@ def test():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
-
-# alter table student add four varchar(20)
-# alter table student drop column four
-# mycursor.execute("select * from member where not name = 'Anna'")
-# create table student(name varchar(20), college varchar(20));
