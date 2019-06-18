@@ -3,7 +3,7 @@ from flask import redirect, Flask, request # pip3 install flask
 import json
 # import quickstart
 # start virtual environment: .\env\Scripts\Activate
-# deactivate virutal environment: deactivate
+# deactivate virtual environment: deactivate
 
 # use below command to access installed modules
 # pip freeze
@@ -39,11 +39,53 @@ def get_all():
 def get_groups():
     objects_list = []
     mycursor.execute("select distinct groups from member")
+
     # or add groups table that keeps track of all group info
+    # mycursor.execute("select json_arrayagg(groups) from company")
+    # result = mycursor.fetchone()[0]
+    # return result
+
     for i in mycursor:
         objects_list.append(i[0])
     j = json.dumps(objects_list)
     return j
+
+# add group information
+@app.route("/groups/", methods=['POST'])
+def add_group():
+    group = request.form.get('group')
+    offset = request.form.get('offset')
+    slot_time = request.form.get('slot_time')
+    start_day = request.form.get('start_day')
+    end_day = request.form.get('end_day')
+    location = request.form.get('location')
+
+    mycursor.execute("insert into company values ('" + group + "', " + offset + ", " + slot_time 
+        + ", '" + start_day + "', '" + end_day + "', '" + location + "')")
+    mydb.commit()
+    return redirect("/")
+
+# edit group information
+@app.route("/group/<string:group>/update/", methods=['POST'])
+def update_group(group):
+    offset = request.form.get('offset')
+    slot_time = request.form.get('slot_time')
+    start_day = request.form.get('start_day')
+    end_day = request.form.get('end_day')
+    location = request.form.get('location')
+
+    mycursor.execute("update company set offset = " + offset + ", slot_time = " + slot_time
+        + ", start_day = '" + start_time + "', end_day = '" + end_day + "', location = '" + location
+        + "' where groups = '" + group + "'")
+    mydb.commit()
+    return redirect("/")
+
+# delete group information
+@app.route("/group/<string:group>/", methods=['DELETE'])
+def delete_group(group):
+    mycursor.execute("delete from company where groups = '" + group + "'")
+    mydb.commit()
+    return redirect("/")
 
 # get information of all members in group
 @app.route("/group/<string:group>/")
@@ -132,6 +174,13 @@ def add_mem():
     country = request.form.get('country')
     email = request.form.get('email')
     group = request.form.get('group')
+
+    # mycursor.execute("select groups from company where groups = '" + group + "'")
+    # if mycursor.fetchone() is not None:
+    #     # add member to group
+    # else:
+    #     # do nothing
+    #     # error that group needs to be created first
 
     mycursor.execute("insert into member values ('" + first_name + "', '" + last_name + "', '" + job 
         + "', " + age + ", " + years + ", '" + gender + "', '" + street + "', '" + county + "', '" 
@@ -227,6 +276,7 @@ def test():
     # mycursor.execute("drop table member")
     # mycursor.execute("drop table education")
     # mycursor.execute("drop table interests")
+    # mycursor.execute("drop table company")
 
     # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
     # mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")

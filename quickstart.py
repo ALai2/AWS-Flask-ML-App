@@ -7,11 +7,11 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import json
+from dateutil import tz
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/calendar-python-quickstart.json heyo heyo heyo
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-
 
 def get_credentials():
     """Gets valid user credentials from storage.
@@ -86,16 +86,23 @@ def get_incoming_events(mylist, time): # use events to find open time slots
 
     # isoformat = 2019-06-18T13:22:34.425903Z
     now = datetime.utcnow()
-    print(now)
+    # print(now)
 
-    add_days = 0 # could be positive, negative or zero
-    utc_offset = 4
+    add_days = 0 # could be positive, negative or zero, need this?
+    # utc_offset = 4
     h, m = time['end'].split(":")
     date = datetime(time['year'], time['month'], time['day'], int(h), int(m), 0, 0) # custom date
     
-    now = (date + timedelta(hours=utc_offset) + timedelta(days=add_days)).isoformat() + 'Z' # 'Z' indicates UTC time
-    print(now)
-    # calendarId is email, in company calendars are connected
+    # auto-detect local and utc zones
+    utc_zone = tz.tzutc()
+    local_zone = tz.tzlocal()
+    date = date.replace(tzinfo=local_zone)
+    utc_time = date.astimezone(utc_zone)
+
+    now = (utc_time + timedelta(days=add_days)).isoformat()[:19] + 'Z' # 'Z' indicates UTC time
+    # print(now)
+
+    # calendarId is email, in company the calendars are connected
     # error 404: when accessing a calendar that the user can not access
     all_lists = []
     results = 10
@@ -237,31 +244,46 @@ def find_free_slot(events, start, info):
         end_min = str_to_min(e0['end'])
         start_min = str_to_min(e1['start'])
         nday = next_day(e0)
-        if same_day(e0, e1):
-            if (start_min - end_min > total_time):
-                time = end_min + offset
+        
+        if same_day(e0, e1):  
+            if str_to_min(e0['end']) > str_to_min(start_of_day):
+                if (start_min - end_min > total_time):
+                    time = end_min + offset
+                    e0['start'] = min_to_str(time)
+                    e0['end'] = min_to_str(time + slot_time)
+                    return e0
+            elif (start_min - str_to_min(start_of_day) > total_time):
+                time = str_to_min(start_of_day) + offset
                 e0['start'] = min_to_str(time)
                 e0['end'] = min_to_str(time + slot_time)
                 return e0
-        else:
+        
+        else:  
             if (str_to_min(end_of_day) - end_min > total_time):
-                time = end_min + offset
-                e0['start'] = min_to_str(time)
-                e0['end'] = min_to_str(time + slot_time)
-                return e0 
+                if end_min - str_to_min(start_of_day) > 0:
+                    time = end_min + offset
+                    e0['start'] = min_to_str(time)
+                    e0['end'] = min_to_str(time + slot_time)
+                    return e0 
+                else:
+                    time = str_to_min(start_of_day) + offset
+                    e0['start'] = min_to_str(time)
+                    e0['end'] = min_to_str(time + slot_time)
+                    return e0
             elif (not (nday['year'] == e1['year'] and nday['month'] == e1['month'] and nday['day'] == e1['day'])):
                 time = str_to_min(start_of_day) + offset
-                e0 = nday
                 e0['end'] = min_to_str(time + slot_time)
                 e0['start'] = min_to_str(time)
                 return e0
-            elif (str_to_min(e1['start']) - str_to_min(start_of_day) > total_time):
+            elif (start_min - str_to_min(start_of_day) > total_time):
                 time = str_to_min(start_of_day) + offset
                 e1['end'] = min_to_str(time + slot_time)
                 e1['start'] = min_to_str(time)
                 return e1
+        
         e0 = e1
         i = i + 1  
+    
     end_min = str_to_min(e0['end'])
     if (str_to_min(end_of_day) - end_min > total_time):
         time = end_min + offset
@@ -295,7 +317,7 @@ def same_day(e1, e2):
                 return True 
     return False
 
-# call pairs method in api to use calendar
+# call pairs method in api?
 def pairs(list_of_pairs, starting_time, group):
     # groups, offset, slot_time, start_day, end_day, location
     # if no group info set to default
@@ -314,12 +336,19 @@ def pairs(list_of_pairs, starting_time, group):
         free_slot = find_free_slot(mylist, time, info)
 
         location = info['location']
-        # insert event to calendar with email1 and email2 as accomplices, and also location of meeting
         return free_slot
-
+        
+        # insert event to calendar with email1 and email2 as accomplices, and also location of meeting
         # mylist = []
         # use free slot and location info to create event info
-        # d1 = {'name': 'Testing', 'date': '2019-06-18', 'start': '11:00:00', 'end': '12:00:00', 'email1': email1, 'email2': email2, 'location': location}
+        
+        # if (free_slot['month'] < 10): month = "0" + str(free_slot['month'])
+        # else: month = str(free_slot['month'])
+        # if (free_slot['day'] < 10): month = "0" + str(free_slot['day'])
+        # else: day = str(free_slot['day'])
+        # date = str(free_slot['year']) + "-" + month + "-" + day
+
+        # d1 = {'name': 'Friendly Coffee Chat', 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email1': email1, 'email2': email2, 'location': location}
         # mylist.append(d1)
         # addevent(mylist)
 
@@ -334,25 +363,20 @@ if __name__ == '__main__': # For testing
     # addevent(mylist)
     
     default_time = get_now()
-    # get_incoming_events(["al766@cornell.edu"], default_time)
+    get_incoming_events(["al766@cornell.edu"], default_time)
     # print("\nCurrent Time: " + json.dumps(get_now()))
     
-    events1 = []
-    events2 = []
-    d1 = {'year': 2019, 'month': 6, 'day': 18, 'start': "12:00", 'end': "13:00"}
-    d2 = {'year': 2019, 'month': 6, 'day': 18, 'start': "13:00", 'end': "19:30"}
-    d3 = {'year': 2019, 'month': 6, 'day': 20, 'start': "13:30", 'end': "16:00"}
-    d4 = {'year': 2019, 'month': 6, 'day': 19, 'start': '8:00', 'end': '10:00'}
+    # events1 = []
+    # events2 = []
+    # d1 = {'year': 2019, 'month': 6, 'day': 18, 'start': "8:00", 'end': "22:00"}
+    # d2 = {'year': 2019, 'month': 6, 'day': 19, 'start': "6:00", 'end': "18:00"}
+    # d3 = {'year': 2019, 'month': 6, 'day': 19, 'start': "20:00", 'end': "23:00"}
+    # d4 = {'year': 2019, 'month': 6, 'day': 21, 'start': "8:00", 'end': "22:00"}
     
-    events1.append(d1)
-    events2.append(d2)
-    events1.append(d3)
-    events2.append(d4)
-    mylist = unavailable_slot([events1, events2])
-    print(json.dumps(mylist))
-    print("\n" + json.dumps(find_free_slot(mylist, default_time, info)))
-    
-    # list_of_pairs = [(1,2),(2,3)]
-    # for (one,two) in list_of_pairs:
-    #     print(one) 
-    #     print(two)
+    # events1.append(d1)
+    # events2.append(d2)
+    # events1.append(d3)
+    # events2.append(d4)
+    # mylist = unavailable_slot([events1, events2])
+    # print(json.dumps(mylist))
+    # print("\n" + json.dumps(find_free_slot(mylist, default_time, info)))
