@@ -1,4 +1,3 @@
-# pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 from __future__ import print_function
 from datetime import datetime, timedelta
 import pickle
@@ -19,8 +18,7 @@ def get_credentials():
     If nothing has been stored, or if the stored credentials are invalid,
     the OAuth2 flow is completed to obtain the new credentials.
 
-    Returns:
-        Credentials, the obtained credential.
+    Returns: Credentials, the obtained credential.
     """
     
     creds = None
@@ -49,67 +47,55 @@ def get_credentials():
 
 # https://developers.google.com/calendar/create-events 
 # http://wescpy.blogspot.com/2015/09/creating-events-in-google-calendar.html 
-# input is a list of dictionaries
-# each dictionary represents an event to be added to google calendar
-def addevent(mylist):
-    # get credentials to access api
-    creds = get_credentials()
-    service = build('calendar', 'v3', credentials=creds)
-    # GMT_OFF = '-04:00'    # PDT/MST/GMT-7
+# input is a dictionary which represents an event to be added to google calendar
+def addevent(event, service):
+    # # get credentials to access api
+    # creds = get_credentials()
+    # service = build('calendar', 'v3', credentials=creds)
 
     utc_zone = tz.tzutc()
     local_zone = tz.tzlocal()
     
-    # loop through event information in given list
-    for i in mylist:
-        # convert datetime from local time zone to utc time zone
-        # event start time
-        start_date = i['date'] + 'T'+ i['start']
-        start_date = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S")
-        start_date = start_date.replace(tzinfo=local_zone)
-        utc_start = start_date.astimezone(utc_zone)
-        utc_start = datetime.strftime(utc_start, "%Y-%m-%dT%H:%M:%S-00:00")
+    # convert datetime from local time zone to utc time zone
+    # event start time
+    start_date = event['date'] + 'T'+ event['start']
+    start_date = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S")
+    start_date = start_date.replace(tzinfo=local_zone)
+    utc_start = start_date.astimezone(utc_zone)
+    utc_start = datetime.strftime(utc_start, "%Y-%m-%dT%H:%M:%S-00:00")
 
-        # event end time
-        end_date = i['date'] + 'T'+ i['end']
-        end_date = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S")
-        end_date = end_date.replace(tzinfo=local_zone)
-        utc_end = end_date.astimezone(utc_zone)
-        utc_end = datetime.strftime(utc_end, "%Y-%m-%dT%H:%M:%S-00:00")
+    # event end time
+    end_date = event['date'] + 'T'+ event['end']
+    end_date = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S")
+    end_date = end_date.replace(tzinfo=local_zone)
+    utc_end = end_date.astimezone(utc_zone)
+    utc_end = datetime.strftime(utc_end, "%Y-%m-%dT%H:%M:%S-00:00")
 
-        # event added to calendar
-        # Adding an address into the location field enables features such as 
-        # "time to leave" or displaying a map with the directions.
-        EVENT = {
-            'summary': i['name'],
-            'location': i['location'],
-            #datetime format:'2015-09-15T00:00:00%s' % GMT_OFF
-            'start':   {'dateTime': utc_start},
-            'end':     {'dateTime': utc_end},
-            'attendees': [
-              { 'email': i['email1'] },
-              { 'email': i['email2'] },
-            ]
-        }
-        e = service.events().insert(calendarId='primary',
-        sendNotifications=True, body=EVENT).execute()
-
-        # print('''*** %r event added:
-        # Start: %s
-        # End:   %s''' % (e['summary'].encode('utf-8'),
-        #     e['start']['dateTime'], e['end']['dateTime']))
+    # event added to calendar
+    # Adding an address into the location field enables features such as 
+    # "time to leave" or displaying a map with the directions.
+    EVENT = {
+        'summary': event['name'],
+        'location': event['location'],
+        #datetime format:'2015-09-15T00:00:00%s' % GMT_OFF
+        'start':   {'dateTime': utc_start},
+        'end':     {'dateTime': utc_end},
+        'attendees': [
+          { 'email': event['email1'] },
+          { 'email': event['email2'] },
+        ]
+    }
+    e = service.events().insert(calendarId='primary',
+    sendNotifications=True, body=EVENT).execute()
 
 # input is list of emails
-def get_incoming_events(mylist, time): # use events to find open time slots
-    creds = get_credentials()
-
-    service = build('calendar', 'v3', credentials=creds)
+def get_incoming_events(mylist, time, service): # use events to find open time slots
+    # creds = get_credentials()
+    # service = build('calendar', 'v3', credentials=creds)
 
     # isoformat = 2019-06-18T13:22:34.425903Z
-    now = datetime.utcnow()
-    # print(now)
+    # now = datetime.utcnow()
 
-    add_days = 0 # could be positive, negative or zero, need this?
     h, m = time['end'].split(":")
     date = datetime(time['year'], time['month'], time['day'], int(h), int(m), 0, 0) # custom date
     
@@ -119,14 +105,12 @@ def get_incoming_events(mylist, time): # use events to find open time slots
     date = date.replace(tzinfo=local_zone)
     utc_time = date.astimezone(utc_zone)
 
-    now = (utc_time + timedelta(days=add_days)).isoformat()[:19] + 'Z' # 'Z' indicates UTC time
-    # print(now)
+    now = utc_time.isoformat()[:19] + 'Z' # 'Z' indicates UTC time
 
     # calendarId is email, in company the calendars are connected
     # error 404: when accessing a calendar that the user can not access
     all_lists = []
     results = 10
-    print('Getting the upcoming ' + str(results) + ' events')
     
     # get upcoming events for emails in email list
     for email in mylist:
@@ -144,7 +128,6 @@ def get_incoming_events(mylist, time): # use events to find open time slots
                 end = event['end'].get('dateTime', event['end'].get('date'))
                 date = start[0:10]
                 y, m, d = date.split('-')
-                # 'name': event['summary']
                 d = {'year': int(y), 'month': int(m), 'day': int(d), 'start': start[11:16], 'end': end[11:16]}
                 e_list.append(d)
             all_lists.append(e_list)
@@ -316,7 +299,6 @@ def find_free_slot(events, start, info):
                 e1['end'] = min_to_str(time + slot_time)
                 e1['start'] = min_to_str(time)
                 return e1
-        
         e0 = e1
         i = i + 1  
     
@@ -358,7 +340,10 @@ def same_day(e1, e2):
 
 # use list of pairs and group information to create information for inserting calendar events
 def pairs(list_of_pairs, starting_time, group):
-
+    # get credentials to access api
+    creds = get_credentials()
+    service = build('calendar', 'v3', credentials=creds)
+    
     # default starting time is current time
     if starting_time is not None: time = starting_time 
     else: time = get_now()
@@ -368,16 +353,13 @@ def pairs(list_of_pairs, starting_time, group):
     else: info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
     
     # loop through list of pairs
-    eventlist = []
     for (email1, email2) in list_of_pairs:
         # get upcoming events in the target pair's calendars
-        all_lists = get_incoming_events([email1, email2], time)
+        all_lists = get_incoming_events([email1, email2], time, service)
         mylist = unavailable_slot(all_lists)
-        print(json.dumps(mylist))
         
         # find free slot from list of unavailable time slots
         free_slot = find_free_slot(mylist, time, info)
-        print(json.dumps(free_slot))
         location = info['location']
         
         # use free_slot information to create date for event
@@ -388,15 +370,21 @@ def pairs(list_of_pairs, starting_time, group):
         date = str(free_slot['year']) + "-" + month + "-" + day
 
         # append new event to list of events to be inserted into calendar
-        d1 = {'name': 'Friendly Coffee Chat', 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email1': email1, 'email2': email2, 'location': location}
-        eventlist.append(d1)
-
-    # insert events into calendar 
-    addevent(eventlist)
+        # https://www.piliapp.com/twitter-symbols/
+        d1 = {'name': 'Coffee Chat ☕', 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email1': email1, 'email2': email2, 'location': location}
+        
+        # insert event into calendar
+        addevent(d1, service)
 
 if __name__ == '__main__': # For testing
     info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
     group = info
+    
+    default_time = get_now()
+    starting_time = default_time
+    
+    list_of_pairs = [("al766@cornell.edu", "al766@cornell.edu"), ("al766@cornell.edu", "al766@cornell.edu")]
+    pairs(list_of_pairs, starting_time, group)
     
     # mylist = []
     # d1 = {'name': 'Testing', 'date': '2019-06-18', 'start': '13:00:00', 'end': '14:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu', 'location': info['location']}
@@ -405,8 +393,7 @@ if __name__ == '__main__': # For testing
     # mylist.append(d2)
     # addevent(mylist)
     
-    default_time = get_now()
-    starting_time = default_time
+    # {'year': year, 'month': month, 'day': day, 'start': "", 'end': end}
     # eventlist = get_incoming_events(["al766@cornell.edu", "al766@cornell.edu"], default_time)
     # print("\nCurrent Time: " + json.dumps(get_now()))
     
@@ -425,5 +412,3 @@ if __name__ == '__main__': # For testing
     # mylist = unavailable_slot(eventlist)
     # print(json.dumps(mylist))
     # print("\n" + json.dumps(find_free_slot(mylist, default_time, info)))
-    list_of_pairs = [("al766@cornell.edu", "al766@cornell.edu")]
-    pairs(list_of_pairs, starting_time, group)

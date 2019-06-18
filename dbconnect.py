@@ -1,5 +1,5 @@
-import mysql.connector # pip3 install mysql-connector
-from flask import redirect, Flask, request # pip3 install flask
+import mysql.connector
+from flask import redirect, Flask, request
 import json
 # import quickstart
 # start virtual environment: .\env\Scripts\Activate
@@ -11,7 +11,8 @@ import json
 # Deploy a flask application on AWS
 # https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80 
 
-# create company table? (group, start, end, location)
+# need company table?
+# use Flask SQLAlchemy? to prevent SQL injection?
 
 app = Flask(__name__)
 
@@ -41,6 +42,7 @@ def get_groups():
     mycursor.execute("select distinct groups from member")
 
     # or add groups table that keeps track of all group info
+    
     # mycursor.execute("select json_arrayagg(groups) from company")
     # result = mycursor.fetchone()[0]
     # return result
