@@ -39,6 +39,7 @@ def get_all():
 def get_groups():
     objects_list = []
     mycursor.execute("select distinct groups from member")
+    # or add groups table that keeps track of all group info
     for i in mycursor:
         objects_list.append(i[0])
     j = json.dumps(objects_list)
@@ -226,10 +227,15 @@ def test():
     # mycursor.execute("drop table member")
     # mycursor.execute("drop table education")
     # mycursor.execute("drop table interests")
-    mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
-    mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
-    mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
-    mydb.commit()
+
+    # mycursor.execute("create table member(first_name varchar(50), last_name varchar(50), job varchar(50), age int, years int, gender varchar(20), street varchar(50), county varchar(50), state varchar(50), country varchar(50), email varchar(50), groups varchar(50))")
+    # mycursor.execute("create table education(first_name varchar(50), last_name varchar(50), education varchar(50))")
+    # mycursor.execute("create table interests(first_name varchar(50), last_name varchar(50), interests varchar(50))")
+    
+    # mycursor.execute("create table company(groups varchar(50), offset int, slot_time int, start_day varchar(10), end_day varchar(10), location varchar(50))")
+    # mycursor.execute("insert into company values('Cornell', 15, 60, '8:00', '18:00', 'Cornell University')")
+    # mycursor.execute("insert into company values('Duke', 10, 60, '9:00', '20:00', 'Duke University')")
+    # mydb.commit()
     
     return get_all()
 
