@@ -18,7 +18,6 @@ def get_credentials():
     the OAuth2 flow is completed to obtain the new credentials.
     Returns: Credentials, the obtained credential.
     """
-    
     creds = None
     
     # The file token.pickle stores the user's access and refresh tokens, and is
@@ -67,72 +66,71 @@ def addevent(event, service):
     for i in event['email']:
         attendees.append({'email': i})
     
-    # add description for event???
-    # description = "Have a nice good chat with a colleague. You might even make a new friend!"
     # Event to be added to calendar
     EVENT = {
-        'summary': event['name'],
+        'summary':      event['name'],
         # Adding an address into the location field enables features such as 
         # "time to leave" or displaying a map with the directions.
-        'location': event['location'],
-        # 'description': description,
+        'location':     event['location'],
+        'description':  event['description'],
         #datetime format:'2015-09-15T00:00:00%s' % GMT_OFF
-        'start':   {'dateTime': utc_start},
-        'end':     {'dateTime': utc_end},
-        'attendees': attendees
+        'start':        {'dateTime': utc_start},
+        'end':          {'dateTime': utc_end},
+        'attendees':    attendees
     }
     e = service.events().insert(calendarId='primary',
     sendNotifications=True, body=EVENT).execute()
 
 # input is list of emails
 def get_incoming_events(mylist, time, service): # use events to find open time slots
-    # create datetime object from time input
+    # create custom datetime object from time input
     h, m = time['end'].split(":")
-    date = datetime(time['year'], time['month'], time['day'], int(h), int(m), 0, 0) # custom date
+    Y, M, D = time['date'].split("-")
+    date = datetime(int(Y), int(M), int(D), int(h), int(m), 0, 0)
     
     # auto-detect local and utc zones
     utc_zone = tz.tzutc()
     local_zone = tz.tzlocal()
+
+    # convert time zone from local to utc
     date = date.replace(tzinfo=local_zone)
     utc_time = date.astimezone(utc_zone)
-
     now = utc_time.isoformat()[:19] + 'Z' # 'Z' indicates UTC time
 
     # calendarId is email, in company the calendars are connected
     # error 404: when accessing a calendar that the user can not access
-    all_lists = []
-    results = 10
+    totallist = []
+    results = 10 # max number of events to be returned by api
     
     # get upcoming events for emails in email list
     for email in mylist:
         try:
             events_result = service.events().list(calendarId=email, timeMin=now,
                                                 maxResults=results, singleEvents=True,
-                                                orderBy='startTime').execute()
+                                                orderBy='startTime', fields='items(start,end)').execute()
             events = events_result.get('items', [])
 
-            e_list = []
             # if not events:
             #     print('No upcoming events found.')
             for event in events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 end = event['end'].get('dateTime', event['end'].get('date'))
                 date = start[0:10]
-                y, m, d = date.split('-')
-                d = {'year': int(y), 'month': int(m), 'day': int(d), 'start': start[11:16], 'end': end[11:16]}
-                e_list.append(d)
-            all_lists.append(e_list)
+                d = {'date': date, 'start': start[11:16], 'end': end[11:16]}
+                totallist.append(d)
         
         except: # error handling
             print("User does not have access to target " + email + "'s calendar.")
-   
-    return all_lists
+    
+    totallist.sort(key = lambda x: (datetime.strptime(x['date'], '%Y-%m-%d'), datetime.strptime(x['start'], '%H:%M')))
+    return totallist
 
 # get current time in dictionary format
 def get_now():
     now = datetime.now()
-    date_str = str(now.year) + "/" + str(now.month) + "/" + str(now.day) + " " + str(now.hour) + ":" + str(now.minute)
-    d = {'year': now.year, 'month': now.month, 'day': now.day, 'start': "", 'end': str(now.hour) + ":" + str(now.minute)}
+    date = datetime.strftime(now, "%Y-%m-%d")
+    end = datetime.strftime(now, "%H:%M")
+    d = {'date': date, 'start': "", 'end': end}
     return d
 
 # convert time string to number of minutes
@@ -149,91 +147,6 @@ def min_to_str(time_min):
     if m < 10: m_str = "0" + str(m)
     else: m_str = str(m)
     return h_str + ":" + m_str 
-
-# combine and order events in lists
-def unavailable_slot(list_of_lists):
-    events1 = list_of_lists[0]
-    events2 = list_of_lists[1]
-    len1 = len(events1)
-    len2 = len(events2)
-    i = 0
-    j = 0
-    acc = []
-
-    # loop through both event lists
-    while (i != len1 or j != len2):
-        if i == len1:
-            acc.append(events2[j])
-            j = j + 1
-        elif j == len2:
-            acc.append(events1[i])
-            i = i + 1
-        else:
-            e1 = events1[i]
-            e2 = events2[j]
-            compare = compare_events(e1, e2)
-                
-            if compare == 0: # equal times
-                acc.append(e2)
-            elif compare == 1: # (s1, e2)
-                e1['end'] = e2['end']
-                acc.append(e1)
-            elif compare == 2: # (s1, e1)
-                acc.append(e1)
-            elif compare == 3: # (s2, e1)
-                e2['end'] = e1['end']
-                acc.append(e2)
-            elif compare == 4: # (s2, e2)
-                acc.append(e2)
-            elif compare == -1:
-                acc.append(e1)
-                j = j - 1
-            else: # compare == -2
-                acc.append(e2)
-                i = i - 1
-            i = i + 1
-            j = j + 1
-    
-    return acc
-
-# compare two events to help order events by time
-def compare_events(event1, event2):
-    if event1['year'] < event2['year']: return -1
-    elif event1['year'] > event2['year']: return -2
-    else:
-        if event1['month'] < event2['month']: return -1
-        elif event1['month'] > event2['month']: return -2
-        else:
-            if event1['day'] < event2['day']: return -1
-            elif event1['day'] > event2['day']: return -2
-            else:
-                compare_1 = compare_times(event1['start'], event2['start'])
-                compare_2 = compare_times(event1['end'], event2['end'])
-                compare_3 = compare_times(event1['start'], event2['end'])
-                compare_4 = compare_times(event1['end'], event2['start'])
-
-                if compare_1 == 0 and compare_2 == 0:                       return 0
-                # (s1, e2) s1, s2, e1, e2
-                elif compare_1 <= 0 and compare_2 <= 0 and compare_4 >= 0:  return 1 
-                # (s1, e1) s1, s2, e2, e1
-                elif compare_1 <= 0 and compare_2 >= 0:                     return 2 
-                # (s2, e1) s2, s1, e2, e1
-                elif compare_1 >= 0 and compare_2 >= 0 and compare_3 <= 0:  return 3 
-                # (s2, e2) s2, s1, e1, e2
-                elif compare_1 >= 0 and compare_2 <= 0:                     return 4 
-                # (s1, e1) (s2, e2)
-                elif compare_4 <= 0:                                        return -1
-                # (s2, e2) (s1, e1)
-                # elif compare_3 >= 0:
-                else:                                                       return -2
-
-# compare two times to see if one proceeds the other        
-def compare_times(time1, time2):
-    t1 = str_to_min(time1)
-    t2 = str_to_min(time2)
-    if t1 < t2: return -1
-    elif t1 > t2: return 1
-    else: return 0
 
 # find free slot from list of events and group information / input
 def find_free_slot(events, start, info):
@@ -260,11 +173,13 @@ def find_free_slot(events, start, info):
                     time = end_min + offset
                     e0['start'] = min_to_str(time)
                     e0['end'] = min_to_str(time + slot_time)
+                    # print("one")
                     return e0
             elif (start_min - str_to_min(start_of_day) >= total_time):
                 time = str_to_min(start_of_day) + offset
                 e0['start'] = min_to_str(time)
                 e0['end'] = min_to_str(time + slot_time)
+                # print("two")
                 return e0
         # occur on different days
         else:  
@@ -273,110 +188,106 @@ def find_free_slot(events, start, info):
                     time = end_min + offset
                     e0['start'] = min_to_str(time)
                     e0['end'] = min_to_str(time + slot_time)
+                    # print("three")
                     return e0 
                 else:
                     time = str_to_min(start_of_day) + offset
                     e0['start'] = min_to_str(time)
                     e0['end'] = min_to_str(time + slot_time)
+                    # print("four")
                     return e0
             # if there is a gap of days between events, use day after first event
-            elif (not (nday['year'] == e1['year'] and nday['month'] == e1['month'] and nday['day'] == e1['day'])):
+            elif (nday['date'] != e1['date']):
                 time = str_to_min(start_of_day) + offset
                 e0['end'] = min_to_str(time + slot_time)
                 e0['start'] = min_to_str(time)
+                # print("five")
                 return e0
             elif (start_min - str_to_min(start_of_day) >= total_time):
                 time = str_to_min(start_of_day) + offset
                 e1['end'] = min_to_str(time + slot_time)
                 e1['start'] = min_to_str(time)
+                # print("six")
                 return e1
         e0 = e1
         i = i + 1  
     
     # if there are no upcoming events or do not have gaps in events list
     end_min = str_to_min(e0['end'])
-    if (str_to_min(end_of_day) - end_min >= total_time):
+    start_min = str_to_min(e0['start'])
+    if ((start_min < str_to_min(start_of_day)) and (end_min <= str_to_min(start_of_day))):
+        time = str_to_min(start_of_day) + offset
+        e0['end'] = min_to_str(time + slot_time)
+        e0['start'] = min_to_str(time)
+        # print("seven")
+    elif (str_to_min(end_of_day) - end_min >= total_time):
         time = end_min + offset
         e0['start'] = min_to_str(time)
         e0['end'] = min_to_str(time + slot_time)
+        # print("eight")
     else:
         time = str_to_min(start_of_day) + offset
         e0 = next_day(e0)
         e0['end'] = min_to_str(time + slot_time)
         e0['start'] = min_to_str(time)
+        # print("nine")
     return e0
 
 # acquires the date of the next day of the inputted date
 def next_day(day):
-    # create object to be returned
-    nextday = {'year': day['year'], 'month': day['month'], 'day': day['day'], 'start': day['start'], 'end': day['end']}
-    s = str(nextday['year']) + "/" + str(nextday['month']) + "/" + str(nextday['day'])
-    
+    nextday = {'date': day['date'], 'start': day['start'], 'end': day['end']} 
+
     # add one day to datetime object and convert back to string
-    date = datetime.strptime(s, "%Y/%m/%d")
+    date = datetime.strptime(day['date'], "%Y-%m-%d")
     modified_date = date + timedelta(days=1)
-    new_date = datetime.strftime(modified_date, "%Y/%m/%d")
-    
-    # split string and update dictionary object
-    y, m, d = new_date.split("/")
-    nextday['year'] = int(y)
-    nextday['month'] = int(m)
-    nextday['day'] = int(d)
+    new_date = datetime.strftime(modified_date, "%Y-%m-%d")
+    nextday['date'] = new_date 
     return nextday 
 
 # check if two events exist on the same date (not time)
 def same_day(e1, e2):
-    if (e1['year'] == e2['year'] and 
-        e1['month'] == e2['month'] and 
-            e1['day'] == e2['day']):
-                return True 
+    if (e1['date'] == e2['date']):
+        return True
     return False
 
 # use inputs to create information for inserting calendar events
-def pairs(name, list_of_lists, starting_time, group):
+def pairs(name, list_of_lists, time, info, description):
     # get credentials to access api
     creds = get_credentials()
     service = build('calendar', 'v3', credentials=creds)
     
-    # default starting time is current time
-    if starting_time is not None: time = starting_time 
-    else: time = get_now()
-    
-    # default group information if none is provided
-    if group is not None: info = group 
-    else: info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
+    # default information # need default for description?
+    if time is None: time = get_now()
+    if info is None: info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
+    if name is None: name = 'Coffee Chat ☕'
     
     # loop through list of pairs
     for i in list_of_lists:
         # get upcoming events in the target pair's calendars
-        all_lists = get_incoming_events(i, time, service)
-        mylist = unavailable_slot(all_lists)
+        mylist = get_incoming_events(i, time, service)
         
         # find free slot from list of unavailable time slots
         free_slot = find_free_slot(mylist, time, info)
         location = info['location']
-        
-        # use free_slot information to create date for event
-        if (free_slot['month'] < 10): month = "0" + str(free_slot['month'])
-        else: month = str(free_slot['month'])
-        if (free_slot['day'] < 10): month = "0" + str(free_slot['day'])
-        else: day = str(free_slot['day'])
-        date = str(free_slot['year']) + "-" + month + "-" + day
 
         # append new event to list of events to be inserted into calendar
         # https://www.piliapp.com/twitter-symbols/
-        d1 = {'name': name, 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email': i, 'location': location}
+        d1 = {'name': name, 'date': free_slot['date'], 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email': i, 'location': location, 'description': description}
         
         # insert event into calendar
         addevent(d1, service)
 
 if __name__ == '__main__': # For testing
-    default_info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
-    group = default_info
+    group = None
     
-    default_time = get_now()
-    starting_time = next_day(default_time)
+    # default_time = get_now()
+    # starting_time = next_day(default_time)
+    starting_time = None
     
-    name = 'Coffee Chat ☕'
+    name = None
+    
+    description = "Have a nice chat with a colleague. You might even make a new friend!"
+    description = None
+    
     list_of_lists = [["al766@cornell.edu", "al766@cornell.edu"], ["al766@cornell.edu", "al766@cornell.edu"]]
-    pairs(name, list_of_lists, starting_time, group)
+    pairs(name, list_of_lists, starting_time, group, description)
