@@ -42,7 +42,7 @@ def get_groups():
     mycursor.execute("select distinct groups from member")
 
     # or add groups table that keeps track of all group info
-    
+
     # mycursor.execute("select json_arrayagg(groups) from company")
     # result = mycursor.fetchone()[0]
     # return result
@@ -268,13 +268,6 @@ def delete_mem(first_name, last_name):
 # for testing
 @app.route("/testing/")
 def test():
-    # mycursor.execute("delete from education where name = 'Anna'")
-    # mycursor.execute("insert into education values ('Anna', 'Carnegie Mellon')")
-    # mycursor.execute("delete from interests where name = 'Anna'")
-    # mycursor.execute("insert into interests values ('Anna', 'piano')")
-    # mycursor.execute("alter table member add groups varchar(50)")
-    # mydb.commit()
-    
     # mycursor.execute("drop table member")
     # mycursor.execute("drop table education")
     # mycursor.execute("drop table interests")

@@ -13,11 +13,9 @@ from dateutil import tz
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 def get_credentials():
-    """Gets valid user credentials from storage.
-
+    """ Gets valid user credentials from storage.
     If nothing has been stored, or if the stored credentials are invalid,
     the OAuth2 flow is completed to obtain the new credentials.
-
     Returns: Credentials, the obtained credential.
     """
     
@@ -42,17 +40,10 @@ def get_credentials():
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
-    
     return creds
 
-# https://developers.google.com/calendar/create-events 
-# http://wescpy.blogspot.com/2015/09/creating-events-in-google-calendar.html 
 # input is a dictionary which represents an event to be added to google calendar
 def addevent(event, service):
-    # # get credentials to access api
-    # creds = get_credentials()
-    # service = build('calendar', 'v3', credentials=creds)
-
     utc_zone = tz.tzutc()
     local_zone = tz.tzlocal()
     
@@ -71,31 +62,31 @@ def addevent(event, service):
     utc_end = end_date.astimezone(utc_zone)
     utc_end = datetime.strftime(utc_end, "%Y-%m-%dT%H:%M:%S-00:00")
 
-    # event added to calendar
-    # Adding an address into the location field enables features such as 
-    # "time to leave" or displaying a map with the directions.
+    # create event item for attendees
+    attendees = []
+    for i in event['email']:
+        attendees.append({'email': i})
+    
+    # add description for event???
+    # description = "Have a nice good chat with a colleague. You might even make a new friend!"
+    # Event to be added to calendar
     EVENT = {
         'summary': event['name'],
+        # Adding an address into the location field enables features such as 
+        # "time to leave" or displaying a map with the directions.
         'location': event['location'],
+        # 'description': description,
         #datetime format:'2015-09-15T00:00:00%s' % GMT_OFF
         'start':   {'dateTime': utc_start},
         'end':     {'dateTime': utc_end},
-        'attendees': [
-          { 'email': event['email1'] },
-          { 'email': event['email2'] },
-        ]
+        'attendees': attendees
     }
     e = service.events().insert(calendarId='primary',
     sendNotifications=True, body=EVENT).execute()
 
 # input is list of emails
 def get_incoming_events(mylist, time, service): # use events to find open time slots
-    # creds = get_credentials()
-    # service = build('calendar', 'v3', credentials=creds)
-
-    # isoformat = 2019-06-18T13:22:34.425903Z
-    # now = datetime.utcnow()
-
+    # create datetime object from time input
     h, m = time['end'].split(":")
     date = datetime(time['year'], time['month'], time['day'], int(h), int(m), 0, 0) # custom date
     
@@ -121,8 +112,8 @@ def get_incoming_events(mylist, time, service): # use events to find open time s
             events = events_result.get('items', [])
 
             e_list = []
-            if not events:
-                print('No upcoming events found.')
+            # if not events:
+            #     print('No upcoming events found.')
             for event in events:
                 start = event['start'].get('dateTime', event['start'].get('date'))
                 end = event['end'].get('dateTime', event['end'].get('date'))
@@ -264,21 +255,21 @@ def find_free_slot(events, start, info):
         
         # if events occur in the same day
         if same_day(e0, e1):  
-            if str_to_min(e0['end']) > str_to_min(start_of_day):
-                if (start_min - end_min > total_time):
+            if str_to_min(e0['end']) >= str_to_min(start_of_day):
+                if (start_min - end_min >= total_time):
                     time = end_min + offset
                     e0['start'] = min_to_str(time)
                     e0['end'] = min_to_str(time + slot_time)
                     return e0
-            elif (start_min - str_to_min(start_of_day) > total_time):
+            elif (start_min - str_to_min(start_of_day) >= total_time):
                 time = str_to_min(start_of_day) + offset
                 e0['start'] = min_to_str(time)
                 e0['end'] = min_to_str(time + slot_time)
                 return e0
         # occur on different days
         else:  
-            if (str_to_min(end_of_day) - end_min > total_time):
-                if end_min - str_to_min(start_of_day) > 0:
+            if (str_to_min(end_of_day) - end_min >= total_time):
+                if end_min - str_to_min(start_of_day) >= 0:
                     time = end_min + offset
                     e0['start'] = min_to_str(time)
                     e0['end'] = min_to_str(time + slot_time)
@@ -294,7 +285,7 @@ def find_free_slot(events, start, info):
                 e0['end'] = min_to_str(time + slot_time)
                 e0['start'] = min_to_str(time)
                 return e0
-            elif (start_min - str_to_min(start_of_day) > total_time):
+            elif (start_min - str_to_min(start_of_day) >= total_time):
                 time = str_to_min(start_of_day) + offset
                 e1['end'] = min_to_str(time + slot_time)
                 e1['start'] = min_to_str(time)
@@ -304,7 +295,7 @@ def find_free_slot(events, start, info):
     
     # if there are no upcoming events or do not have gaps in events list
     end_min = str_to_min(e0['end'])
-    if (str_to_min(end_of_day) - end_min > total_time):
+    if (str_to_min(end_of_day) - end_min >= total_time):
         time = end_min + offset
         e0['start'] = min_to_str(time)
         e0['end'] = min_to_str(time + slot_time)
@@ -317,13 +308,16 @@ def find_free_slot(events, start, info):
 
 # acquires the date of the next day of the inputted date
 def next_day(day):
+    # create object to be returned
     nextday = {'year': day['year'], 'month': day['month'], 'day': day['day'], 'start': day['start'], 'end': day['end']}
     s = str(nextday['year']) + "/" + str(nextday['month']) + "/" + str(nextday['day'])
     
+    # add one day to datetime object and convert back to string
     date = datetime.strptime(s, "%Y/%m/%d")
     modified_date = date + timedelta(days=1)
     new_date = datetime.strftime(modified_date, "%Y/%m/%d")
     
+    # split string and update dictionary object
     y, m, d = new_date.split("/")
     nextday['year'] = int(y)
     nextday['month'] = int(m)
@@ -338,8 +332,8 @@ def same_day(e1, e2):
                 return True 
     return False
 
-# use list of pairs and group information to create information for inserting calendar events
-def pairs(list_of_pairs, starting_time, group):
+# use inputs to create information for inserting calendar events
+def pairs(name, list_of_lists, starting_time, group):
     # get credentials to access api
     creds = get_credentials()
     service = build('calendar', 'v3', credentials=creds)
@@ -353,9 +347,9 @@ def pairs(list_of_pairs, starting_time, group):
     else: info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
     
     # loop through list of pairs
-    for (email1, email2) in list_of_pairs:
+    for i in list_of_lists:
         # get upcoming events in the target pair's calendars
-        all_lists = get_incoming_events([email1, email2], time, service)
+        all_lists = get_incoming_events(i, time, service)
         mylist = unavailable_slot(all_lists)
         
         # find free slot from list of unavailable time slots
@@ -371,44 +365,18 @@ def pairs(list_of_pairs, starting_time, group):
 
         # append new event to list of events to be inserted into calendar
         # https://www.piliapp.com/twitter-symbols/
-        d1 = {'name': 'Coffee Chat ☕', 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email1': email1, 'email2': email2, 'location': location}
+        d1 = {'name': name, 'date': date, 'start': free_slot['start'] + ':00', 'end': free_slot['end'] + ':00', 'email': i, 'location': location}
         
         # insert event into calendar
         addevent(d1, service)
 
 if __name__ == '__main__': # For testing
-    info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
-    group = info
+    default_info = {'offset': 10, 'slot_time': 60, 'start_day': '8:00', 'end_day': '20:00', 'location': 'Cornell'}
+    group = default_info
     
     default_time = get_now()
-    starting_time = default_time
+    starting_time = next_day(default_time)
     
-    list_of_pairs = [("al766@cornell.edu", "al766@cornell.edu"), ("al766@cornell.edu", "al766@cornell.edu")]
-    pairs(list_of_pairs, starting_time, group)
-    
-    # mylist = []
-    # d1 = {'name': 'Testing', 'date': '2019-06-18', 'start': '13:00:00', 'end': '14:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu', 'location': info['location']}
-    # d2 = {'name': 'Testing', 'date': '2019-06-18', 'start': '16:00:00', 'end': '17:00:00', 'email1': 'al766@cornell.edu', 'email2': 'al766@cornell.edu', 'location': info['location']}
-    # mylist.append(d1)
-    # mylist.append(d2)
-    # addevent(mylist)
-    
-    # {'year': year, 'month': month, 'day': day, 'start': "", 'end': end}
-    # eventlist = get_incoming_events(["al766@cornell.edu", "al766@cornell.edu"], default_time)
-    # print("\nCurrent Time: " + json.dumps(get_now()))
-    
-    # events1 = []
-    # events2 = []
-    # d1 = {'year': 2019, 'month': 6, 'day': 18, 'start': "8:00", 'end': "22:00"}
-    # d2 = {'year': 2019, 'month': 6, 'day': 19, 'start': "6:00", 'end': "18:00"}
-    # d3 = {'year': 2019, 'month': 6, 'day': 19, 'start': "20:00", 'end': "23:00"}
-    # d4 = {'year': 2019, 'month': 6, 'day': 21, 'start': "8:00", 'end': "22:00"}
-    
-    # events1.append(d1)
-    # events2.append(d2)
-    # events1.append(d3)
-    # events2.append(d4)
-    # mylist = unavailable_slot([events1, events2])
-    # mylist = unavailable_slot(eventlist)
-    # print(json.dumps(mylist))
-    # print("\n" + json.dumps(find_free_slot(mylist, default_time, info)))
+    name = 'Coffee Chat ☕'
+    list_of_lists = [["al766@cornell.edu", "al766@cornell.edu"], ["al766@cornell.edu", "al766@cornell.edu"]]
+    pairs(name, list_of_lists, starting_time, group)
