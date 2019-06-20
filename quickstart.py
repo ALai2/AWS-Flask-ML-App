@@ -121,7 +121,7 @@ def get_incoming_events(mylist, time, service): # use events to find open time s
         
         except: # error handling
             print("User does not have access to target " + email + "'s calendar.")
-    
+
     totallist.sort(key = lambda x: (datetime.strptime(x['date'], '%Y-%m-%d'), datetime.strptime(x['start'], '%H:%M')))
     return totallist
 
@@ -150,6 +150,7 @@ def min_to_str(time_min):
 
 # find free slot from list of events and group information / input
 def find_free_slot(events, start, info):
+    # initialize variables
     e0 = start
     slot_time = info['slot_time']
     offset = info['offset']
@@ -212,10 +213,9 @@ def find_free_slot(events, start, info):
         e0 = e1
         i = i + 1  
     
-    # if there are no upcoming events or do not have gaps in events list
+    # if there are no upcoming events and other special cases
     end_min = str_to_min(e0['end'])
-    start_min = str_to_min(e0['start'])
-    if ((start_min < str_to_min(start_of_day)) and (end_min <= str_to_min(start_of_day))):
+    if ((e0 != start) and ((str_to_min(e0['start']) < str_to_min(start_of_day)) and (end_min <= str_to_min(start_of_day)))):
         time = str_to_min(start_of_day) + offset
         e0['end'] = min_to_str(time + slot_time)
         e0['start'] = min_to_str(time)
@@ -289,5 +289,5 @@ if __name__ == '__main__': # For testing
     description = "Have a nice chat with a colleague. You might even make a new friend!"
     description = None
     
-    list_of_lists = [["al766@cornell.edu", "al766@cornell.edu"], ["al766@cornell.edu", "al766@cornell.edu"]]
+    list_of_lists = [["al766@cornell.edu", "al766@cornell.edu", "al766@cornell.edu"], ["al766@cornell.edu", "al766@cornell.edu"]]
     pairs(name, list_of_lists, starting_time, group, description)
