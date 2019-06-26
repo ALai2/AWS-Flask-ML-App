@@ -1,7 +1,7 @@
 import mysql.connector
 from flask import redirect, Flask, request
 import json
-# import quickstart
+import quickstart
 # start virtual environment: .\env\Scripts\Activate
 # deactivate virtual environment: deactivate
 
@@ -286,3 +286,13 @@ def test():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
+# json to csv
+# http://blog.appliedinformaticsinc.com/how-to-parse-and-convert-json-to-csv-using-python/ 
+
+# or
+
+# json to 2D matrix
+# each row is a person
+
+# use feature scaling?

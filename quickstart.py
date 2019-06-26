@@ -289,5 +289,5 @@ if __name__ == '__main__': # For testing
     description = "Have a nice chat with a colleague. You might even make a new friend!"
     description = None
     
-    list_of_lists = [["al766@cornell.edu", "al766@cornell.edu", "al766@cornell.edu"], ["al766@cornell.edu", "al766@cornell.edu"]]
+    list_of_lists = [["alisalai2011@gmail.com", "al766@cornell.edu"]]
     pairs(name, list_of_lists, starting_time, group, description)
