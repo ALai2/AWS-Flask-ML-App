@@ -51,3 +51,9 @@ def get_recommendations(name):
     return result 
 
 print(get_recommendations('Brown, Mia'))
+
+# def get_ratio(row):
+#     name = row['name']
+#     name1 = row['something']
+#     return fuzz.token_set_ratio(name, name1)
+# len(df[df.apply(get_ratio, axis=1) > 70]) / len(df)
