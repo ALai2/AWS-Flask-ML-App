@@ -24,7 +24,6 @@ for feature in features:
 
 # create soup
 m1['score'] = m1['Employee Name'] + " " + m1['State'] + " " + m1['Zip'] + " " + m1['DOB'] + " " + m1['Sex'] + " " + m1['Date of Hire'] + " " + m1['Department'] + " " + m1['Position']
-# print(m1.head(3))
 
 #Import TfIdfVectorizer from scikit-learn
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -37,9 +36,6 @@ tfidf = TfidfVectorizer(stop_words='english')
 
 #Construct the required TF-IDF matrix by fitting and transforming the data
 tfidf_matrix = tfidf.fit_transform(m1['score'])
-
-#Output the shape of tfidf_matrix
-# tfidf_matrix.shape
 
 # Import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
@@ -68,7 +64,7 @@ def get_recommendations(name, cosine_sim=cosine_sim, list_to_remove=list_to_remo
     emp_sims = []
     num = 0
     for i in sim_scores:
-        if (num == 12): break
+        if (num == 11): break
         if (num != 0):
             if i[0] not in list_to_remove:
                 emp_indices.append(i[0])
@@ -89,7 +85,6 @@ def get_random(mylist):
         rand_ind = random.choice(inds)
         result = mylist[mylist.index == rand_ind]
     else:
-        print(mylist)
         result = mylist
     return result
 
@@ -98,25 +93,17 @@ def get_pairs(emplist):
     for e in emplist:
         if not (indices[e] in list_to_remove):
             partner = list(get_random(get_recommendations(e))['Employee Name'])
-            # print(partner)
-            if len(partner) < 2:
-                pairs.append((e, partner[0]))
-                list_to_remove.append(indices[e])
-                list_to_remove.append(indices[partner[0]])
-            else:
-                print((e, partner[0], partner[1]))
-                pairs.append((e, partner[0], partner[1]))
-                list_to_remove.append(indices[e])
-                list_to_remove.append(indices[partner[0]])
-                list_to_remove.append(indices[partner[1]])
+            
+            pair = [e]
+            list_to_remove.append(indices[e])
+            for p in partner:
+                pair.append(p)
+                list_to_remove.append(indices[p])
+            pairs.append(pair)
+            
             list_to_remove.sort(reverse=True)
-    print(list_to_remove)
+    # print(list_to_remove)
     return pairs
 
-# print(get_random(get_recommendations('Brown, Mia')))
-# print(get_recommendations('Brown, Mia'))
-print(get_pairs(m0['Employee Name'][0:302].sample(frac=1)))
-# print(list(enumerate(cosine_sim[0])))
-# get_pairs(m0['Employee Name'].sample(frac=1))
-# rand_list = [1, 2]
-# print(m1['score'].drop(rand_list).head(3))
+print(get_pairs(m0['Employee Name'][0:308].sample(frac=1)))
+# get_pairs(m0['Employee Name'][0:308].sample(frac=1))
