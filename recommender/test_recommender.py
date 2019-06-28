@@ -80,13 +80,13 @@ def get_recommendations(name, cosine_sim=cosine_sim, list_to_remove=list_to_remo
 
 import random 
 def get_random(mylist):
-    group = 2 # number of people per group
+    group = 3 # number of people per group
     if (len(mylist) > group):
-        inds = mylist.index 
+        inds = list(mylist.index)
+        rand_inds = random.sample(inds, group-1)
         result = pd.DataFrame()
-        for i in range(0, group-1):
-            rand_ind = random.choice(inds)
-            result = pd.concat([result, mylist[mylist.index == rand_ind]])
+        for i in rand_inds:
+            result = pd.concat([result, mylist[mylist.index == i]])
     else:
         result = mylist
     return result
@@ -108,9 +108,9 @@ def get_pairs(emplist):
     # print(list_to_remove)
     return pairs
 
-# TODO
+# need to do, minimize number of global variables
 def convert_data_to_matrix():
     return None
 
-print(get_pairs(m0['Employee Name'][0:308].sample(frac=1)))
+print(get_pairs(m0['Employee Name'].sample(frac=1)))
 # get_pairs(m0['Employee Name'][0:308].sample(frac=1))
