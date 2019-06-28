@@ -1,9 +1,18 @@
 # Import Pandas
 import pandas as pd
 
-# Load Employees Metadata
-metadata = pd.read_csv('../human-resources/HRDataset_v9.csv')
-m0 = metadata[['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']]
+#Import TfIdfVectorizer from scikit-learn
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# Import linear_kernel
+from sklearn.metrics.pairwise import linear_kernel
+
+# Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
+tfidf = TfidfVectorizer(stop_words='english')
+
+# features
+features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
+primary = 'Employee Name'
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -16,40 +25,35 @@ def clean_data(x):
         else:
             return ''
 
-# Apply clean_data function to your features.
-features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
-m1 = m0.copy()
-for feature in features:
-    m1[feature] = m0[feature].apply(clean_data)
+# minimize number of global variables
+def convert_csv_to_matrix(csv, num):
+    # Load Employees Metadata
+    metadata = pd.read_csv(csv)
+    m0 = metadata[features]
 
-# create soup
-m1['score'] = m1['Employee Name'] + " " + m1['State'] + " " + m1['Zip'] + " " + m1['DOB'] + " " + m1['Sex'] + " " + m1['Date of Hire'] + " " + m1['Department'] + " " + m1['Position']
+    # Apply clean_data function to your features and create soup
+    m1 = m0.copy()
+    m1['score'] = ""
+    for feature in features:
+        m1[feature] = m0[feature].apply(clean_data)
+        m1['score'] = m1['score'] + " " + m1[feature]
+    
+    #Replace NaN with an empty string
+    # m['score'] = m['score'].fillna('')
 
-#Import TfIdfVectorizer from scikit-learn
-from sklearn.feature_extraction.text import TfidfVectorizer
+    #Construct the required TF-IDF matrix by fitting and transforming the data
+    tfidf_matrix = tfidf.fit_transform(m1['score'])
 
-#Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
-tfidf = TfidfVectorizer(stop_words='english')
+    # Compute the cosine similarity matrix
+    cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 
-#Replace NaN with an empty string
-# m['score'] = m['score'].fillna('')
-
-#Construct the required TF-IDF matrix by fitting and transforming the data
-tfidf_matrix = tfidf.fit_transform(m1['score'])
-
-# Import linear_kernel
-from sklearn.metrics.pairwise import linear_kernel
-
-# Compute the cosine similarity matrix
-cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-
-#Construct a reverse map of indices and employee names
-indices = pd.Series(m1.index, index=m0['Employee Name']).drop_duplicates()
-
-list_to_remove = []
+    #Construct a reverse map of indices and employee names
+    indices = pd.Series(m1.index, index=m0[primary]).drop_duplicates()
+    
+    return get_pairs(m0[primary].sample(frac=1), indices, cosine_sim, m0, num)
 
 # Function that takes in movie title as input and outputs most similar movies
-def get_recommendations(name, cosine_sim=cosine_sim, list_to_remove=list_to_remove):
+def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
     # Get the index of the employee that matches the name
     idx = indices[name]
 
@@ -75,15 +79,14 @@ def get_recommendations(name, cosine_sim=cosine_sim, list_to_remove=list_to_remo
 
     # Return the top 10 most similar employee not already paired
     result = m0.iloc[emp_indices]
-    result = result.assign(Similarity = emp_sims)
+    result = result.assign(Similarity = emp_sims) # still need this?
     return result 
 
 import random 
-def get_random(mylist):
-    group = 3 # number of people per group
-    if (len(mylist) > group):
+def get_random(mylist, num): # num = number of people per group
+    if (len(mylist) > num):
         inds = list(mylist.index)
-        rand_inds = random.sample(inds, group-1)
+        rand_inds = random.sample(inds, num-1)
         result = pd.DataFrame()
         for i in rand_inds:
             result = pd.concat([result, mylist[mylist.index == i]])
@@ -91,11 +94,12 @@ def get_random(mylist):
         result = mylist
     return result
 
-def get_pairs(emplist):
+def get_pairs(emplist, indices, cosine_sim, m0, num):
     pairs = []
+    list_to_remove = []
     for e in emplist:
         if not (indices[e] in list_to_remove):
-            partner = list(get_random(get_recommendations(e))['Employee Name'])
+            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)[primary])
             
             pair = [e]
             list_to_remove.append(indices[e])
@@ -108,9 +112,4 @@ def get_pairs(emplist):
     # print(list_to_remove)
     return pairs
 
-# need to do, minimize number of global variables
-def convert_data_to_matrix():
-    return None
-
-print(get_pairs(m0['Employee Name'].sample(frac=1)))
-# get_pairs(m0['Employee Name'][0:308].sample(frac=1))
+print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 2))
