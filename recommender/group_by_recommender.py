@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/
+
 # Import Pandas
 import pandas as pd
 
@@ -7,12 +9,15 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
 
+import json # for testing
+
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
 
 # features
 features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
 primary = 'Employee Name'
+groupby = 'Department'
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -31,26 +36,34 @@ def convert_csv_to_matrix(csv, num):
     metadata = pd.read_csv(csv)
     m0 = metadata[features]
 
-    # Apply clean_data function to your features and create soup
-    m1 = m0.copy()
-    m1['score'] = ""
-    for feature in features:
-        m1[feature] = m0[feature].apply(clean_data)
-        m1['score'] = m1['score'] + " " + m1[feature]
+    group_dict = {}
+    courses = m0[groupby].unique() # list of all unique department names
+    for course in courses:
+        group = (m0[m0[groupby] == course]).reset_index()
+        print(group)
+
+        # Apply clean_data function to your features and create soup
+        m1 = group.copy()
+        m1['score'] = ""
+        for feature in features:
+            m1[feature] = group[feature].apply(clean_data)
+            m1['score'] = m1['score'] + " " + m1[feature]
+
+        #Construct the required TF-IDF matrix by fitting and transforming the data
+        tfidf_matrix = tfidf.fit_transform(m1['score'])
+
+        # Compute the cosine similarity matrix
+        cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+
+        #Construct a reverse map of indices and employee names
+        indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
+        
+        # print(group)
+        group_dict[course] = get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
+        print(course + ": " + json.dumps(group_dict[course]) + "\n")
     
-    #Replace NaN with an empty string
-    # m['score'] = m['score'].fillna('')
-
-    #Construct the required TF-IDF matrix by fitting and transforming the data
-    tfidf_matrix = tfidf.fit_transform(m1['score'])
-
-    # Compute the cosine similarity matrix
-    cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-
-    #Construct a reverse map of indices and employee names
-    indices = pd.Series(m1.index, index=m0[primary]).drop_duplicates()
-    
-    return get_pairs(m0[primary].sample(frac=1), indices, cosine_sim, m0, num)
+    # return get_pairs(m0[primary].sample(frac=1), indices, cosine_sim, m0, num)
+    return group_dict
 
 # Function that takes in movie title as input and outputs most similar movies
 def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
