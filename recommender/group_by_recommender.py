@@ -37,11 +37,11 @@ def convert_csv_to_matrix(csv, num):
     m0 = metadata[features]
 
     group_dict = {}
+    matches = []
+    ones = []
     courses = m0[groupby].unique() # list of all unique department names
-    for course in courses:
-        group = (m0[m0[groupby] == course]).reset_index()
-        print(group)
 
+    def func_pairs(group):
         # Apply clean_data function to your features and create soup
         m1 = group.copy()
         m1['score'] = ""
@@ -57,13 +57,32 @@ def convert_csv_to_matrix(csv, num):
 
         #Construct a reverse map of indices and employee names
         indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
+            
+        return get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
+
+    for course in courses:
+        group = (m0[m0[groupby] == course]).reset_index()
         
-        # print(group)
-        group_dict[course] = get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
-        print(course + ": " + json.dumps(group_dict[course]) + "\n")
+        # keep track of groups with only one member
+        if len(group) == 1:
+            ones.append(group.iloc[0])
+        else:
+            matches = matches + func_pairs(group)
     
-    # return get_pairs(m0[primary].sample(frac=1), indices, cosine_sim, m0, num)
-    return group_dict
+    if len(ones) == 1:
+        for match in matches:
+            if len(ones) == 0: break
+            else:
+                while len(match) < num:
+                    if len(ones) != 0:
+                        match.append(ones.pop(0)['Employee Name'])
+                    else: break
+        if len(ones) > 0:
+            matches[0].append(ones.pop(0))
+    else:
+        matches = matches + func_pairs(ones)
+    
+    return matches
 
 # Function that takes in movie title as input and outputs most similar movies
 def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
@@ -125,4 +144,4 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
             list_to_remove.sort(reverse=True)
     return pairs
 
-convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 3)
+print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 3))
