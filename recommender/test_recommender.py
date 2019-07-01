@@ -1,7 +1,7 @@
 # Import Pandas
 import pandas as pd
 
-#Import TfIdfVectorizer from scikit-learn
+# Import TfIdfVectorizer from scikit-learn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Import linear_kernel
@@ -17,11 +17,11 @@ primary = 'Employee Name'
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
     if isinstance(x, list):
-        return [str.lower(i) for i in x]
+        return [str.lower(i).strip() for i in x]
     else:
         #Check if item exists. If not, return empty string
         if isinstance(x, str):
-            return str.lower(x)
+            return str.lower(x).strip()
         else:
             return ''
 
@@ -94,6 +94,7 @@ def get_random(mylist, num): # num = number of people per group
         result = mylist
     return result
 
+# semi-greedy algorithm
 def get_pairs(emplist, indices, cosine_sim, m0, num):
     pairs = []
     list_to_remove = []
@@ -109,7 +110,6 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
             pairs.append(pair)
             
             list_to_remove.sort(reverse=True)
-    # print(list_to_remove)
     return pairs
 
-print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 2))
+print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 3))
