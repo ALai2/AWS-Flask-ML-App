@@ -1,15 +1,13 @@
-# spectral clustering better for smaller number of groups
-# Import Pandas
+# spectral and kmeans clustering better for smaller number of groups
 import pandas as pd
 
-# Import TfIdfVectorizer from scikit-learn
+# import modules for creating similarity matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
-
-# Import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
 
+# import clustering methods
 from sklearn.cluster import SpectralClustering
-import numpy as np 
+from sklearn.cluster import KMeans
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
@@ -41,18 +39,17 @@ def convert_csv_to_matrix(csv, num):
     for feature in features:
         m1[feature] = m0[feature].apply(clean_data)
         m1['score'] = m1['score'] + " " + m1[feature]
-    
-    #Replace NaN with an empty string
-    # m['score'] = m['score'].fillna('')
 
     #Construct the required TF-IDF matrix by fitting and transforming the data
     tfidf_matrix = tfidf.fit_transform(m1['score'])
 
     # Compute the cosine similarity matrix
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+    # cosine_sim[cosine_sim != 1] = cosine_sim[cosine_sim != 1] * 2
     
-    total = int(len(m1) / num)
-    group_list = SpectralClustering(n_clusters=total, n_init=100, affinity='nearest_neighbors', n_neighbors=num).fit_predict(cosine_sim)
+    total = int(len(m1) / (num*2))
+    # group_list = SpectralClustering(n_clusters=total, n_neighbors=10, affinity='precomputed').fit_predict(cosine_sim)
+    group_list = KMeans(n_clusters=total, init="k-means++").fit_predict(cosine_sim)
 
     mylists = [ [] for i in range(total) ]
     for i in range(len(group_list)):
@@ -61,5 +58,4 @@ def convert_csv_to_matrix(csv, num):
     
     return mylists
 
-
-print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 2))
+print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 3))
