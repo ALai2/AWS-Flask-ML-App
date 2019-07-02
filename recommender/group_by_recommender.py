@@ -24,8 +24,8 @@ features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1',
 primary = 'Name'
 # groupby = 'Major'
 groupby = None
-weights = {'Major': 2, 'Class 1': 3, 'Class 2': 3, 'Class 3': 3, 'Class 4': 3}
-num = 3
+weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 15}
+num = 2
 csv = 'Test Classes.csv'
 
 # Function to convert all strings to lower case and strip names of spaces
