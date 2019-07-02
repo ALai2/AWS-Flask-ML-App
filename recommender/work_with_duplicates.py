@@ -22,11 +22,11 @@ tfidf = TfidfVectorizer(stop_words='english')
 
 features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 primary = 'Name'
-groupby = 'Major'
-# groupby = None
+# groupby = 'Major'
+groupby = None
 weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 15}
 num = 3
-csv = 'Test Classes.csv'
+csv = 'ProfileInfo.csv'
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -44,7 +44,7 @@ def convert_csv_to_matrix(csv, num):
     # Load Employees Metadata
     metadata = pd.read_csv(csv)
     m0 = metadata[features]
-
+    m0 = m0.reset_index()
     group_dict = {}
     matches = []
     ones = []
@@ -69,8 +69,10 @@ def convert_csv_to_matrix(csv, num):
         cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 
         #Construct a reverse map of indices and employee names
-        indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
-        return get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
+        # indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
+        indices = pd.Series(m1.index, index=m1['index']).drop_duplicates()
+        return get_pairs(group['index'].sample(frac=1), indices, cosine_sim, group, num)
+        # return get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
 
     if groupby is not None:
         courses = m0[groupby].unique() # list of all unique department names
@@ -153,14 +155,14 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
     list_to_remove = []
 
     for e in emplist:
-
+        
         if indices[e] not in list_to_remove:
-            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)[primary])
-            
-            pair = [e]
+            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
+            name0 = m0[primary][m0['index'] == e].iloc[0]
+            pair = [name0]
             list_to_remove.append(indices[e])
             for p in partner:
-                pair.append(p)
+                pair.append(m0[primary][m0['index'] == p].iloc[0])
                 list_to_remove.append(indices[p])
 
             pairs.append(pair)
