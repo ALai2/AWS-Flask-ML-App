@@ -1,0 +1,123 @@
+Name,Major,Class 1,Class 2,Class 3,Class 4,Interest 1,Interest 2,Interest 3,Hometown,Hometype
+Paul ,Communication,COMM 1101,ILRID 1700,INFO 1300,ASTRO 1101,Art,Soccer,Basketball,New York,Suburban
+Pablo,American Studies,AMST 1115 ,CS 1110,CHEM 2070,MATH 1120,Jazz Music,Singing,Painting,New Jersey,Suburban
+Alisa,Biological Sciences,BIOG 1440,CHEM 2070,MATH 1110,NS 1600,Music,Baking,Softball,California,Suburban
+Pedro,Applied Economics and Management,ECON 1110,AEM 2010,AEM 2100,AEM 2200,Entrepreneurship,Dogs,Jokes,Brazil,Urban
+Jordyn,Computer Science,CS 1110,MATH 1120,INFO 1300,ITAL 1201,dogs,animals,food,Nevada,Rural
+Nick,Chemical Engineering,CHEM 2090,CS 1110,MATH 1910,PHYS 1112,Computers ,robotics,basketball,Illinois,Urban
+Sam ,Hotel Administration,HADM 1350,HADM 1210,HADM 1360,ECON 1110,Beer,Basketball,Beaches,Massachusetts,Suburban
+John,Mechanical Engineering,CHEM 2090,CS 1110,MATH 1920,ECON 1110,Animals,robotics,Soccer,New York,Urban
+Stephanie,Mechanical Engineering,CHEM 2090,CS 1110,MATH 1920,PHYS 1112,pokemon,technology,guitar,Nebraska,Rural
+Bill,Government,ECON 1110,GOVT 1817,HIST 1700,GOVT 1111,politics,finance,food,Tennessee,Suburban
+Nadav,Performing Arts,PMA 2800,BIOMG 1350,PMA 1145,CS 1110,Guitar,Singing,football,New York,Suburban
+Martha,Undecided,PHIL 1100,ASTRO 1101,ECON 1110,MUSIC 1105,music,dance,fishing,Massachusetts,Suburban
+Lisa,Undecided,ARAB 1201,ASTRO 1101,INFO 1300,STS 1101,astrology,animals,music,California,Suburban
+Jordan,Communication,ECON 1110,COMM 1110,COMM 2010,MUSIC 1105,singing,karate,bowling,New York,Urban
+Seth,History,COMM 1101,GOVT 1111,ITAL 1201,ASTRO 1101,football,drawing,running,Maryland,Suburban
+Max,Applied Economics and Management,ECON 1110,AEM 2200,AEM 2010,SPAN 2090,football,basketball,soccer,California,suburban
+Doug,History,COMM 1101,GOVT 1111,PHIL 1100,ARAB 1201,yoga,photography,baseball,Delaware,Suburban
+Linda,Computer Science,CS 1110,MATH 1910,ECON 1110,CHEM 2090,dancing,animals,food,Nevada,Suburban
+Jessica,Computer Science,CS 1110,MATH 1910,PHYS 1112,ENGRI 1110,robotics,animals,yoga,Kansas,Rural
+Swee,Computer Science,CS 2110,MATh 1920,PHYS 1112,CHEM 2090,Computers ,listening to music,board games,New Hampshire,Suburban
+Mark,Operations Research,CS 1110,MATH 1910,PHYS 1112,CHEM 2090,soccer,video games,drawing,California,Suburban
+Dave ,Economics,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,music,karate,board games,New Jersey,Suburban
+Sanjana,Economics,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,music,karate,board games,New Jersey,Suburban
+Matt,Near Eastern Studies,NES 1660,GOVT 1817,ECON 1120,ECON 2040,history,politics,baseball,Tennessee,Suburban
+Justin,Chemical Engineering,CHEM 2090,MATH 1920,PHYS 1112,ASTRO 1101,art,math,fishing,Kansas,Rural
+Julia,Government,NES 1660,GOVT 1817,ANTHR 1400,STS 1101,singing,politics,guitar,Ohio,Suburban
+Jake,Government,GOVT 1817,PHYS 1112,ECON 1110,ANTHR 1400,political science,dance,finance,New Jersey,Suburban
+Megan,Astronomy,ARAB 1201,ASTRO 1101,ASTRO 1103,DEA 1101,acting,photography,origami,Oklahoma,Suburban
+Lauren,Archaelogoy,ARKEO 1200,HIST 1660,HIST 1700,PHIL 1100,watching tv,animals,fashion,Michigan,Suburban
+James,undecided,CS 1110,CHEM 2070,MATH 1120,ASTRO 1101,netflix,chill,beer,Michigan,Suburban
+Nicole,Architecture,ARCH 1101,ARCH 1120,BIOEE 1540,PHIL 1100,art,building,architecture,Montana,Rural
+Leah,English,ENGL 1100,PSYCH 1101,ITAL 1201,PHIL 1100,reading,writing,makeup,Washington,Urban
+Esteban,Math,MATH 2210,ECON 1120,PSYCH 1101,SPAN 2090,lanugages ,kung fu,tennis,Spain,Surbaban
+Bella,Human Developmetn,HD 1150,MATH 1110,BIOEE 1540,INFO 1300,politics,drawing,painting,Connecticut,Suburban
+Halle,Performing Arts,PMA 2800,PMA 1145,SPAN 2090,PSYCH 1101,acting,theatre,dancing,California,Urban
+Jacob,Biometry and Statistics,MATH 1110,BIOEE 1180,DSOC 1101,PLBIO 2400,math,acting ,lacrosse,Massachusetts,Suburban
+Chris,English,ECON 1110,ENGL 1100,PSYCH 1101,PHIL 1100,drama,dancing,writing,Georgia,Urban
+Olivia,Plant Science,PLSCI 1101,PLSCI 1300,PLSCI 1120,NTRES 1101,plants,nature,hiking,Lousianna,Suburban
+Will,Environmental and Sustainability Sciences,BIOG 1440,BIOEE 1610,PSYCH 1101,ECON 1110,plants,walking,trees,Maine,Rural
+Dan,Food Science,FDSC 1101,FDSC 1500,PLSCI 1120,PLBIO 2400,food,tennis,hiking,Maine,Rural
+Dave2 ,Food Science,FDSC 1101,FDSC 1500,DSOC 1101,HD 1150,food,kung fu,biking,Maine,Rural
+Dennis,Plant Science,FDSC 1101,FDSC 1500,PLSCI 1120,HD 1150,writing,tennis,fashion,Maine,Rural
+Stephen,computer science,CS 1110,MATH 1120,SPAN 2090,ECON 1110,eating,pokemon,sports,Montana,Urban
+Emily,Landscape Architecture,LA 1410,LA 2010,DSOC 1101,PLSCI 1101,architecture,knitting,sewing,Iowa,Rural
+Amanda,Plant Science,PLSCI 1101,PSYCH 1101,PHIL 1100,ITAL 1201,nature,hiking,drama,Iowa,Rural
+Shane,Agricultural Sciences,ANSC 1101,AG 1125,BOEE 1610,ECON 1110,farming,beer,golf,New York,Rural
+Jake2,Animal Science,ANSC 1101,BIOAP 1100,COMM 1101,DSOC 1101,animals,dogs,nature,Wisconsin,Rural
+Alexandra,Architecture,ARCH 1101,ARCH 1120,BIOEE 1540,PHIL 1100,buildings,traveling,tennis,Oregon ,Suburban
+Alli,Design and Environmental Analysis,DEA 1101,DEA 1110,DEA 1500,DSOC 1101,art,design,fashion,California,Urban
+Willa,PMA,PMA 2800,PMA 1145,BIOAP 1100,PHIL 1100,dancing,singing,theatre,New York,Urban
+Pam,AEM,ECON 1110,AEM 2010,AEM 2100,PHIL 1100,economics,business,finance ,New York,Urban
+Timmy,Design and Environmental Analysis,DEA 1101,HD 1150,DEA 1500,PAM 2040,clothes,makeup,fashion,Florida,Urban
+Danielsen,Animal Science,ANSC 1101,BIOEE 1540,MATH 1110,PSYCH 1101,clothes,fashion,shoes,New York,Urban
+Jake3,Design and Environmental Analysis,DEA 1101,HD 1150,PHIL 1100,PMA 1145,design,dancing,clothes,New York,Urban
+Ryan,Biometry and Statistics,MATH 1110,BIOEE 1180,SPAN 2090,PHIL 1100,biology,math ,golf,New Jersey,Suburban
+Peter,Policy Analysis and Management,ECON 1110,PAM 2040,PAM 2300,DSOC 1101,politics,traveling ,acting,Vermont,Suburban
+Julia2,Economics,HD 1150,GOVT 1817,PSYCH 1101,ECON 1110,finance,nature,board games,Illinois,Urban
+Kyle,Industrial Labor Relations,ECON 1110,ILRIR 1100,ILROB 1220,DSOC 1101,policy,hiking,origami,Colorado,Suburban
+Stamm,Applied Economics and Management,ECON 1110,BIOEE 11870,AEM 2010,AEM 2200,Entrepreneurship,soccer,concerts,Virginia,Suburban
+Levy,Applied Economics and Management,ECON 1120,BIOEE 1610,Math 1110,AEM 2200,basketball,golf,guitar,New York,Urban
+Jen,Industrial Labor Relations,ILIID 1700,ILRST 2100,ILROB 1220,ECON 1120,politics,lacrosse,makeup,Illinois,Suburban
+Alana,Industrial Labor Relations,ILRIR 1100,ILRST 2100,ILRIR 2010,ECON 1110,running,working out,playing sports,West Virginia,Rural
+Sheldon,Economics,ECON 1110,ECON 1120,SPAN 2090,Chem 2070,Finanace,Djing,riding my bike,Oregon,Urabn
+Joshua,Industrial Labor Relations,ILIID 1700,ILRST 2100,ILRIR 2010,ILRIR 1100,dancing,acting ,playing guitar,Virginia,Suburban
+Seamus,Industrial Labor Relations,ILID 1700,ECON 1120,MATH 1120,AEM 2220,guitar,piano,lacrosse,New York,Suburban
+Joshua2,Industrial Labor Relations,ECON 1110,ILRID 1700,ILROB 1220,ILRIR 1100,dancing,acting ,playing guitar,Virginia,Suburban
+Jack,Performing Arts,PMA 2800,ECON 1110,BIOAP 1100,PHIL 1100,dancing,rock music,fashion,Rhode Island,Suburban
+Oliver,Biomedical Engineering,CHEM 2090,MATH 1910,PHYS 1112,BIOMG 1350,biology,golfing,makeup,Texas,Suburban
+Jason3,Biomedical Engineering,CHEM 2090,MATH 1920,ECON 1110,BIOMG 1350,robotics,fashion,makeup,Rhode Island,Suburban
+Alex,Earth and Atmospheric Sciences,BIOMI 1120,CS 1110,BIOEE 1610,SPAN 2090,rocks,volcanos,hiking,Texas,Urban
+Noah2,Biomedical Engineering,CHEM 2090,CS 1110,MATH 1920,BIOMG 1350,kpop,music,playing guitar,Hawaii,Urban
+Donald,Architecture,ARCH 1101,ARCH 1120,ECON 1110,PMA 2800,kpop,dancing,board games,Florida,Urban
+Brad,Applied Economics and Management,AEM 1101,ECON 1110,AEM 2100,AEM 2210,business,finance,math,New Mexico,Suburban
+Chad,Applied Economics and Management,AEM 1101,ECON 1110,AEM 2100,PLBIO 2400,plants,nature,road trips,New Mexico,Suburban
+Benjamin,Biometry and Statistics,MATH 1110,BIOEE 1180,Econ 1110,PHIL 1100,Insurance,beer pong,tennis,New York ,Suburban
+Jackson,Applied Economics and Management,AEM 1101,DSOC 1101,AEM 2100,PLBIO 2400,business,nature,tennis,Michigan,Suburban
+Zach,Biometry and Statistics,MATH 1110,BIOEE 1180,ECON 1110,PHIL 1100,singing,beer pong,hanging with friends,New Jersey,Suburban
+James2,Applied Economics and Management,AEM 1101,AEM 2210,AEM 2100,PLBIO 2400,politics,pottery,scuba diving,North Dakota,Rural
+Thad,Undecided,ECON 1110,ASTRO 1101,ECON 1120,CS 1110,finance,rapping,rock music,Portugal,Urban
+Digital Nomad,Applied Economics and Management,AEM 1101,AEM 2210,AEM 2100,DSOC 1101,baking,video games,exercising,,Rural
+Ken,Undecided,CHEM 2070,PHYS 1112,ECON 1110,CS 2110,entrepreneurship,beer,golf,Austrailia,Urban
+Steve,Undecided,ECON 1110,CHEM 2090,Span 2079,CS 2110,football,lacrosse,sports,New York,Urban
+Andrea,Undecided,ECON 1110,MATH 1110,PHYS 1112,CHEM 2090,kpop,lacrosse,origami,California,Urban
+Bob,Undecided,PHIL 1100,MATH 1110,AEM 1101,SPAN 2090,fashion,Finanace,riding my bike,Virginia,Suburban
+Ava,Undecided,ECON 1120,PHIL 1100,DSOC 1101,CS 1110,soccer,dancing,playing violin,Utah,Suburban
+Amelia,Undecided,ARCH 1101,PHIL 1100,ILRST 2100,STS 1101,math,fashion,entrepreneurship,Kansas,Suburban
+Grat,Undecided,ECON 1120,PLBIO 2400,BIOEE 1610,MATH 1120,kpop,pottery,viola,Oklahoma,Urban
+Chloe,Undecided,PSYCH 1101,Math 1110,ILRST 2100,ITAL 1201,playing sports,watching tv,netflix,Alabama,Suburban
+Block,Undecided,SPAN 1120,ECON 1110,CHEM 2070,BIOEE 1610,watching sports,knicks,basketball,New York ,Suburban
+Chloe2,Undecided,SPAN 1120,PLBIO 2400,PHIL 1100,GOVT 1111,government,politics,political science,Idaho,Rural
+Barak,Undecided,ECON 1110,CS 2110,ECON 1120,SPAN 2090,insurance,chineese food,rock music,New Hampshire,Rural
+Cathrine,Undecided,SPAN 1120,HD 1150,HIST 1700,DEA 1101,art,painting,pottery,Pennsylvania,Suburban
+Van,Undecided,SPAN 1120,PLBIO 2400,PHYS 1112,PMA 2800,chineese food,kpop,makeup,Pennsylvania,Urban
+Mia,Undecided,COMM 1101,HD 1150,CS 1110,DEA 1101,computer programming,coding,technology,Delaware,Suburban
+Alonzo,Undecided,CS 2110,SPAN 1120,GOVT 1111,MATH 1110,rocks,rapping,playing sports,Florida,Urban
+Grace,Undecided,BIOEE 1610,HD 1150,CS 1110,DEA 1101,playing football,camping,baseball,Delaware,Suburban
+Isabel,Undecided,GOVT 1111,SPAN 1120,CS 2110,PHYS 1112,math,painting,finance,Kansas,Suburban
+Ethan,Undecided,SPAN 1120,ECON 2040,INFO 1300,DEA 1101,design,computing,working out,Connecticut,Suburban
+Walker,Undecided,SPAN 1120,HD 1150,HIST 1700,CS 1110,video games,xbox,programming,Ohio,Urban
+Esther,Undecided,GOVT 1111,ECON 2040,INFO 1300,PSYCH 1101,philosophy,reading,poetry,Vermont,Rural
+Emma,Undecided,COMM 1101,PHIL 1100,INFO 1300,DSOC 1101,watching netflix,origami,riding bikes,Rhode Island,Suburban
+Rocky,Undecided,ECON 1110,SPAN 1120,CS 2110,PHYS 1112,poetry,computing,boxing,New York ,Urban
+Phillip,Undecided,MATH 2210,SPAN 1120,CS 2110,SPAN 2090,poetry,reading,camping,New York ,Suburban
+Maddy,Undecided,PLSCI 1120,ECON 2040,MATH 1110,STS 1101,statistics ,eating,horseback riding,Rhode Island,Suburban
+Griffin,Undecided,SPAN 1120,MATH 2210,INFO 1300,PSYCH 1101,eating,horseback riding,finance,Massachusetts,Suburban
+Stewie,Undecided,INFO 2450,ARCH 1101,ILRST 2100,STS 1101,designing,programming,using the internet,Arizona,Suburban
+Lois,Undecided,CS 2110,ILROB 1220,COMM 1101,AEM 2200,youtubing,boxing,makeup,Texas,Rural
+Meg,Undecided,INFO 2450,COMM 2200,ILRST 2100,DSOC 1101,public speaking,blogging ,singing,Maryland,Suburban
+Cleavland,Undecided,MATH 2210,ECON 1120,CS 2800,ECON 2040,golf,tennis,painting,Rhode Island,Urban
+Quagmire,Undecided,INFO 2450,SPAN 1120,ILRST 2100,MATH 1110,languages,blogging ,food,Delaware,Suburban
+Glen,Undecided,COMM 1101,SPAN 1120,MATH 2210,CS 2110,poetry,designing,using the internet,Pennsylvania,Suburban
+Bonnie,Undecided,ECON 2040,SPAN 1120,ILRST 2100,CS 1110,welding,making music,playing guitar,Mississippi,Suburban
+Joe,Undecided,ECON 2040,COMM 2200,INFO 2450,CS 3410,math,eating,camping,Mississippi,Urban
+Chris2,Undecided,COMM 1101,SPAN 1120,PLBIO 2400,INFO 1300,crossword puzzles,hiking,going to the beach,Indianna,Rural
+Herbert,Undecided,COMM 1101,GOVT 1111,SPAN 1120,PHYS 1112,Netflix,eating,smoking pot,Delaware,Urban
+Brian,Undecided,ILROB 1220,ECON 1120,STS 1101,INFO 1300,sewing,beekeeping,backpacking,North Carolina,Rural
+Mort,Undecided,INFO 1300,COMM 1101,PHYS 1112,BIOEE 1610,gardening,flowers,camping,South Carolina,Suburban
+Carter,Undecided,COMM 1101,DEA 1101,AEM 2100,CS 1110,board games,shoes,fashion,Rhode Island,Suburban
+Adam West,Undecided,MATH 2210,GOVT 1111,ECON 1110,PMA 2800,sailing,meme making,squash,Massachusetts,Urban
+Consuela,Undecided,MATH 1110,ILRST 2100,ECON 2040,INFO 2450,playing poker,sports betting,doing drugs,Connecticut,Suburban
+Diabeto,Undecided,MATH 1110,COMM 2200,CS 2110,SPAN 1120,sewing,making music,singing,Nevada,Urban
+Dylan,Undecided,STS 1101,INFO 2450,COMM 1101,GOVT 1111,ice skating,scuba diving,hanging with friends,New Hampshire,Suburban

@@ -13,9 +13,20 @@ import json # for testing
 tfidf = TfidfVectorizer(stop_words='english')
 
 # features
-features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
-primary = 'Employee Name'
-groupby = 'Department'
+# features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
+# primary = 'Employee Name'
+# groupby = 'Department'
+# weights = {'Employee Name': 3}
+# num = 3
+# csv = '../human-resources/HRDataset_v9.csv'
+
+features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
+primary = 'Name'
+# groupby = 'Major'
+groupby = None
+weights = {'Major': 2, 'Class 1': 3, 'Class 2': 3, 'Class 3': 3, 'Class 4': 3}
+num = 3
+csv = 'Test Classes.csv'
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -37,16 +48,20 @@ def convert_csv_to_matrix(csv, num):
     group_dict = {}
     matches = []
     ones = []
-    courses = m0[groupby].unique() # list of all unique department names
 
     def func_pairs(group):
         # Apply clean_data function to your features and create soup
         m1 = group.copy()
+        # print(group)
         m1['score'] = ""
         for feature in features:
             m1[feature] = group[feature].apply(clean_data)
-            m1['score'] = m1['score'] + " " + m1[feature]
-
+            if feature in weights:
+                for i in range(weights[feature]):
+                    m1['score'] = m1['score'] + " " + m1[feature]
+            else:
+                m1['score'] = m1['score'] + " " + m1[feature]
+            
         #Construct the required TF-IDF matrix by fitting and transforming the data
         tfidf_matrix = tfidf.fit_transform(m1['score'])
 
@@ -55,30 +70,38 @@ def convert_csv_to_matrix(csv, num):
 
         #Construct a reverse map of indices and employee names
         indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
-            
         return get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
 
-    for course in courses:
-        group = (m0[m0[groupby] == course]).reset_index()
+    if groupby is not None:
+        courses = m0[groupby].unique() # list of all unique department names
         
-        # keep track of groups with only one member
-        if len(group) == 1:
-            ones.append(group.iloc[0])
-        else:
-            matches = matches + func_pairs(group)
-    
-    if len(ones) == 1:
-        for match in matches:
-            if len(ones) == 0: break
+        for course in courses:
+            group = (m0[m0[groupby] == course]).reset_index()
+            # keep track of groups with only one member
+            
+            if len(group) == 1:
+                ones.append(group)
             else:
-                while len(match) < num:
-                    if len(ones) != 0:
-                        match.append(ones.pop(0)[primary])
-                    else: break
-        if len(ones) > 0:
-            matches[0].append(ones.pop(0))
+                matches = matches + func_pairs(group)
+        
+        if len(ones) == 1:
+            for match in matches:
+                if len(ones) == 0: break
+                else:
+                    while len(match) < num:
+                        if len(ones) != 0:
+                            match.append(ones.pop(0)[primary])
+                        else: break
+            if len(ones) > 0:
+                matches[0].append(ones.pop(0))
+        else:
+            df = pd.DataFrame(columns=features)
+            for one in ones:
+                df = df.append(one, sort=False)
+            df = df.reset_index().drop('level_0', axis=1)
+            matches = matches + func_pairs(df)
     else:
-        matches = matches + func_pairs(ones)
+        matches = func_pairs(m0)
     
     return matches
 
@@ -128,8 +151,10 @@ def get_random(mylist, num): # num = number of people per group
 def get_pairs(emplist, indices, cosine_sim, m0, num):
     pairs = []
     list_to_remove = []
+
     for e in emplist:
-        if not (indices[e] in list_to_remove):
+
+        if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)[primary])
             
             pair = [e]
@@ -137,9 +162,10 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
             for p in partner:
                 pair.append(p)
                 list_to_remove.append(indices[p])
+
             pairs.append(pair)
-            
             list_to_remove.sort(reverse=True)
+ 
     return pairs
 
-print(convert_csv_to_matrix('../human-resources/HRDataset_v9.csv', 3))
+print(convert_csv_to_matrix(csv, num))
