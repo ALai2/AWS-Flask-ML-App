@@ -1,5 +1,3 @@
-# https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/
-
 # Import Pandas
 import pandas as pd
 
@@ -75,7 +73,7 @@ def convert_csv_to_matrix(csv, num):
             else:
                 while len(match) < num:
                     if len(ones) != 0:
-                        match.append(ones.pop(0)['Employee Name'])
+                        match.append(ones.pop(0)[primary])
                     else: break
         if len(ones) > 0:
             matches[0].append(ones.pop(0))
