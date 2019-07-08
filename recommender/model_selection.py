@@ -18,7 +18,17 @@ m0 = metadata[features]
 raw_data = metadata.drop('target', axis=1) # get just features
 y = metdata['target'] # get target value
 
+def get_similarity():
+    #Construct the required TF-IDF matrix by fitting and transforming the data
+    tfidf_matrix = tfidf.fit_transform(m1['score'])
+
+    # Compute the cosine similarity matrix
+    cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+    
+    return None
+
 # modify raw_data to get X
+# get similarity of strings from cosine
 X = raw_data
 
 # X, y = np.arange(10).reshape((5,2)), range(5) 

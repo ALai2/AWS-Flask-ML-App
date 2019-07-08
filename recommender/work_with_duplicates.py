@@ -13,20 +13,15 @@ import json # for testing
 tfidf = TfidfVectorizer(stop_words='english')
 
 # features
-# features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
-# primary = 'Employee Name'
-# groupby = 'Department'
-# weights = {'Employee Name': 3}
-# num = 3
-# csv = '../human-resources/HRDataset_v9.csv'
-
 features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 primary = 'Name'
 # groupby = 'Major'
 groupby = None
-weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 15}
-num = 3
-csv = 'ProfileInfo.csv'
+weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 5}
+num = 2
+csv = 'Test Classes.csv'
+# csv = 'ProfileInfo.csv'
+# csv = '4ppltest.csv'
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -38,6 +33,12 @@ def clean_data(x):
             return str.lower(x).strip()
         else:
             return ''
+
+def replace_space(x):
+    if isinstance(x, str):
+        return str.lower(x).replace(" ", "")
+    else:
+        return ''
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -56,6 +57,11 @@ def convert_csv_to_matrix(csv, num):
         m1['score'] = ""
         for feature in features:
             m1[feature] = group[feature].apply(clean_data)
+            
+            if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4']:
+                m1[feature] = m1[feature].apply(replace_space)
+            # print(m1[feature])
+            
             if feature in weights:
                 for i in range(weights[feature]):
                     m1['score'] = m1['score'] + " " + m1[feature]
@@ -123,7 +129,7 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
     emp_sims = []
     num = 0
     for i in sim_scores:
-        if (num == 11): break
+        if (num == 2): break
         if (num != 0):
             if i[0] not in list_to_remove:
                 emp_indices.append(i[0])
@@ -151,23 +157,33 @@ def get_random(mylist, num): # num = number of people per group
 
 # semi-greedy algorithm
 def get_pairs(emplist, indices, cosine_sim, m0, num):
-    pairs = []
+    # pairs = []
     list_to_remove = []
-
+    pairs = pd.DataFrame()
     for e in emplist:
         
         if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
-            name0 = m0[primary][m0['index'] == e].iloc[0]
+            # name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
+            pairs = pairs.append(m0[m0['index'] == e].iloc[0])
+            
+            name0 = m0[m0['index'] == e].iloc[0]
             pair = [name0]
             list_to_remove.append(indices[e])
             for p in partner:
-                pair.append(m0[primary][m0['index'] == p].iloc[0])
+                # pair.append(m0[primary][m0['index'] == p].iloc[0] + " " + str(p))
+                pairs = pairs.append(m0[m0['index'] == p].iloc[0])
                 list_to_remove.append(indices[p])
 
+            new = pd.DataFrame([pair])
+            pairs = pairs.append(['pair'], sort=False)
             pairs.append(pair)
             list_to_remove.sort(reverse=True)
  
     return pairs
 
-print(convert_csv_to_matrix(csv, num))
+# print(convert_csv_to_matrix(csv, num))
+df = convert_csv_to_matrix(csv, num)
+print(df)
+df.to_csv('testing.csv', index=False)
+# df.to_csv('ppltestpairs.csv', index=False)
