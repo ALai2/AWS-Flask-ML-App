@@ -30,8 +30,9 @@ m0 = metadata[features]
 # input features and output target
 # raw_data = metadata.drop(output, axis=1) # get just features
 # y = metdata[output] # get target value
+# need names from training set?
 
-def get_similarity(first, second):
+def get_similarity(first, second): # return similarity between two strings
     df = pd.DataFrame()
     df = df.append([first, second])
     
@@ -40,8 +41,6 @@ def get_similarity(first, second):
 
     # Compute the cosine similarity matrix
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-    
-    # return similarity between two strings
     return cosine_sim[0][1]
 
 features = ['Name','feature','test']
@@ -98,7 +97,22 @@ rfaccur = cl.score(X_test, y_test)
 print(rfaccur)
 
 y = cl.predict(X_test)
-# 1. create model using data csv
-# 2. predict using input csv
-# use cross validation?
+# get names
+# get info of people with names
+# get similarity ratios and create dataframe with values
+# predict and get outputs
+'''
+
+'''
+import pickle
+
+# save the model to disk
+model = cl
+filename = 'finalized_model.sav'
+pickle.dump(model, open(filename, 'wb'))
+
+# load the model from disk
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.score(X_test, Y_test)
+print(result)
 '''
