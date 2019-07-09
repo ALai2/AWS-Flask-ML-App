@@ -17,9 +17,9 @@ features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1',
 primary = 'Name'
 # groupby = 'Major'
 groupby = None
-weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 5}
+weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 num = 2
-csv = 'Test Classes.csv'
+csv = 'Test Classes Extended.csv'
 # csv = 'ProfileInfo.csv'
 # csv = '4ppltest.csv'
 
@@ -58,7 +58,7 @@ def convert_csv_to_matrix(csv, num):
         for feature in features:
             m1[feature] = group[feature].apply(clean_data)
             
-            if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4']:
+            if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
                 m1[feature] = m1[feature].apply(replace_space)
             # print(m1[feature])
             
