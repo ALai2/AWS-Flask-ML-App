@@ -17,6 +17,6 @@ def replace_space(x):
 
 def trim_str(x):
     if isinstance(x, str):
-        return x.replace(" ", "")
+        return x.strip()
     else:
         return ''

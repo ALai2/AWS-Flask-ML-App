@@ -55,7 +55,7 @@ def get_similarity(first, second): # return similarity between two strings
     return cosine_sim[0][1]
 
 # will later change to data in training_csv
-data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5]]
+data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5],["Joshua, Joshua2", 7]]
 metadata = pd.DataFrame(data, columns=['group','target'])
 # print(df)
 
@@ -81,6 +81,7 @@ for i in df.iterrows(): # loop through df rows and acquire similarity ratios
             # use index or name? is duplicate names a big problem? or use netid for this?
             index1 = m0.index[m0[primary] == name1][0]
             index2 = m0.index[m0[primary] == name2][0]
+            # name1 = m0['Name'][m0.index == index1].iloc[0]
             
             first = ""
             second = ""
@@ -104,24 +105,37 @@ X = pd.DataFrame(soup_data, columns=training_features)
 print(X)
 
 # don't need feature scaling, all similarity numbers are between 0 and 1
+X = X[[x for x in training_features if x != primary]]
 
-'''
 # 20% of data goes into test set, 80% into training set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
 
-# somehow have way to change weights
+# change metrics to increase accuracy, need more data for supervised learning
 cl = RandomForestClassifier(n_estimators=900, n_jobs=-1) # select model to create
 cl.fit(X_train, y_train)
 rfaccur = cl.score(X_test, y_test)
 print(rfaccur)
 
-y = cl.predict(X_test)
-# clf.predict([[3, 5, 4, 2]])
+'''
+# https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
+# https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
+# https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
+# https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
+# https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
+# https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
+'''
+
+# y = cl.predict(X_test)
+# clf.predict([[3, 5, 4, 2],[3, 5, 4, 2]])
+# result --> [1, 1] (list of predictions)
+# combine features and result lists to create complete dataframe? or tuple list?
+# sort by result
+# results = sorted(results, key=lambda x: x[1], reverse=True)
 # get names
 # get info of people with names
 # get similarity ratios and create dataframe with values
 # predict and get outputs
-
+'''
 feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
 print(feature_imp) # feature importance
 '''
@@ -136,13 +150,6 @@ print(feature_imp) # feature importance
 
 # or do all pairs and normalize
 # create matrix for KMeans or spectral clustering
-
-# https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
-# https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
-# https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
-# https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
-# https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
-# https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
 
 
 '''
