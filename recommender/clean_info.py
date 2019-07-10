@@ -14,3 +14,9 @@ def replace_space(x):
         return str.lower(x).replace(" ", "")
     else:
         return ''
+
+def trim_str(x):
+    if isinstance(x, str):
+        return x.replace(" ", "")
+    else:
+        return ''

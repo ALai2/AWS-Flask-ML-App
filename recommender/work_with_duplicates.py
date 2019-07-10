@@ -21,7 +21,6 @@ weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 
 num = 2
 csv = 'Test Classes Extended.csv'
 # csv = 'ProfileInfo.csv'
-# csv = '4ppltest.csv'
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -169,4 +168,3 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
 df = convert_csv_to_matrix(csv, num)
 print(df)
 df.to_csv('testing.csv', index=False)
-# df.to_csv('ppltestpairs.csv', index=False)

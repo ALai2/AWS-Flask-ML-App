@@ -17,7 +17,9 @@ import clean_info as ci
 tfidf = TfidfVectorizer(stop_words='english')
 
 features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
-# features = ['Employee Name','State','Zip','DOB','Sex','Date of Hire','Department','Position']
+training_features = ['Name','Major','Classes','Interests','Hometown','Hometype']
+classes = ['Class 1','Class 2','Class 3','Class 4']
+interests = ['Interest 1','Interest 2','Interest 3']
 primary = 'Name'
 # groupby = 'Major'
 groupby = None
@@ -26,9 +28,6 @@ num = 2
 csv = 'Test Classes Extended.csv'
 training_csv = "?"
 output = 'target'
-
-# csv: features
-# training_csv: group (names of people separated by commas?), target (1-10)
 
 # Load student data
 metadata = pd.read_csv(csv)
@@ -39,6 +38,7 @@ for feature in [x for x in features if x != primary]:
             
     if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
         m0[feature] = m0[feature].apply(ci.replace_space)
+m0[primary] = m0[primary].apply(ci.trim_str)
 
 def get_similarity(first, second): # return similarity between two strings
     if first is None or second is None:
@@ -54,10 +54,8 @@ def get_similarity(first, second): # return similarity between two strings
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
     return cosine_sim[0][1]
 
-features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
-primary = "Name"
 # will later change to data in training_csv
-data = [["Pam, Shane, Brad", 2], ["Pam, Brad, Chad", 3]]
+data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5]]
 metadata = pd.DataFrame(data, columns=['group','target'])
 # print(df)
 
@@ -70,9 +68,11 @@ y = metadata[output] # get target value
 soup_data = []
 for i in df.iterrows(): # loop through df rows and acquire similarity ratios
     mylist = i[1]['group'].split(", ")
+    # be careful of the way the group is inputted
+    # split by commas and then use strip?
     pairs = list(itertools.combinations(mylist, 2))
     soups = [i[1]['group']]
-    for feature in [x for x in features if x != primary]:
+    for feature in [x for x in training_features if x != primary]:
         acc = 0.0
         for p in pairs:
             name1 = p[0]
@@ -81,21 +81,31 @@ for i in df.iterrows(): # loop through df rows and acquire similarity ratios
             # use index or name? is duplicate names a big problem? or use netid for this?
             index1 = m0.index[m0[primary] == name1][0]
             index2 = m0.index[m0[primary] == name2][0]
-                
-            first = m0[m0[primary] == name1][feature].iloc[0]
-            second = m0[m0[primary] == name2][feature].iloc[0]
+            
+            first = ""
+            second = ""
+            if feature == 'Classes':
+                for c in classes:
+                    first += " " + m0[m0[primary] == name1][c].iloc[0]
+                    second += " " + m0[m0[primary] == name2][c].iloc[0]
+            elif feature == 'Interests':
+                for i in interests:
+                    first += " " + m0[m0[primary] == name1][i].iloc[0]
+                    second += " " + m0[m0[primary] == name2][i].iloc[0]
+            else:
+                first = m0[m0[primary] == name1][feature].iloc[0]
+                second = m0[m0[primary] == name2][feature].iloc[0]
                 
             # get average similarity of pairs
             acc += get_similarity(first, second)
         soups.append(acc / len(pairs))
     soup_data.append(soups)
-X = pd.DataFrame(soup_data, columns=features)
+X = pd.DataFrame(soup_data, columns=training_features)
 print(X)
 
 # don't need feature scaling, all similarity numbers are between 0 and 1
 
 '''
-
 # 20% of data goes into test set, 80% into training set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
@@ -115,12 +125,26 @@ y = cl.predict(X_test)
 feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
 print(feature_imp) # feature importance
 '''
+# predict new data
+# also make new pairings for predicted data?
+
+# use algorithm similar to work_with_duplicates to create pairings
+# match one person with all pairs
+# choose one from top pairings
+# remove grouped people from entire list
+# choose another person and repeat until finished
+
+# or do all pairs and normalize
+# create matrix for KMeans or spectral clustering
+
 # https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
 # https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
 # https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
 # https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
 # https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
 # https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
+
+
 '''
 # https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/ 
 import pickle
