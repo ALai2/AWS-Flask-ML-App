@@ -23,23 +23,6 @@ csv = 'Test Classes Extended.csv'
 # csv = 'ProfileInfo.csv'
 # csv = '4ppltest.csv'
 
-# Function to convert all strings to lower case and strip names of spaces
-def clean_data(x):
-    if isinstance(x, list):
-        return [str.lower(i).strip() for i in x]
-    else:
-        #Check if item exists. If not, return empty string
-        if isinstance(x, str):
-            return str.lower(x).strip()
-        else:
-            return ''
-
-def replace_space(x):
-    if isinstance(x, str):
-        return str.lower(x).replace(" ", "")
-    else:
-        return ''
-
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
     # Load Employees Metadata
@@ -56,10 +39,10 @@ def convert_csv_to_matrix(csv, num):
         # print(group)
         m1['score'] = ""
         for feature in features:
-            m1[feature] = group[feature].apply(clean_data)
+            m1[feature] = group[feature].apply(ci.clean_data)
             
             if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
-                m1[feature] = m1[feature].apply(replace_space)
+                m1[feature] = m1[feature].apply(ci.replace_space)
             # print(m1[feature])
             
             if feature in weights:

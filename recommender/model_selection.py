@@ -10,6 +10,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
 
+import itertools
+import clean_info as ci
+
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
 
@@ -21,18 +24,26 @@ groupby = None
 weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 num = 2
 csv = 'Test Classes Extended.csv'
+training_csv = "?"
 output = 'target'
+
+# csv: features
+# training_csv: group (names of people separated by commas?), target (1-10)
 
 # Load student data
 metadata = pd.read_csv(csv)
 m0 = metadata[features]
 
-# input features and output target
-# raw_data = metadata.drop(output, axis=1) # get just features
-# y = metdata[output] # get target value
-# need names from training set?
+for feature in [x for x in features if x != primary]:
+    m0[feature] = m0[feature].apply(ci.clean_data)
+            
+    if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
+        m0[feature] = m0[feature].apply(ci.replace_space)
 
 def get_similarity(first, second): # return similarity between two strings
+    if first is None or second is None:
+        return 0.0
+    
     df = pd.DataFrame()
     df = df.append([first, second])
     
@@ -43,49 +54,47 @@ def get_similarity(first, second): # return similarity between two strings
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
     return cosine_sim[0][1]
 
-features = ['Name','feature','test']
-data = [["Name1", "playing with trains", "playing with fire", "Name2", "playing", "TESTING"], ["ONE","MATH2110", "CS2110","TWO", "first", "second"]]
-df = pd.DataFrame(data, columns=['Name1','feature1','test1','Name2', 'feature2','test2'])
-print(df)
+features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
+primary = "Name"
+# will later change to data in training_csv
+data = [["Pam, Shane, Brad", 2], ["Pam, Brad, Chad", 3]]
+metadata = pd.DataFrame(data, columns=['group','target'])
+# print(df)
 
-# what if group has more than two people?
-# get student info from different csv than training set?
+# modify df to get X
+df = metadata.drop(output, axis=1) # get just features
+# print(df)
+y = metadata[output] # get target value
+# print(y)
+
 soup_data = []
 for i in df.iterrows(): # loop through df rows and acquire similarity ratios
-    soups = []
-    for feature in features:
-        first = i[1][feature + str(1)] # first = m0[m0['Name'] == name1][feature]
-        second = i[1][feature + str(2)]
-        if feature != primary:
-            soups.append(get_similarity(first, second))
-        else:
-            soups.append(first + ", " + second)
+    mylist = i[1]['group'].split(", ")
+    pairs = list(itertools.combinations(mylist, 2))
+    soups = [i[1]['group']]
+    for feature in [x for x in features if x != primary]:
+        acc = 0.0
+        for p in pairs:
+            name1 = p[0]
+            name2 = p[1]
+            
+            # use index or name? is duplicate names a big problem? or use netid for this?
+            index1 = m0.index[m0[primary] == name1][0]
+            index2 = m0.index[m0[primary] == name2][0]
+                
+            first = m0[m0[primary] == name1][feature].iloc[0]
+            second = m0[m0[primary] == name2][feature].iloc[0]
+                
+            # get average similarity of pairs
+            acc += get_similarity(first, second)
+        soups.append(acc / len(pairs))
     soup_data.append(soups)
-new = pd.DataFrame(soup_data, columns=features)
-print(new)
+X = pd.DataFrame(soup_data, columns=features)
+print(X)
+
+# don't need feature scaling, all similarity numbers are between 0 and 1
 
 '''
-soup_data = []
-for i in df.iterrows():
-    first_name = i[1][name1]
-    second_name = i[1][name2]
-    soups = [first_name, second_name]
-    for feature in features:
-        if feature != "Name":
-            first = m0[m0['Name'] == first_name][feature]
-            second = m0[m0['Name'] == second_name][feature]
-            soups.append(get_similarity(first, second))
-    soup_data.append(soups)
-new = pd.DataFrame(soup_data, columns=(['name1','name2'] + features))
-
-''' #  use only numbers, no names in training dataframe
-
-'''
-# modify raw_data to get X
-# get similarity of strings from cosine
-X = raw_data
-# https://stackoverflow.com/questions/15173225/calculate-cosine-similarity-given-2-sentence-strings 
-# http://blog.christianperone.com/2013/09/machine-learning-cosine-similarity-for-vector-space-models-part-iii/ 
 
 # 20% of data goes into test set, 80% into training set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
@@ -97,13 +106,23 @@ rfaccur = cl.score(X_test, y_test)
 print(rfaccur)
 
 y = cl.predict(X_test)
+# clf.predict([[3, 5, 4, 2]])
 # get names
 # get info of people with names
 # get similarity ratios and create dataframe with values
 # predict and get outputs
-'''
 
+feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
+print(feature_imp) # feature importance
 '''
+# https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
+# https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
+# https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
+# https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
+# https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
+# https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
+'''
+# https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/ 
 import pickle
 
 # save the model to disk
