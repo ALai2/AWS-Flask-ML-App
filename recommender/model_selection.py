@@ -101,11 +101,11 @@ for i in df.iterrows(): # loop through df rows and acquire similarity ratios
             acc += get_similarity(first, second)
         soups.append(acc / len(pairs))
     soup_data.append(soups)
-X = pd.DataFrame(soup_data, columns=training_features)
-print(X)
+df_soup = pd.DataFrame(soup_data, columns=training_features)
+print(df_soup)
 
 # don't need feature scaling, all similarity numbers are between 0 and 1
-X = X[[x for x in training_features if x != primary]]
+X = df_soup[[x for x in training_features if x != primary]]
 
 # 20% of data goes into test set, 80% into training set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
@@ -115,6 +115,18 @@ cl = RandomForestClassifier(n_estimators=900, n_jobs=-1) # select model to creat
 cl.fit(X_train, y_train)
 rfaccur = cl.score(X_test, y_test)
 print(rfaccur)
+print(X_test)
+
+predictions = cl.predict(X_test)
+X_test = X_test.assign(Prediction = predictions).sort_index()
+index_list = list(X_test.index)
+name_list = df_soup[['Name']].iloc[index_list]
+X_test = X_test.assign(Name = name_list)
+
+cols = X_test.columns.tolist()
+cols = cols[-1:] + cols[:-1]
+X_test = X_test[cols]
+print(X_test)
 
 '''
 # https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
@@ -125,16 +137,8 @@ print(rfaccur)
 # https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
 '''
 
-# y = cl.predict(X_test)
-# clf.predict([[3, 5, 4, 2],[3, 5, 4, 2]])
-# result --> [1, 1] (list of predictions)
-# combine features and result lists to create complete dataframe? or tuple list?
-# sort by result
 # results = sorted(results, key=lambda x: x[1], reverse=True)
-# get names
-# get info of people with names
-# get similarity ratios and create dataframe with values
-# predict and get outputs
+
 '''
 feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
 print(feature_imp) # feature importance
@@ -150,7 +154,6 @@ print(feature_imp) # feature importance
 
 # or do all pairs and normalize
 # create matrix for KMeans or spectral clustering
-
 
 '''
 # https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/ 
