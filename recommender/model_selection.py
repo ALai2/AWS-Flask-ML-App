@@ -58,23 +58,7 @@ def get_similarity(first, second): # return similarity between two strings
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
     return cosine_sim[0][1]
 
-def create_model():
-    m0 = clean_df(csv)
-
-    '''
-    # Load training data
-    training = pd.read_csv(training_csv)
-    metadata = training[features]
-    '''
-
-    # will later change to data in training_csv
-    data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5],["Joshua, Joshua2", 7]]
-    metadata = pd.DataFrame(data, columns=['group','target'])
-
-    # modify df to get X
-    df = metadata.drop(output, axis=1) # get just features
-    y = metadata[output] # get target value
-
+def load_prediction(df, m0):
     soup_data = []
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
         mylist = i[1]['group'].split(", ")
@@ -112,45 +96,75 @@ def create_model():
             soups.append(acc / len(pairs))
         soup_data.append(soups)
     df_soup = pd.DataFrame(soup_data, columns=training_features)
-    print(df_soup)
+    # print(df_soup)
+
+    return df_soup 
+
+def create_model():
+    m0 = clean_df(csv)
+
+    '''
+    # Load training data
+    training = pd.read_csv(training_csv)
+    metadata = training[['group','target]]
+    '''
+
+    # will later change to data in training_csv
+    data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5],["Joshua, Joshua2", 7]]
+    metadata = pd.DataFrame(data, columns=['group','target'])
+
+    # modify df to get X
+    df = metadata.drop(output, axis=1) # get just features
+    y = metadata[output] # get target value
+
+    # df is features to be predicted
+    # m0 is information about people
+    df_soup = load_prediction(df, m0)
 
     # don't need feature scaling, all similarity numbers are between 0 and 1
     X = df_soup[[x for x in training_features if x != primary]]
 
+    # later on don't split the dataset
     # 20% of data goes into test set, 80% into training set
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
 
+    # use regression instead of classifier?
     # change metrics to increase accuracy, need more data for supervised learning
     cl = RandomForestClassifier(n_estimators=900, n_jobs=-1) # select model to create
     cl.fit(X_train, y_train)
-    rfaccur = cl.score(X_test, y_test)
+    # rfaccur = cl.score(X_test, y_test)
     # print(rfaccur)
-    # print(X_test)
+
+    '''
+    # add when have real data to create model from
+    feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
+    print(feature_imp) # feature importance
+    '''
 
     # save the model (cl) to disk
     pickle.dump(cl, open(filename, 'wb'))
 
     return df_soup, X_test
+    # return cl?
 
 '''
-# Load prediction data
-pred = pd.read_csv(prediction_csv)
-metadata = pred[features]
+# Load prediction data (to create df_soup)
+# df is pairings in dataframe format
+m0 = clean_df(prediction_csv)
+df_soup = load_prediction(df, m0)
 # have list of names and information about people
 '''
-df_soup, X_test = create_model()
+# df_soup, X_test = create_model()
 
 def make_prediction(df_soup, X_test):
-    '''
-    # https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/ 
-    '''
+
     # load the model from disk
     cl = pickle.load(open(filename, 'rb'))
-    # result = loaded_model.score(X_test, Y_test)
-    # print(result)
-    
+    # dataframe of numerical features for prediction
     predictions = cl.predict(X_test)
     X_test = X_test.assign(Prediction = predictions).sort_index()
+    # X_test = X_test.sort_values(by='Prediction', ascending=False)
+
     index_list = list(X_test.index)
     name_list = df_soup[['Name']].iloc[index_list]
     X_test = X_test.assign(Name = name_list)
@@ -158,35 +172,71 @@ def make_prediction(df_soup, X_test):
     cols = X_test.columns.tolist()
     cols = cols[-1:] + cols[:-1]
     X_test = X_test[cols]
-    print(X_test)
     
-    return None
+    return X_test
 
-make_prediction(df_soup, X_test)
+# print(make_prediction(df_soup, X_test))
 
+def split_names(m0):
+    names = list(m0['Name'])
+    length = len(names)
+
+    # or make psuedo-cosine matrix by getting normalized similarity ratios of all pairs
+    pairs = list(itertools.combinations(names, 2))
+    matrix = np.eye(length, length)
+    
+    # list.index(element)
+    data = []
+    for (one, two) in pairs:
+        data.append([one + ", " + two])
+    df = pd.DataFrame(data, columns=['group'])
+
+    df_soup = load_prediction(df, m0)
+    # print(df_soup)
+    X_test = df_soup[[x for x in training_features if x != primary]]
+
+    predictions = make_prediction(df_soup, X_test)
+    
+    for p in predictions.iterrows(): # loop through df rows and acquire similarity ratios
+        [one, two] = p[1]['Name'].split(", ")
+        index1 = names.index(one)
+        index2 = names.index(two)
+        pred = p[1]['Prediction'] / 10
+        matrix[index1][index2] = pred 
+        matrix[index2][index1] = pred
+    
+    # print(matrix) # <-- new cosine_sim matrix
+
+    from sklearn.cluster import KMeans
+    group_list = KMeans(n_clusters=60, init="k-means++").fit_predict(matrix)
+    # print(group_list)
+
+    mylists = [ [] for i in range(60) ]
+    for i in range(len(group_list)):
+        group = group_list[i]
+        mylists[group].append(m0.iloc[i][primary])
+    
+    print(mylists)
+
+    '''
+    remainder = len(names) % num
+    if remainder == 1:
+        return 1 # make one num + 1 group and then group rest in num groups
+    elif remainder != 0:
+        return 2 # group remainder and then group rest in num groups
+    # make groups with num people
+    pairs = list(itertools.combinations(names, remainder))
+    '''
+    return None  
+
+m0 = clean_df(csv)
+split_names(m0)
 '''
-# https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
-# https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
-# https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
-# https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
-# https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
-# https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
+# links about random forests classifier
+https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
+https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
+https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
+https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
+https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
+https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
 '''
-
-# df = df.sort_values(by='Prediction', ascending=False)
-
-'''
-feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
-print(feature_imp) # feature importance
-'''
-# predict new data
-# also make new pairings for predicted data?
-
-# use algorithm similar to work_with_duplicates to create pairings
-# match one person with all pairs
-# choose one from top pairings
-# remove grouped people from entire list
-# choose another person and repeat until finished
-
-# or do all pairs and normalize
-# create matrix for KMeans or spectral clustering
