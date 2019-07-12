@@ -43,14 +43,14 @@ def convert_csv_to_matrix(csv, num):
         # Apply clean_data function to your features and create soup
         # print(group)
 
-        m1['score'] = ""
+        m1 = m1.assign(score = [''] * len(m1))
         for feature in features:
             if feature in weights:
                 for i in range(weights[feature]):
                     m1['score'] = m1['score'] + " " + m1[feature]
             else:
                 m1['score'] = m1['score'] + " " + m1[feature]
-            
+        
         #Construct the required TF-IDF matrix by fitting and transforming the data
         tfidf_matrix = tfidf.fit_transform(m1['score'])
 
@@ -71,7 +71,7 @@ def convert_csv_to_matrix(csv, num):
         courses = m0[groupby].unique() # list of all unique department names
         
         for course in courses:
-            group = (m0[m0[groupby] == course]).reset_index()
+            group = (m0[m0[groupby] == course]).reindex()
             # keep track of groups with only one member
             
             if len(group) == 1:
@@ -93,7 +93,7 @@ def convert_csv_to_matrix(csv, num):
             df = pd.DataFrame(columns=features)
             for one in ones:
                 df = df.append(one, sort=False)
-            df = df.reset_index().drop('level_0', axis=1)
+            df = df.reindex()
             matches = matches + func_pairs(df)
     else:
         matches = func_pairs(m0)
@@ -131,7 +131,7 @@ def get_random(mylist, num): # num = number of people per group
     if (len(mylist) > num):
         inds = list(mylist.index)
         rand_inds = random.sample(inds, num-1)
-        result = pd.DataFrame()
+        result = pd.DataFrame(columns=features)
         for i in rand_inds:
             result = pd.concat([result, mylist[mylist.index == i]])
     else:
@@ -142,7 +142,7 @@ def get_random(mylist, num): # num = number of people per group
 def get_pairs(emplist, indices, cosine_sim, m0, num):
     # pairs = []
     list_to_remove = []
-    pairs = pd.DataFrame()
+    pairs = pd.DataFrame(columns=features)
     for e in emplist:
         if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
@@ -157,8 +157,10 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
                 pairs = pairs.append(m0[m0['index'] == p].iloc[0])
                 list_to_remove.append(indices[p])
 
-            new = pd.DataFrame([pair])
-            pairs = pairs.append(['pair'], sort=False)
+            # new = pd.DataFrame([pair])
+            data = [['-'] * 12]
+            extra = pd.DataFrame(data, columns=features + ['index'])
+            pairs = pd.concat([pairs, extra], sort=False)
             pairs.append(pair)
             list_to_remove.sort(reverse=True)
  
@@ -168,26 +170,3 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
 df = convert_csv_to_matrix(csv, num)
 print(df)
 df.to_csv('testing.csv', index=False)
-metadata = pd.read_csv(csv)
-m0 = metadata[features]
-# print(list(df[primary]))
-# print(list(m0[primary]))
-cset = set(m0[primary])
-add = [item for item in list(df[primary]) if item not in cset]
-# print(add)
-# print(len(m0[primary]) + len(add))
-# print(len(df[primary]))
-
-a = list(df[primary])
-seen = {}
-dupes = []
-
-for x in a:
-    if x not in seen:
-        seen[x] = 1
-    else:
-        if seen[x] == 1:
-            dupes.append(x)
-        seen[x] += 1
-print(dupes)
-# print([x for x in list(df[primary]) in list(m0[primary])])
