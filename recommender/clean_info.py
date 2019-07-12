@@ -20,3 +20,14 @@ def trim_str(x):
         return x.strip()
     else:
         return ''
+
+import pandas as pd 
+# Load data from csv and organize
+def clean_df(m0, features, primary):
+    for feature in [x for x in features if x != primary]:
+        m0[feature] = m0[feature].apply(clean_data)
+                
+        if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
+            m0[feature] = m0[feature].apply(replace_space)
+    m0[primary] = m0[primary].apply(trim_str)
+    return m0

@@ -9,6 +9,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 import json # for testing
 import clean_info as ci 
+import model_selection as ms 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
@@ -34,17 +35,16 @@ def convert_csv_to_matrix(csv, num):
     ones = []
 
     def func_pairs(group):
-        # Apply clean_data function to your features and create soup
         m1 = group.copy()
+        m1 = ci.clean_df(m1, features, primary)
+        
+        # BEGINNING ------------------------------------------------------------
+        
+        # Apply clean_data function to your features and create soup
         # print(group)
+
         m1['score'] = ""
         for feature in features:
-            m1[feature] = group[feature].apply(ci.clean_data)
-            
-            if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
-                m1[feature] = m1[feature].apply(ci.replace_space)
-            # print(m1[feature])
-            
             if feature in weights:
                 for i in range(weights[feature]):
                     m1['score'] = m1['score'] + " " + m1[feature]
@@ -57,9 +57,13 @@ def convert_csv_to_matrix(csv, num):
         # Compute the cosine similarity matrix
         cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 
+        # END -----------------------------------------------------------------
+        
+        # cosine_sim = ms.construct_similarity(m1)
+
         #Construct a reverse map of indices and employee names
         # indices = pd.Series(m1.index, index=group[primary]).drop_duplicates()
-        indices = pd.Series(m1.index, index=m1['index']).drop_duplicates()
+        indices = pd.Series(group.index, index=group['index']).drop_duplicates()
         return get_pairs(group['index'].sample(frac=1), indices, cosine_sim, group, num)
         # return get_pairs(group[primary].sample(frac=1), indices, cosine_sim, group, num)
 
@@ -112,14 +116,10 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
     emp_sims = []
     num = 0
     for i in sim_scores:
-        if (num == 2): break
-        if (num != 0):
-            if i[0] not in list_to_remove:
-                emp_indices.append(i[0])
-                emp_sims.append(i[1])
-                num = num + 1
-        else:
-            num = num + 1
+        if (len(emp_indices) == 1): break
+        if i[0] not in list_to_remove and i[0] != name:
+            emp_indices.append(i[0])
+            emp_sims.append(i[1])
 
     # Return the top 10 most similar employee not already paired
     result = m0.iloc[emp_indices]
@@ -144,7 +144,6 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
     list_to_remove = []
     pairs = pd.DataFrame()
     for e in emplist:
-        
         if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
             # name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
@@ -169,3 +168,26 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
 df = convert_csv_to_matrix(csv, num)
 print(df)
 df.to_csv('testing.csv', index=False)
+metadata = pd.read_csv(csv)
+m0 = metadata[features]
+# print(list(df[primary]))
+# print(list(m0[primary]))
+cset = set(m0[primary])
+add = [item for item in list(df[primary]) if item not in cset]
+# print(add)
+# print(len(m0[primary]) + len(add))
+# print(len(df[primary]))
+
+a = list(df[primary])
+seen = {}
+dupes = []
+
+for x in a:
+    if x not in seen:
+        seen[x] = 1
+    else:
+        if seen[x] == 1:
+            dupes.append(x)
+        seen[x] += 1
+print(dupes)
+# print([x for x in list(df[primary]) in list(m0[primary])])

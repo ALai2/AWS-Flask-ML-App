@@ -31,18 +31,6 @@ training_csv = "?"
 output = 'target'
 filename = 'finalized_model.sav'
 
-# Load data from csv and organize
-def clean_df(csv):
-    metadata = pd.read_csv(csv)
-    m0 = metadata[features]
-
-    for feature in [x for x in features if x != primary]:
-        m0[feature] = m0[feature].apply(ci.clean_data)
-                
-        if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
-            m0[feature] = m0[feature].apply(ci.replace_space)
-    m0[primary] = m0[primary].apply(ci.trim_str)
-    return m0
 
 def get_similarity(first, second): # return similarity between two strings
     if first is None or second is None:
@@ -101,7 +89,9 @@ def load_prediction(df, m0):
     return df_soup 
 
 def create_model():
-    m0 = clean_df(csv)
+    metadata = pd.read_csv(csv)
+    m0 = metadata[features]
+    m0 = ci.clean_df(m0, features, primary)
 
     '''
     # Load training data
@@ -177,11 +167,11 @@ def make_prediction(df_soup, X_test):
 
 # print(make_prediction(df_soup, X_test))
 
-def split_names(m0):
+def construct_similarity(m0):
     names = list(m0['Name'])
     length = len(names)
 
-    # or make psuedo-cosine matrix by getting normalized similarity ratios of all pairs
+    # create psudo-similarity matrix
     pairs = list(itertools.combinations(names, 2))
     matrix = np.eye(length, length)
     
@@ -205,18 +195,20 @@ def split_names(m0):
         matrix[index1][index2] = pred 
         matrix[index2][index1] = pred
     
+    return matrix 
     # print(matrix) # <-- new cosine_sim matrix
 
-    from sklearn.cluster import KMeans
-    group_list = KMeans(n_clusters=60, init="k-means++").fit_predict(matrix)
-    # print(group_list)
+    # make pairs using similarity matrix
+    # from sklearn.cluster import KMeans
+    # group_list = KMeans(n_clusters=60, init="k-means++").fit_predict(matrix)
+    # # print(group_list)
 
-    mylists = [ [] for i in range(60) ]
-    for i in range(len(group_list)):
-        group = group_list[i]
-        mylists[group].append(m0.iloc[i][primary])
+    # mylists = [ [] for i in range(60) ]
+    # for i in range(len(group_list)):
+    #     group = group_list[i]
+    #     mylists[group].append(m0.iloc[i][primary])
     
-    print(mylists)
+    # print(mylists)
 
     '''
     remainder = len(names) % num
@@ -227,10 +219,11 @@ def split_names(m0):
     # make groups with num people
     pairs = list(itertools.combinations(names, remainder))
     '''
-    return None  
-
-m0 = clean_df(csv)
-split_names(m0)
+    # return None  
+# metadata = pd.read_csv(csv)
+# m0 = metadata[features]
+# m0 = ci.clean_df(m0, features, primary) # need some way to split for groupby
+# print(construct_similarity(m0))
 '''
 # links about random forests classifier
 https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
