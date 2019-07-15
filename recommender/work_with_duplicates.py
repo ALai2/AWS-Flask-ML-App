@@ -17,8 +17,8 @@ tfidf = TfidfVectorizer(stop_words='english')
 # features
 features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 primary = 'Name'
-groupby = 'Major'
-# groupby = None
+# groupby = 'Major'
+groupby = None
 weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 num = 2
 csv = 'Test Classes Extended.csv'
@@ -38,7 +38,7 @@ def convert_csv_to_matrix(csv, num):
         # apply clean_df function to features
         m1 = group.copy()
         m1 = ci.clean_df(m1, features, primary)
-        
+        '''
         # BEGINNING ------------------------------------------------------------
         m1 = m1.assign(score = [''] * len(m1))
         for feature in features:
@@ -54,8 +54,9 @@ def convert_csv_to_matrix(csv, num):
         # Compute the cosine similarity matrix
         cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
         # END -----------------------------------------------------------------
-        
-        # cosine_sim = ms.construct_similarity(m1)
+        '''
+
+        cosine_sim = ms.construct_similarity(m1)
         #Construct a reverse map of indices and employee names
         indices = pd.Series(group.index, index=group['index']).drop_duplicates()
 

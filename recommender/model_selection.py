@@ -1,18 +1,19 @@
 import pandas as pd
 import numpy as np
-# X, y = np.arange(10).reshape((5,2)), range(5) 
+
+# for creating the ml model
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier 
 
-# Import TfIdfVectorizer from scikit-learn
+# import TfIdfVectorizer from scikit-learn
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Import linear_kernel
+# import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
 
 import itertools
 import clean_info as ci 
-import pickle 
+import pickle # for saving the ml model
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
@@ -22,10 +23,6 @@ training_features = ['Name','Major','Classes','Interests','Hometown','Hometype']
 classes = ['Class 1','Class 2','Class 3','Class 4']
 interests = ['Interest 1','Interest 2','Interest 3']
 primary = 'Name'
-# groupby = 'Major'
-groupby = None
-weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
-num = 2
 csv = 'Test Classes Extended.csv'
 training_csv = "?"
 output = 'target'
@@ -57,12 +54,16 @@ def load_prediction(df, m0):
         for feature in [x for x in training_features if x != primary]:
             acc = 0.0
             for p in pairs:
-                name1 = p[0]
-                name2 = p[1]
+                # name1 = p[0]
+                # name2 = p[1]
+                index1 = int(p[0])
+                index2 = int(p[1])
+                name1 = m0['Name'][m0.index == index1].iloc[0]
+                name2 = m0['Name'][m0.index == index2].iloc[0]
                 
                 # use index or name? is duplicate names a big problem? or use netid for this?
-                index1 = m0.index[m0[primary] == name1][0]
-                index2 = m0.index[m0[primary] == name2][0]
+                # index1 = m0.index[m0[primary] == name1][0]
+                # index2 = m0.index[m0[primary] == name2][0]
                 # name1 = m0['Name'][m0.index == index1].iloc[0]
                 
                 first = ""
@@ -83,9 +84,8 @@ def load_prediction(df, m0):
                 acc += get_similarity(first, second)
             soups.append(acc / len(pairs))
         soup_data.append(soups)
+    
     df_soup = pd.DataFrame(soup_data, columns=training_features)
-    # print(df_soup)
-
     return df_soup 
 
 def create_model():
@@ -98,14 +98,13 @@ def create_model():
     training = pd.read_csv(training_csv)
     metadata = training[['group','target]]
     '''
-
     # will later change to data in training_csv
     data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5],["Joshua, Joshua2", 7]]
     metadata = pd.DataFrame(data, columns=['group','target'])
 
     # modify df to get X
     df = metadata.drop(output, axis=1) # get just features
-    y = metadata[output] # get target value
+    y = metadata[output] # get target values
 
     # df is features to be predicted
     # m0 is information about people
@@ -114,7 +113,7 @@ def create_model():
     # don't need feature scaling, all similarity numbers are between 0 and 1
     X = df_soup[[x for x in training_features if x != primary]]
 
-    # later on don't split the dataset
+    # later on don't split the dataset, just use X and y for fit
     # 20% of data goes into test set, 80% into training set
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
 
@@ -133,21 +132,11 @@ def create_model():
 
     # save the model (cl) to disk
     pickle.dump(cl, open(filename, 'wb'))
+    return None 
 
-    return df_soup, X_test
-    # return cl?
-
-'''
-# Load prediction data (to create df_soup)
-# df is pairings in dataframe format
-m0 = clean_df(prediction_csv)
-df_soup = load_prediction(df, m0)
-# have list of names and information about people
-'''
-# df_soup, X_test = create_model()
+# create_model()
 
 def make_prediction(df_soup, X_test):
-
     # load the model from disk
     cl = pickle.load(open(filename, 'rb'))
     # dataframe of numerical features for prediction
@@ -165,10 +154,9 @@ def make_prediction(df_soup, X_test):
     
     return X_test
 
-# print(make_prediction(df_soup, X_test))
-
 def construct_similarity(m0):
-    names = list(m0['Name'])
+    # names = list(m0['Name'])
+    names = list(m0.index)
     length = len(names)
 
     # create psudo-similarity matrix
@@ -178,58 +166,28 @@ def construct_similarity(m0):
     # list.index(element)
     data = []
     for (one, two) in pairs:
-        data.append([one + ", " + two])
+        data.append([str(one) + ", " + str(two)])
     df = pd.DataFrame(data, columns=['group'])
 
     df_soup = load_prediction(df, m0)
-    # print(df_soup)
     X_test = df_soup[[x for x in training_features if x != primary]]
 
     predictions = make_prediction(df_soup, X_test)
     
-    for p in predictions.iterrows(): # loop through df rows and acquire similarity ratios
+    # loop through df rows and acquire similarity ratios
+    for p in predictions.iterrows():
         [one, two] = p[1]['Name'].split(", ")
-        index1 = names.index(one)
-        index2 = names.index(two)
+        # index1 = names.index(one)
+        # index2 = names.index(two)
+        index1 = int(one)
+        index2 = int(two)
         pred = p[1]['Prediction'] / 10
         matrix[index1][index2] = pred 
         matrix[index2][index1] = pred
     
-    return matrix 
-    # print(matrix) # <-- new cosine_sim matrix
+    return matrix # psuedo-cosine_sim matrix
 
-    # make pairs using similarity matrix
-    # from sklearn.cluster import KMeans
-    # group_list = KMeans(n_clusters=60, init="k-means++").fit_predict(matrix)
-    # # print(group_list)
-
-    # mylists = [ [] for i in range(60) ]
-    # for i in range(len(group_list)):
-    #     group = group_list[i]
-    #     mylists[group].append(m0.iloc[i][primary])
-    
-    # print(mylists)
-
-    '''
-    remainder = len(names) % num
-    if remainder == 1:
-        return 1 # make one num + 1 group and then group rest in num groups
-    elif remainder != 0:
-        return 2 # group remainder and then group rest in num groups
-    # make groups with num people
-    pairs = list(itertools.combinations(names, remainder))
-    '''
-    # return None  
 # metadata = pd.read_csv(csv)
 # m0 = metadata[features]
 # m0 = ci.clean_df(m0, features, primary) # need some way to split for groupby
 # print(construct_similarity(m0))
-'''
-# links about random forests classifier
-https://www.datacamp.com/community/tutorials/random-forests-classifier-python 
-https://stackabuse.com/random-forest-algorithm-with-python-and-scikit-learn/ 
-https://towardsdatascience.com/random-forest-in-python-24d0893d51c0 
-https://dataaspirant.com/2017/06/26/random-forest-classifier-python-scikit-learn/ 
-https://medium.com/machine-learning-101/chapter-5-random-forest-classifier-56dc7425c3e1 
-https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html 
-'''
