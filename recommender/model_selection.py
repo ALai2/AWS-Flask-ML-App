@@ -15,6 +15,9 @@ import itertools
 import clean_info as ci 
 import pickle # for saving the ml model
 
+use_index = True 
+# use_index = False 
+
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
 
@@ -54,17 +57,15 @@ def load_prediction(df, m0):
         for feature in [x for x in training_features if x != primary]:
             acc = 0.0
             for p in pairs:
-                # name1 = p[0]
-                # name2 = p[1]
-                index1 = int(p[0])
-                index2 = int(p[1])
-                name1 = m0['Name'][m0.index == index1].iloc[0]
-                name2 = m0['Name'][m0.index == index2].iloc[0]
                 
-                # use index or name? is duplicate names a big problem? or use netid for this?
-                # index1 = m0.index[m0[primary] == name1][0]
-                # index2 = m0.index[m0[primary] == name2][0]
-                # name1 = m0['Name'][m0.index == index1].iloc[0]
+                if use_index:
+                    index1 = int(p[0])
+                    index2 = int(p[1])
+                    name1 = m0['Name'][m0.index == index1].iloc[0]
+                    name2 = m0['Name'][m0.index == index2].iloc[0]
+                else:
+                    name1 = p[0]
+                    name2 = p[1]
                 
                 first = ""
                 second = ""
@@ -155,8 +156,10 @@ def make_prediction(df_soup, X_test):
     return X_test
 
 def construct_similarity(m0):
-    # names = list(m0['Name'])
-    names = list(m0.index)
+    if use_index:
+        names = list(m0.index)
+    else:
+        names = list(m0['Name'])
     length = len(names)
 
     # create psudo-similarity matrix
@@ -166,7 +169,10 @@ def construct_similarity(m0):
     # list.index(element)
     data = []
     for (one, two) in pairs:
-        data.append([str(one) + ", " + str(two)])
+        if use_index:
+            data.append([str(one) + ", " + str(two)])
+        else:
+            data.append([one + ", " + two])
     df = pd.DataFrame(data, columns=['group'])
 
     df_soup = load_prediction(df, m0)
@@ -177,10 +183,13 @@ def construct_similarity(m0):
     # loop through df rows and acquire similarity ratios
     for p in predictions.iterrows():
         [one, two] = p[1]['Name'].split(", ")
-        # index1 = names.index(one)
-        # index2 = names.index(two)
-        index1 = int(one)
-        index2 = int(two)
+        
+        if use_index:
+            index1 = int(one)
+            index2 = int(two)
+        else:
+            index1 = names.index(one)
+            index2 = names.index(two)
         pred = p[1]['Prediction'] / 10
         matrix[index1][index2] = pred 
         matrix[index2][index1] = pred

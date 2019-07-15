@@ -23,6 +23,8 @@ weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 
 num = 2
 csv = 'Test Classes Extended.csv'
 # csv = 'ProfileInfo.csv'
+use_model = True 
+# use_model = False 
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -38,25 +40,26 @@ def convert_csv_to_matrix(csv, num):
         # apply clean_df function to features
         m1 = group.copy()
         m1 = ci.clean_df(m1, features, primary)
-        '''
-        # BEGINNING ------------------------------------------------------------
-        m1 = m1.assign(score = [''] * len(m1))
-        for feature in features:
-            if feature in weights:
-                for i in range(weights[feature]):
-                    m1['score'] = m1['score'] + " " + m1[feature]
-            else:
-                m1['score'] = m1['score'] + " " + m1[feature]
         
-        #Construct the required TF-IDF matrix by fitting and transforming the data
-        tfidf_matrix = tfidf.fit_transform(m1['score'])
+        if use_model:
+            cosine_sim = ms.construct_similarity(m1)
+        else:
+            # BEGINNING ------------------------------------------------------------
+            m1 = m1.assign(score = [''] * len(m1))
+            for feature in features:
+                if feature in weights:
+                    for i in range(weights[feature]):
+                        m1['score'] = m1['score'] + " " + m1[feature]
+                else:
+                    m1['score'] = m1['score'] + " " + m1[feature]
+            
+            #Construct the required TF-IDF matrix by fitting and transforming the data
+            tfidf_matrix = tfidf.fit_transform(m1['score'])
 
-        # Compute the cosine similarity matrix
-        cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-        # END -----------------------------------------------------------------
-        '''
-
-        cosine_sim = ms.construct_similarity(m1)
+            # Compute the cosine similarity matrix
+            cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+            # END -----------------------------------------------------------------
+    
         #Construct a reverse map of indices and employee names
         indices = pd.Series(group.index, index=group['index']).drop_duplicates()
 
