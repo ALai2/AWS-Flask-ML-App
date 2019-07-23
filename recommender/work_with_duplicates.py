@@ -15,16 +15,25 @@ import model_selection as ms
 tfidf = TfidfVectorizer(stop_words='english')
 
 # features
-features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
+# features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
+# weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
+features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 24, 'Hometown': 3, 'Campus Location': 22, 'Race': 0, 'Preferences': 0}
+
 primary = 'Name'
-# groupby = 'Major'
+# groupby = 'Race'
 groupby = None
-weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
+
 num = 2
-csv = 'Test Classes Extended.csv'
+# csv = 'Test Classes Extended.csv'
+csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
-use_model = True 
-# use_model = False 
+# use_model = True 
+use_model = False 
+pair_groups = False 
+# pair_groups = True 
+random = False   
+rand_num = 4
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -33,7 +42,10 @@ def convert_csv_to_matrix(csv, num):
     m0 = metadata[features]
     m0 = m0.reset_index()
     group_dict = {}
-    matches = pd.DataFrame(columns=features + ['index'])
+    if pair_groups:
+        matches = {}
+    else:
+        matches = pd.DataFrame(columns=features + ['index'])
     ones = []
 
     def func_pairs(group):
@@ -69,30 +81,42 @@ def convert_csv_to_matrix(csv, num):
         courses = m0[groupby].unique() # list of all unique department names
         
         for course in courses:
+
             group = (m0[m0[groupby] == course]).reset_index().drop('level_0', axis=1)
             # keep track of groups with only one member
 
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches = pd.concat([matches, func_pairs(group)], sort=False)
-        
-        if len(ones) == 1:
-            for match in matches:
-                if len(ones) == 0: break
+                if pair_groups:
+                    matches[course] = func_pairs(group)
                 else:
-                    while len(match) < num:
-                        if len(ones) != 0:
-                            match.append(ones.pop(0)[primary])
-                        else: break
-            if len(ones) > 0:
-                matches[0].append(ones.pop(0))
-        else:
-            df = pd.DataFrame(columns=features + ['index'])
-            for one in ones:
-                df = df.append(one, sort=False)
-            df = df.reset_index().drop('level_0', axis=1)
-            matches = pd.concat([matches, func_pairs(df)], sort=False)
+                    matches = pd.concat([matches, func_pairs(group)], sort=False)
+        
+        if len(ones) != 0:
+            if len(ones) == 1:
+                if pair_groups:
+                    matches['Outcast'] = ones.pop(0)
+                else:
+                    for match in matches:
+                        if len(ones) == 0: break
+                        else:
+                            while len(match) < num:
+                                if len(ones) != 0:
+                                    match.append(ones.pop(0)[primary])
+                                else: break
+                    if len(ones) > 0:
+                        matches[0].append(ones.pop(0))
+            else:
+                df = pd.DataFrame(columns=features + ['index'])
+                print(df)
+                for one in ones:
+                    df = df.append(one, sort=False)
+                df = df.reset_index().drop('level_0', axis=1)
+                if pair_groups:
+                    matches['Other'] = func_pairs(df)
+                else:
+                    matches = pd.concat([matches, func_pairs(df)], sort=False)
     else:
         matches = func_pairs(m0)
     
@@ -113,7 +137,7 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
     emp_indices = []
     emp_sims = []
     for i in sim_scores:
-        if (len(emp_indices) == 1): break
+        if (len(emp_indices) == rand_num): break
         if i[0] not in list_to_remove and i[0] != idx:
             emp_indices.append(i[0])
             emp_sims.append(i[1])
@@ -127,42 +151,58 @@ import random
 def get_random(mylist, num): # num = number of people per group
     if (len(mylist) > num):
         inds = list(mylist.index)
-        rand_inds = random.sample(inds, num-1)
-        result = pd.DataFrame(columns=features)
-        for i in rand_inds:
-            result = pd.concat([result, mylist[mylist.index == i]])
+        if random:
+            rand_inds = random.sample(inds, num-1)
+            result = pd.DataFrame(columns=features)
+            for i in rand_inds:
+                result = pd.concat([result, mylist[mylist.index == i]], sort=False)
+        else:
+            for i in range(0, num):
+                result = pd.concat([result, mylist[mylist.index == i]], sort=False)
     else:
         result = mylist
     return result
 
 # semi-greedy algorithm
 def get_pairs(emplist, indices, cosine_sim, m0, num):
-    # pairs = []
+    if pair_groups:
+        pairs = []
+    else:
+        pairs = pd.DataFrame(columns=features + ['index'])
     list_to_remove = []
-    pairs = pd.DataFrame(columns=features + ['index'])
+    
     for e in emplist:
         if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
-            # name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
-            pairs = pairs.append(m0[m0['index'] == e].iloc[0])
+            if pair_groups:
+                name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
+                pair = [name0]
+            else:
+                name0 = m0[m0['index'] == e].iloc[0]
+                pairs = pairs.append(m0[m0['index'] == e].iloc[0])
             
-            name0 = m0[m0['index'] == e].iloc[0]
-            pair = [name0]
             list_to_remove.append(indices[e])
             for p in partner:
-                # pair.append(m0[primary][m0['index'] == p].iloc[0] + " " + str(p))
-                pairs = pairs.append(m0[m0['index'] == p].iloc[0])
+                if pair_groups:
+                    pair.append(m0[primary][m0['index'] == p].iloc[0] + " " + str(p))
+                else:
+                    pairs = pairs.append(m0[m0['index'] == p].iloc[0])
                 list_to_remove.append(indices[p])
 
-            # new = pd.DataFrame([pair])
-            data = [['-'] * 12]
-            extra = pd.DataFrame(data, columns=features + ['index'])
-            pairs = pd.concat([pairs, extra], sort=False)
-            pairs.append(pair)
+            if pair_groups:
+                pairs.append(pair)
+            else:
+                data = [['-'] * (len(features)+1)]
+                extra = pd.DataFrame(data, columns=features + ['index'])
+                pairs = pd.concat([pairs, extra], sort=False)
+            
             list_to_remove.sort(reverse=True)
     return pairs
 
-# print(convert_csv_to_matrix(csv, num))
-df = convert_csv_to_matrix(csv, num)
-print(df)
-df.to_csv('testing.csv', index=False)
+if pair_groups:
+    print(convert_csv_to_matrix(csv, num))
+    # create groups using pairs from each group
+else:
+    df = convert_csv_to_matrix(csv, num)
+    print(df)
+    df.to_csv('testing.csv', index=False)

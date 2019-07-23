@@ -1,282 +1,406 @@
-Name,Major,Class 1,Class 2,Class 3,Class 4,Interest 1,Interest 2,Interest 3,Hometown,Hometype,index
-Bella,Human Developmetn,HD 1150,MATH 1110,BIOEE 1540,INFO 1300,politics,drawing,painting,Connecticut,Suburban,55
-Pablo,American Studies,AMST 1115 ,CS 1110,CHEM 2070,MATH 1120,Jazz Music,Singing,Painting,New Jersey,Suburban,2
--,-,-,-,-,-,-,-,-,-,-,-
-Chris2,Undecided,COMM 1101,SPAN 1120,PLBIO 2400,INFO 1300,crossword puzzles,hiking,going to the beach,Indianna,Rural,90
-Dan,Food Science,FDSC 1101,FDSC 1500,PLSCI 1120,PLBIO 2400,food,tennis,hiking,Maine,Rural,47
--,-,-,-,-,-,-,-,-,-,-,-
-Panther,Undecided,ASRC 1816,HIST 1970,LATA 1802,MEDVL 1660,camping,candle making,gambling,India ,Urban,177
-Adam West,Undecided,MATH 2210,GOVT 1111,ECON 1110,PMA 2800,sailing,meme making,squash,Massachusetts,Urban,76
--,-,-,-,-,-,-,-,-,-,-,-
-Diabeto,Undecided,MATH 1110,COMM 2200,CS 2110,SPAN 1120,sewing,making music,singing,Nevada,Urban,93
-Noah,Biomedical Engineering,CHEM 2090,CS 1110,MATH 1920,BIOMG 1350,kpop,music,playing guitar,Hawaii,Urban,21
--,-,-,-,-,-,-,-,-,-,-,-
-Velma,Undecided,ENGL 1105,LING 1101,INFO 2450,ITAL 1201,linguistics,boxing,science ,New York,Suburban,169
-Jake,Government,GOVT 1817,PHYS 1112,ECON 1110,ANTHR 1400,political science,dance,finance,New Jersey,Suburban,50
--,-,-,-,-,-,-,-,-,-,-,-
-Nadav,Performing Arts,PMA 2800,BIOMG 1350,PMA 1145,CS 1110,Guitar,Singing,football,New York,Suburban,70
-Max,Applied Economics and Management,ECON 1110,AEM 2200,AEM 2010,SPAN 2090,football,basketball,soccer,California,suburban,11
--,-,-,-,-,-,-,-,-,-,-,-
-Simpson,Undecided,EAS 1340,EAS 3050,MATH 1110,BIOEE 1180,meterology,baseball,cricket,Alabama,Rural,150
-Barak,Undecided,ECON 1110,CS 2110,ECON 1120,SPAN 2090,insurance,chineese food,rock music,New Hampshire,Rural,81
--,-,-,-,-,-,-,-,-,-,-,-
-Snoopy,Undecided,ENGL 1111,ECON 2040,PHIL 1650,AMST 1500,pizza,food,eating food,Wyoming ,Rural,170
-Jordyn,Computer Science,CS 1110,MATH 1120,INFO 1300,ITAL 1201,dogs,animals,food,Nevada,Rural,32
--,-,-,-,-,-,-,-,-,-,-,-
-Esther,Undecided,GOVT 1111,ECON 2040,INFO 1300,PSYCH 1101,philosophy,reading,poetry,Vermont,Rural,96
-Brian,Undecided,ILROB 1220,ECON 1120,STS 1101,INFO 1300,sewing,beekeeping,backpacking,North Carolina,Rural,85
--,-,-,-,-,-,-,-,-,-,-,-
-Meg,Undecided,INFO 2450,COMM 2200,ILRST 2100,DSOC 1101,public speaking,blogging ,singing,Maryland,Suburban,111
-Zach,Biometry and Statistics,MATH 1110,BIOEE 1180,ECON 1110,PHIL 1100,singing,beer pong,hanging with friends,New Jersey,Suburban,26
--,-,-,-,-,-,-,-,-,-,-,-
-Chris,English,ECON 1110,ENGL 1100,PSYCH 1101,PHIL 1100,drama,dancing,writing,Georgia,Urban,44
-Pam,Applied Economics and Management,ECON 1110,AEM 2010,AEM 2100,PHIL 1100,economics,business,finance ,New York,Urban,0
--,-,-,-,-,-,-,-,-,-,-,-
-Bunny,Viticulture and Enology,PLSCI 1420,CHEM 1560,VIEN 1104,VIEN 2204,wine,grapes,cooking,West Virginia,Rural,131
-Shane,Agricultural Sciences,ANSC 1101,AG 1125,BOEE 1610,ECON 1110,farming,beer,golf,New York,Rural,1
--,-,-,-,-,-,-,-,-,-,-,-
-Issac,Fiber Science and Apparel Design,FSAD 1350,FSAD 1360,ART 1504,SPAN 1120,middeval times,american history,stamp collecting,Oklahoma,Rural,148
-Abraham,Archaeology,ARKEO 2165,ANTHR 1200,PSYCH 1101,ECON 1110,government ,history,religion,Wyoming ,Rural,152
--,-,-,-,-,-,-,-,-,-,-,-
-Chad,Applied Economics and Management,AEM 1101,ECON 1110,AEM 2100,PLBIO 2400,plants,nature,road trips,New Mexico,Suburban,6
-Brad,Applied Economics and Management,AEM 1101,ECON 1110,AEM 2100,AEM 2210,business,finance,math,New Mexico,Suburban,5
--,-,-,-,-,-,-,-,-,-,-,-
-Scooby,Undecided,ENGL 1147,ASTRO 1101,ILRST 2100,CS 1110,video games,basketball,designing clothes,Connecticut,Suburban,167
-Paul ,Communication,COMM 1101,ILRID 1700,INFO 1300,ASTRO 1101,Art,Soccer,Basketball,New York,Suburban,30
--,-,-,-,-,-,-,-,-,-,-,-
-Mort,Undecided,INFO 1300,COMM 1101,PHYS 1112,BIOEE 1610,gardening,flowers,camping,South Carolina,Suburban,113
-fmar,Undecided,ARCH 1101,PHIL 1100,ILRST 2100,STS 1101,math,fashion,entrepreneurship,Kansas,Suburban,78
--,-,-,-,-,-,-,-,-,-,-,-
-Jen,Industrial Labor Relations,ILIID 1700,ILRST 2100,ILROB 1220,ECON 1120,politics,lacrosse,makeup,Illinois,Suburban,57
-Jason,Biomedical Engineering,CHEM 2090,MATH 1920,ECON 1110,BIOMG 1350,robotics,fashion,makeup,Rhode Island,Suburban,20
--,-,-,-,-,-,-,-,-,-,-,-
-Alonzo,Undecided,CS 2110,SPAN 1120,GOVT 1111,MATH 1110,rocks,rapping,playing sports,Florida,Urban,77
-Stephen,computer science,CS 1110,MATH 1120,SPAN 2090,ECON 1110,eating,pokemon,sports,Montana,Urban,34
--,-,-,-,-,-,-,-,-,-,-,-
-Willa,Performing Arts,PMA 2800,PMA 1145,BIOAP 1100,PHIL 1100,dancing,singing,theatre,New York,Urban,74
-Donald,Architecture,ARCH 1101,ARCH 1120,ECON 1110,PMA 2800,kpop,dancing,board games,Florida,Urban,16
--,-,-,-,-,-,-,-,-,-,-,-
-Dave2,Food Science,FDSC 1101,FDSC 1500,DSOC 1101,HD 1150,food,kung fu,biking,Maine,Rural,48
-Mickie,Hotel Administration,HADM 1350,SPAN 2090,CS 1110,ECON 1110,Food,Eating,Computers,New Mexico,Rural,123
--,-,-,-,-,-,-,-,-,-,-,-
-Goober,Nutritional Science,NS 1150,NS 1600,PLBIO 2400,BIOEE 1180,food,eating healthy,cooking,Maryland,Suburban,127
-Jacob,Biometry and Statistics,MATH 1110,BIOEE 1180,DSOC 1101,PLBIO 2400,math,acting ,lacrosse,Massachusetts,Suburban,24
--,-,-,-,-,-,-,-,-,-,-,-
-Esteban,Mathematics,MATH 2210,ECON 1120,PSYCH 1101,SPAN 2090,lanugages ,kung fu,tennis,Spain,Surbaban,63
-Cleavland,Undecided,MATH 2210,ECON 1120,CS 2800,ECON 2040,golf,tennis,painting,Rhode Island,Urban,91
--,-,-,-,-,-,-,-,-,-,-,-
-Justin,Chemical Engineering,CHEM 2090,MATH 1920,PHYS 1112,ASTRO 1101,art,math,fishing,Kansas,Rural,27
-Nicole,Architecture,ARCH 1101,ARCH 1120,BIOEE 1540,PHIL 1100,art,building,architecture,Montana,Rural,17
--,-,-,-,-,-,-,-,-,-,-,-
-Linda,Computer Science,CS 1110,MATH 1910,ECON 1110,CHEM 2090,dancing,animals,food,Nevada,Suburban,33
-Lauren,Archaelogoy,ARKEO 1200,HIST 1660,HIST 1700,PHIL 1100,watching tv,animals,fashion,Michigan,Suburban,14
--,-,-,-,-,-,-,-,-,-,-,-
-Minnie,Hotel Administration,CS 1110,HADM 1210,HADM 1360,SPAN 1120,xbox,playstation,netflix,Colorado,Suburban,124
-Sam ,Hotel Administration,HADM 1350,HADM 1210,HADM 1360,ECON 1110,Beer,Basketball,Beaches,Massachusetts,Suburban,54
--,-,-,-,-,-,-,-,-,-,-,-
-Nick,Chemical Engineering,CHEM 2090,CS 1110,MATH 1910,PHYS 1112,Computers ,robotics,basketball,Illinois,Urban,28
-Levy,Applied Economics and Management,ECON 1120,BIOEE 1610,Math 1110,AEM 2200,basketball,golf,guitar,New York,Urban,10
--,-,-,-,-,-,-,-,-,-,-,-
-Brett,Undecided,GOVT 1111,ILRST 2100,CHIN 1101,DSOC 1101,politics,kickball,philosophy,Mississippi,Suburban,153
-Bill,Government,ECON 1110,GOVT 1817,HIST 1700,GOVT 1111,politics,finance,food,Tennessee,Suburban,49
--,-,-,-,-,-,-,-,-,-,-,-
-Sanjana,Economics,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,music,karate,board games,New Jersey,Suburban,42
-Alisa,Biological Sciences,BIOG 1440,CHEM 2070,MATH 1110,NS 1600,Music,Baking,Softball,California,Suburban,19
--,-,-,-,-,-,-,-,-,-,-,-
-Martha,Undecided,PHIL 1100,ASTRO 1101,ECON 1110,MUSIC 1105,music,dance,fishing,Massachusetts,Suburban,110
-Benjamin,Biometry and Statistics,MATH 1110,BIOEE 1180,Econ 1110,PHIL 1100,Insurance,beer pong,tennis,New York ,Suburban,23
--,-,-,-,-,-,-,-,-,-,-,-
-Larry,Music,MUSIC 1100,ECON 1110,CS 1110,STS 1101,singing ,music,guitar,New York,Urban,128
-Thad,Undecided,ECON 1110,ASTRO 1101,ECON 1120,CS 1110,finance,rapping,rock music,Portugal,Urban,119
--,-,-,-,-,-,-,-,-,-,-,-
-Winnie,Linguistics,LING 1101,LING 3302,MATH 1110,PSYCH 1101,languages,watching tv,political science,North Dakota,Rural,136
-Chloe,Undecided,PSYCH 1101,Math 1110,ILRST 2100,ITAL 1201,playing sports,watching tv,netflix,Alabama,Suburban,88
--,-,-,-,-,-,-,-,-,-,-,-
-Fred,Classics,LATIN 1202,CLASS 1615,CLASS 2000,CLASS 2603,reading,art history,novels,Michigan,Suburban,159
-Matt,Near Eastern Studies,NES 1660,GOVT 1817,ECON 1120,ECON 2040,history,politics,baseball,Tennessee,Suburban,66
--,-,-,-,-,-,-,-,-,-,-,-
-John,Mechanical Engineering,CHEM 2090,CS 1110,MATH 1920,ECON 1110,Animals,robotics,Soccer,New York,Urban,64
-Stephanie,Mechanical Engineering,CHEM 2090,CS 1110,MATH 1920,PHYS 1112,pokemon,technology,guitar,Nebraska,Rural,65
--,-,-,-,-,-,-,-,-,-,-,-
-Chloe2,Undecided,SPAN 1120,PLBIO 2400,PHIL 1100,GOVT 1111,government,politics,political science,Idaho,Rural,89
-James2,Applied Economics and Management,AEM 1101,AEM 2210,AEM 2100,PLBIO 2400,politics,pottery,scuba diving,North Dakota,Rural,9
--,-,-,-,-,-,-,-,-,-,-,-
-Green Lantern,Undecided,ARCH 1901,ASTRO 1700,CAPS 1920,HIST 1511,blogging,social media,netflix,China,Suburban,175
-Ava,Undecided,ECON 1120,PHIL 1100,DSOC 1101,CS 1110,soccer,dancing,playing violin,Utah,Suburban,80
--,-,-,-,-,-,-,-,-,-,-,-
-Emily,Landscape Architecture,LA 1410,LA 2010,DSOC 1101,PLSCI 1101,architecture,knitting,sewing,Iowa,Rural,62
-Danielsen,Animal Science,ANSC 1101,BIOEE 1540,MATH 1110,PSYCH 1101,clothes,fashion,shoes,New York,Urban,3
--,-,-,-,-,-,-,-,-,-,-,-
-Block,Undecided,SPAN 1120,ECON 1110,CHEM 2070,BIOEE 1610,watching sports,knicks,basketball,New York ,Suburban,82
-Bob,Undecided,PHIL 1100,MATH 1110,AEM 1101,SPAN 2090,fashion,Finanace,riding my bike,Virginia,Suburban,83
--,-,-,-,-,-,-,-,-,-,-,-
-Dylan,Undecided,STS 1101,INFO 2450,COMM 1101,GOVT 1111,ice skating,scuba diving,hanging with friends,New Hampshire,Suburban,94
-Doug,History,COMM 1101,GOVT 1111,PHIL 1100,ARAB 1201,yoga,photography,baseball,Delaware,Suburban,52
--,-,-,-,-,-,-,-,-,-,-,-
-Grace,Undecided,BIOEE 1610,HD 1150,CS 1110,DEA 1101,playing football,camping,baseball,Delaware,Suburban,99
-Seth,History,COMM 1101,GOVT 1111,ITAL 1201,ASTRO 1101,football,drawing,running,Maryland,Suburban,53
--,-,-,-,-,-,-,-,-,-,-,-
-Alex,Earth and Atmospheric Sciences,BIOMI 1120,CS 1110,BIOEE 1610,SPAN 2090,rocks,volcanos,hiking,Texas,Urban,39
-jake2,Animal Science,ANSC 1101,BIOAP 1100,COMM 1101,DSOC 1101,animals,dogs,nature,Wisconsin,Rural,4
--,-,-,-,-,-,-,-,-,-,-,-
-Lois,Undecided,CS 2110,ILROB 1220,COMM 1101,AEM 2200,youtubing,boxing,makeup,Texas,Rural,108
-Glen,Undecided,COMM 1101,SPAN 1120,MATH 2210,CS 2110,poetry,designing,using the internet,Pennsylvania,Suburban,98
--,-,-,-,-,-,-,-,-,-,-,-
-Mia,Undecided,COMM 1101,HD 1150,CS 1110,DEA 1101,computer programming,coding,technology,Delaware,Suburban,112
-Bonnie,Undecided,ECON 2040,SPAN 1120,ILRST 2100,CS 1110,welding,making music,playing guitar,Mississippi,Suburban,84
--,-,-,-,-,-,-,-,-,-,-,-
-Turner,Undecided,BIOG 1440,EAS 1340,CHIN 1101,PSYCH 1101,swimming,writing,taking pictures,North Carolina,Suburban,154
-Carter,Undecided,COMM 1101,DEA 1101,AEM 2100,CS 1110,board games,shoes,fashion,Rhode Island,Suburban,86
--,-,-,-,-,-,-,-,-,-,-,-
-Joshua2,Industrial Labor Relations,ECON 1110,ILRID 1700,ILROB 1220,ILRIR 1100,dancing,acting ,playing guitar,Virginia,Suburban,59
-Megan,Astronomy,ARAB 1201,ASTRO 1101,ASTRO 1103,DEA 1101,acting,photography,origami,Oklahoma,Suburban,18
--,-,-,-,-,-,-,-,-,-,-,-
-Pearl,Engineering Physics,PHYS 2208,ASTRO 1101,MATH 1920,ECON 1120,math,astronomy,chess,Misouri,Urban,142
-Joe,Undecided,ECON 2040,COMM 2200,INFO 2450,CS 3410,math,eating,camping,Mississippi,Urban,105
--,-,-,-,-,-,-,-,-,-,-,-
-Eduardo,Fine Arts,ART 1504,ART 2201,SPAN 2090,,art,painting,drawing,Texas,Rural,144
-Digital Nomad,Applied Economics and Management,AEM 1101,AEM 2210,AEM 2100,DSOC 1101,baking,video games,exercising,,Rural,7
--,-,-,-,-,-,-,-,-,-,-,-
-Jackson,Applied Economics and Management,AEM 1101,DSOC 1101,AEM 2100,PLBIO 2400,business,nature,tennis,Michigan,Suburban,8
-Stamm,Applied Economics and Management,ECON 1110,BIOEE 11870,AEM 2010,AEM 2200,Entrepreneurship,soccer,concerts,Virginia,Suburban,13
--,-,-,-,-,-,-,-,-,-,-,-
-Farquaad,Undecided,COML 1127,ESS 2000,PLSCS 1120,SINHA 1100,paintball,darts,magic,Nebraska,Rural,186
-Cosmo,Undecided,COML 2030,ANTHR 1200,ASTRO 1101,SPAN 2090,sculpting,algorithm building,binge drinking,Kansas,Rural,158
--,-,-,-,-,-,-,-,-,-,-,-
-Kyle,Industrial Labor Relations,ECON 1110,ILRIR 1100,ILROB 1220,DSOC 1101,policy,hiking,origami,Colorado,Suburban,60
-Alana,Industrial Labor Relations,ILRIR 1100,ILRST 2100,ILRIR 2010,ECON 1110,running,working out,playing sports,West Virginia,Rural,56
--,-,-,-,-,-,-,-,-,-,-,-
-Goofy,Music,PHIL 1100,SPAN 1120,MUSIC 1100,MUSIC 1101,music,singing ,songwriting,Ohio,Suburban,126
-Swee,Computer Science,CS 2110,MATh 1920,PHYS 1112,CHEM 2090,Computers ,listening to music,board games,New Hampshire,Suburban,35
--,-,-,-,-,-,-,-,-,-,-,-
-Lance,Engineering Physics,PHYS 2208,MATH 1910,MATH 2210,ECON 1120,robots,outer space,computers,California,Urban,166
-Pedro,Applied Economics and Management,ECON 1110,AEM 2010,AEM 2100,AEM 2200,Entrepreneurship,Dogs,Jokes,Brazil,Urban,12
--,-,-,-,-,-,-,-,-,-,-,-
-Chip,Undecided,PHYS 1112,CS 1110,MATH 1120,PSYCH 1101,running,swimming,pop music,Virginia,Suburban,156
-Dave ,Economics,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,music,karate,board games,New Jersey,Suburban,40
--,-,-,-,-,-,-,-,-,-,-,-
-Bugs,Science and Technology Studies ,STS 1180,STS 1101,BIOEE 1540,ECON 1110,computing,programming,baking,Arizona,Suburban,129
-Ethan,Undecided,SPAN 1120,ECON 2040,INFO 1300,DEA 1101,design,computing,working out,Connecticut,Suburban,97
--,-,-,-,-,-,-,-,-,-,-,-
-Halle,Performing Arts,PMA 2800,PMA 1145,SPAN 2090,PSYCH 1101,acting,theatre,dancing,California,Urban,68
-Jake3,Design and Environmental Analysis,DEA 1101,HD 1150,PHIL 1100,PMA 1145,design,dancing,clothes,New York,Urban,37
--,-,-,-,-,-,-,-,-,-,-,-
-Steve,Undecided,ECON 1110,CHEM 2090,Span 2079,CS 2110,football,lacrosse,sports,New York,Urban,117
-Andrea,Undecided,ECON 1110,MATH 1110,PHYS 1112,CHEM 2090,kpop,lacrosse,origami,California,Urban,79
--,-,-,-,-,-,-,-,-,-,-,-
-Akash,Linguistics,LING 1101,MATH 1120,PSYCH 1101,ENGL 1101,plays,government ,chess,Minnesota,Rural,163
-Chode,English,ENGL 1100,AMST 4194,ENGL 2080,ITAL 1201,pizza,plays,shakespeare,Virginia,rural,146
--,-,-,-,-,-,-,-,-,-,-,-
-Cathrine,Undecided,SPAN 1120,HD 1150,HIST 1700,DEA 1101,art,painting,pottery,Pennsylvania,Suburban,87
-Consuela,Undecided,MATH 1110,ILRST 2100,ECON 2040,INFO 2450,playing poker,sports betting,doing drugs,Connecticut,Suburban,92
--,-,-,-,-,-,-,-,-,-,-,-
-Grat,Undecided,ECON 1120,PLBIO 2400,BIOEE 1610,MATH 1120,kpop,pottery,viola,Oklahoma,Urban,100
-Herbert,Undecided,COMM 1101,GOVT 1111,SPAN 1120,PHYS 1112,Netflix,eating,smoking pot,Delaware,Urban,102
--,-,-,-,-,-,-,-,-,-,-,-
-Will,Environmental and Sustainability Sciences,BIOG 1440,BIOEE 1610,PSYCH 1101,ECON 1110,plants,walking,trees,Maine,Rural,46
-Alexandra,Architecture,ARCH 1101,ARCH 1120,BIOEE 1540,PHIL 1100,buildings,traveling,tennis,Oregon ,Suburban,15
--,-,-,-,-,-,-,-,-,-,-,-
-Donkey,Undecided,COML 1105,VISST 2174,IARD 1100,GREEK 1101,go carting,going to the movies,horseback riding,Pennsylvania,Rural,184
-Emma,Undecided,COMM 1101,PHIL 1100,INFO 1300,DSOC 1101,watching netflix,origami,riding bikes,Rhode Island,Suburban,95
--,-,-,-,-,-,-,-,-,-,-,-
-James,undecided,CS 1110,CHEM 2070,MATH 1120,ASTRO 1101,netflix,chill,beer,Michigan,Suburban,104
-Griffin,Undecided,SPAN 1120,MATH 2210,INFO 1300,PSYCH 1101,eating,horseback riding,finance,Massachusetts,Suburban,101
--,-,-,-,-,-,-,-,-,-,-,-
-Jim,Music,MUSIC 1105,MUSIC 1105,SPAN 2090,HIST 1700,guitar,singing,poetry,Louisiana,Rural,157
-Oliver,Biomedical Engineering,CHEM 2090,MATH 1910,PHYS 1112,BIOMG 1350,biology,golfing,makeup,Texas,Suburban,22
--,-,-,-,-,-,-,-,-,-,-,-
-Marge,Archaeology,ARKEO 1200,ENGL 1158,ARKEO 2165,PSYCH 1101,rocks,collecting stamps,backpacking,Oregon,Suburban,164
-Shaggy,Archaeology,COML 2030,ARKEO 1200,SPAN 1120,PHYS 1112,fossils,exercising,website design,New Jersey,Suburban,165
--,-,-,-,-,-,-,-,-,-,-,-
-Timmy,Design and Environmental Analysis,DEA 1101,HD 1150,DEA 1500,PAM 2040,clothes,makeup,fashion,Florida,Urban,38
-Alli,Design and Environmental Analysis,DEA 1101,DEA 1110,DEA 1500,DSOC 1101,art,design,fashion,California,Urban,36
--,-,-,-,-,-,-,-,-,-,-,-
-Wanda,Comparative Literature,COML 2030,COML 2050,ASTRO 1101,DEA 1101,design,reading ,shakespeare,Arkansas,Rural,155
-Ryan,Biometry and Statistics,MATH 1110,BIOEE 1180,SPAN 2090,PHIL 1100,biology,math ,golf,New Jersey,Suburban,25
--,-,-,-,-,-,-,-,-,-,-,-
-Jordan,Communication,ECON 1110,COMM 1110,COMM 2010,MUSIC 1105,singing,karate,bowling,New York,Urban,29
-Pink,History,ASIAN 1113,HIST 1660,HIST 1700,HIST 1920,badminton,bird watching ,bowling,Japan,Urban,176
--,-,-,-,-,-,-,-,-,-,-,-
-Rocky,Undecided,ECON 1110,SPAN 1120,CS 2110,PHYS 1112,poetry,computing,boxing,New York ,Urban,116
-Isabel,Undecided,GOVT 1111,SPAN 1120,CS 2110,PHYS 1112,math,painting,finance,Kansas,Suburban,103
--,-,-,-,-,-,-,-,-,-,-,-
-Charlie,German Studies,GERST 1175,GERST 1210,ECON 1110,PSYCH 1101,german,learning languages,animals,Nevada,Suburban,139
-Lisa,Undecided,ARAB 1201,ASTRO 1101,INFO 1300,STS 1101,astrology,animals,music,California,Suburban,107
--,-,-,-,-,-,-,-,-,-,-,-
-Batman,Undecided,ARTH 1100,AEM 1106,JWST 1103,ASRC 1203,public speaking,superheroes,comics,Lousianna,Rural,172
-Superman,Undecided,AIIS 1124,PERSN 1322,AMST 1595,AMST 1802,history,government ,politics,Germany,Rural,173
--,-,-,-,-,-,-,-,-,-,-,-
-Taz,Undecided,BIONB 1220,HIST 1970,FINN 1121,PSYCH 1500,kayaking,chess,crochet,Indonesia,Urban,178
-Ken,Undecided,CHEM 2070,PHYS 1112,ECON 1110,CS 2110,entrepreneurship,beer,golf,Austrailia,Urban,106
--,-,-,-,-,-,-,-,-,-,-,-
-Patrick ,Hotel Administration,HADM 1350,MATH 1120,ECON 1110,CS 1110,walking,reading ,music,California,Urban,122
-Leah,English,ENGL 1100,PSYCH 1101,ITAL 1201,PHIL 1100,reading,writing,makeup,Washington,Urban,45
--,-,-,-,-,-,-,-,-,-,-,-
-Roger,Urban and Regional Studies,ARCH 1102,ASTRO 1101,PSYCH 1101,ENGL 1100,waterskiing,eating,movies,New York,Suburban,160
-Maddy,Undecided,PLSCI 1120,ECON 2040,MATH 1110,STS 1101,statistics ,eating,horseback riding,Rhode Island,Suburban,109
--,-,-,-,-,-,-,-,-,-,-,-
-Sandy,"Feminist, Gender, and Sexuality Studies",FGSS 2290,FGSS 2010,AIIS 1123,ASIAN 1192,feminism,gender ,protesting,New York,Urban,135
-Jessica,Computer Science,CS 1110,MATH 1910,PHYS 1112,ENGRI 1110,robotics,animals,yoga,Kansas,Rural,31
--,-,-,-,-,-,-,-,-,-,-,-
-Mark,Operations Research,CS 1110,MATH 1910,PHYS 1112,CHEM 2090,soccer,video games,drawing,California,Suburban,67
-Julia2,Economics,HD 1150,GOVT 1817,PSYCH 1101,ECON 1110,finance,nature,board games,Illinois,Urban,41
--,-,-,-,-,-,-,-,-,-,-,-
-Yogi,English,GOVT 1111,CLASS 1615,ENGL 2000,PSYCH 1101,binge watching tv,excel,problem solving,New Hampshire,Rural,162
-Squidwerd,Asian Studies,ASIAN 1192,ASIAN 1111,MATH 1110,CS 2110,tv,playing the bass,eating food,Nebraska,Rural,125
--,-,-,-,-,-,-,-,-,-,-,-
-Tweedy,Africana Studies,ASRC 1121,ASRC 1120,ECON 2040,HIST 1700,africa,nature,biking,Kenya,Rural,143
-Amanda,Plant Science,PLSCI 1101,PSYCH 1101,PHIL 1100,ITAL 1201,nature,hiking,drama,Iowa,Rural,71
--,-,-,-,-,-,-,-,-,-,-,-
-Henry,Sociology,DSOC 1101,DSOC 1200,ECON 1110,,songwriting,tennis,sewing,New York,Suburban,138
-Peter,Policy Analysis and Management,ECON 1110,PAM 2040,PAM 2300,DSOC 1101,politics,traveling ,acting,Vermont,Suburban,75
--,-,-,-,-,-,-,-,-,-,-,-
-Homer,Undecided,EAS 1340,EAS 2680,MATH 1110,EAS 3410,math,eating,food,California,Urban,149
-Quagmire,Undecided,INFO 2450,SPAN 1120,ILRST 2100,MATH 1110,languages,blogging ,food,Delaware,Suburban,115
--,-,-,-,-,-,-,-,-,-,-,-
-Sheldon,Economics,ECON 1110,ECON 1120,SPAN 2090,Chem 2070,Finanace,Djing,riding my bike,Oregon,Urabn,43
-Julia,Government,NES 1660,GOVT 1817,ANTHR 1400,STS 1101,singing,politics,guitar,Ohio,Suburban,51
--,-,-,-,-,-,-,-,-,-,-,-
-Flinstone,English,LATIN 2201,CLASS 1615,ENGL 1100,CLASS 2604,writing,history of literature,baking,Iowa,Rural,161
-Dennis,Plant Science,FDSC 1101,FDSC 1500,PLSCI 1120,HD 1150,writing,tennis,fashion,Maine,Rural,72
--,-,-,-,-,-,-,-,-,-,-,-
-Jack,Performing Arts,PMA 2800,ECON 1110,BIOAP 1100,PHIL 1100,dancing,rock music,fashion,Rhode Island,Suburban,69
-Joshua,Industrial Labor Relations,ILIID 1700,ILRST 2100,ILRIR 2010,ILRIR 1100,acting ,dancing,playing guitar,Virginia,Suburban,58
--,-,-,-,-,-,-,-,-,-,-,-
-Popeye,Atmospheric Sciences,EAS 1340,EAS 3050,AEM 2100,EAS 1340,weather,science,beer,Washington,Urban,147
-Seamus,Industrial Labor Relations,ILID 1700,ECON 1120,MATH 1120,AEM 2220,guitar,piano,lacrosse,New York,Suburban,61
--,-,-,-,-,-,-,-,-,-,-,-
-Cat Woman,Undecided,AMST 1148,ANTHR 1200,ASIAN 1192,ASRC 1595,political science,volleyball,field hockey,England,Suburban,174
-Phillip,Undecided,MATH 2210,SPAN 1120,CS 2110,SPAN 2090,poetry,reading,camping,New York ,Suburban,114
--,-,-,-,-,-,-,-,-,-,-,-
-Walker,Undecided,SPAN 1120,HD 1150,HIST 1700,CS 1110,video games,xbox,programming,Ohio,Urban,121
-Stewie,Undecided,INFO 2450,ARCH 1101,ILRST 2100,STS 1101,designing,programming,using the internet,Arizona,Suburban,118
--,-,-,-,-,-,-,-,-,-,-,-
-Shrek,Psychology,CLASS 1531,PSYCH 2230,PSYCH 2650,THAI 1121,cheerleading,paddleboarding,archery,Spain,Urban,180
-Olivia,Plant Science,PLSCI 1101,PLSCI 1300,PLSCI 1120,NTRES 1101,plants,nature,hiking,Lousianna,Suburban,73
--,-,-,-,-,-,-,-,-,-,-,-
-Pooh,Global and Public Health Sciences,NS 1600,CHEM 2070,BIOG 1440,BIOEE 1180,public policy,politics,knitting,South Dakota,Suburban,137
-Van,Undecided,SPAN 1120,PLBIO 2400,PHYS 1112,PMA 2800,chineese food,kpop,makeup,Pennsylvania,Urban,120
--,-,-,-,-,-,-,-,-,-,-,-
-Duck,Religious Studies,RELST 2273,RELST 2157,GOVT 1111,,religion,god,praying,Montana,Rural,134
-Mrs. Puff,History of Art,Arth 2000,PHIL 1100,VISST 1101,ARTH 1169,drawing,painting,sculpture,California ,Urban,130
--,-,-,-,-,-,-,-,-,-,-,-
-James,Undecided,ECON 1120,CHEM 2080,Span 2070,CS 2110,golf,lacrosse,hockey,Connecticut,Suburban,171
-Doo,Undecided,ENGL 1120,MATH 1910,ASIAN 1111,CHIN 1101,dancing,ballet,going on runs,New York,Suburban,168
--,-,-,-,-,-,-,-,-,-,-,-
-Tom,Undecided,ASTRO 1101,BIOEE 1610,PSYCH 1101,ASIAN 1111,tennis,cheerleading,acting,Portugal,Suburban,181
-Carmelo,Undecided,SPAN 2090,MATH 1110,INFO 1300,PSYCH 1101,walking ,hiking,lifting,Ohio,Suburban,179
--,-,-,-,-,-,-,-,-,-,-,-
-Brown,Physics,PHYS 1112,MATH 1220,PHYS 2207,PSYCH 1101,physics,science,bill nye,Vermont,Suburban,141
-Krab,Linguistics,LING 1101,SPAN 1120,LING 1100,AMST 1585,languages,dancing,storytelling,Spain,Suburban,132
--,-,-,-,-,-,-,-,-,-,-,-
-Daffy,Urban and Regional Planning,CRP 1100,CRP 1101,CRP 2610,PHYS 1201,building,architecture,math,North Carolina,Suburban,133
-Mirabile,Italian,ITAL 1202,ITAL 1212,PSYCH 1101,,italian,soccer,working out,Illinois,Urban,140
--,-,-,-,-,-,-,-,-,-,-,-
-Tyrion,Undecided,AIIS 1124,SPAN 1120,LING 1101,CHIN 1101,baseball,swordfighting,archery,Kentucky,Suburban,183
-Bird,Anthropology,ANTHR 1400,ANTHR 1200,ANTHR 1300,ANTHR 2400,plants,government ,computers,Oklahoma,Suburban,145
--,-,-,-,-,-,-,-,-,-,-,-
-Fiona,Undecided,COML 1104,THAI 1100,HINDI 1101,VISST 1101,cake decorating,pets,crossword puzzles,Wisconsin,Urban,182
-Lord,Undecided,COML 1106,HD 2200,HD 2300,SANSK 1131,puzzles,jewelry making,hunting,Idaho,Rural,185
--,-,-,-,-,-,-,-,-,-,-,-
-Bart,China and Asia-Pacific Studies,CAPS 1622,CAPS 1670,CHIN 1101,STS 1101,China,history,government,Missouri,Suburban,151
--,-,-,-,-,-,-,-,-,-,-,-
+Name,Gender,Major,Grad Year,Class 1,Class 2,Class 3,Class 4,Interest 1,Interest 2,Study Habits,Hometown,Campus Location,Race,Preferences,index
+Asher,Male,Computer Science,2021,CS 3420,ENGRD 2300,DEA 1500,ILRIR 4066,rockets,rock collecting,I start my assignments closer to the deadline.,New York,West Campus (Dorms),4,,53
+Owen,Male,Computer Science,2022,COGST 3660,ECE 2300,CS 2800,,painting,golf,I start my assignments closer to the deadline.,England,West Campus (Dorms),2,,103
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Victoria,Female,Undecided,2021,CS 4820,ILROB 1220,ORIE 3120,ECON 1110,political science,dance,I start my assignments closer to the deadline.,New Jersey,North Campus (Other),3,,107
+Jackson,Male,Mathematics,2021,CS 4700,ENGRD 2700,ORIE 3120,,philosophy,reading,I start my assignments closer to the deadline.,Vermont,North Campus (Other),4,,84
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jared,Male,Engineering Physics,2021,ECE 3100,CS 4820,ECE 3100,,youtubing,boxing,I start my assignments closer to the deadline.,Texas,Collegetown,2,,134
+Darryl,Prefer not to specify,Computer Science,2022,CS 4700,MATH 2940,CRP 1101,,dancing,ballet,I start my assignments closer to the deadline.,New York,Collegetown,1,,75
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gabriella,Female,Undecided,2021,THETR 1510,CS 4700,DEA 1101,,dancing,acting ,I start my assignments in the middle of the week.,Virginia,Other,0,,34
+Betty,Female,Computer Science,2022,CS 2800,CS 4700,DEA 1101,,design,dancing,I start my assignments in the middle of the week.,New York,West Campus (Dorms),1,,37
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Plankton,Male,Computer Science,2020,CS 4420,ENGRD 2700,ENGRD 2700,AEM 4120,badminton,bird watching ,I start my assignments in the middle of the week.,Japan,North Campus (Other),1,,60
+Sarah,Female,Biometry and Statistics,2022,CS 4620,MATH 2940,ORIE 3120,AEM 4120,plants,nature,I start my assignments in the middle of the week.,Lousianna,Collegetown,1,,66
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Grace,Female,Undecided,2021,HIST 2451,HE 4700,MATH 4710,,policy,hiking,I start my assignments the day they are released,Colorado,North Campus (Freshmen Dorms),0,,155
+Nikki,Female,Undecided,2021,CS 4700,HIST 2451,HIST 2003,,Guitar,Singing,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),1,,77
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Roy,Prefer not to specify,Design and Environmental Analysis,2021,DEA 1101,HD 1150,DEA 1500,PAM 2040,fossils,exercising,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),6,,125
+Naomi,Female,Applied Economics and Management,2021,INFO 2040,CS 4700,ENGRD 2700,,dogs,animals,I start my assignments closer to the deadline.,Nevada,North Campus (Freshmen Dorms),3,,162
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mindy,Female,Undecided,2022,CS 4620,FDSC 2500,ENGRD 2190,,soccer,golf,I start my assignments closer to the deadline.,China,North Campus (Freshmen Dorms),1,,244
+Carmela,Female,Computer Science,2021,ASIAN 2202,CS 4820,ENGL 2681,,languages,blogging ,I start my assignments closer to the deadline.,Delaware,North Campus (Freshmen Dorms),1,,6
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Phil,Male,Computer Science ,2021,ECE 2300,NS 4630,MATH 4710,ENGRD 2250,traveling,soccer,I start my assignments the day they are released,Kentucky,Collegetown,3,,231
+Ellie,Female,Undecided,2021,CS 4620,CS 4700,MUSIC 2111,ENGRD 2190,cheerleading,Basketball,I start my assignments the day they are released,Massachusetts,Collegetown,3,,69
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brenden,Male,Computer Science ,2022,CS 4620,AEM 4120,ENGRD 2300,,volunteering,shopping,I start my assignments in the middle of the week.,Kentucky,Collegetown,1,,258
+Danielson,Male,Computer Science,2021,MATH 2940,Phys 2213,CS 2800,,biology,math ,I start my assignments in the middle of the week.,New Jersey,Collegetown,3,,181
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Stanley,Prefer not to specify,Urban and Regional Studies,2021,CS 4420,ASTRO 1101,CS 4320,ENGL 1100,writing,history of literature,I start my assignments closer to the deadline.,Iowa,North Campus (Other),6,,1
+Dwight,Male,Mathematics,2021,CS 2800,CLASS 2810,ENGRD 2190,,writing ,basketball,I start my assignments closer to the deadline.,Japan,North Campus (Freshmen Dorms),1,,243
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mort,Male,Computer Science,2021,CS 4620,ILRIR 1100,ECON 1120,,Entrepreneurship,Dogs,I start my assignments the day they are released,Brazil,Other,5,,70
+Rachel,Female,Computer Science,2021,CS 4700,PHYS 2213,DEA 2150,,welding,making music,I start my assignments the day they are released,Mississippi,Other,2,,79
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carter,Male,Computer Science,2020,COGST 3660,MATH 4710,ECE 3110,,acting,photography,I start my assignments the day they are released,Oklahoma,North Campus (Other),0,,137
+Meg,Female,Computer Science,2020,MATH 2940,CS 4820,PHYS 2214,ENGRD 2700,clothes,fashion,I start my assignments the day they are released,New York,North Campus (Other),3,,180
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jackie,Female,Religious Studies,2021,CS 4320,RELST 2157,GOVT 1111,,feminism,gender ,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),5,,215
+Austin,Male,Economics,2021,CS 2800,MUSIC 1105,ECE 2300,,rapping,beatboxing,I start my assignments in the middle of the week.,New Jersey,North Campus (Freshmen Dorms),1,,257
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ruby,Female,Biometry and Statistics,2021,FDSC 2500,MATH 2940,BTRY 3080,,dancing,singing,I start my assignments closer to the deadline.,New York,Other,1,,100
+Bart,Male,Computer Science,2020,BTRY 3080,CS 4410,INFO 2040,ECON 1110,watching tv,animals,I start my assignments closer to the deadline.,Michigan,Other,6,,20
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Spongebob,Male,Computer Science,2021,CS 4410,ENGRD 2700,MATH 4710,GERST 1210,linguistics,boxing,I start my assignments the day they are released,New York,Other,0,,57
+Eva,Female,Biometry and Statistics,2022,CS 4820,CS 4700,CRP 3370,GERST 1210,politics,traveling ,I start my assignments the day they are released,Vermont,North Campus (Freshmen Dorms),2,,105
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Velma,Female,Undecided,2021,PHYS 2213,MATH 2940,CS 2800,ASIAN 2260,yoga,photography,I start my assignments in the middle of the week.,Delaware,West Campus (Dorms),3,,211
+David,Male,Economics,2021,CS 4820,PHYS 2213,PAM 2550,,watching sports,knicks,I start my assignments in the middle of the week.,New York ,West Campus (Dorms),6,,121
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Archie,Female,Undecided,2022,CS 4420,HE 4800,DEA 1101,,dancing,acting ,I start my assignments closer to the deadline.,Virginia,Other,1,,61
+Julia,Female,Undecided,2021,ECE 2300,CS 4700,DEA 1101,DEA 2040,architecture,knitting,I start my assignments closer to the deadline.,Iowa,West Campus (Dorms),0,,132
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gabby,Female,Undecided,2022,CS 4820,PHYS 2213,ORIE 3120,ARCH 1501,politics,lacrosse,I start my assignments the day they are released,Illinois,Other,0,,92
+Madison,Female,Undecided,2021,CS 4820,PHYS 2213,ECON 4020,ECON 1120,singing,politics,I start my assignments the day they are released,Ohio,West Campus (Dorms),3,,108
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sophie,Female,Italian,2021,ITAL 1202,ITAL 1212,PSYCH 2020,,physics,science,I start my assignments the day they are released,Vermont,North Campus (Other),6,,167
+Ally,Female,Mathematics,2021,DANCE 1320,ENGRD 2700,PHIL 3310,,golf,tennis,I start my assignments the day they are released,Rhode Island,North Campus (Other),3,,122
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeff,Male,Nutritional Science,2021,NS 1150,ENGRD 2020,PLBIO 2400,BIOEE 1180,hockey,skiing,I start my assignments closer to the deadline.,Iowa,North Campus (Other),3,,197
+Dexter,Other,Undecided,2021,CS 4700,EAS 3050,ASRC 1121,BIOEE 1180,China,history,I start my assignments in the middle of the week.,Missouri,North Campus (Other),1,,129
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Erin,Female,Undecided,2021,ENGRD 2020,FSAD 1250,MATH 2210,,gardening,guitar,I start my assignments closer to the deadline.,Korea ,North Campus (Freshmen Dorms),4,,245
+Lindsay,Female,Undecided,2022,CS 4820,PHYS 2213,ORIE 3120,,pokemon,technology,I start my assignments closer to the deadline.,Nebraska,North Campus (Freshmen Dorms),0,,90
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Piper,Female,Computer Science,2021,BURM 1122,INFO 4240,MATH 2210,,economics,business,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),0,,35
+Pablo,Male,Computer Science,2021,MATH 4710,ECE 2300,ORIE 3120,,kpop,pottery,I start my assignments the day they are released,Oklahoma,North Campus (Freshmen Dorms),3,,189
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dylan,Male,Government,2021,ENGRD 2020,GOVT 1817,HIST 1700,GOVT 1111,model rockets,mountain biking,I start my assignments in the middle of the week.,Massachusetts,West Campus (Dorms),3,,135
+Sheldon,Male,Electrical and Computer Engineering,2021,ENGRD 2020,BURM 1122,LING 3315,ECE 2300,chess,ceramics,I start my assignments in the middle of the week.,India,West Campus (Dorms),1,,241
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Rebecca,Female,Africana Studies,2020,CS 4620,ASRC 1120,ECON 2040,PSYCH 1101,biking,hiking,I start my assignments closer to the deadline.,Oregon,Collegetown,3,,12
+Hannah,Female,Undecided,2021,CS 4820,PHYS 2213,PHIL 3310,,acting,theatre,I start my assignments closer to the deadline.,California,Collegetown,1,,98
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cooper,Male,Operations Research,2020,CS 4740,PLBIO 2400,ENGRD 2190,,snorkeling,scuba diving,I start my assignments closer to the deadline.,Mississippi,Collegetown,4,,261
+Taylor,Female,Computer Science ,2022,CS 4740,ILRIR 4023,CS 4700,BTRY 3080,singing,yoyo,I start my assignments closer to the deadline.,Nebraska,Collegetown,2,,266
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jen,Other,Fine Arts,2022,ART 1504,ART 2201,SPAN 2090,,plants,government ,I start my assignments in the middle of the week.,Oklahoma,North Campus (Freshmen Dorms),4,,4
+Leslie,Female,Electrical and Computer Engineering,2022,ENGRD 2020,COGST 3660,CHEM 2080,,cake decorating,baking,I start my assignments in the middle of the week.,Washington,North Campus (Freshmen Dorms),1,,240
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Henry,Male,Economics,2022,DEA 1200,ECON 4020,HD 2300,INFO 2040,netflix,baseball,I start my assignments closer to the deadline.,New York,North Campus (Freshmen Dorms),4,,126
+Max,Male,Computer Science,2022,THETR 1510,CS 4820,GOVT 3553,,legos,meditation,I start my assignments closer to the deadline.,Rhode Island,North Campus (Freshmen Dorms),3,,49
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Emily,Female,Computer Science,2021,THETR 1510,HIST 2003,CS 4700,,gardening,flowers,I start my assignments the day they are released,South Carolina,Collegetown,1,,5
+Tyler,Male,Computer Science,2021,CS 4700,DANCE 1181,BTRY 3080,,golf,basketball,I start my assignments the day they are released,Korea,Collegetown,3,,81
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Aiden,Male,Computer Science,2021,CS 4420,CEE 3040,ENGRD 2700,AEM 4120,paintball,darts,I start my assignments closer to the deadline.,Nebraska,North Campus (Other),2,,62
+Margaret,Female,Biological Sciences,2021,MATH 4710,ENGRD 2700,ORIE 3120,BIOMG 1350,video games,xbox,I start my assignments closer to the deadline.,Ohio,North Campus (Other),3,,188
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Seth,Male,Engineering Physics,2021,ASIAN 2202,CLASS 2603,CS 4700,,statistics ,eating,I start my assignments the day they are released,Rhode Island,Other,2,,8
+Harrison,Male,Computer Science,2021,CS 4700,ENGRD 2700,MATH 4710,,math,fashion,I start my assignments the day they are released,Kansas,Collegetown,5,,87
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Karen,Prefer not to specify,Computer Science,2022,DEA 1101,ILRIR 1100,CS 4700,PMA 1145,rocks,collecting stamps,I start my assignments in the middle of the week.,Oregon,Other,6,,124
+Angela,Female,Computer Science,2021,ORIE 3120,CS 4820,CS 4700,,Music,Baking,I start my assignments in the middle of the week.,California,North Campus (Other),0,,199
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carter,Male,Computer Science,2022,CS 4410,ECE 3100,CS 4820,INFO 2040,puzzles,jewelry making,I start my assignments in the middle of the week.,Idaho,North Campus (Freshmen Dorms),2,,58
+Sage,Female,Science and Technology Studies ,2021,CS 4410,ECE 3100,BTRY 3080,HIST 2672,drawing,painting,I start my assignments closer to the deadline.,California ,North Campus (Freshmen Dorms),4,,59
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Pearl,Male,Computer Science,2020,FSAD 1250,PHYS 2213,PAM 2550,MUSIC 2112,public speaking,superheroes,I start my assignments the day they are released,Lousianna,West Campus (Dorms),0,,146
+Tom,Male,Computer Science,2021,INDO 4432,CS 4700,INFO 2040,,kpop,music,I start my assignments the day they are released,Hawaii,West Campus (Dorms),3,,10
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kevin,Other,Undecided,2021,BIOG 1440,EAS 1340,CHIN 1101,PSYCH 1101,design,reading ,I start my assignments closer to the deadline.,Arkansas,North Campus (Freshmen Dorms),6,,15
+Stewie,Male,Computer Science,2021,PHYS 2214,MATH 2940,ECON 1110,,Jazz Music,Singing,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),1,,212
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Theo,Male,Mathematics,2022,BURM 1122,MATH 4810,ECON 3130,CS 4620,painting,piano,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),3,,50
+Marge,Female,Applied Economics and Management,2020,MATH 2940,PHYS 2213,CS 2800,,robotics,animals,I start my assignments in the middle of the week.,Kansas,North Campus (Freshmen Dorms),3,,179
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Debby,Female,Computer Science ,2022,CS 4740,MUSIC 1100,ENGRD 2640,,rafting,hiking,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),1,,256
+Phineas,Male,Computer Science ,2020,CS 2800,WRIT 4860,MATH 4710,,boxing,lacrosse,I start my assignments in the middle of the week.,California,West Campus (Dorms),3,,237
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Walker,Other,Fiber Science and Apparel Design,2021,FSAD 1350,CS 4320,ART 1504,SPAN 1120,math,eating,I start my assignments closer to the deadline.,California,Other,6,,147
+Mandy,Female,Computer Science ,2021,ENGL 2681,FREN 3130,CS 4320,,baseball,graphic design,I start my assignments closer to the deadline.,New Jersey,Collegetown,3,,143
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alexander,Male,Engineering Physics,2021,ASIAN 2202,CS 4620,PHIL 3310,,astrology,animals,I start my assignments in the middle of the week.,California,West Campus (Dorms),2,,7
+Ron,Male,Computer Science ,2021,CS 4620,COML 2350,ENGRD 2190,,football,boating,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),5,,239
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Abigail,Female,English,2020,ENGL 1100,AMST 4194,ENGL 2080,ITAL 1201,weather,science,I start my assignments the day they are released,Washington,West Campus (Dorms),5,,142
+Adam,Male,Computer Science,2021,MATH 2940,CS 2800,PHYS 2213,ECE 2300,plants,nature,I start my assignments the day they are released,New Mexico,West Campus (Dorms),2,,177
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Barney,Male,Computer Science,2021,KOREA 4402,INFO 2040,NAVS 1102,,art,design,I start my assignments the day they are released,California,West Campus (Dorms),1,,39
+Jeremy,Male,Mathematics,2021,EAS 1109,ECE 2300,MATH 4710,HIST 2672,design,computing,I start my assignments the day they are released,Connecticut,West Campus (Dorms),4,,128
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alana,Female,Undecided,2020,CS 4820,PHYS 2213,ENGRD 2700,ECON 1120,Animals,robotics,I start my assignments in the middle of the week.,New York,Other,0,,89
+Aria,Female,Undecided,2022,CS 4820,PSYCH 3420,ENGRD 2700,ECON 4020,politics,finance,I start my assignments in the middle of the week.,Tennessee,North Campus (Other),3,,106
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Craig,Male,Computer Science ,2022,CS 2800,FSAD 1250,ENGRD 2640,,netflix,programming ,I start my assignments the day they are released,New York,Other,3,,252
+Clara,Female,Operations Research,2022,CS 4420,RUSSIA 1131,ENGRD 2640,BTRY 3080,nail art,origami,I start my assignments the day they are released,Washington,Other,3,,254
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ed,Male,Economics,2022,MATH 2210,ECON 3040,ASIAN 3308,,rocks,digging,I start my assignments closer to the deadline.,Utah ,Collegetown,4,,175
+Jessica,Female,Engineering Physics,2021,PHYS 2208,MATH 1910,MATH 2210,ECON 1120,africa,nature,I start my assignments closer to the deadline.,Kenya,Collegetown,6,,210
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Connor,Male,Economics,2022,CS 4820,ENGRD 2700,HINDI 1101,,kpop,lacrosse,I start my assignments in the middle of the week.,California,Other,5,,119
+Liam,Male,Computer Science,2022,CS 4820,ENGRD 2700,PHIL 3310,,walking ,hiking,I start my assignments in the middle of the week.,Ohio,Other,1,,102
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+April,Female,Computer Science ,2022,CS 4420,COML 2350,ENGRD 2190,ENGRD 2700,nature,hiking,I start my assignments closer to the deadline.,New York,West Campus (Dorms),3,,250
+Maria,Female,Computer Science ,2021,CS 4700,HIST 3632,ENGRD 2190,ENGRD 2700,field hockey,songwriting,I start my assignments closer to the deadline.,Hawaii,West Campus (Dorms),6,,265
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+John,Male,Engineering Physics,2021,INFO 4240,CS 4820,DEA 1101,CS 4430,math,eating,I start my assignments closer to the deadline.,Mississippi,North Campus (Freshmen Dorms),3,,165
+Jan,Female,Operations Research,2022,ENGRD 2020,HADM 6090,MATH 2940,,playing piano,fencing,I start my assignments closer to the deadline.,New York,North Campus (Freshmen Dorms),4,,246
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lisa,Female,Computer Science,2021,MUSIC 1100,CS 2800,ENGRD 2700,CS 4700,buildings,traveling,I start my assignments the day they are released,Oregon ,North Campus (Freshmen Dorms),6,,193
+Tweety,Female,Information Science,2020,SOC 1900,CS 4820,ART 1500,MATH 4710,reading,writing,I start my assignments the day they are released,Washington,North Campus (Freshmen Dorms),0,,216
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tucker,Male,Computer Science,2022,CS 4820,CS 2800,Chem 2090,ARCH 1502,biology,golfing,I start my assignments in the middle of the week.,Texas,West Campus (Dorms),4,,118
+Sophia,Female,Physics,2021,CS 2800,MATH 2940,PAM 2350,,math,astronomy,I start my assignments in the middle of the week.,Misouri,West Campus (Dorms),6,,48
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Holly,Prefer not to specify,Computer Science,2021,CS 4700,DEA 1110,DEA 1500,DSOC 1101,plays,government ,I start my assignments the day they are released,Minnesota,Collegetown,1,,123
+Lily,Female,Mathematics,2021,ORIE 3120,INFO 2040,CHEM 3670,,playing sports,watching tv,I start my assignments the day they are released,Alabama,Collegetown,3,,202
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Zachary,Male,Information Science,2020,INFO 2450,ASTRO 1101,INFO 2040,ILRST 2100,fashion,exercising,I start my assignments in the middle of the week.,New York,North Campus (Other),3,,164
+Glenn,Male,Computer Science,2022,CHIN 1101,INFO 2040,CS 4820,,kpop,dancing,I start my assignments in the middle of the week.,Florida,North Campus (Freshmen Dorms),0,,24
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jenna,Female,Undecided,2021,BME 4440,INFO 2300,ASIAN 3307,,history,politics,I start my assignments the day they are released,Tennessee,North Campus (Other),1,,17
+Mark,Male,Computer Science ,2021,CS 4620,BME 4440,ENGRD 2640,,kung fu,motorcycles,I start my assignments the day they are released,California,Other,3,,253
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jacob,Male,Computer Science,2021,CS 4820,ECE 3100,ORIE 3120,,ice skating,scuba diving,I start my assignments the day they are released,New Hampshire,Other,3,,115
+Snoopy,Male,Information Science,2021,CS 4820,PSYCH 3420,HORT 2010,,food,kung fu,I start my assignments the day they are released,Maine,North Campus (Other),3,,110
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Richard,Male,Hotel Administration,2021,HADM 1210,HADM 1360,CS 2800,,wine,grapes,I start my assignments the day they are released,West Virginia,North Campus (Other),4,,153
+Jerry,Male,Computer Science ,2021,CS 4620,BIONB 3300,MATH 2940,,watching tv,relaxing,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),3,,251
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Caleb,Male,Mechanical Engineering,2021,COGST 3660,PSYCH 3420,CS 4620,NBA 5550,robots,history,I start my assignments closer to the deadline.,Illinois,North Campus (Other),3,,51
+Eliza,Female,Computer Science,2021,BIONB 3300,ENGRD 2700,ASIAN 3333,,board games,shoes,I start my assignments closer to the deadline.,Rhode Island,North Campus (Other),2,,80
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Melanie,Female,Computer Science ,2022,CS 4700,ITAL 1212,ENGRD 2190,BTRY 3080,sketching,drawing,I start my assignments in the middle of the week.,Arkansas,Collegetown,4,,260
+Carlos,Male,Computer Science ,2021,CS 2800,MILS 4402,ENGRD 2190,,gymnastics,dancing,I start my assignments in the middle of the week.,Georgia,Collegetown,2,,269
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Zoey,Female,Undecided,2022,CS 4620,CS 4700,ARCH 1502,,football,drawing,I start my assignments closer to the deadline.,Maryland,West Campus (Dorms),3,,68
+Aliza,Female,Mathematics,2022,CS 4700,ENGRD 2700,PHIL 3310,,art,painting,I start my assignments closer to the deadline.,Pennsylvania,West Campus (Dorms),3,,82
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chandler,Male,Music,2021,CS 2800,CHEM 2080,PSYCH 3420,MATH 4710,tv,playing the bass,I start my assignments the day they are released,Nebraska,North Campus (Freshmen Dorms),2,,42
+Zack,Male,Performing Arts,2020,PMA 2800,INDO 4432,SPAN 2090,ENGRD 2300,model rockets,darts,I start my assignments the day they are released,Florida ,North Campus (Freshmen Dorms),3,,214
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tony,Male,Computer Science,2021,MUSIC 2111,CS 4820,BTRY 2080,,poetry,reading,I start my assignments in the middle of the week.,New York ,Other,1,,195
+Alisa,Female,Computer Science,2020,CHIN 1109,CS 4820,ILRIR 3820,,Computers ,robotics,I start my assignments in the middle of the week.,Illinois,Other,3,,25
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mr. Krabs,Male,Computer Science,2021,HADM 6090,ORIE 3120,INFO 2040,CHIN 1101,blogging,social media,I start my assignments the day they are released,China,North Campus (Freshmen Dorms),0,,73
+White,Other,Undecided,2020,EAS 1340,EAS 2680,MATH 1110,EAS 3410,meterology,baseball,I start my assignments the day they are released,Alabama,North Campus (Freshmen Dorms),6,,131
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Oliver,Male,Computer Science,2020,GOVT 3553,BTRY 3080,MATH 4710,ENGRD 2700,cake decorating,pets,I start my assignments in the middle of the week.,Wisconsin,West Campus (Dorms),1,,152
+Jay,Male,Undecided,2020,CS 4320,LATIN 1201,BTRY 3080,ENGRD 2250,video games,rapping,I start my assignments in the middle of the week.,Oregon,West Campus (Dorms),6,,228
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Conrad,Male,Economics,2021,CS 4820,INFO 2040,CHEM 3670,,soccer,dancing,I start my assignments closer to the deadline.,Utah,North Campus (Freshmen Dorms),6,,120
+Jack,Male,Computer Science,2021,CS 4820,CHEM 3670,PSYCH 3420,ENGL 2681,watching netflix,origami,I start my assignments in the middle of the week.,Rhode Island,North Campus (Freshmen Dorms),3,,116
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ferb,Male,Economics,2021,CHEM 2080,PMA 4220,MATH 2940,ENGRD 2300,sailing,going to the beach,I start my assignments the day they are released,New Jersey,Collegetown,3,,233
+Candace,Female,Computer Science ,2022,CHEM 2080,SINHA 3301,MATH 2210,ENGRD 2300,polo,basketball,I start my assignments the day they are released,California,Collegetown,3,,234
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hunter,Male,Computer Science,2020,CS 3420,DEA 2150,PHIL 3310,,sleeping,soccer,I start my assignments the day they are released,New York,Collegetown,4,,54
+Pam,Female,Computer Science,2020,CS 2800,CS 4740,NBA 5550,HIST 2003,math,acting ,I start my assignments the day they are released,Massachusetts,Collegetown,3,,46
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Phyllis,Other,Undecided,2020,GOVT 1111,ILRST 2100,CHIN 1101,DSOC 1101,swimming,writing,I start my assignments in the middle of the week.,North Carolina,Other,6,,151
+Andy,Prefer not to specify,Undecided,2021,PHYS 1112,CS 1110,MATH 1120,PSYCH 1101,guitar,singing,I start my assignments in the middle of the week.,Louisiana,West Campus (Dorms),4,,208
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Leo,Male,Mechanical Engineering,2022,BIONB 3300,CHEM 3670,INFO 2040,CA 4740,badminton,origami,I start my assignments the day they are released,New York,West Campus (Dorms),3,,52
+Josh,Male,Computer Science,2022,ORIE 3120,INFO 2040,CHEM 3670,INFO 2300,kayaking,chess,I start my assignments the day they are released,Indonesia,Collegetown,1,,200
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Andy,Male,Computer Science ,2021,CS 2800,COML 2214,ENGRD 2190,MATH 4710,hiking,backpacking,I start my assignments closer to the deadline.,China,North Campus (Other),4,,249
+Leah,Female,Undecided,2022,CS 4620,PHYS 2213,ORIE 3120,,nature,hiking,I start my assignments closer to the deadline.,Iowa,North Campus (Other),1,,65
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jillian,Female,Computer Science,2020,ECON 3030,CS 4410,CS 4820,INFO 2300,robotics,fashion,I start my assignments closer to the deadline.,Rhode Island,North Campus (Other),3,,138
+Sandy,Female,Computer Science,2020,THETR 1510,PHYS 2213,DEA 2150,PAM 2300,golf,lacrosse,I start my assignments closer to the deadline.,Connecticut,North Campus (Other),0,,63
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joe,Male,Computer Science,2021,PHYS 2112,MATH 4260,CS 4700,BTRY 3080,basketball,golf,I start my assignments in the middle of the week.,New York,Collegetown,0,,209
+Jamie,Female,Computer Science,2021,CHEM 3570,ENGL 2681,ECON 4020,,,,I start my assignments in the middle of the week.,New York,Collegetown,3,,23
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Johnny,Male,Electrical and Computer Engineering,2021,BIONB 3300,CHEM 3670,PSYCH 3420,,designing,programming,I start my assignments closer to the deadline.,Arizona,Collegetown,4,,117
+Timmy,Male,Computer Science,2022,PHIL 3310,PHYS 2213,CS 2800,,singing,badminton,I start my assignments closer to the deadline.,New Jersey,Collegetown,2,,207
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bella,Female,Viticulture and Enology,2021,PLSCI 1420,CHEM 1560,VIEN 1104,VIEN 2204,languages,dancing,I start my assignments in the middle of the week.,Spain,West Campus (Dorms),4,,213
+Claire,Female,Spanish,2021,SPAN 2090,ART 1500 ,CS 4700,,italian,programming ,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),3,,218
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Maya,Female,Anthropology,2021,ANTHR 1400,ANTHR 1200,ANTHR 1300,CS 4620,pizza,plays,I start my assignments closer to the deadline.,Virginia,North Campus (Other),4,,0
+Chris,Male,Computer Science,2021,CS 2800,SPAN 2090,INFO 2040,PHYS 2213,business,finance,I start my assignments closer to the deadline.,New Mexico,North Campus (Other),2,,41
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Paul,Male,Mathematics,2021,ECON 3040,CS 4320,PSYCH 3420,ECE 3100,lifting,boxing,I start my assignments in the middle of the week.,Colorodo,West Campus (Dorms),4,,140
+Josephine,Female,Undecided,2020,CS 4820,CS 4620,ORIE 3120,ENGRD 2020,soccer,video games,I start my assignments in the middle of the week.,California,West Campus (Dorms),1,,97
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Susan,Female,Global and Public Health Sciences,2021,NS 1600,CHEM 2070,BIOG 1440,BIOEE 1180,songwriting,tennis,I start my assignments the day they are released,New York,Collegetown,6,,198
+Frank,Male,Global and Public Health Sciences,2021,BIOEE 1180,CS 2800,CS 4320,ECON 3030,car washing,card games,I start my assignments the day they are released,Turkey,Collegetown,3,,14
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Phoebe,Female,China and Asia-Pacific Studies,2021,HADM 6090,ECE 3100,ORIE 3100,,food,eating healthy,I start my assignments closer to the deadline.,Maryland,West Campus (Dorms),3,,111
+Bugs,Male,Computer Science,2021,HE 4800,PSYCH 3420,ENGRD 2700,,clothes,makeup,I start my assignments closer to the deadline.,Florida,West Campus (Dorms),1,,154
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Squidward,Male,Computer Science,2021,CS 2800,ORIE 3120,ORIE 3120,MUSIC 2112,history,government ,I start my assignments in the middle of the week.,Germany,Collegetown,0,,36
+Daffy,Female,Computer Science,2021,CS 2800,LAW 4051,ORIE 3120,LING 1111,music,karate,I start my assignments in the middle of the week.,New Jersey,Collegetown,0,,88
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alyssa,Female,Atmospheric Sciences,2022,EAS 1340,EAS 3050,AEM 2100,EAS 1340,middeval times,american history,I start my assignments in the middle of the week.,Oklahoma,Collegetown,5,,130
+Matthew,Male,Mathematics,2020,CS 4700,JWST 1101,ORIE 3120,,poetry,designing,I start my assignments in the middle of the week.,Pennsylvania,Collegetown,4,,85
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ken,Male,Computer Science,2021,BTRY 3080,ECON 1110,CHEM 2080,PHYS 2213,art,math,I start my assignments the day they are released,Kansas,Other,3,,19
+Lauren,Female,Urban and Regional Planning,2021,CRP 1100,CRP 1101,CRP 2610,PHYS 1201,religion,god,I start my assignments the day they are released,Montana,Other,4,,30
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Rachel,Female,Psychology,2021,ILRIR 4066,HINDI 1101,BIOEE 1610,ENGRD 2640,Food,Eating,I start my assignments in the middle of the week.,New Mexico,Collegetown,2,,157
+Mitchell,Male,Computer Science,2021,ECE 2300,IARD 6011,MATH 2940,ENGRD 2220,graphic design,ice skating,I start my assignments in the middle of the week.,India,Collegetown,1,,224
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Vanessa,Female,Computer Science ,2021,ENGRD 2020,SWAHL 2102,MATH 2210,,sleeping,netflix,I start my assignments in the middle of the week.,New York,West Campus (Dorms),3,,235
+West,Male,Computer Science,2021,COGST 3660,CS 4820,PHYS 2213,ECE 2300,baking,video games,I start my assignments in the middle of the week.,Korea,West Campus (Dorms),3,,178
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joseph,Male,Italian,2020,ITAL 1202,ECON 1110,ENGRD 2300,BIOEE 1610,model rockets,mountain biking,I start my assignments the day they are released,South Carolina,North Campus (Other),3,,166
+Dante,Male,Economics,2022,CRP 3370,PHYS 2213,DEA 2150,,insurance,chineese food,I start my assignments the day they are released,New Hampshire,North Campus (Other),6,,32
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Maxwell,Male,Food Science,2020,FDSC 1101,FDSC 1500,DSOC 1101,HD 1150,frogs,bears,I start my assignments the day they are released,Michigan,North Campus (Other),3,,144
+Theodore,Male,Landscape Architecture,2021,ENGRD 2300,LA 2010,DSOC 1101,PLSCI 1101,golfing,comics,I start my assignments the day they are released,New York,Other,3,,168
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mackenzie,Female,Computer Science ,2022,CS 4420,HD 4790,ENGRD 2640,,writing ,reading the newspaper,I start my assignments closer to the deadline.,South Dakota,West Campus (Dorms),6,,264
+Parker,Male,Computer Science ,2020,CS 2800,HIST 2672,ECE 2300,,tennis,golf,I start my assignments closer to the deadline.,Lousianna,West Campus (Dorms),6,,262
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mrs. Puff,Female,Computer Science,2022,CS 4700,PHYS 2213,INFO 2040,,political science,volleyball,I start my assignments closer to the deadline.,England,Other,0,,71
+Lucas,Male,Computer Science,2022,CRP 1101,CS 4820,INFO 2040,CS 3420,baseball,swordfighting,I start my assignments closer to the deadline.,Kentucky,Collegetown,1,,31
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kevin,Male,Computer Science ,2020,CS 2800,LAW 4131,ENGRD 2300,,nature,animals,I start my assignments in the middle of the week.,Idaho,Collegetown,2,,268
+Wesley,Male,Computer Science ,2021,CS 4700,KANAD 1100,ECE 2300,,photography,going outside,I start my assignments in the middle of the week.,Iowa,Collegetown,2,,267
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jordyn ,Female,Computer Science,2021,ASIAN 2202,CS 4820,ENGR 2700,,singing,karate,I start my assignments closer to the deadline.,New York,Other,3,,9
+Mickey,Male,Information Science,2021,CS 4820,CS 4700,ASIAN 2202,ECON 3030,music,karate,I start my assignments the day they are released,New Jersey,Other,1,,95
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Pedro,Male,Computer Science,2021,MATH 4810,ECE 2300,ORIE 3120,ARCH 2301,playing football,camping,I start my assignments closer to the deadline.,Delaware,Other,3,,192
+Bradley,Male,Economics,2022,CS 4820,ORIE 3120,ORIE 3120,ECON 1120,fashion,Finanace,I start my assignments closer to the deadline.,Virginia,Collegetown,3,,109
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Drake,Male,Computer Science,2022,CS 4700,ENGRD 2700,PHIL 3310,MATH 4710,camping,candle making,I start my assignments closer to the deadline.,India ,West Campus (Dorms),1,,74
+Trisha,Female,Computer Science,2021,ECE 2300,CS 2800,CHEM 2080,,public speaking,watching youtube videos,I start my assignments closer to the deadline.,New York ,West Campus (Dorms),3,,133
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brian,Male,Computer Science,2021,CS 4700,CS 4820,MATH 4710,SPAN 2090,animals,dogs,I start my assignments in the middle of the week.,Wisconsin,North Campus (Other),2,,78
+Cameron,Female,Undecided,2020,INFO 2040,CS 4700,ASIAN 3307,SPAN 2090,politics,drawing,I start my assignments in the middle of the week.,Connecticut,Collegetown,3,,161
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gavin,Male,Linguistics,2021,LING 1101,SPAN 1120,ENGRD 2640,AMST 1585,building,architecture,I start my assignments closer to the deadline.,North Carolina,Collegetown,4,,171
+Stephen,Male,Linguistics,2021,LING 1101,ENGRD 2300,MATH 1110,,public policy,politics,I start my assignments closer to the deadline.,South Dakota,West Campus (Dorms),5,,172
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Toby,Prefer not to specify,Undecided,2021,COML 2030,ANTHR 1200,ASTRO 1101,SPAN 2090,reading,art history,I start my assignments the day they are released,Michigan,Other,6,,29
+Charlie,Male,Information Science,2021,VIET 1121,CS 4620,ASIAN 2202,SPAN 2090,plants,walking,I start my assignments in the middle of the week.,Maine,North Campus (Freshmen Dorms),1,,220
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Monica,Female,Biological Sciences,2021,MATH 4810,ENGRD 2700,BIOEE 1610,,xbox,playstation,I start my assignments closer to the deadline.,Colorado,Other,2,,191
+Michael,Male,Computer Science ,2021,ENGRD 2190,ILRIC 4330,MATH 2210,,hunting,fishing,I start my assignments closer to the deadline.,Japan,North Campus (Other),4,,247
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Doug,Male,Computer Science,2021,STS 1180,STS 1101,BIOEE 1540,ECON 1110,singing ,music,I start my assignments the day they are released,New York,Collegetown,4,,219
+Liam,Male,Operations Research,2021,MATH 4710,ASIAN 3333,ECE 3100,CS 4740,math,painting,I start my assignments the day they are released,Kansas,Collegetown,3,,186
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Laurie,Female,Computer Science,2021,GERST 1210,VIET 1121,CS 4700,CS 4320,music,dance,I start my assignments in the middle of the week.,Massachusetts,North Campus (Freshmen Dorms),1,,150
+Mellie,Female,Psychology,2021,WRIT 4860,JWST 1101,ORIE 3120,,chineese food,kpop,I start my assignments in the middle of the week.,Pennsylvania,North Campus (Freshmen Dorms),3,,187
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carson,Female,Computer Science,2021,MATH 4710,ENGRD 2700,ECE 3100,CS 4740,Netflix,eating,I start my assignments closer to the deadline.,Delaware,West Campus (Dorms),3,,184
+Jeffery,Male,Linguistics,2022,LING 3302,CS 2800,PAM 3550,,photoshop,chess,I start my assignments closer to the deadline.,Iowa,West Campus (Dorms),3,,173
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Noah,Male,Computer Science,2022,COGST 3660,DANCE 1181,ECE 3110,,cheerleading,paddleboarding,I start my assignments closer to the deadline.,Spain,North Campus (Freshmen Dorms),1,,67
+Herbet,Male,Computer Science,2021,PAM 2000,CS 4700,CHEM 2080,ENGRD 2700,art,building,I start my assignments closer to the deadline.,Montana,North Campus (Freshmen Dorms),0,,203
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Peter,Male,Computer Science,2021,FDSC 2500,CS 4740,RUSSIA 1131,,eating,horseback riding,I start my assignments in the middle of the week.,Massachusetts,North Campus (Other),3,,185
+Minnie,Female,Information Science,2020,INFO 2040,CS 4700,RUSSIA 1131,,Finanace,classic rock,I start my assignments in the middle of the week.,Oregon,Other,0,,158
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nicole,Female,Undecided,2022,CS 2800,PHYS 2213,ORIE 3120,ENGRD 2300,dancing,rock music,I start my assignments the day they are released,Rhode Island,Other,1,,38
+Edward,Male,Economics,2020,MATH 2210,ECON 4020,MUSIC 2111,PAM 2300,design ,programming ,I start my assignments the day they are released,Nevada,Other,4,,176
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Patrick,Male,Computer Science,2022,CS 4820,AS 1200,ART 3092,,pizza,food,I start my assignments in the middle of the week.,Wyoming ,North Campus (Freshmen Dorms),0,,94
+Kramer,Male,Mathematics,2020,ENGRD 2020,BME 4440,NBA 5240,BTRY 3080,crowssword puzzles,reading,I start my assignments in the middle of the week.,India,North Campus (Freshmen Dorms),1,,242
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kelly,Prefer not to specify,Earth and Atmospheric Sciences,2022,BIOMI 1120,CS 1110,BIOEE 1610,SPAN 2090,robots,outer space,I start my assignments the day they are released,California,North Campus (Other),6,,16
+Christopher,Male,Computer Science,2021,ECON 1120,FGSS 3721,CS 4700,,poetry,computing,I start my assignments the day they are released,New York ,North Campus (Other),1,,136
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lois,Female,Computer Science,2020,CS 4700,JWST 1101,CS 4320,,farming,skateboarding,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),1,,76
+Alex,Female,Undecided,2022,BURM 1122,CS 4700,DEA 1101,,guitar,piano,I start my assignments in the middle of the week.,New York,North Campus (Other),0,,64
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Drew,Male,Computer Science,2022,CS 2800,ANTHR 1300,HINDI 1101,HIST 2003,marine biology,octopus,I start my assignments in the middle of the week.,France,Other,3,,43
+Daniela,Female,Computer Science,2021,CS 2800,GOVT 3847,ENGR 2700,ENGRD 2220,dancing,beatboxing,I start my assignments in the middle of the week.,Connecticut,Collegetown,3,,221
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ross,Male,Computer Science,2021,CS 4320,HADM 4380,ENGR 2700,ENGRD 2220,blogging,calligraphy,I start my assignments in the middle of the week.,China,Collegetown,4,,222
+Renee,Female,Undecided,2022,CS 4420,KOREA 4402,ENGR 2700,ENGRD 2250,ping pong,reading,I start my assignments in the middle of the week.,Washington,West Campus (Dorms),6,,227
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Avery,Female,Science and Technology Studies ,2021,CS 4700,ECE 3100,ORIE 3100,,computing,programming,I start my assignments in the middle of the week.,Arizona,Other,4,,86
+Carson,Male,Computer Science,2021,ECON 4020,ECON 3130,CS 2800,,rocks,soccer,I start my assignments in the middle of the week.,Washington,Other,4,,141
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Homer,Male,Computer Science,2021,INFO 2300,ECON 4020,ART 1500,,Entrepreneurship,soccer,I start my assignments in the middle of the week.,Virginia,Other,6,,163
+Fred,Male,Computer Science,2021,CS 4820,PLBIO 2400,ASIAN 2202,,eating,pokemon,I start my assignments in the middle of the week.,Montana,North Campus (Other),1,,101
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Wilma,Female,Computer Science,2020,BIONB 3300,RUSSIA 1131,MUSIC 2111,,Computers ,listening to music,I start my assignments closer to the deadline.,New Hampshire,North Campus (Other),1,,96
+Winnie,Male,Information Science,2020,COGST 3660,CS 4620,ENGRD 2220,SPAN 2090,food,tennis,I start my assignments closer to the deadline.,Maine,North Campus (Freshmen Dorms),1,,160
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lana,Female,Undecided,2021,CS 4230,PHYS 2213,HE 4700,ECON 4020,writing,tennis,I start my assignments the day they are released,Maine,West Campus (Dorms),1,,55
+Nolan,Male,Computer Science,2022,CS 4820,PHYS 2213,PAM 2000,ECON 1110,rocks,rapping,I start my assignments closer to the deadline.,Florida,West Campus (Dorms),2,,104
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kendall,Female,Mathematics,2022,CS 4820,PHYS 2213,ECON 3130,HD 2300,crossword puzzles,hiking,I start my assignments closer to the deadline.,Indianna,North Campus (Freshmen Dorms),3,,113
+Jim,Male,Computer Science ,2022,CS 4320,MILS 3301,ENGRD 2190,BTRY 3080,kayaking,hiking,I start my assignments closer to the deadline.,Korea,North Campus (Other),4,,248
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joe,Male,German Studies,2021,GERST 1175,GERST 1210,ECON 1110,ENGRD 2220,programming ,computers,I start my assignments closer to the deadline.,Thailand ,North Campus (Freshmen Dorms),3,,148
+Sam,Male,Computer Science,2021,PAM 2000,CS 4820,ENGRD 2700,ECON 1110,Art,Soccer,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),3,,205
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Linda,Female,Computer Science ,2020,CS 4420,THETR 1510,MATH 4710,ENGRD 2190,darts,laser tag,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),3,,236
+Perry,Male,Computer Science ,2022,CS 4320,COML 2214,MATH 4710,,poker,gambling,I start my assignments in the middle of the week.,Washington,West Campus (Dorms),5,,238
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Meredith,Prefer not to specify,English,2022,LATIN 2201,CLASS 1615,ENGL 1100,CLASS 2604,binge watching tv,excel,I start my assignments closer to the deadline.,New Hampshire,West Campus (Dorms),6,,170
+Quagmire,Male,Computer Science,2020,INDO 4432,CS 4740,AEM 4120,ECON 1110,business,nature,I start my assignments closer to the deadline.,Michigan,West Campus (Dorms),0,,18
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Steve,Male,"Feminist, Gender, and Sexuality Studies",2021,FGSS 2290,FGSS 2010,AIIS 1123,ASIAN 1192,languages,watching tv,I start my assignments closer to the deadline.,North Dakota,North Campus (Other),5,,145
+Goofy,Male,Information Science,2021,INFO 2040,CS 4700,ASIAN 2202,CS 4320,drama,dancing,I start my assignments closer to the deadline.,Georgia,Other,1,,159
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+James,Male,Computer Science,2021,CS 4820,ENGRD 2700,HIST 2004,ARCH 1501,sewing,making music,I start my assignments closer to the deadline.,Nevada,Collegetown,3,,114
+Cleveland,Male,Computer Science,2021,ECON 3030,CS 2800,ASIAN 2202,PHYS 2112,football,basketball,I start my assignments closer to the deadline.,California,Collegetown,5,,139
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sal,Male,Electrical and Computer Engineering,2021,CHIN 1110,CS 4820,CS 4700,MATH 4820,football,lacrosse,I start my assignments in the middle of the week.,New York,West Campus (Dorms),4,,27
+Jill,Female,Mathematics,2022,CS 4700,ASRC 1121,ORIE 3120,ENGRD 2300,playing poker,sports betting,I start my assignments in the middle of the week.,Connecticut,West Campus (Dorms),3,,83
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bonnie,Female,Computer Science,2021,CHEM 2080,ENGRD 2700,HIST 2003,CS 2800,politics,pottery,I start my assignments the day they are released,North Dakota,Collegetown,0,,22
+Maia,Female,Archaeology,2021,ARKEO 2165,ANTHR 1200,PSYCH 1101,ECON 1110,politics,kickball,I start my assignments the day they are released,Mississippi,Collegetown,6,,2
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Phillip,Male,Computer Science ,2022,CHEM 2080,PERSN 1320,MATH 2940,ENGRD 2300,skateboarding,riding my bike,I start my assignments the day they are released,New York,Collegetown,3,,232
+Olivia,Female,Sociology,2021,CS 2800,CHEM 2080,ASRC 1121,ARCH 2301,finance,rapping,I start my assignments the day they are released,Portugal,Other,3,,47
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Duck,Male,Computer Science,2022,CS 4700,PHYS 2213,BTRY 3080,ECON 1120,finance,nature,I start my assignments closer to the deadline.,Illinois,Collegetown,0,,72
+Mel,Female,Undecided,2021,CS 4820,PHYS 2213,ORIE 3120,ASRC 1108,running,working out,I start my assignments closer to the deadline.,West Virginia,Collegetown,0,,91
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Michelle,Female,Computer Science,2022,ASRC 1109,ORIE 3120,DEA 2150,HIST 2003,sewing,beekeeping,I start my assignments in the middle of the week.,North Carolina,North Campus (Freshmen Dorms),2,,11
+Creed,Prefer not to specify,Classics,2022,LATIN 1202,CLASS 1615,CLASS 2000,CLASS 2603,waterskiing,eating,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),6,,169
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Manny,Male,Economics,2022,CS 4620,LSP 4677,BTRY 3080,ENGRD 2250,magic,listening to podcasts,I start my assignments closer to the deadline.,New Mexico,West Campus (Dorms),0,,229
+Hailey,Female,Electrical and Computer Engineering,2022,CS 4420,INFO 5150,ENGR 2700,ENGRD 2220,sculpting,sewing,I start my assignments closer to the deadline.,California,West Campus (Dorms),1,,226
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke,Male,Mathematics,2020,CS 2800,NAVS 2201,BTRY 3080,ENGRD 2250,watersports,fling kites,I start my assignments in the middle of the week.,Illinois,West Campus (Dorms),0,,230
+Erika,Female,Computer Science,2021,PAM 2000,CS 4820,ILRIR 4066,,computer programming,coding,I start my assignments closer to the deadline.,Delaware,West Campus (Dorms),1,,204
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Melanie,Female,Computer Science ,2021,CS 4700,ASIAN 3333,ENGRD 2640,MATH 4710,paintball,listening to music,I start my assignments in the middle of the week.,California,West Campus (Dorms),1,,255
+Gabe,Prefer not to specify,Economics,2021,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,video games,basketball,I start my assignments in the middle of the week.,Connecticut,West Campus (Dorms),6,,174
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alice,Female,China and Asia-Pacific Studies,2022,CAPS 1622,CS 4620,CHIN 1101,STS 1101,government ,history,I start my assignments closer to the deadline.,Wyoming ,West Campus (Dorms),6,,21
+Nate,Male,Operations Research,2022,CS 1110,MATH 1910,PHYS 1112,CHEM 2090,tennis,eating,I start my assignments closer to the deadline.,New York,Other,3,,33
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Caroline,Female,Sociology,2021,DSOC 1101,DSOC 1200,GERST 1210,,german,learning languages,I start my assignments in the middle of the week.,Nevada,Other,1,,127
+Ian,Male,Computer Science,2021,CHIN 1110,AEM 4120,ORIE 3120,,sailing,meme making,I start my assignments in the middle of the week.,Massachusetts,North Campus (Other),2,,26
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Danny,Male,Operations Research,2021,ORIE 3120,CS 4740,AEM 4120,,netflix,chill,I start my assignments in the middle of the week.,Michigan,Other,3,,201
+Joey,Male,Music,2021,CS 2800,CS 4410,PSYCH 3420,ART 1500,music,singing ,I start my assignments in the middle of the week.,Ohio,North Campus (Other),3,,44
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Allison,Female,Applied Economics and Management,2020,CS 4820,NES 1201,ENGRD 2700,HIST 2003,dancing,animals,I start my assignments the day they are released,Nevada,North Campus (Other),1,,99
+Logan,Male,Engineering Physics,2021,MATH 4260,PHIL 3310,CS 4740,CS 4430,entrepreneurship,bowling,I start my assignments the day they are released,Austrailia,North Campus (Other),2,,182
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Robert,Male,Mathematics,2022,BIONB 3300,CS 4700 ,DEA 1101,BTRY 3080,robotics,political science,I start my assignments the day they are released,New York,North Campus (Other),4,,190
+Amanda,Female,Undecided,2022,PHIL 3310,CS 4700,CHIN 1110,DEA 2040,lanugages ,kung fu,I start my assignments the day they are released,Spain,Collegetown,0,,206
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon,Male,Computer Science ,2021,CS 4420,JWST 1101,ENGRD 2640,,skiing,snowboarding,I start my assignments in the middle of the week.,Kansas,Collegetown,4,,259
+Cam,Male,Computer Science ,2021,ECE 2300,HD 2820,MATH 2940,ENGRD 2220,cooking,puzzles,I start my assignments closer to the deadline.,Japan,Collegetown,4,,223
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Isabella,Female,Africana Studies,2021,ASRC 1121,ECON 1110,ECON 2040,CS 4620,art,painting,I start my assignments the day they are released,Texas,Other,4,,13
+Mason,Male,Computer Science,2021,CS 4320,HADM 4150,PHIL 3310,ECE 2300,go carting,going to the movies,I start my assignments the day they are released,Pennsylvania,Other,1,,56
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Maddie,Female,Mathematics,2020,CS 4820,ENGRD 2700,PHIL 3310,EAS 3010,government,politics,I start my assignments in the middle of the week.,Idaho,Other,3,,112
+Nathan,Male,Near Eastern Studies,2020,NES 1660,GOVT 1817,ECON 1120,ECON 2040,sky diving,basketball,I start my assignments in the middle of the week.,New York,Collegetown,3,,196
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Anthony,Male,Industrial Labor Relations,2020,ILID 1700,ENGRD 2640,MATH 1120,AEM 2220,tennis,sailing,I start my assignments closer to the deadline.,Washington,Collegetown,3,,156
+Bunny,Male,Computer Science,2022,ENGRD 2190,SPAN 2090,ENGRD 2700,MILS 3301,rocks,volcanos,I start my assignments the day they are released,Texas,Collegetown,0,,93
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gloria,Female,Electrical and Computer Engineering,2022,ECE 2300,INDO 4432,ENGRD 2020,,yoga,exercising,I start my assignments in the middle of the week.,Germany,West Campus (Dorms),1,,225
+Larry,Male,Philosophy ,2022,CS 2800,CHIN 1110,ART 1601,,cookie decorating,model cars,I start my assignments in the middle of the week.,Nebraska,North Campus (Freshmen Dorms),3,,45
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+William,Male,Computer Science,2022,CS 2800,MATH 4710,FREN 2090,ENGRD 2700,tennis,cheerleading,I start my assignments the day they are released,Portugal,North Campus (Other),1,,40
+Rosie,Female,Sociology,2021,MATH 4710,HIST 2672,BIOMG 1350,CS 4320,walking,reading ,I start my assignments the day they are released,California,West Campus (Dorms),2,,183
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jan,Prefer not to specify,Music,2022,MUSIC 1105,MUSIC 1105,SPAN 2090,ASRC 1121,sculpting,algorithm building,I start my assignments closer to the deadline.,Kansas,Collegetown,5,,194
+Charles,Male,German Studies,2020,CS 4740,GERST 1210,ECON 1110,ENGRD 2020,italian,soccer,I start my assignments closer to the deadline.,Illinois,North Campus (Freshmen Dorms),6,,149
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chase,Male,Computer Science ,2021,CS 4620,HD 2380,ENGRD 2300,,windsurfing,going to the beach,I start my assignments closer to the deadline.,North Dakota,West Campus (Dorms),6,,263
+Lucy,Female,Sociology,2022,SOC 2202,SPAN 1120,SOC 1101,ECON 2040,racecar driving,golf,I start my assignments in the middle of the week.,Virginia,Other,3,,217
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+Abby,Female,Comparative Literature,2022,COML 2030,COML 2050,CS 4420,DEA 1101,running,swimming,I start my assignments the day they are released,Virginia,North Campus (Other),4,,28
+Evan,Male,Computer Science,2021,ART 1500,CS 4820,CS 4700,FGSS 3721,public speaking,blogging ,I start my assignments closer to the deadline.,Maryland,North Campus (Other),1,,3
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

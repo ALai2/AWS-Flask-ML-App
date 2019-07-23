@@ -21,10 +21,10 @@ use_index = True
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words='english')
 
-features = ['Name','Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
-training_features = ['Name','Major','Classes','Interests','Hometown','Hometype']
+features = ['Name','Gender','Major','Grad','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
+training_features = ['Name','Gender','Major','Grad','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
 classes = ['Class 1','Class 2','Class 3','Class 4']
-interests = ['Interest 1','Interest 2','Interest 3']
+interests = ['Interest 1','Interest 2']
 primary = 'Name'
 csv = 'Test Classes Extended.csv'
 training_csv = "?"

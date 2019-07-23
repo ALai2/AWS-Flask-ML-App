@@ -6,6 +6,8 @@ def clean_data(x):
         #Check if item exists. If not, return empty string
         if isinstance(x, str):
             return str.lower(x).strip()
+        elif isinstance(x, int):
+            return str(x)
         else:
             return ''
 
@@ -27,7 +29,7 @@ def clean_df(m0, features, primary):
     for feature in [x for x in features if x != primary]:
         m0[feature] = m0[feature].apply(clean_data)
                 
-        if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Hometown']:
+        if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Hometown','Study Habits','Campus Location']:
             m0[feature] = m0[feature].apply(replace_space)
     m0[primary] = m0[primary].apply(trim_str)
     return m0
