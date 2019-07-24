@@ -18,7 +18,10 @@ tfidf = TfidfVectorizer(stop_words='english')
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 24, 'Hometown': 3, 'Campus Location': 22, 'Race': 0, 'Preferences': 0}
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
+# Clarkson weights
+# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
+# weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
 
 primary = 'Name'
 # groupby = 'Race'
@@ -32,8 +35,8 @@ csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 use_model = False 
 pair_groups = False 
 # pair_groups = True 
-random = False   
-rand_num = 4
+random = True    
+rand_num = 3
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -81,7 +84,6 @@ def convert_csv_to_matrix(csv, num):
         courses = m0[groupby].unique() # list of all unique department names
         
         for course in courses:
-
             group = (m0[m0[groupby] == course]).reset_index().drop('level_0', axis=1)
             # keep track of groups with only one member
 
@@ -109,7 +111,7 @@ def convert_csv_to_matrix(csv, num):
                         matches[0].append(ones.pop(0))
             else:
                 df = pd.DataFrame(columns=features + ['index'])
-                print(df)
+                
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)

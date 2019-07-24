@@ -19,10 +19,10 @@ use_index = True
 # use_index = False 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
-tfidf = TfidfVectorizer(stop_words='english')
+tfidf = TfidfVectorizer(stop_words='english') # stop words include numbers so what to do about Grad Year?
 
-features = ['Name','Gender','Major','Grad','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-training_features = ['Name','Gender','Major','Grad','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
+features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
+training_features = ['Name','Gender','Major','Grad Year','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
 classes = ['Class 1','Class 2','Class 3','Class 4']
 interests = ['Interest 1','Interest 2']
 primary = 'Name'
@@ -38,7 +38,7 @@ def get_similarity(first, second): # return similarity between two strings
     
     df = pd.DataFrame()
     df = df.append([first, second])
-    
+
     #Construct the required TF-IDF matrix by fitting and transforming the data
     tfidf_matrix = tfidf.fit_transform(df[0])
 
@@ -48,12 +48,15 @@ def get_similarity(first, second): # return similarity between two strings
 
 def load_prediction(df, m0):
     soup_data = []
+    
+    # def loop_rows(i):
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
         mylist = i[1]['group'].split(", ")
+
         # be careful of the way the group is inputted
         # split by commas and then use strip?
         pairs = list(itertools.combinations(mylist, 2))
-        soups = [i[1]['group']]
+        soups = [ i[1]['group'] ]
         for feature in [x for x in training_features if x != primary]:
             acc = 0.0
             for p in pairs:
@@ -73,19 +76,27 @@ def load_prediction(df, m0):
                     for c in classes:
                         first += " " + m0[m0[primary] == name1][c].iloc[0]
                         second += " " + m0[m0[primary] == name2][c].iloc[0]
+                    # first = " ".join(m0[m0[primary] == name1][c].iloc[0] for c in classes)
+                    # second = " ".join(m0[m0[primary] == name2][c].iloc[0] for c in classes)
                 elif feature == 'Interests':
                     for i in interests:
                         first += " " + m0[m0[primary] == name1][i].iloc[0]
                         second += " " + m0[m0[primary] == name2][i].iloc[0]
+                    # first = " ".join(m0[m0[primary] == name1][i].iloc[0] for i in interests)
+                    # second = " ".join(m0[m0[primary] == name2][i].iloc[0] for i in interests)
                 else:
                     first = m0[m0[primary] == name1][feature].iloc[0]
                     second = m0[m0[primary] == name2][feature].iloc[0]
                     
                 # get average similarity of pairs
                 acc += get_similarity(first, second)
+                
             soups.append(acc / len(pairs))
         soup_data.append(soups)
+        # return soups
     
+    # soup_data = list(map(loop_rows, df.iterrows()))
+    # print(soup_data)
     df_soup = pd.DataFrame(soup_data, columns=training_features)
     return df_soup 
 
@@ -135,6 +146,7 @@ def create_model():
     pickle.dump(cl, open(filename, 'wb'))
     return None 
 
+# HELLO!!!!!!!!!!!!!!!!!-------------------------------------------------
 # create_model()
 
 def make_prediction(df_soup, X_test):
@@ -167,12 +179,16 @@ def construct_similarity(m0):
     matrix = np.eye(length, length)
     
     # list.index(element)
-    data = []
-    for (one, two) in pairs:
-        if use_index:
-            data.append([str(one) + ", " + str(two)])
-        else:
-            data.append([one + ", " + two])
+    # data = []
+    # for (one, two) in pairs:
+    #     if use_index:
+    #         data.append([str(one) + ", " + str(two)])
+    #     else:
+    #         data.append([one + ", " + two])
+
+    # https://www.freecodecamp.org/news/if-you-have-slow-loops-in-python-you-can-fix-it-until-you-cant-3a39e03b6f35/ 
+    data = [ [str(one) + ", " + str(two)] if use_index else [one + ", " + two] for (one, two) in pairs ]
+
     df = pd.DataFrame(data, columns=['group'])
 
     df_soup = load_prediction(df, m0)
@@ -181,6 +197,7 @@ def construct_similarity(m0):
     predictions = make_prediction(df_soup, X_test)
     
     # loop through df rows and acquire similarity ratios
+    # def loop_predictions(p):
     for p in predictions.iterrows():
         [one, two] = p[1]['Name'].split(", ")
         
@@ -193,6 +210,8 @@ def construct_similarity(m0):
         pred = p[1]['Prediction'] / 10
         matrix[index1][index2] = pred 
         matrix[index2][index1] = pred
+        # return None 
+    # map(loop_predictions, predictions.iterrows())
     
     return matrix # psuedo-cosine_sim matrix
 
