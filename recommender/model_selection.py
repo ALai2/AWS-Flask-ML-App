@@ -83,12 +83,9 @@ def load_prediction(df, m0):
             if use_index:
                 index = int(m)
                 name_list.append(index)
-                # name_list.append(m0['Name'][m0.index == index].iloc[0])
-                # print(m0[m0['Name'] == name_list[0]]['index'].iloc[0])
             else:
-                # name_list.append(m)
                 name_list.append(m0['index'][m0['Name'] == m].iloc[0])
-                # print(m0[m0['Name'] == m]['index'].iloc[0])
+
         loop_list = [[], []]
         
         soups = [ i[1]['group'] ]
@@ -174,7 +171,7 @@ def make_prediction(df_soup, X_test):
     cl = pickle.load(open(filename, 'rb'))
     # dataframe of numerical features for prediction
     predictions = cl.predict(X_test)
-    X_test = X_test.assign(Prediction = predictions).sort_index()
+    X_test = X_test.assign(Prediction = predictions)
     X_test = X_test.sort_values(by='Prediction', ascending=False)
 
     index_list = list(X_test.index)

@@ -14,6 +14,8 @@ csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
 training_features = ['Name','Gender','Major','Grad Year','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
 primary = 'Name'
+# groupby = 'Race'
+groupby = None # need to add groupby
 num = 2
 do_random = True    
 rand_num = 3
@@ -25,13 +27,14 @@ m0 = metadata[features]
 m0 = m0.reset_index()
 
 def speed_up_pairings(m0):
-    m1 = ci.clean_df(m0, features, primary)
+
+    m1 = m0.copy()
+    m1 = ci.clean_df(m1, features, primary)
     
     if use_index:
-        names = list(m0.index)
+        names = list(m1['index'])
     else:
-        names = list(m0['Name'])
-    length = len(names)
+        names = list(m1['Name'])
 
     data = [['-'] * (len(features)+1)]
     extra = pd.DataFrame(data, columns=features + ['index'])
@@ -43,13 +46,14 @@ def speed_up_pairings(m0):
         if n not in already_paired:
             not_paired.remove(n)
             already_paired.append(n)
+            
             if use_index:
                 pairs = pairs.append(m0[m0['index'] == n].iloc[0])
             else:
-                pairs = pairs.append(m0[m0['Name'] == n].iloc[0])
+                n_index = m1['index'][m1['Name'] == n].iloc[0]
+                pairs = pairs.append(m0[m0['index'] == n_index].iloc[0])
 
             data = [ [str(n) + ", " + str(x)] if use_index else [n + ", " + x] for x in not_paired ]
-    
             df = pd.DataFrame(data, columns=['group'])
 
             df_soup = ms.load_prediction(df, m1)
@@ -78,7 +82,7 @@ def speed_up_pairings(m0):
             else: 
                 already_paired += result
                 not_paired = [ x for x in not_paired if x not in result ]
-                matches = [ m0['index'][m0['Name'] == m].iloc[0] for m in result ]
+                matches = [ m1['index'][m1['Name'] == m].iloc[0] for m in result ]
 
             for m in matches:
                 pairs = pairs.append(m0[m0['index'] == m].iloc[0])

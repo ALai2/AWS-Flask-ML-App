@@ -12,13 +12,13 @@ import clean_info as ci
 import model_selection as ms 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
-tfidf = TfidfVectorizer(stop_words='english')
+tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english')
 
 # features
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 12, 'Class 2': 12, 'Class 3': 12, 'Class 4': 12, 'Interest 1': 8, 'Interest 2': 8, 'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}
 # Clarkson weights
 # S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
 # weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
@@ -31,11 +31,11 @@ num = 2
 # csv = 'Test Classes Extended.csv'
 csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
-use_model = True 
-# use_model = False 
+# use_model = True 
+use_model = False 
 pair_groups = False 
 # pair_groups = True 
-do_random = True    
+do_random = False        
 rand_num = 3
 
 # minimize number of global variables
@@ -153,14 +153,14 @@ import random
 def get_random(mylist, num): # num = number of people per group
     if (len(mylist) > num):
         inds = list(mylist.index)
+        result = pd.DataFrame(columns=features)
         if do_random:
             rand_inds = random.sample(inds, num-1)
-            result = pd.DataFrame(columns=features)
             for i in rand_inds:
                 result = pd.concat([result, mylist[mylist.index == i]], sort=False)
         else:
-            for i in range(0, num):
-                result = pd.concat([result, mylist[mylist.index == i]], sort=False)
+            for i in range(0, num-1):
+                result = pd.concat([result, mylist[mylist.index == inds[i]]], sort=False)
     else:
         result = mylist
     return result
