@@ -18,20 +18,19 @@ tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 16, 'Class 2': 16, 'Class 3': 16, 'Class 4': 16, 'Interest 1': 8, 'Interest 2': 8, 'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
+weights = {'Name': 0, 'Gender': 24, 'Major': 5, 'Grad Year': 7, 'Class 1': 16, 'Class 2': 16, 'Class 3': 16, 'Class 4': 16, 'Interest 1': 8, 'Interest 2': 8, 'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
 # weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
 
 primary = 'Name'
-# groupby = 'Race'
-groupby = None
+groupby = 'Race'
+# groupby = None
 
-num = 3
+num = 2
 # csv = 'Test Classes Extended.csv'
 csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
 # use_model = True 
 use_model = False 
-pair_groups = False 
 # pair_groups = True 
 do_random = False               
 rand_num = 5
@@ -43,13 +42,10 @@ def convert_csv_to_matrix(csv, num):
     m0 = metadata[features]
     m0 = m0.reset_index()
     group_dict = {}
-    if pair_groups:
-        matches = {}
-    else:
-        matches = pd.DataFrame(columns=features + ['index'])
+    matches = []
     ones = []
 
-    def func_pairs(group):
+    def func_pairs(features, group):
         # apply clean_df function to features
         m1 = group.copy()
         m1 = ci.clean_df(m1, features, primary)
@@ -88,39 +84,67 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                if pair_groups:
-                    matches[course] = func_pairs(group)
-                else:
-                    matches = pd.concat([matches, func_pairs(group)], sort=False)
+                matches += func_pairs(features, group)
         
         if len(ones) != 0:
             if len(ones) == 1:
-                if pair_groups:
-                    matches['Outcast'] = ones.pop(0)
-                else:
-                    for match in matches:
-                        if len(ones) == 0: break
-                        else:
-                            while len(match) < num:
-                                if len(ones) != 0:
-                                    match.append(ones.pop(0)[primary])
-                                else: break
-                    if len(ones) > 0:
-                        matches[0].append(ones.pop(0))
+                for match in matches:
+                    if len(ones) == 0: break
+                    else:
+                        while len(match) < num:
+                            if len(ones) != 0:
+                                match.append(ones.pop(0)[primary])
+                            else: break
+                if len(ones) > 0:
+                    matches[0].append(ones.pop(0))
             else:
                 df = pd.DataFrame(columns=features + ['index'])
                 
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                if pair_groups:
-                    matches['Other'] = func_pairs(df)
-                else:
-                    matches = pd.concat([matches, func_pairs(df)], sort=False)
+                matches += func_pairs(features, df)
     else:
-        matches = func_pairs(m0)
+        matches = func_pairs(features, m0)
     
-    return matches
+    pair_features = ['Name','Class 1','Class 2','Class 3','Class 4','Class 5','Class 6','Class 7','Class 8']
+    i_classes = ['Class 1','Class 2','Class 3','Class 4']
+    df = pd.DataFrame(columns=pair_features)
+    for pair in matches:
+        str_pair = [ str(x) for x in pair ]
+        total_name = ", ".join(str_pair)
+
+        data = [total_name]
+        for i in pair:
+            for feature in i_classes:
+                data.append(m0[feature][m0['index'] == i].iloc[0])
+        
+        while(len(data) < len(pair_features)):
+            data.append("")
+
+        pair_df = pd.DataFrame([data], columns=pair_features)
+        df = pd.concat([df, pair_df], sort=False)
+    df = df.reset_index().drop('index', axis=1).reset_index()
+
+    result = func_pairs(pair_features, df)
+    print_out = []
+    for four in result:
+        str_four = [ df[primary][df['index'] == x].iloc[0] for x in four ]
+        print_out.append(", ".join(str_four))
+    
+    pairs = pd.DataFrame(columns=features + ['index'])
+    for group in print_out:
+        index_list = group.split(", ")
+        for i in index_list:
+            pairs = pairs.append(m0[m0['index'] == int(float(i))].iloc[0])
+        data = [['-'] * (len(features)+1)]
+        data2 = [['+'] * (len(features)+1)]
+        extra = pd.DataFrame(data, columns=features + ['index'])
+        extra2 = pd.DataFrame(data2, columns=features + ['index'])
+        pairs = pd.concat([pairs, extra, extra2], sort=False)
+
+    # print this
+    return pairs 
 
 # Function that takes in movie title as input and outputs most similar movies
 def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
@@ -165,46 +189,27 @@ def get_random(mylist, num): # num = number of people per group
 
 # semi-greedy algorithm
 def get_pairs(emplist, indices, cosine_sim, m0, num):
-    if pair_groups:
-        pairs = []
-    else:
-        pairs = pd.DataFrame(columns=features + ['index'])
+    pairs = []
     list_to_remove = []
     
     for e in emplist:
         if indices[e] not in list_to_remove:
             partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
-            if pair_groups:
-                name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
-                pair = [name0]
-            else:
-                name0 = m0[m0['index'] == e].iloc[0]
-                pairs = pairs.append(m0[m0['index'] == e].iloc[0])
+            # name0 = m0[primary][m0['index'] == e].iloc[0] + " " + str(e)
+            name0 = e
+            pair = [name0]
             
             list_to_remove.append(indices[e])
             for p in partner:
-                if pair_groups:
-                    pair.append(m0[primary][m0['index'] == p].iloc[0] + " " + str(p))
-                else:
-                    pairs = pairs.append(m0[m0['index'] == p].iloc[0])
+                # pair.append(m0[primary][m0['index'] == p].iloc[0] + " " + str(p))
+                pair.append(p)
                 list_to_remove.append(indices[p])
 
-            if pair_groups:
-                pairs.append(pair)
-            else:
-                data = [['-'] * (len(features)+1)]
-                data2 = [['+'] * (len(features)+1)]
-                extra = pd.DataFrame(data, columns=features + ['index'])
-                extra2 = pd.DataFrame(data2, columns=features + ['index'])
-                pairs = pd.concat([pairs, extra, extra2], sort=False)
+            pairs.append(pair)
             
             list_to_remove.sort(reverse=True)
     return pairs
 
-if pair_groups:
-    print(convert_csv_to_matrix(csv, num))
-    # create groups using pairs from each group
-else:
-    df = convert_csv_to_matrix(csv, num)
-    print(df)
-    df.to_csv('testing.csv', index=False)
+df = convert_csv_to_matrix(csv, num)
+print(df)
+df.to_csv('testing.csv', index=False)
