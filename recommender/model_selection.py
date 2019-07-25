@@ -15,29 +15,44 @@ import itertools
 import clean_info as ci 
 import pickle # for saving the ml model
 
-use_index = True 
-# use_index = False 
+# 270 students --> around 17 minutes
+# 187 students --> around 8 minutes
+# reduce amount of predictions needed to be made by not predicting unwanted pairs
+# create new file for pairing model predictions
+
+# use_index = True 
+use_index = False 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
-tfidf = TfidfVectorizer(stop_words='english') # stop words include numbers so what to do about Grad Year?
+tfidf = TfidfVectorizer(stop_words = 'english') # stop words include numbers so what to do about Grad Year?
 
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
 training_features = ['Name','Gender','Major','Grad Year','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
+
 classes = ['Class 1','Class 2','Class 3','Class 4']
 interests = ['Interest 1','Interest 2']
+combine = {'Classes': classes, 'Interests': interests}
+
 primary = 'Name'
-csv = 'Test Classes Extended.csv'
+# csv = 'Test Classes Extended.csv'
+csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 training_csv = "?"
 output = 'target'
 filename = 'finalized_model.sav'
 
 
 def get_similarity(first, second): # return similarity between two strings
-    if first is None or second is None:
-        return 0.0
     
-    df = pd.DataFrame()
-    df = df.append([first, second])
+    if not first or not second or first is None or second is None:
+        return 0.0
+    if len(first) == 1 or len(second) == 1:
+        if first == second: return 1.0 
+        else: return 0.0 
+    if first == second:
+        return 1.0 
+    
+    df = pd.DataFrame([first, second])
+    # print(df)
 
     #Construct the required TF-IDF matrix by fitting and transforming the data
     tfidf_matrix = tfidf.fit_transform(df[0])
@@ -45,58 +60,63 @@ def get_similarity(first, second): # return similarity between two strings
     # Compute the cosine similarity matrix
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
     return cosine_sim[0][1]
+    
+    # print(first)
+    # print(second)
+    # df1 = pd.DataFrame(first)
+    # df2 = pd.DataFrame(second)
+    # tm1 = tfidf.fit_transform(df1[0])
+    # tm2 = tfidf.fit_transform(df2[0])
+
+    # cosine_sim = linear_kernel(tm1, tm2)
+    # result = [ cosine_sim[i][i] for i in range(0, len(cosine_sim)) ]
+    # return result 
 
 def load_prediction(df, m0):
     soup_data = []
-    
+    # print(m0)
     # def loop_rows(i):
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
         mylist = i[1]['group'].split(", ")
-
-        # be careful of the way the group is inputted
-        # split by commas and then use strip?
-        pairs = list(itertools.combinations(mylist, 2))
+        name_list = []
+        for m in mylist:
+            if use_index:
+                index = int(m)
+                name_list.append(index)
+                # name_list.append(m0['Name'][m0.index == index].iloc[0])
+                # print(m0[m0['Name'] == name_list[0]]['index'].iloc[0])
+            else:
+                # name_list.append(m)
+                name_list.append(m0['index'][m0['Name'] == m].iloc[0])
+                # print(m0[m0['Name'] == m]['index'].iloc[0])
+        loop_list = [[], []]
+        
         soups = [ i[1]['group'] ]
+
+        '''
         for feature in [x for x in training_features if x != primary]:
-            acc = 0.0
-            for p in pairs:
-                
-                if use_index:
-                    index1 = int(p[0])
-                    index2 = int(p[1])
-                    name1 = m0['Name'][m0.index == index1].iloc[0]
-                    name2 = m0['Name'][m0.index == index2].iloc[0]
-                else:
-                    name1 = p[0]
-                    name2 = p[1]
-                
-                first = ""
-                second = ""
+            for j in range(0,2):
                 if feature == 'Classes':
-                    for c in classes:
-                        first += " " + m0[m0[primary] == name1][c].iloc[0]
-                        second += " " + m0[m0[primary] == name2][c].iloc[0]
-                    # first = " ".join(m0[m0[primary] == name1][c].iloc[0] for c in classes)
-                    # second = " ".join(m0[m0[primary] == name2][c].iloc[0] for c in classes)
+                    loop_list[j].append(" ".join(m0[m0[primary] == name_list[j]][c].iloc[0] for c in classes))
                 elif feature == 'Interests':
-                    for i in interests:
-                        first += " " + m0[m0[primary] == name1][i].iloc[0]
-                        second += " " + m0[m0[primary] == name2][i].iloc[0]
-                    # first = " ".join(m0[m0[primary] == name1][i].iloc[0] for i in interests)
-                    # second = " ".join(m0[m0[primary] == name2][i].iloc[0] for i in interests)
+                    loop_list[j].append(" ".join(m0[m0[primary] == name_list[j]][i].iloc[0] for i in interests))
                 else:
-                    first = m0[m0[primary] == name1][feature].iloc[0]
-                    second = m0[m0[primary] == name2][feature].iloc[0]
-                    
-                # get average similarity of pairs
-                acc += get_similarity(first, second)
-                
-            soups.append(acc / len(pairs))
+                    loop_list[j].append(m0[m0[primary] == name_list[j]][feature].iloc[0])
+        
+        soups += get_similarity(loop_list[0], loop_list[1]) 
+        '''
+
+        for feature in [x for x in training_features if x != primary]:
+            mylist = []
+            for j in range(0,2):
+                if feature in combine:
+                    mylist.append(" ".join(m0[m0['index'] == name_list[j]][i].iloc[0] for i in combine[feature]))
+                else:
+                    mylist.append(m0[m0['index'] == name_list[j]][feature].iloc[0])
+            soups.append(get_similarity(mylist[0], mylist[1]))
+
         soup_data.append(soups)
-        # return soups
     
-    # soup_data = list(map(loop_rows, df.iterrows()))
-    # print(soup_data)
     df_soup = pd.DataFrame(soup_data, columns=training_features)
     return df_soup 
 
@@ -111,7 +131,7 @@ def create_model():
     metadata = training[['group','target]]
     '''
     # will later change to data in training_csv
-    data = [["Pam, Shane", 2], ["Pam, Brad, Chad", 3], ["Jackson, Pedro, Sam", 5],["Joshua, Joshua2", 7]]
+    data = [["Maya, Maia", 2], ["Maya, Stanley, Sam", 3], ["Evan, Jen, Emily", 5],["Jordyn, Tom", 7]]
     metadata = pd.DataFrame(data, columns=['group','target'])
 
     # modify df to get X
@@ -155,7 +175,7 @@ def make_prediction(df_soup, X_test):
     # dataframe of numerical features for prediction
     predictions = cl.predict(X_test)
     X_test = X_test.assign(Prediction = predictions).sort_index()
-    # X_test = X_test.sort_values(by='Prediction', ascending=False)
+    X_test = X_test.sort_values(by='Prediction', ascending=False)
 
     index_list = list(X_test.index)
     name_list = df_soup[['Name']].iloc[index_list]
@@ -219,3 +239,20 @@ def construct_similarity(m0):
 # m0 = metadata[features]
 # m0 = ci.clean_df(m0, features, primary) # need some way to split for groupby
 # print(construct_similarity(m0))
+
+# # first = ['female', 'anthropology', '2021', 'anthr1400 anthr1200 anthr1300 cs 4620', 'pizza plays', 'istartmyassignmentsclosertothedeadline.', 'virginia', 'northcampus(other)', '4', '']
+# # second = ['prefer not to specify', 'urbanandregionalstudies', '2021', 'cs4420 astro1101 cs4320 engl 1100', 'writing history of literature', 'istartmyassignmentsclosertothedeadline.', 'iowa', 'northcampus(other)', '6', '']
+# first = ['one','two','three four']
+# second = ['one','asdfasd','asdfasd']
+# df1 = pd.DataFrame(first)
+# df2 = pd.DataFrame(second)
+# tm1 = tfidf.fit_transform(df1[0])
+# tm2 = tfidf.fit_transform(df2[0])
+# print(tm1.shape[1])
+# print(tm2.shape[1])
+
+# # print(tm1)
+# # print(tm2)
+# cosine_sim = linear_kernel(tm1, tm2)
+# result = [ cosine_sim[i][i] for i in range(0, len(cosine_sim)) ]
+# print(result) 

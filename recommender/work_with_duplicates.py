@@ -31,11 +31,11 @@ num = 2
 # csv = 'Test Classes Extended.csv'
 csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
-# use_model = True 
-use_model = False 
+use_model = True 
+# use_model = False 
 pair_groups = False 
 # pair_groups = True 
-random = True    
+do_random = True    
 rand_num = 3
 
 # minimize number of global variables
@@ -153,7 +153,7 @@ import random
 def get_random(mylist, num): # num = number of people per group
     if (len(mylist) > num):
         inds = list(mylist.index)
-        if random:
+        if do_random:
             rand_inds = random.sample(inds, num-1)
             result = pd.DataFrame(columns=features)
             for i in rand_inds:
