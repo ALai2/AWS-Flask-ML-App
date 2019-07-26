@@ -1,11 +1,5 @@
 import pandas as pd
 
-# Import TfIdfVectorizer from scikit-learn
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-# Import linear_kernel
-from sklearn.metrics.pairwise import linear_kernel
-
 import clean_info as ci 
 import model_selection as ms # use model selection for predictions
 import random 
@@ -71,7 +65,7 @@ def speed_up_pairings(m0):
                 if do_random:
                     result = random.sample(group_sims, num-1)
                 else:
-                    result = group_sims[0, num]
+                    result = group_sims[:num]
             else:
                 result = group_sims
             
@@ -88,7 +82,6 @@ def speed_up_pairings(m0):
                 pairs = pairs.append(m0[m0['index'] == m].iloc[0])
             
             pairs = pd.concat([pairs, extra], sort=False)
-
     return pairs  
 
 print(speed_up_pairings(m0))

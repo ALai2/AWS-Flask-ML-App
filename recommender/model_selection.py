@@ -78,13 +78,14 @@ def load_prediction(df, m0):
     # def loop_rows(i):
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
         mylist = i[1]['group'].split(", ")
-        name_list = []
-        for m in mylist:
-            if use_index:
-                index = int(m)
-                name_list.append(index)
-            else:
-                name_list.append(m0['index'][m0['Name'] == m].iloc[0])
+        # name_list = []
+        # for m in mylist:
+        #     if use_index:
+        #         index = int(m)
+        #         name_list.append(index)
+        #     else:
+        #         name_list.append(m0['index'][m0['Name'] == m].iloc[0])
+        name_list = [ int(m) if use_index else m0['index'][m0['Name'] == m].iloc[0] for m in mylist ]
 
         loop_list = [[], []]
         

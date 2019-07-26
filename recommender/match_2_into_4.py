@@ -50,7 +50,7 @@ def convert_csv_to_matrix(csv, num):
         m1 = group.copy()
         m1 = ci.clean_df(m1, features, primary)
         
-        if use_model:
+        if use_model: # how to make this work?
             cosine_sim = ms.construct_similarity(m1)
         else:
             # BEGINNING ------------------------------------------------------------
@@ -211,5 +211,6 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
     return pairs
 
 df = convert_csv_to_matrix(csv, num)
-print(df)
+# print(df)
+print("Done")
 df.to_csv('testing.csv', index=False)

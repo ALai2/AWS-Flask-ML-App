@@ -1,10 +1,22 @@
+import keywords_dict as kd 
+
+def key_replace(x):
+    if isinstance(x, str):
+        keywords = kd.get_keywords()
+        for k in keywords:
+            if str.lower(x).strip() in keywords[k]:
+                return k
+        return x 
+    else:
+        return ''
+
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
     if isinstance(x, list):
         return [str.lower(i).strip() for i in x]
     else:
         #Check if item exists. If not, return empty string
-        if isinstance(x, str):
+        if isinstance(x, str): # check dictionary
             return str.lower(x).strip()
         elif isinstance(x, int):
             return str(x)

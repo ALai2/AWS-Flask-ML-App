@@ -41,6 +41,10 @@ def convert_csv_to_matrix(csv, num):
     # Load data from csv
     metadata = pd.read_csv(csv)
     m0 = metadata[features]
+
+    for feature in ['Interest 1','Interest 2']:
+        m0[feature] = m0[feature].apply(ci.key_replace)
+    
     m0 = m0.reset_index()
     group_dict = {}
     if pair_groups:
@@ -206,5 +210,6 @@ if pair_groups:
     # create groups using pairs from each group
 else:
     df = convert_csv_to_matrix(csv, num)
-    print(df)
+    # print(df)
+    print("Done")
     df.to_csv('testing.csv', index=False)
