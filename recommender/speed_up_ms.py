@@ -61,7 +61,7 @@ def speed_up_pairings(m0):
                 n, x = (p[1]['Name']).split(", ")
                 group_sims.append(x)
             
-            if (len(group_sims) > num):
+            if (len(group_sims) >= num):
                 if do_random:
                     result = random.sample(group_sims, num-1)
                 else:
@@ -84,4 +84,6 @@ def speed_up_pairings(m0):
             pairs = pd.concat([pairs, extra], sort=False)
     return pairs  
 
-print(speed_up_pairings(m0))
+df = speed_up_pairings(m0)
+print(df)
+df.to_csv('testing.csv', index=False)

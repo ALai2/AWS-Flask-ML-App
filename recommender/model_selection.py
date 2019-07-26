@@ -75,18 +75,17 @@ def get_similarity(first, second): # return similarity between two strings
 def load_prediction(df, m0):
     soup_data = []
     # print(m0)
-    # def loop_rows(i):
+
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
         mylist = i[1]['group'].split(", ")
-        # name_list = []
-        # for m in mylist:
-        #     if use_index:
-        #         index = int(m)
-        #         name_list.append(index)
-        #     else:
-        #         name_list.append(m0['index'][m0['Name'] == m].iloc[0])
-        name_list = [ int(m) if use_index else m0['index'][m0['Name'] == m].iloc[0] for m in mylist ]
-
+        name_list = []
+        for m in mylist:
+            if use_index:
+                index = int(m)
+                name_list.append(index)
+            else:
+                name_list.append(m0['index'][m0['Name'] == m].iloc[0])
+        
         loop_list = [[], []]
         
         soups = [ i[1]['group'] ]
@@ -196,16 +195,12 @@ def construct_similarity(m0):
     pairs = list(itertools.combinations(names, 2))
     matrix = np.eye(length, length)
     
-    # list.index(element)
-    # data = []
-    # for (one, two) in pairs:
-    #     if use_index:
-    #         data.append([str(one) + ", " + str(two)])
-    #     else:
-    #         data.append([one + ", " + two])
-
-    # https://www.freecodecamp.org/news/if-you-have-slow-loops-in-python-you-can-fix-it-until-you-cant-3a39e03b6f35/ 
-    data = [ [str(one) + ", " + str(two)] if use_index else [one + ", " + two] for (one, two) in pairs ]
+    data = []
+    for (one, two) in pairs:
+        if use_index:
+            data.append([str(one) + ", " + str(two)])
+        else:
+            data.append([one + ", " + two])
 
     df = pd.DataFrame(data, columns=['group'])
 

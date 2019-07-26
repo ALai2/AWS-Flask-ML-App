@@ -31,6 +31,7 @@ csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
 # use_model = True 
 use_model = False 
+replace_list = ['Interest 1','Interest 2']
 pair_groups = False 
 # pair_groups = True 
 do_random = False               
@@ -42,7 +43,7 @@ def convert_csv_to_matrix(csv, num):
     metadata = pd.read_csv(csv)
     m0 = metadata[features]
 
-    for feature in ['Interest 1','Interest 2']:
+    for feature in replace_list:
         m0[feature] = m0[feature].apply(ci.key_replace)
     
     m0 = m0.reset_index()
