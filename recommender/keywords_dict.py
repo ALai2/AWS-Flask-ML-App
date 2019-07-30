@@ -143,7 +143,7 @@ keywords = {
 
 'Horses' : ['horses', 'horseback riding' , 'polo' , 'horse racing' , 'going horseback riding' , 'watching polo', 'watching a polo match'],
 
-'Winter Sports' : ['skiing' , 'snowboarding' , 'ice skating', 'going skiing' , 'going snowboarding', 'shredding pow', 'aspen', 'vail', 'hockey'],
+'Winter Sports' : ['skiing' , 'snowboarding' , 'ice skating', 'going skiing' , 'going snowboarding', 'shredding pow', 'aspen', 'vail', 'hockey', 'ice hockey'],
 
 'Cheerleading' : ['cheerleading', 'being a cheerleader', 'cheering', 'cheer'],
 
@@ -168,3 +168,11 @@ keywords = {
 
 def get_keywords():
    return keywords
+
+# deal with cross-listed courses
+'''
+courses = {'ENGRD 2110': 'CS 2110'}
+
+def get_courses():
+   return courses
+'''

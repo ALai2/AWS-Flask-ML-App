@@ -10,6 +10,32 @@ def key_replace(x):
     else:
         return ''
 
+'''
+def course_replace(x):
+    if isinstance(x, str):
+        x = format_course(x)
+        courses = kd.get_courses()
+        if x in courses: ?????
+            return courses[x]
+        return x
+    else:
+        return ''
+'''
+
+def format_course(x):
+    txt = str.upper(x.replace(" ", ""))
+    for i in range(len(txt)-1, -1, -1):
+        if not txt[i].isdigit():
+            return txt[0:i+1] + " " + txt[i+1:]
+
+# import re 
+# def course_match(x):
+#     pattern = '([A-Za-z]+)[\s]*([\d]+)'
+#     if re.search(pattern, x):
+#         return True 
+#     return False 
+# print(course_match("E2NGRD 2110"))
+
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
     if isinstance(x, list):

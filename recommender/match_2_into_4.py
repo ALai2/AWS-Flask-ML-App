@@ -12,13 +12,21 @@ import clean_info as ci
 import model_selection as ms 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
-tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english')
+tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = True)
+# tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = False)
 
 # features
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-weights = {'Name': 0, 'Gender': 24, 'Major': 5, 'Grad Year': 7, 'Class 1': 16, 'Class 2': 16, 'Class 3': 16, 'Class 4': 16, 'Interest 1': 8, 'Interest 2': 8, 'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
+c_weight = 16
+i_weight = 8
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 
+    'Class 1': c_weight, 'Class 2': c_weight, 'Class 3': c_weight, 'Class 4': c_weight, 'Class 5': c_weight, 'Class 6': c_weight, 'Class 7': c_weight, 'Class 8': c_weight, 
+    'Interest 1': i_weight, 'Interest 2': i_weight, 
+    'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}
+
+# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
 # weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
 
 primary = 'Name'
@@ -26,17 +34,19 @@ primary = 'Name'
 groupby = None
 
 num = 3
+num2 = 2
 # csv = 'Test Classes Extended.csv'
 csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 # csv = 'ProfileInfo.csv'
-# use_model = True 
+
 use_model = False 
 replace_list = ['Interest 1','Interest 2']
-# pair_groups = True 
-do_random = False               
-rand_num = 5
 
-pair_groups = False  # ml does not work with pair_groups = True 
+do_random = False                 
+rand_num = 4
+rand_num2 = 3
+
+pair_groups = False  # use_model = True does not work with pair_groups = True 
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -52,7 +62,7 @@ def convert_csv_to_matrix(csv, num):
     matches = []
     ones = []
 
-    def func_pairs(features, group):
+    def func_pairs(features, group, num, rand_num):
         # apply clean_df function to features
         m1 = group.copy()
         m1 = ci.clean_df(m1, features, primary)
@@ -79,7 +89,7 @@ def convert_csv_to_matrix(csv, num):
         #Construct a reverse map of indices and employee names
         indices = pd.Series(group.index, index=group['index']).drop_duplicates()
 
-        return get_pairs(group['index'].sample(frac=1), indices, cosine_sim, group, num)
+        return get_pairs(group['index'].sample(frac=1), indices, cosine_sim, group, num, rand_num)
 
     if groupby is not None:
         courses = m0[groupby].unique() # list of all unique department names
@@ -91,7 +101,7 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches += func_pairs(features, group)
+                matches += func_pairs(features, group, num, rand_num)
         
         if len(ones) != 0:
             if len(ones) == 1:
@@ -110,13 +120,19 @@ def convert_csv_to_matrix(csv, num):
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                matches += func_pairs(features, df)
+                matches += func_pairs(features, df, num, rand_num)
     else:
-        matches = func_pairs(features, m0)
+        matches = func_pairs(features, m0, num, rand_num)
     
     if pair_groups:
-        pair_features = ['Name','Class 1','Class 2','Class 3','Class 4','Class 5','Class 6','Class 7','Class 8']
         i_classes = ['Class 1','Class 2','Class 3','Class 4']
+        
+        # pair_features = ['Name','Class 1','Class 2','Class 3','Class 4','Class 5','Class 6','Class 7','Class 8']
+        pair_features = ['Name']
+        for n in range(0, num):
+            pair_features += [ 'Class '+str((n*4)+i) for i in range(1, len(i_classes)+1)]
+        
+        
         df = pd.DataFrame(columns=pair_features)
         for pair in matches:
             str_pair = [ str(x) for x in pair ]
@@ -134,7 +150,7 @@ def convert_csv_to_matrix(csv, num):
             df = pd.concat([df, pair_df], sort=False)
         df = df.reset_index().drop('index', axis=1).reset_index()
 
-        result = func_pairs(pair_features, df)
+        result = func_pairs(pair_features, df, num2, rand_num2)
 
         print_out = []
         for four in result:
@@ -158,7 +174,7 @@ def convert_csv_to_matrix(csv, num):
     return pairs 
 
 # Function that takes in movie title as input and outputs most similar movies
-def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
+def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num):
     # Get the index of the employee that matches the name
     idx = indices[name]
 
@@ -171,8 +187,12 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0):
     # Get the employee indices
     emp_indices = []
     emp_sims = []
+    if do_random:
+        group_num = rand_num 
+    else:
+        group_num = num + 1
     for i in sim_scores:
-        if (len(emp_indices) == rand_num): break
+        if (len(emp_indices) == group_num): break
         if i[0] not in list_to_remove and i[0] != idx:
             emp_indices.append(i[0])
             emp_sims.append(i[1])
@@ -199,13 +219,13 @@ def get_random(mylist, num): # num = number of people per group
     return result
 
 # semi-greedy algorithm
-def get_pairs(emplist, indices, cosine_sim, m0, num):
+def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num):
     pairs = []
     list_to_remove = []
     
     for e in emplist:
         if indices[e] not in list_to_remove:
-            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0), num)['index'])
+            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0, rand_num), num)['index'])
             name0 = e
             pair = [name0]
             
@@ -222,4 +242,4 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
 df = convert_csv_to_matrix(csv, num)
 print(df)
 # print("Done")
-# df.to_csv('testing.csv', index=False)
+df.to_csv('testing.csv', index=False)

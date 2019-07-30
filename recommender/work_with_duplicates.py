@@ -18,7 +18,14 @@ tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 16, 'Class 2': 16, 'Class 3': 16, 'Class 4': 16, 'Interest 1': 8, 'Interest 2': 8, 'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
+c_weight = 16
+i_weight = 8
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 
+    'Class 1': c_weight, 'Class 2': c_weight, 'Class 3': c_weight, 'Class 4': c_weight, 
+    'Interest 1': i_weight, 'Interest 2': i_weight, 
+    'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}
+
+# S = 1.8 C, L = 1.5 C, I = 0.8 C, H = 0.6 C, G = 0.5 C, M = 0.3 C
 # weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 'Class 1': 10, 'Class 2': 10, 'Class 3': 10, 'Class 4': 10, 'Interest 1': 6, 'Interest 2': 6, 'Study Habits': 15, 'Hometown': 3, 'Campus Location': 14, 'Race': 0, 'Preferences': 0}
 
 primary = 'Name'
@@ -33,7 +40,7 @@ csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 use_model = False 
 replace_list = ['Interest 1','Interest 2']
 do_random = False               
-rand_num = 5
+rand_num = 3
 
 # minimize number of global variables
 def convert_csv_to_matrix(csv, num):
@@ -180,6 +187,6 @@ def get_pairs(emplist, indices, cosine_sim, m0, num):
     return pairs
 
 df = convert_csv_to_matrix(csv, num)
-# print(df)
-print("Done")
+print(df)
+# print("Done")
 df.to_csv('testing.csv', index=False)
