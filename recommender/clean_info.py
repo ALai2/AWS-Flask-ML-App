@@ -15,8 +15,9 @@ def course_replace(x):
     if isinstance(x, str):
         x = format_course(x)
         courses = kd.get_courses()
-        if x in courses: ?????
-            return courses[x]
+        for c in courses:
+            if x in courses[c]:
+                return c
         return x
     else:
         return ''
