@@ -18,7 +18,7 @@ tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='
 primary = 'Name'
 # groupby = 'Race'
 groupby = None
-use_model = False 
+use_model = True  
 replace_list = ['Interest 1','Interest 2']
 
 # data of people to be paired
@@ -53,13 +53,13 @@ else:
     weights.update({ 'Class '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
 
 # construct similarity matrix for group according to features and return pairings
-def func_pairs(features, group, num, rand_num, do_random):
+def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
     # apply clean_df function to features
     m1 = group.copy()
-    m1 = ci.clean_df(m1, features, primary)
-        
-    if use_model: # how to make this work?
-        cosine_sim = ms.construct_similarity(m1)
+    m1 = ci.clean_df(m1, features, primary, i_classes)
+    
+    if use_model: # how to make this work for second round?
+        cosine_sim = ms.construct_similarity(m1, model_num)
     else:
         # BEGINNING ------------------------------------------------------------
         m1 = m1.assign(score = [''] * len(m1))
@@ -87,7 +87,6 @@ def convert_csv_to_matrix(csv, num):
     # Load data from csv
     metadata = pd.read_csv(csv)
     m0 = metadata[features]
-
     for feature in replace_list:
         m0[feature] = m0[feature].apply(ci.key_replace)
 
@@ -106,7 +105,7 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches += func_pairs(features, group, num, rand_num, do_random)
+                matches += func_pairs(features, group, num, rand_num, do_random, i_classes, 1)
         
         if len(ones) != 0:
             if len(ones) == 1:
@@ -115,26 +114,27 @@ def convert_csv_to_matrix(csv, num):
                     else:
                         while len(match) < num:
                             if len(ones) != 0:
-                                match.append(ones.pop(0)[primary])
+                                match.append(int(ones.pop(0)['index']))
                             else: break
                 if len(ones) > 0:
-                    matches[0].append(ones.pop(0))
+                    matches[0].append(int(ones.pop(0)['index']))
             else:
                 df = pd.DataFrame(columns=features + ['index'])
                 
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                matches += func_pairs(features, df, num, rand_num, do_random)
+                matches += func_pairs(features, df, num, rand_num, do_random, i_classes, 1)
     else:
-        matches = func_pairs(features, m0, num, rand_num, do_random)
+        matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
     
     if pair_groups:
         # prepare first round pairings for second round pairings
-        pair_features = ['Name']
+        two_classes = []
         for n in range(0, num):
-            pair_features += [ 'Class '+str((n*len(i_classes))+i) for i in range(1, len(i_classes)+1)]
+            two_classes += [ 'Class '+str((n*len(i_classes))+i) for i in range(1, len(i_classes)+1)]
         
+        pair_features = ['Name'] + two_classes
         df = pd.DataFrame(columns=pair_features)
         for pair in matches:
             str_pair = [ str(x) for x in pair ]
@@ -154,7 +154,7 @@ def convert_csv_to_matrix(csv, num):
         df = df.reset_index().drop('index', axis=1).reset_index()
 
         # complete second round pairings
-        result = func_pairs(pair_features, df, num2, rand_num2, do_random2)
+        result = func_pairs(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
 
         print_out = []
         for four in result:

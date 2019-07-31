@@ -20,25 +20,30 @@ import pickle # for saving the ml model
 # reduce amount of predictions needed to be made by not predicting unwanted pairs
 # create new file for pairing model predictions
 
-# use_index = True 
-use_index = False 
+use_index = True 
+# use_index = False 
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(stop_words = 'english') # stop words include numbers so what to do about Grad Year?
 
 features = ['Name','Gender','Major','Grad Year','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-training_features = ['Name','Gender','Major','Grad Year','Classes','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
+training_features = ['Name','Gender','Major','Grad Year','Classes 1','Interests','Study Habits','Hometown','Campus Location','Race','Preferences']
+second_features = ['Name','Classes 2']
 
 classes = ['Class 1','Class 2','Class 3','Class 4']
+second_classes = classes + ['Class 5','Class 6','Class 7','Class 8']
 interests = ['Interest 1','Interest 2']
-combine = {'Classes': classes, 'Interests': interests}
+combine = {'Classes 1': classes, 'Classes 2': second_classes, 'Interests': interests}
 
 primary = 'Name'
 # csv = 'Test Classes Extended.csv'
 csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 training_csv = "?"
 output = 'target'
+
 filename = 'finalized_model.sav'
+model_choice = {1: 'first_model.sav', 2: 'second_model.sav'}
+create_2_model = False 
 
 
 def get_similarity(first, second): # return similarity between two strings
@@ -72,19 +77,27 @@ def get_similarity(first, second): # return similarity between two strings
     # result = [ cosine_sim[i][i] for i in range(0, len(cosine_sim)) ]
     # return result 
 
-def load_prediction(df, m0):
+def load_prediction(df, m0, model_num):
     soup_data = []
-    # print(m0)
+    if model_num == 1:
+        allfeatures = training_features
+    elif model_num == 2:
+        allfeatures = second_features
 
     for i in df.iterrows(): # loop through df rows and acquire similarity ratios
-        mylist = i[1]['group'].split(", ")
+        mylist = i[1]['group'].split("; ")
         name_list = []
         for m in mylist:
             if use_index:
                 index = int(m)
                 name_list.append(index)
             else:
-                name_list.append(m0['index'][m0['Name'] == m].iloc[0])
+                if create_2_model:
+                    group = m.split(", ")
+                    for g in group:
+                        name_list.append(m0['index'][m0['Name'] == g].iloc[0])
+                else:
+                    name_list.append(m0['index'][m0['Name'] == m].iloc[0])
         
         loop_list = [[], []]
         
@@ -102,25 +115,42 @@ def load_prediction(df, m0):
         
         soups += get_similarity(loop_list[0], loop_list[1]) 
         '''
-
-        for feature in [x for x in training_features if x != primary]:
-            mylist = []
-            for j in range(0,2):
-                if feature in combine:
-                    mylist.append(" ".join(m0[m0['index'] == name_list[j]][i].iloc[0] for i in combine[feature]))
-                else:
-                    mylist.append(m0[m0['index'] == name_list[j]][feature].iloc[0])
-            soups.append(get_similarity(mylist[0], mylist[1]))
-
+        
+        if not create_2_model:
+            for feature in [x for x in allfeatures if x != primary]:
+                mylist = []
+                for j in range(0,2):
+                    if feature in combine:
+                        mylist.append(" ".join(m0[m0['index'] == name_list[j]][i].iloc[0] for i in combine[feature]))
+                    else:
+                        mylist.append(m0[m0['index'] == name_list[j]][feature].iloc[0])
+                soups.append(get_similarity(mylist[0], mylist[1]))  
+        else:
+            for feature in [x for x in second_features if x != primary]:
+                mylist = []
+                half = len(name_list) / 2
+                acc = []
+                for k in range(0, len(name_list)):
+                    if k == half:
+                        mylist.append(" ".join(acc))
+                        acc = []
+                    if feature in combine:
+                        acc.append(" ".join(m0[m0['index'] == name_list[k]][i].iloc[0] for i in combine[feature]))
+                    else:
+                        acc.append(m0[m0['index'] == name_list[j]][feature].iloc[0])
+                mylist.append(" ".join(acc))
+                soups.append(get_similarity(mylist[0], mylist[1]))  
+        
+        
         soup_data.append(soups)
-    
-    df_soup = pd.DataFrame(soup_data, columns=training_features)
+
+    df_soup = pd.DataFrame(soup_data, columns=allfeatures)
     return df_soup 
 
-def create_model():
+def create_model(model_num):
     metadata = pd.read_csv(csv)
-    m0 = metadata[features]
-    m0 = ci.clean_df(m0, features, primary)
+    m0 = metadata[features].reset_index()
+    m0 = ci.clean_df(m0, features, primary, classes)
 
     '''
     # Load training data
@@ -128,7 +158,12 @@ def create_model():
     metadata = training[['group','target]]
     '''
     # will later change to data in training_csv
-    data = [["Maya, Maia", 2], ["Maya, Stanley, Sam", 3], ["Evan, Jen, Emily", 5],["Jordyn, Tom", 7]]
+    if model_num == 1:
+        data = [["Maya; Maia", 2], ["Maya; Stanley", 3], ["Evan; Jen", 5],["Jordyn; Tom", 7]]
+        allfeatures = training_features
+    elif model_num == 2:
+        data = [["Maya, Maia; Evan, Jen", 2],["Jordyn, Tom; Rebecca, Frank", 7]]
+        allfeatures = second_features
     metadata = pd.DataFrame(data, columns=['group','target'])
 
     # modify df to get X
@@ -137,10 +172,10 @@ def create_model():
 
     # df is features to be predicted
     # m0 is information about people
-    df_soup = load_prediction(df, m0)
+    df_soup = load_prediction(df, m0, model_num)
 
     # don't need feature scaling, all similarity numbers are between 0 and 1
-    X = df_soup[[x for x in training_features if x != primary]]
+    X = df_soup[[x for x in allfeatures if x != primary]]
 
     # later on don't split the dataset, just use X and y for fit
     # 20% of data goes into test set, 80% into training set
@@ -158,16 +193,17 @@ def create_model():
     feature_imp = pd.Series(clf.feature_importances_,index=iris.feature_names).sort_values(ascending=False)
     print(feature_imp) # feature importance
     '''
-
+    filename = model_choice[model_num]
     # save the model (cl) to disk
     pickle.dump(cl, open(filename, 'wb'))
     return None 
 
 # HELLO!!!!!!!!!!!!!!!!!-------------------------------------------------
-# create_model()
+# create_model(2)
 
-def make_prediction(df_soup, X_test):
+def make_prediction(df_soup, X_test, model_num):
     # load the model from disk
+    filename = model_choice[model_num]
     cl = pickle.load(open(filename, 'rb'))
     # dataframe of numerical features for prediction
     predictions = cl.predict(X_test)
@@ -184,7 +220,7 @@ def make_prediction(df_soup, X_test):
     
     return X_test
 
-def construct_similarity(m0):
+def construct_similarity(m0, model_num):
     if use_index:
         names = list(m0.index)
     else:
@@ -198,21 +234,25 @@ def construct_similarity(m0):
     data = []
     for (one, two) in pairs:
         if use_index:
-            data.append([str(one) + ", " + str(two)])
+            data.append([str(one) + "; " + str(two)])
         else:
-            data.append([one + ", " + two])
+            data.append([one + "; " + two])
 
     df = pd.DataFrame(data, columns=['group'])
 
-    df_soup = load_prediction(df, m0)
-    X_test = df_soup[[x for x in training_features if x != primary]]
+    df_soup = load_prediction(df, m0, model_num)
+    if model_num == 1:
+        features = training_features
+    elif model_num == 2:
+        features = second_features
+    
+    X_test = df_soup[[x for x in features if x != primary]]
 
-    predictions = make_prediction(df_soup, X_test)
+    predictions = make_prediction(df_soup, X_test, model_num)
     
     # loop through df rows and acquire similarity ratios
-    # def loop_predictions(p):
     for p in predictions.iterrows():
-        [one, two] = p[1]['Name'].split(", ")
+        [one, two] = p[1]['Name'].split("; ")
         
         if use_index:
             index1 = int(one)
@@ -223,8 +263,6 @@ def construct_similarity(m0):
         pred = p[1]['Prediction'] / 10
         matrix[index1][index2] = pred 
         matrix[index2][index1] = pred
-        # return None 
-    # map(loop_predictions, predictions.iterrows())
     
     return matrix # psuedo-cosine_sim matrix
 

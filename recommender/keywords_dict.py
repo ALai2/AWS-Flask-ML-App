@@ -171,7 +171,7 @@ def get_keywords():
 
 # deal with cross-listed courses
 '''
-courses = {'ENGRD 2110': 'CS 2110'}
+courses = {'ENGRD 2110': ['CS 2110']}
 
 def get_courses():
    return courses

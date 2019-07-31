@@ -1,8 +1,8 @@
-import keywords_dict as kd 
+import keywords_dict as kd
+keywords = kd.get_keywords()
 
 def key_replace(x):
     if isinstance(x, str):
-        keywords = kd.get_keywords()
         for k in keywords:
             if str.lower(x).strip() in keywords[k]:
                 return k
@@ -11,6 +11,13 @@ def key_replace(x):
         return ''
 
 '''
+def format_course(x):
+    txt = str.upper(x.replace(" ", ""))
+    for i in range(len(txt)-1, -1, -1):
+        if not txt[i].isdigit():
+            return txt[0:i+1] + " " + txt[i+1:]
+    return txt 
+
 def course_replace(x):
     if isinstance(x, str):
         x = format_course(x)
@@ -21,21 +28,14 @@ def course_replace(x):
         return x
     else:
         return ''
+
+def replace_df(m0):
+    for feature in ['Interest 1','Interest 2']:
+        m0[feature] = m0[feature].apply(key_replace)
+    for feature in ['Class 1','Class 2','Class 3','Class 4']:
+        m0[feature] = m0[feature].apply(course_replace)
+    return m0
 '''
-
-def format_course(x):
-    txt = str.upper(x.replace(" ", ""))
-    for i in range(len(txt)-1, -1, -1):
-        if not txt[i].isdigit():
-            return txt[0:i+1] + " " + txt[i+1:]
-
-# import re 
-# def course_match(x):
-#     pattern = '([A-Za-z]+)[\s]*([\d]+)'
-#     if re.search(pattern, x):
-#         return True 
-#     return False 
-# print(course_match("E2NGRD 2110"))
 
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
@@ -51,24 +51,18 @@ def clean_data(x):
             return ''
 
 def replace_space(x):
-    if isinstance(x, str):
-        return str.lower(x).replace(" ", "")
-    else:
-        return ''
+    return x.replace(" ", "")
 
 def trim_str(x):
-    if isinstance(x, str):
-        return x.strip()
-    else:
-        return ''
+    return x.strip()
 
 import pandas as pd 
 # Load data from csv and organize
-def clean_df(m0, features, primary):
+def clean_df(m0, features, primary, i_classes):
     for feature in [x for x in features if x != primary]:
         m0[feature] = m0[feature].apply(clean_data)
                 
-        if feature in ['Major', 'Class 1', 'Class 2', 'Class 3', 'Hometown','Study Habits','Campus Location']:
+        if feature in i_classes + ['Major', 'Hometown','Study Habits','Campus Location']:
             m0[feature] = m0[feature].apply(replace_space)
     m0[primary] = m0[primary].apply(trim_str)
     return m0
