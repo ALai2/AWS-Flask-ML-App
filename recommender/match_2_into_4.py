@@ -10,6 +10,7 @@ from sklearn.metrics.pairwise import linear_kernel
 import json # for testing
 import clean_info as ci 
 import model_selection as ms 
+import speed_up_ms as sums
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = True)
@@ -18,7 +19,8 @@ tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='
 primary = 'Name'
 # groupby = 'Race'
 groupby = None
-use_model = True  
+use_model = False   
+speed_model = True   
 replace_list = ['Interest 1','Interest 2']
 
 # data of people to be paired
@@ -30,7 +32,7 @@ rand_num = 4
 do_random = False 
 
 # round two variables
-pair_groups = True  # use_model = True does not work with pair_groups = True 
+pair_groups = True  # need to fix for speed_model=True + num>2
 num2 = 2
 rand_num2 = 3
 do_random2 = False 
@@ -91,7 +93,6 @@ def convert_csv_to_matrix(csv, num):
         m0[feature] = m0[feature].apply(ci.key_replace)
 
     m0 = m0.reset_index()
-    group_dict = {}
     matches = []
     ones = []
 
@@ -105,7 +106,10 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches += func_pairs(features, group, num, rand_num, do_random, i_classes, 1)
+                if speed_model:
+                    matches += sums.speed_up_pairings(features, group, num, rand_num, do_random, i_classes, 1)
+                else:
+                    matches += func_pairs(features, group, num, rand_num, do_random, i_classes, 1)
         
         if len(ones) != 0:
             if len(ones) == 1:
@@ -124,10 +128,16 @@ def convert_csv_to_matrix(csv, num):
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                matches += func_pairs(features, df, num, rand_num, do_random, i_classes, 1)
+                if speed_model:
+                    matches += sums.speed_up_pairings(features, df, num, rand_num, do_random, i_classes, 1)
+                else:
+                    matches += func_pairs(features, df, num, rand_num, do_random, i_classes, 1)
     else:
-        matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
-    
+        if speed_model:
+            matches += sums.speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, 1)
+        else:
+            matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
+    # print(matches)
     if pair_groups:
         # prepare first round pairings for second round pairings
         two_classes = []
@@ -145,6 +155,20 @@ def convert_csv_to_matrix(csv, num):
                 for feature in i_classes:
                     data.append(m0[feature][m0['index'] == i].iloc[0])
             
+            # take care of extra data
+            while(len(data) > len(pair_features)):
+                c1 = data[len(data)-1]
+                if not isinstance(c1, str):
+                    data.remove(c1)
+                else:
+                    c2 = data[len(data)-2]
+                    if not isinstance(c2, str):
+                        data.remove(c2)
+                    else:
+                        data.append(c1 + "," + c2)
+                        data.remove(c1)
+                        data.remove(c2)
+            
             # take care of missing data
             while(len(data) < len(pair_features)):
                 data.append("")
@@ -154,7 +178,10 @@ def convert_csv_to_matrix(csv, num):
         df = df.reset_index().drop('index', axis=1).reset_index()
 
         # complete second round pairings
-        result = func_pairs(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
+        if speed_model:
+            result = sums.speed_up_pairings(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
+        else:
+            result = func_pairs(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
 
         print_out = []
         for four in result:

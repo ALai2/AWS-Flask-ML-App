@@ -51,7 +51,7 @@ def clean_data(x):
             return ''
 
 def replace_space(x):
-    return x.replace(" ", "")
+    return (x.replace(" ", "")).replace(",", " ")
 
 def trim_str(x):
     return x.strip()
@@ -66,3 +66,8 @@ def clean_df(m0, features, primary, i_classes):
             m0[feature] = m0[feature].apply(replace_space)
     m0[primary] = m0[primary].apply(trim_str)
     return m0
+
+# mylist = ['one','two','three']
+# mylist.append(mylist[len(mylist)-1] + " " + mylist[len(mylist)-2])
+# mylist.remove(mylist[len(mylist)-1])
+# print(mylist)
