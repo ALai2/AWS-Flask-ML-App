@@ -13,7 +13,7 @@ training_features = ['Name','Gender','Major','Grad Year','Classes 1','Interests'
 second_features = ['Name','Classes 2']
 
 # add combine variables?
-def speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, model_num):
+def speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, model_num, combine):
 
     m1 = m0.copy()
     m1 = ci.clean_df(m1, features, primary, i_classes)
@@ -47,7 +47,7 @@ def speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, model_n
             data = [ [str(n) + "; " + str(x)] if use_index else [n + "; " + x] for x in not_paired ]
             df = pd.DataFrame(data, columns=['group'])
 
-            df_soup = ms.load_prediction(df, m1, model_num)
+            df_soup = ms.load_prediction(df, m1, model_num, combine)
             if model_num == 1:
                 t_features = training_features
             elif model_num == 2:

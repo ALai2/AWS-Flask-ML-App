@@ -42,6 +42,8 @@ do_random2 = False
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
 i_classes = ['Class 1','Class 2','Class 3','Class 4']
 features = ['Name','Gender','Major','Grad Year'] + i_classes + ['Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
+interests = ['Interest 1','Interest 2']
+combine = {'Classes 1': i_classes,  'Interests': interests}
 c_weight = 16
 i_weight = 8
 weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 
@@ -61,7 +63,7 @@ def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
     m1 = ci.clean_df(m1, features, primary, i_classes)
     
     if use_model: # how to make this work for second round?
-        cosine_sim = ms.construct_similarity(m1, model_num)
+        cosine_sim = ms.construct_similarity(m1, model_num, combine)
     else:
         # BEGINNING ------------------------------------------------------------
         m1 = m1.assign(score = [''] * len(m1))
@@ -107,7 +109,7 @@ def convert_csv_to_matrix(csv, num):
                 ones.append(group)
             else:
                 if speed_model:
-                    matches += sums.speed_up_pairings(features, group, num, rand_num, do_random, i_classes, 1)
+                    matches += sums.speed_up_pairings(features, group, num, rand_num, do_random, i_classes, 1, combine)
                 else:
                     matches += func_pairs(features, group, num, rand_num, do_random, i_classes, 1)
         
@@ -129,12 +131,12 @@ def convert_csv_to_matrix(csv, num):
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
                 if speed_model:
-                    matches += sums.speed_up_pairings(features, df, num, rand_num, do_random, i_classes, 1)
+                    matches += sums.speed_up_pairings(features, df, num, rand_num, do_random, i_classes, 1, combine)
                 else:
                     matches += func_pairs(features, df, num, rand_num, do_random, i_classes, 1)
     else:
         if speed_model:
-            matches += sums.speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, 1)
+            matches += sums.speed_up_pairings(features, m0, num, rand_num, do_random, i_classes, 1, combine)
         else:
             matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
     # print(matches)
@@ -178,8 +180,9 @@ def convert_csv_to_matrix(csv, num):
         df = df.reset_index().drop('index', axis=1).reset_index()
 
         # complete second round pairings
+        combine['Classes 2'] = two_classes
         if speed_model:
-            result = sums.speed_up_pairings(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
+            result = sums.speed_up_pairings(pair_features, df, num2, rand_num2, do_random2, two_classes, 2, combine)
         else:
             result = func_pairs(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
 

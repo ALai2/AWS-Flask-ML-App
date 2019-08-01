@@ -77,7 +77,7 @@ def get_similarity(first, second): # return similarity between two strings
     # result = [ cosine_sim[i][i] for i in range(0, len(cosine_sim)) ]
     # return result 
 
-def load_prediction(df, m0, model_num):
+def load_prediction(df, m0, model_num, combine):
     soup_data = []
     if model_num == 1:
         allfeatures = training_features
@@ -172,7 +172,7 @@ def create_model(model_num):
 
     # df is features to be predicted
     # m0 is information about people
-    df_soup = load_prediction(df, m0, model_num)
+    df_soup = load_prediction(df, m0, model_num, combine)
 
     # don't need feature scaling, all similarity numbers are between 0 and 1
     X = df_soup[[x for x in allfeatures if x != primary]]
@@ -220,7 +220,7 @@ def make_prediction(df_soup, X_test, model_num):
     
     return X_test
 
-def construct_similarity(m0, model_num):
+def construct_similarity(m0, model_num, combine):
     if use_index:
         names = list(m0.index)
     else:
@@ -240,7 +240,7 @@ def construct_similarity(m0, model_num):
 
     df = pd.DataFrame(data, columns=['group'])
 
-    df_soup = load_prediction(df, m0, model_num)
+    df_soup = load_prediction(df, m0, model_num, combine)
     if model_num == 1:
         features = training_features
     elif model_num == 2:
