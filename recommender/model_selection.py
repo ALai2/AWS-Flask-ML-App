@@ -15,11 +15,6 @@ import itertools
 import clean_info as ci 
 import pickle # for saving the ml model
 
-# 270 students --> around 17 minutes
-# 187 students --> around 8 minutes
-# reduce amount of predictions needed to be made by not predicting unwanted pairs
-# create new file for pairing model predictions
-
 use_index = True 
 # use_index = False 
 

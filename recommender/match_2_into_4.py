@@ -19,12 +19,12 @@ tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='
 primary = 'Name'
 # groupby = 'Race'
 groupby = None
-use_model = False   
-speed_model = True   
-replace_list = ['Interest 1','Interest 2']
+use_model = False     
+speed_model = False      
 
 # data of people to be paired
-csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
+# csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
+csv = 'Cornell Students Sept 16 Invalid Emails Deleted.csv'
 
 # round one variables
 num = 2
@@ -32,29 +32,30 @@ rand_num = 4
 do_random = False 
 
 # round two variables
-pair_groups = True  # need to fix for speed_model=True + num>2
+pair_groups = True 
 num2 = 2
 rand_num2 = 3
-do_random2 = False 
+do_random2 = True  
 
 # features
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
-i_classes = ['Class 1','Class 2','Class 3','Class 4']
-features = ['Name','Gender','Major','Grad Year'] + i_classes + ['Interest 1','Interest 2','Study Habits','Hometown','Campus Location','Race','Preferences']
-interests = ['Interest 1','Interest 2']
+i_classes = ['Course 1','Course 2','Course 3','Course 4']
+interests = ['Interest 1','Interest 2','Interest 3']
+# features = ['Name','Gender','Major','Grad Year'] + i_classes + interests + ['Study Habits','Hometown','Campus Location','Race','Preferences']
+features = ['Name','Major','Grad Year'] + i_classes + interests + ['Hometown']
+replace_list = interests
 combine = {'Classes 1': i_classes,  'Interests': interests}
 c_weight = 16
 i_weight = 8
 weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 
     'Interest 1': i_weight, 'Interest 2': i_weight, 
     'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}
-
 if pair_groups:
     for n in range(0, num):
-        weights.update({ 'Class '+str((n*len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
+        weights.update({ 'Course '+str((n*len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
 else:
-    weights.update({ 'Class '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
+    weights.update({ 'Course '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
 
 # construct similarity matrix for group according to features and return pairings
 def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
@@ -90,6 +91,10 @@ def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
 def convert_csv_to_matrix(csv, num):
     # Load data from csv
     metadata = pd.read_csv(csv)
+
+    final = metadata[features + ['Email','Phone']]
+    final = final.reset_index()
+
     m0 = metadata[features]
     for feature in replace_list:
         m0[feature] = m0[feature].apply(ci.key_replace)
@@ -194,17 +199,17 @@ def convert_csv_to_matrix(csv, num):
         print_out = [ ", ".join([ str(y) for y in x ]) for x in matches ] 
     
     # get the data of the people represented by indices to insert into csv
-    pairs = pd.DataFrame(columns=features + ['index'])
+    pairs = pd.DataFrame(columns=features + ['Email','Phone','index'])
     for group in print_out:
         index_list = group.split(", ")
         for i in index_list:
-            pairs = pairs.append(m0[m0['index'] == int(float(i))].iloc[0])
-        data = [['-'] * (len(features)+1)]
-        data2 = [['+'] * (len(features)+1)]
+            pairs = pairs.append(final[final['index'] == int(float(i))].iloc[0])
+        data = [['-'] * (len(features)+3)]
+        data2 = [['+'] * (len(features)+3)]
 
         # for spacing
-        extra = pd.DataFrame(data, columns=features + ['index'])
-        extra2 = pd.DataFrame(data2, columns=features + ['index'])
+        extra = pd.DataFrame(data, columns=features + ['Email','Phone','index'])
+        extra2 = pd.DataFrame(data2, columns=features + ['Email','Phone','index'])
         pairs = pd.concat([pairs, extra, extra2], sort=False)
 
     # print this, output
@@ -242,7 +247,7 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num,
 import random 
 # choose partners from list of top similar people from get_recommendations
 def get_random(mylist, num, do_random): # num = number of people per group
-    if (len(mylist) >= num):
+    if (len(mylist) > num):
         inds = list(mylist.index)
         result = pd.DataFrame(columns=features)
         if do_random:

@@ -1,0 +1,249 @@
+Title,ID,Owner,Created Date,Updated Date,Name,Class 4,Class 3,Email,Hometown,Class 1,Interest 1,Interest 2,Interest 3,Class 2,Phone,Major,HomeType,School,Grad Year
+,c3b92872-6c86-404e-923f-d3ff6395904b,,2019-09-13T19:44:20Z,2019-09-13T19:44:20Z,Linda Li,BEE 2510,CEE 3040,lyl24@cornell.edu,Minnesota,ENGRD 2020,Music,Ice Hockey,Chimes,ENGRD 2210,6514246014,Biological and Environmental Engineering,Suburban,Binghamton University,2022
+,bc2b49a4-9ee0-4873-ad3c-bab69f78268a,,2019-09-13T15:52:21Z,2019-09-13T15:52:21Z,Amanda Juan,MATH 2930,ENGRD 2210,ayj2@cornell.edu,New Jersey,PHYS 2213,Fitness (weightlifting),Food!!,,ENGRD 2020,6092162598,Mechanical engineering,Suburban,Binghamton University,2022
+,46f6002a-2622-47da-95d8-21de0b1b97c5,,2019-09-11T00:57:24Z,2019-09-11T00:57:24Z,Rohan Tyagi,,CS 4700,rt332@cornell.edu,California,CS 4820,Basketball,Board games,Piano,CS 4410,9255963046,Computer sCIENCE,Suburban,Binghamton University,2021
+,6b9c7da8-1e2a-4671-a63c-d25e546538e9,,2019-09-09T21:07:59Z,2019-09-09T21:07:59Z,Vincent Joaquin,ECON 160,CQS 111,vjoaqui1@binghamton.edu,New York,GEOG 103,music,netflix,business,MATH 223/224,5168135346,Marketing,Suburban,Binghamton University,2023
+,b5345488-8928-46e3-8c7c-195307106dfd,,2019-09-06T22:13:11Z,2019-09-06T22:13:11Z,Michelle Yang,,AEM 2400,zy233@cornell.edu,New York,AAS 2130,Photography ,Chinese drama,"Games (Fire Emblem, Pokémon) ",PSYCH 2750,9293553577,Industrial Labor Relations,Urban,Binghamton University,2022
+,4ccaaf8f-6d33-4f8d-bb6a-12430a0d3d9b,,2019-09-06T16:54:37Z,2019-09-06T16:54:37Z,Cole Kwas,phil 1110,math 1110,ctk54@cornell.edu,New York,chem 2070,rowing,hockey,,bio 1440,9175622577,Biology,Urban,Binghamton University,2023
+,d9020616-ae07-4d33-bd8f-fdced1c34fd8,,2019-09-04T21:07:34Z,2019-09-04T21:07:34Z,Flora Lechtreck,Womxn of color writing their own stories,Weight lifting,fll27@cornell.edu,Georgia,CHEM 2070,Volleyball,Basketball,Netflix,BioG 1440,7063514371,HBHS,Suburban,Binghamton University,2023
+,c3dff852-daa8-4f00-aadf-9ec17cd73a67,,2019-09-04T20:47:14Z,2019-09-04T20:47:14Z,Teresa Suh,DSOC 3010,DSOC 3130,tjs359@cornell.edu,California,CHEM 3570,disability,music,,BIOG 1440,8186899274,Development Sociology,Urban,Binghamton University,2021
+,672bd317-a61d-4a10-a1cf-7c31cc00331c,,2019-09-04T20:27:08Z,2019-09-04T20:27:08Z,Macy Smith,plsci 1110,plsci 1101,mes422@cornell.edu,Ohio,biog 1440,soccer,music,crafts,chem 1560,2168487942,plant sciences,Suburban,Binghamton University,2023
+,27f69989-8c49-4043-a065-d5644eb45817,,2019-09-04T19:44:44Z,2019-09-04T19:44:44Z,John Ceske,Econ 1110,Biog 1500,rjc385@cornell.edu,New York,Biog 1440,Weightlifting,Hiking,Reading,Psych 1101,9144143900,Biological Sciences,Suburban,Binghamton University,2023
+,8f74f8a9-03d2-4f89-9ed1-8c2f9210b7eb,,2019-08-29T20:15:03Z,2019-08-29T20:15:03Z,Amy Cao,ILROB1220,HD 1150’,ac2564@cornell.edu,New York,Econ 1120,Eating ,Knitting ,Guitar ,Calc 1120,9178686965,ILR,Urban,Binghamton University,2023
+,6fbbd00c-cad7-48dc-ab98-6e19b942c887,,2019-08-28T18:08:23Z,2019-08-28T18:08:23Z,Thorsten Joachims,cs7792,cs6780,tj36@cornell.edu,Germany,CS4780,Machine Learning,Skiing,,cs5780,6078210000,computer science,Urban,Binghamton University,2022
+,622b105c-5a3e-4fd6-96ef-dea69eb6717c,,2019-08-26T16:30:29Z,2019-08-28T16:01:42Z,Eitan Weinsteiner,UNIV 101Y,LEAD 354,eweinst2@binghamton.edu,New York,ISRL 227,Rugby,Football,Going out,PLSC 113,9177694605,Political Science,Urban,Binghamton University,2023
+,fb0424ca-75da-486e-9c92-b4c5524c7986,,2019-08-19T06:13:49Z,2019-08-19T06:13:49Z,Kenneth Trinh,ANTHR1101,CS1110,klt45@cornell.edu,Maryland,CHEM 2090,Ice hockey,Gym,Food,MATH 1910,3018520818,Engineering,Suburban,Binghamton University,2023
+,4b7f8699-2f68-4a74-a4b3-04ea37f4d77c,,2019-08-17T20:19:28Z,2019-08-17T20:19:28Z,Rachelle Casement,Thea 102,Phil 147,rcaseme1@binghamton.edu,New York,Eng 280M,Surfing ,Swimming ,Mock trial/Law ,Plsc 117,5164277673,"Politics, Philosophy, Law ",Suburban,Binghamton University,2023
+,cbc158b0-b62e-4bbe-ab0b-e806bf9d4fb6,,2019-08-17T19:38:00Z,2019-08-17T19:38:00Z,liam ordonez,PSYCH 1101-001,HD 1150-001,lso26@cornell.edu,Florida,BIOG 1140-001,Beach ,Running ,Volunteering ,PE 1412-002,9417267091,Human Development ,Urban,Binghamton University,2023
+,d35d528e-82b7-4607-a889-23043c314b91,,2019-08-16T16:35:34Z,2019-08-16T16:35:34Z,Veronica Stellings,PSYCH 1101,MATH 1110,vs336@cornell.edu,New York,BIOMG 1350,Hanging with friends ,Eating ,Netflix,BIOEE 1780,9177442406,Biology,Urban,Binghamton University,2023
+,7329675b-f987-49d8-b13e-50937033c611,,2019-08-16T04:27:50Z,2019-08-16T04:27:50Z,charlotte desousa,Schl 127,Span 250,cdesous1@binghamton.edu,New York,Chem 107,research,skiing,animals,Phil 201,6313776979,biology,Rural,Binghamton University,2023
+,4003eab1-a445-40b7-98db-5bfbcda923ab,,2019-08-14T17:44:06Z,2019-08-14T17:44:06Z,sabrina morse,roms 1120,engri 1165,slm346@cornell.edu,Massachusetts,chem 2090,going to sports games,going out,playing sports / being active,math 1910,9788318927,engineering,Suburban,Binghamton University,2023
+,ceaa2bc7-fcfb-48da-a8ef-a1f3b4648fde,,2019-08-14T03:59:53Z,2019-08-14T13:47:07Z,lauren przybylski,CHEM 107,PSYC 223,lprzyby2@binghamton.edu,New Jersey,ANTH 114,rushing,Netflix,,ANTH 200,9734529473,Psychology,Suburban,Binghamton University,2022
+,0ee2e2ab-c61c-477b-a766-f170509f141f,,2019-08-14T00:35:32Z,2019-08-14T13:47:14Z,Christian Donovan,MEDVL 1101-106,MATH 1110-002,cjd237@cornell.edu,Connecticut,CHEM 2070-002,"Video Games, Computer Science, and Computer Hardware. My favorite games include Bloodborne, the Dark Souls series, Battlefield 4, Minecraft, and Monster Hunter World. ","Music (I was a jazz bassist for six years in middle and high school), especially anything to do with the bass guitar. Favorite genres include prog rock, metal, and jazz. ","History, of all types. I'm especially excited for the medieval history FWS I have. ",CS 1110-001,8609844296,"Computer Science, Pre-med",Suburban,Binghamton University,2023
+,6c2767fc-7afb-43ba-81fc-859a59ff694e,,2019-08-13T17:26:04Z,2019-08-13T17:26:04Z,Kristina Ferrara,,Harp 170,kferrar3@binghamton.edu,New York,Chem 107,Swimming,Video games,,Math 148 ,8455514492,Integrative Neurosciene,Suburban,Binghamton University,2023
+,4c9ad733-25ba-41b7-be9f-479e97e8baab,,2019-08-11T02:59:19Z,2019-08-11T02:59:19Z,Sarah Ashkar,ANTHR 1101,HADM 1210,sma273@cornell.edu,Missouri,GOVT 1817,going out with friends ,outdoor adventures/activities,track,HADM 1740,3145622750,hotel administration,Urban,Binghamton University,2023
+,33ff0971-713b-4fbe-8a55-95f109e19efb,,2019-08-09T20:25:01Z,2019-08-14T13:41:24Z,Albert Charles,ENGL 1168,CHEM 2070,acc286@cornell.edu,Florida,FDSC 1101,Food,Music,Gaming,BIOG 1440,7863442760,Food Science,Suburban,Binghamton University,2023
+,26a1b902-ea8a-4e5b-a656-c5d4ae4be2fc,,2019-08-09T19:09:21Z,2019-08-14T13:47:47Z,Jacob Schwadron,Math 147,CLAS 280,jschwad1@binghamton.edu,New York,Hist 104A,Basketball ,Animals ,Football ,Just 101,5164794648,Undecided ,Suburban,Binghamton University,2023
+,3f701906-7d0b-4fd8-a93e-2ca6df6b5acd,,2019-08-09T16:08:01Z,2019-08-09T16:08:01Z,Ke Qing Wang,ENGL 1147,PHYS 1112,kw433@cornell.edu,New York,CS 2112,Mathematics ,Piano,Drawing,MATH 1920,6465773785,Computer Science,Suburban,Binghamton University,2023
+,256bd7ba-ba11-4040-aad6-d33ccbc293be,,2019-08-09T03:26:42Z,2019-08-09T03:26:42Z,Michael,MATH 2210-004,FREN 2090-103,mw776@cornell.edu,California,ECON 1110-002,Lacrosse,Fashion,VR,ENGL 1168-104,9255198198,Economics,Suburban,Binghamton University,2023
+,90e076fa-93a1-487a-9c4d-5da3852a33c2,,2019-08-07T07:48:46Z,2019-08-14T13:39:15Z,Yu te lee,Fws,Ns 1150,yl829@cornell.edu,Taiwan,Chem 2070,Movies & tv shows,Talking,Board games ,Bio 1440,6573871393,"Human biology, health, and society",Urban,Binghamton University,2023
+,f8580ebc-386e-4bbb-87a7-e80706ae018e,,2019-08-07T03:59:51Z,2019-08-14T13:47:32Z,Maxwell Aftel,,HADM 1740,mja256@cornell.edu,New York,HADM 1200,Exercising ,Tennis,Watching Netflix,HADM 1350,6316267029,Hotel Administration,Suburban,Binghamton University,2023
+,55033c87-3e7f-48fb-a687-c3f93e05de8c,,2019-08-06T05:49:26Z,2019-08-06T05:49:26Z,Dominic Sprigg,Math 2210,Gerst 2700,dfs95@cornell.edu,California,Econ 1110,History,Finance,Literature,Gerst 1210,8582436155,Economics,Suburban,Binghamton University,2023
+,15aedf9e-6939-4b38-ac0b-403d0925d4aa,,2019-08-06T02:00:23Z,2019-08-06T02:00:23Z,Courtney Kraft ,CS 1112,CHEM 2090,cjk234@cornell.edu,New Jersey,BIOG 1500,Cheerleading,Track and Field,Hanging out with friends,MATH 1920,6099549386,Engineering,Suburban,Binghamton University,2023
+,0e1f4978-d965-42d5-a732-1354c700e5aa,,2019-08-04T14:02:04Z,2019-08-04T14:02:04Z,Bahar,FWS,PHYS1112,tehranipoorbp@gmail.com,Florida,CS2110,music,reading,cs,MATH2930,8602075013,Computer Science,Suburban,Binghamton University,2023
+,e09552c2-9079-4562-867f-d3f53923f08e,,2019-08-04T12:34:45Z,2019-08-28T16:02:07Z,Barry Zou,,PLSC 117,bzou1@binghamton.edu,New York,ECON 162,Running ,Biking ,Chess,PHIL 101,6465122133,Economics,Suburban,Binghamton University,2023
+,ebb9c496-f84c-45e8-b0b0-41305c493601,,2019-08-04T02:06:16Z,2019-08-28T16:02:11Z,Adrianna Henriquez,Eng 245 ,Univ Alchemy ,ahenriq3@binghamton.edu,New York,Chem 107,Volleyball,Singing,Traveling,Math 108,9172576910,Biology,Urban,Binghamton University,2023
+,620e8c39-e156-4394-8a67-cfc0e30f3ef2,,2019-08-03T21:12:09Z,2019-08-03T21:12:09Z,Brandon Sells,BIOMG 1350-208,BIOMG 1350-001,bps79@cornell.edu,Florida,BIOG 1500-001,Netflix,Sleeping,Music,BIOG 1500-416,3524087121,Biological Sciences ,Suburban,Binghamton University,2023
+,7cf36621-8cff-46bc-b651-68d9ce2aa795,,2019-08-03T08:21:28Z,2019-08-03T08:21:28Z,Hunter Hubbard,Roms 1102,Aem 2100,hwh54@cornell.edu,Texas,Math 2310,Tennis,Golf,Volunteering,Cs 1110,2149186976,Information Science,Suburban,Binghamton University,2023
+,95b665ac-bfde-4331-bf45-6d969c2db251,,2019-08-02T22:43:43Z,2019-08-02T23:09:22Z,Madeline Rosenberg ,Spanish 2090,ENGL 1134,mrr227@cornell.edu,New York,Psych 1101,Writing/journalism,Running ,Drawing,GERST 2700,9147088000,History ,Suburban,Binghamton University,2023
+,f1ae830e-ea74-4ba3-9774-efe36cb769a1,,2019-08-02T21:44:26Z,2019-08-28T16:02:47Z,Colby Palmer,economics ,pyhschology ,cp534@cornell.edu,New York,BIOEE 1350,basketball,Hip Hop,,SOC 1110,5164733385,Development Sociology ,Suburban,Binghamton University,2022
+,0c0162d5-115e-4712-9f0d-911aff15b2b3,,2019-08-02T21:05:15Z,2019-08-02T21:05:15Z,Nicolette Cavallaro ,Hist 101A ,Astr 114,ncavall1@binghamton.edu,New York,Chem 107 ,Soccer,Movies ,Music ,UNIV 101T,7189863013,Integrative neuroscience ,Urban,Binghamton University,2023
+,2077bccc-f006-4d28-a943-2160f7c41834,,2019-08-02T15:38:09Z,2019-08-02T15:38:09Z,Julia Horowitz,Biol 323,Biol 114,jhorowi8@binghamton.edu,New York,Chem 231,Theater,Hiking,Music,Psych 223,3157496161,Neuroscience,Suburban,Binghamton University,2022
+,c2cefe7c-da63-4d32-ad5a-08c601299951,,2019-08-02T15:29:06Z,2019-08-02T23:06:26Z,Margaret Keymakh,Math 1120,BioG 1500,mak448@cornell.edu,New York,Chem 2070,Reading,Art,Politics,BioMG 1350,9177504922,Biological Sciences,Urban,Binghamton University,2023
+,d71cfcbb-f040-46ca-9283-7a71ad0f6128,,2019-08-01T18:20:42Z,2019-08-01T18:20:42Z,Robert Choh Fleming,Math 1910,Ling 1100,rcf82@cornell.edu,Pennsylvania,Chem 2090,Soccer,Comics,Video Games,Engri 1200,6107577057,Electrical and Mechanical Engineering,Suburban,Binghamton University,2023
+,01f51443-08ff-4fb8-bd84-b9c45c21eb6f,,2019-08-01T15:22:10Z,2019-08-01T16:13:30Z, Julia Tsybysheva ,THEA 102,Intro to Scenic Design,jtsybys1@binghamton.edu,New York,Chem 111,Musical Theatre,Baking ,Art,EDD,6317042007,Mechanical engineering ,Suburban,Binghamton University,2023
+,3a2fabe3-7c61-4c95-8deb-0be27e7e9d48,,2019-08-01T04:06:52Z,2019-08-01T04:06:52Z,Jennifer Butler,AMST 3032,BSOC 2101,jyb9@cornell.edu,Pennsylvania,COML 2030,Board/Card Games,Music (Singing),Cooking ,SPAN 2090,2159109958,English,Urban,Binghamton University,2023
+,9e0a2106-d7d2-4fa2-94cf-e6a14707b9be,,2019-08-01T03:33:26Z,2019-08-01T16:24:07Z,Xihang Wang,SPAN 1230,CHEM 2150,xw422@cornell.edu,New Jersey,BIOG 1440,Boating,Card games,Guitar,ECON 1120,8142064009,Biological Sciences,Suburban,Binghamton University,2023
+,8b205b18-0524-41ac-b59d-1c3f442dbd98,,2019-08-01T02:40:52Z,2019-08-01T02:40:52Z,Nadin Suliman,MATH 2930,ENGRI 1101,nadinsuliman@gmail.com,Massachusetts,ECON 1100,Writing,Dancing,Language,CRP 1100,7816541225,Urban Planning,Urban,Binghamton University,2023
+,9c738ecb-7aef-47e9-9ebc-9147118ee522,,2019-08-01T00:42:43Z,2019-08-01T16:24:03Z,Elise Meluson,Thea 101,Ital 111,emeluso1@binghamton.edu,New York,Chem 107,Going to the gym,Broadway Shows,Crew,Harp 170,8456634741,Biological Sciences,Suburban,Binghamton University,2023
+,aca77b09-693e-4fff-9bf3-72998abf35d4,,2019-07-31T23:17:41Z,2019-07-31T23:17:41Z,Morgan Orzeck,,THEA 101,morzeck1@binghamton.edu,New Jersey,Psych 223,Theatre,Psychology,A cappella,SOC 100,2015905909,Psychology/Theatre,Rural,Binghamton University,2023
+,571bcf6e-b62e-4acf-97a5-39310f99b428,,2019-07-31T07:11:13Z,2019-07-31T07:11:13Z,Christie Liguori,ANTH 221,Univ 101F,cliguor1@binghamton.edu,New York,Writ 111,Baking,Dance,Eating,Psyc 111,3474480500,Nursing,Urban,Binghamton University,2023
+,ab341402-ede8-4569-8f3f-077433d19630,,2019-07-31T04:38:47Z,2019-07-31T04:38:47Z,Alexandra Li,ENGL 1158,NS 1150,al985@cornell.edu,New Jersey,CHEM 2070,Watching films and TV shows,Reading,Baking,BIOG 1440,7327706565,"Human Biology, Health, and Society",Suburban,Binghamton University,2023
+,db431b91-2a3a-46f0-95e6-2501c07ffef5,,2019-07-31T03:17:10Z,2019-08-01T16:23:55Z,Ajahni Lee,HIST 103A,GEOG 101,alee884@binghamton.edu,New York,CS 240,Musicals,Programming,Baking,MATH 314,5164697517,Computer Science,Suburban,Binghamton University,2022
+,bc6a245d-0fc9-493a-a3f6-508b62033723,,2019-07-30T22:30:03Z,2019-07-30T22:30:03Z,Sam Rubin,NES 1950,ENGRI 1140,sfr46@cornell.edu,New York,Chem 2090,Music/saxophone,Being outside,Sustainability,Math 2930,9146290871,Materials Science and Engineering,Suburban,Binghamton University,2023
+,95ad90dc-19c4-4274-bcfa-90774658aa9c,,2019-07-30T22:04:40Z,2019-07-30T22:04:40Z,Jackson Kwon,PE 1465,ARTH 1169,jk2689@cornell.edu,Texas,FSAD 1450,Any Art,Spikeball,Traveling,FSAD 2310,9726320410,Fashion Management & Design,Suburban,Binghamton University,2023
+,68410d26-96a6-4882-b031-2b867a666eea,,2019-07-30T21:37:21Z,2019-07-31T17:19:25Z,Trinee Weng,SOC 100,ANTH 221,tweng3@binghamton.edu,New York,WRIT 111,Baking,Biking,Eating,MATH 223,7182882219,Undeclared,Urban,Binghamton University,2023
+,e7ac4296-d8e9-4e65-96dc-eba96b7b3281,,2019-07-30T21:36:23Z,2019-07-30T21:36:23Z,Isabella Mineo,Hist 280,Afst 280,imineo1@binghamton.edu,New York,Psyc 228,Field hockey,Volleyball,,Ital 111,5165199315,Undecided,Suburban,Binghamton University,2023
+,2918693d-4ae0-4825-91ff-eb80f19bc381,,2019-07-30T21:03:39Z,2019-07-30T21:08:02Z,Lyla O’Hara,ARTH 225,THEA 289K,lohara4@binghamton.edu,New York,FREN 111,Art,Theater,Travel,UNIV 280M,3155705270,Undecided,Suburban,Binghamton University,2023
+,04dbb098-294a-4e66-970f-939af50d34ba,,2019-07-30T21:00:02Z,2019-07-31T17:19:39Z,Max Brickman,CQS 111,ECON 162,maxbrickman123@icloud.com,New York,MATH 223/224,Guitar,Football,Comedy Movies,WRIT 111,9148158780,Business Administration ,Suburban,Binghamton University,2023
+,0d813fbb-f5e1-46e5-993f-7c35b0f094e6,,2019-07-30T20:00:06Z,2019-07-30T20:51:59Z,Janis Song,Phil 1110,Engri 1620,jjs468@cornell.edu,Pennsylvania,Chem 2090,dance,baking,working out,Math 1910,2157675757,Undecided Engineering,Suburban,Binghamton University,2023
+,5a52fcd6-d866-416e-9c13-00d2d3206686,,2019-07-30T16:41:07Z,2019-07-30T20:51:37Z,Bella Driesen,HWS 100,ANTH 166,idriese1@binghamton.edu,New York,PSYC 228,Swimming,Hanging out with friends,Netflix,WRIT 111,9145887299,Undecided ,Suburban,Binghamton University,2023
+,45d9c2fd-9af3-4367-966b-7de2a6119ae9,,2019-07-30T04:01:13Z,2019-07-30T20:52:07Z,Yael Gunter,JUST 201,CINE 286G,ygunter1@binghamton.edu,New York,ANTH 111,Student Council,Ultimate Frisbee,Theater,BIOL 114,5854749083,Biological Sciences,Suburban,Binghamton University,2023
+,6db25ce8-bc5d-4a7c-87ef-a1d06f2403b4,,2019-07-30T03:01:10Z,2019-07-30T03:01:10Z,Rebekah Ten Hagen,ENGL 1191,ILROB 1220,ret83@cornell.edu,New Jersey,PAM 2300,Skiing ,Classic Rock,Golf,ECON 1110,6096513350,Industrial and Labor Relations,Suburban,Binghamton University,2023
+,d7d0f10f-0038-48e1-a16f-2fe24fef2366,,2019-07-30T01:19:16Z,2019-07-30T01:19:16Z,Tori DiStefano,ENGL 1105,STSCI 2150,toridistefano@gmail.com,New Jersey,AEM 2220,Food/Food Science,Makeup/Fashion,Music,BIOEE 1780,6099039996,Biology and Society,Suburban,Binghamton University,2023
+,d43d6521-4b35-436a-8d28-d5d6a1fa6416,,2019-07-30T00:46:17Z,2019-07-30T13:31:00Z,Amber Leung ,HADM 1150,HADM 1740,al993@cornell.edu,New Jersey,HADM 1360,Food/eating (always down for new restaurants),"Exploring new cities/small towns (thrifting, art)","Netflix (Big Mouth, The Office, Black Mirror, Rick and Morty)",HADM 1650,9175870839,Hotel Administration ,Suburban,Binghamton University,2023
+,13703237-f967-4746-b519-a040f342fd07,,2019-07-29T22:20:49Z,2019-07-29T22:20:49Z,Teddy Klausner,Engrd 2140,Ling 1100,tjk223@cornell.edu,California,Math 1920,food,art,,CS 2110,4156839885,Computer Science,Urban,Binghamton University,2023
+,a33e796c-a968-4b6b-be3f-884d2df5279e,,2019-07-29T16:49:13Z,2019-07-30T20:52:02Z,Caitlin O’Sullivan,ROMS 1113,ENGRD 2110,ceo58@cornell.edu,Massachusetts,MATH 1920,Lacrosse,Running,Project teams,PHYS 1116,9788444006,Undecided Engineering,Suburban,Binghamton University,2023
+,97ee4e09-4c4e-4230-9055-10bf323d4cfc,,2019-07-29T16:13:31Z,2019-07-29T21:01:04Z,Felix Shi,LING 1100,ENGRI 1140,fcs54@cornell.edu,New York,MATH 1920,Travel,Tennis,Films,CS 2110,6077935303,Mechanical Engineering,Rural,Binghamton University,2023
+,ba30b7e3-d19b-484a-9491-3ed405687771,,2019-07-29T15:58:43Z,2019-07-29T15:58:43Z,Emily Xiao,Bioee 1540,Dsoc 1101,ex39@cornell.edu,New York,Math 1110,Running/track,Singing,Art,Econ 1110,6072326055,Development Sociology,Suburban,Binghamton University,2023
+,18531db1-50eb-49bf-ba58-825dbbbc2625,,2019-07-29T15:57:57Z,2019-07-29T20:48:03Z,Joanne Le,PAM 2300,AMST 2070,jtl237@cornell.edu,Connecticut,ECON 1110,Tennis,Movies,Music,ENGL 1167,8605933877,Policy Analysis and Management,Suburban,Binghamton University,2023
+,b6ea8bdf-f1c5-45ea-8dbe-420384078af3,,2019-07-29T00:39:58Z,2019-07-29T00:39:58Z,Hannah Fuchs,ROMS 1109,CHEM 1150,hf254@cornell.edu,New York,COMM 1101,Hanging out with friends,"Listening to music, going to concerts, making playlists","Meeting new people, traveling ",DSOC 1101,9143360320,Communication,Suburban,Binghamton University,2023
+,51476209-e0a0-4d68-be07-78c9a30b85df,,2019-07-28T23:30:05Z,2019-07-29T00:08:41Z,David Wu,PHIL 1110,SPAN 2090,dgw74@cornell.edu,Connecticut,MATH 1920,Tennis,Football,,PHYS 1116,8603387222,Physics,Suburban,Binghamton University,2023
+,d33d36f8-3ca6-44c0-a235-1b0f01085e7e,,2019-07-28T23:10:14Z,2019-07-28T23:10:14Z,Raahi Menon,ENGRI 1170,MATH 2210,raahimenon1@gmail.com,Texas,CS 1110,Baking,Writing,Game development,PHYS 1116,4699941054,Computer Science,Suburban,Binghamton University,2023
+,f4cf6d73-8a66-4193-95a6-edc33851ef79,,2019-07-28T23:06:29Z,2019-07-28T23:06:29Z,Kassie Wang,CHEM 1560,MATH 1920,klw242@cornell.edu,Maryland,CS 1110,Dance,Skiing,Listening to music,ECON 1110,4435389438,Computer science,Suburban,Binghamton University,2023
+,59ca44ac-055c-4c67-b48f-b793c8be4f41,,2019-07-28T19:36:43Z,2019-07-28T19:36:43Z,Eric Shapiro,MATH 230,CS 140,eshapir9@binghamton.edu,New York,HARP 170,Piano,Biking,Running,CS 120,5852871104,Computer Science,Suburban,Binghamton University,2023
+,f539ec51-67aa-4dbe-a0bc-991b47602084,,2019-07-28T13:45:03Z,2019-07-28T14:59:59Z,Ron Laniado,Effective Speaking,ENG 101,laniado.ron@gmail.com,New York,Calculus II,Programming,Gaming,Napping,PHYS 121,6464929374,Computer Science,Suburban,Binghamton University,2023
+,ff21cbd4-7aca-4fd4-ac0f-fe7e486e36a3,,2019-07-28T10:12:21Z,2019-07-28T10:12:21Z,Andrew Hyunshik Kim,DSOC 1101,CHEM 2070,ahk94@cornell.edu,New York,BIOG 1440,Sleeping,Ice hockey,Cello,BIOG 1500,6072203882,Biological Sciences,Suburban,Binghamton University,2023
+,981b9366-9de1-49cb-b24b-d30704ae637b,,2019-07-28T03:01:02Z,2019-07-28T14:58:16Z,Chloe Metz,HARP 170,GEOG 103,cmetz2@binghamton.edu,New York,CHEM 107,basketball,swimming/water sports,netflix,PSYC 111,3152240630,Biological Sciences,Suburban,Binghamton University,2023
+,42b446d7-6baa-4504-b2c8-747ffb40d312,,2019-07-28T02:27:24Z,2019-07-28T14:54:13Z,ivy lu,GEOG 105,ANTH 167,ilu1@binghamton.edu,New York,CINE 12,Movies,Books,Cooking,THEA 101,3475102900,Cinema,Urban,Binghamton University,2023
+,1051094a-6698-4c42-ba56-562988049309,,2019-07-27T18:24:16Z,2019-07-30T21:08:18Z,Anya Prabowo,PHIL 1110,ENGRI 1200,afp65@cornell.edu,Indonesia,MATH 1920,Canoeing,Trekking,Karaoke,CHIN 1101,9176013791,Undecided Engineering,Urban,Binghamton University,2023
+,e337d091-a686-4bdb-b104-560ca1aab39a,,2019-07-27T16:09:15Z,2019-07-27T16:09:15Z,Gianna Paier,BIOL114,MATH 226,gpaier1@binghamton.edu,New York,GEOG 101,Dancing,Reading,Watching movies,MATH 227,5164928450,Biomedical engineering,Suburban,Binghamton University,2023
+,41aff6f3-082b-4c2b-9bc3-c90cb935cf79,,2019-07-27T01:18:58Z,2019-07-28T15:02:41Z,Haley Barkan,UNIV 101B,Medical Anthropology,hbarkan1@binghamton.edu,Connecticut,CHEM 107,Volunteering,Food,Singing,HEBR 101,2035013670,Biological Sciences,Rural,Binghamton University,2023
+,c5dd4eb5-b6e0-49b8-bbbb-1330ebca2163,,2019-07-27T01:17:47Z,2019-07-27T01:17:47Z,Valerie Staab,RUSS 101,MGMT 111,vstaab1@binghamton.edu,Pennsylvania,CQS 111,Tennis,Video games,Movies,ECON 162,4849874221,Business Administration ,Suburban,Binghamton University,2023
+,58ad42ae-bcf1-4676-98ec-b43ee1c20627,,2019-07-26T23:05:24Z,2019-07-28T15:02:23Z,gabrielle knafelman,CQS 111,MATH 223/224,gknafel1@binghamton.edu,New Jersey,MGMT 111,cooking,reading,music ,ECON 160,7324062885,business administration,Suburban,Binghamton University,2023
+,0ad5b873-ec73-43d2-ad92-b1f5ac1fb198,,2019-07-26T21:15:20Z,2019-07-28T15:02:18Z,Mikayla Zion,PSYC 111,GEOL 116,mzion1@binghamton.edu,New York,ARTH 110,watching hockey,makeup,shopping,ANTH 114,5164266245,Human Development ,Suburban,Binghamton University,2023
+,6f97b96c-65c9-4508-92e8-4e3b890077b6,,2019-07-26T06:17:42Z,2019-07-26T06:17:42Z,Bohden Landis,PLSC 113,EDD 103,blandis2@binghamton.edu,New York,MATH 226,Gaming,Audio,Technology,EDD 111,9146028042,Computer Engineering,Suburban,Binghamton University,2023
+,c9f9bb79-4354-4c1e-a81e-c81bcee15089,,2019-07-26T01:32:26Z,2019-07-28T15:03:33Z,Kyle Lai,CS 2850,MATH 2940,kl655@cornell.edu,New York,CS 2800,Gaming,Food,Infrastructure,CS 2110,7183096432,Computer Science,Urban,Binghamton University,2023
+,5ac3cc00-c8f7-4e37-904a-822a8201b9bc,,2019-07-26T00:34:17Z,2019-07-28T15:03:29Z,Tiffany Chou,PE 1640 ,CS 1110,tlc234@cornell.edu,New York,PHYS 1116,Cooking,Knitting,Violin,MATH 1920,5164794995,Electrical and Computer Engineering,Suburban,Binghamton University,2023
+,1d616a26-5034-4d14-a2c9-484fccc6f16e,,2019-07-26T00:19:13Z,2019-07-28T15:03:23Z,Amanda Doulos,ENG 245,SPAN 250,adoulos2@binghamton.edu,New York,RHET 246,Art,Writing,Photography,ANTH 111,5168845737,English,Suburban,Binghamton University,2023
+,54d9bab1-3afa-40bd-bcff-9456204788ab,,2019-07-25T20:56:35Z,2019-07-25T20:56:35Z,Brandon Restler ,COGST 1500,BSOC 2420,bnr29@cornell.edu,New York,NTRES 1101,Cooking,Hiking,Survivor (the CBS TV show),BIOEE 1610,9143434432,Environment & Sustainability,Suburban,Binghamton University,2023
+,726673b9-c28a-467c-af16-8a33892023a4,,2019-07-25T20:33:01Z,2019-07-27T14:51:17Z,Ryan Schanta,ENGRI 1160,Phys 1112,rts94@cornell.edu,Pennsylvania,Ling 1100,Music (concert/marching),Foreign Languages,Trivia,Math 1920,4845386128,Environmental Engineering (CoE),Suburban,Binghamton University,2023
+,6f5a8e65-cac0-4f5e-be47-7efd9e85418b,,2019-07-25T20:22:55Z,2019-07-25T20:22:55Z,Sierra Yonko,EDD 111,Anth 280Z,syonko1@binghamton.edu,New York,Math 224,Baking,Animals,Volunteering,Chem 111,3152567884,Biomedical Engineering,Rural,Binghamton University,2023
+,e5c9abbd-70f0-4151-b102-23339f873793,,2019-07-25T19:28:54Z,2019-07-25T19:42:19Z,Austin Couch,ARCH 1801,ARCH 1611,amc556@cornell.edu,Ohio,ARCH 1101,Art (drawing/ painting),"Sports (football, basketball, soccer)",Traveling,ARCH 1501,6367446456,Architecture ,Suburban,Binghamton University,2023
+,3ac5e8cb-e1aa-4306-9c39-8092c5708fb0,,2019-07-25T03:45:13Z,2019-07-25T12:57:59Z,Jason Wilson,INFO 4240,COML 1104,jrw355@cornell.edu,California,MATH 2210,Technology,Animals,Music,CS 1112,8052358593,Mathematics,Suburban,Binghamton University,2023
+,55d38b77-8d47-4c70-a5eb-fe8e2b0d8eb6,,2019-07-25T01:56:37Z,2019-07-27T14:51:11Z,Jonathan S Ebenezer,NES 1963,MATH 1120,jsatyaraj14@gmail.com,Missouri,BIOMG 1350,Videogames,Netflix,Piano,CHEM 2070,6366281880,Biological Sciences,Suburban,Binghamton University,2023
+,390f1a96-17bc-43d0-9b47-bdac67d7867e,,2019-07-25T01:12:00Z,2019-07-25T12:58:22Z,Neel Mehta,ENGL 2270,ENGL 2045,nhm43@cornell.edu,Ohio,CHEM 2150,Hiking,Movies,Basketball,BIOG 1440,4403173548,English,Suburban,Binghamton University,2023
+,55f4bf84-a0ce-4f83-95a9-be3bb3716aca,,2019-07-25T00:18:16Z,2019-07-25T00:22:26Z,Bianca Bryant,BIOG 1440,LING 1100,brb223@cornell.edu,Pennsylvania,SPAN 1230,lifting,music,trying new things,MATH 1110,2678151823,Biology & Society,Urban,Binghamton University,2023
+,0882a172-49a3-42a2-b5b3-590f8597eea3,,2019-07-25T00:00:01Z,2019-07-30T21:08:30Z,Jordan Curcio,MUS 112,GEOG 101,jcurcio7@binghamton.edu,New York,CHEM 107,Basketball/soccer/football/baseball,Hip hop/Spanish/edm music,Video games ,MATH 224,9175386275,Biological Sciences,Urban,Binghamton University,2023
+,e852eba1-9a3e-4abe-8068-88f1d89d7e90,,2019-07-24T23:18:21Z,2019-07-24T23:20:36Z,Phylicia Christine A. Latorre,CHEM 2079,BIOG 1440,pal238@cornell.edu,New York,DSOC 1200,Writing,Violin ,EMS,PE 1340,3154803149,"Human Biology, Health, and Society",Suburban,Binghamton University,2023
+,3300eadb-931f-401d-92c3-f8a9be475253,,2019-07-24T23:10:18Z,2019-07-24T23:11:25Z,Emma Contiguglia,ENGL 1147,ITAL 1201,egc54@cornell.edu,New York,GOVT 1111,Hanging out with friends,Exercising,Traveling,MATH 1110,6467632355,Undecided,Urban,Binghamton University,2023
+,e7ff84d5-5097-4de0-98d6-d76b7eafcba8,,2019-07-24T23:03:09Z,2019-07-24T23:03:09Z,Isaac Salazar,BIOMG 1350,CHEM 2070,is293@cornell.edu,Texas,NTRES 1101,Activism ,Dancing ,Music ,MATH 1110,5127872582,Environment & Sustainability ,Suburban,Binghamton University,2023
+,19718c1e-9c95-4684-abda-86a2fc7d9855,,2019-07-24T22:47:48Z,2019-07-24T23:02:44Z,Michelle Davydov,HDEV 100,COLI 214,mdavydo2@binghamton.edu,New York,CHEM 107,going to the gym,eating,watching Netflix/ youtube,SOC 100,9178068570,Human Development ,Suburban,Binghamton University,2023
+,6e95c57c-4302-4f10-9fb3-5e922552149b,,2019-07-24T20:56:40Z,2019-07-24T20:57:49Z,Julia Gibbons,AAAS 380I,HIST 104A,jgibbon2@binghamton.edu,New York, CHEM 101,softball,going to the gym,eating,PSYC 220,5163171751,Nursing ,Suburban,Binghamton University,2023
+,c5c3308b-8c0b-42b5-a273-b33bbc06778f,,2019-07-24T20:16:00Z,2019-07-24T20:20:10Z,Juliet Eshaghoff,,SOC 100,jeshagh1@binghamton.edu,New York,MATH 130,baking,dogs,,ANTH 111,5168170262,Human Development,Suburban,Binghamton University,2023
+,2dc9bc99-5a8b-46e7-949e-20fe5ad94769,,2019-07-24T15:36:52Z,2019-07-24T15:41:07Z,Kiera E Doherty,PLSC 113,MATH 224/225,kdoher10@binghamton.edu,New York,CHEM 107,music,theatre,law,SPAN 211,9178624192,"Chemistry, Political Science",Urban,Binghamton University,2023
+,04457e92-f085-439b-8608-b46de4861998,,2019-07-24T13:13:35Z,2019-07-24T18:36:13Z,Victoria Ruiz,SPAN 211,PSYC 330,vruiz1@binghamton.edu,New York,MUS 180C,Music,Movies,Nature,PSYC 228,5167324334,Psychology,Suburban,Binghamton University,2023
+,efa0abae-58de-4373-b6f2-8edaec030fa1,,2019-07-24T10:55:53Z,2019-07-24T15:41:11Z,Julia Allen,,ENGRI 1101,jra264@cornell.edu,New York,MATH 1920,Running,Model UN,Engineering,PHYS 2217,5853557655,Undecided Engineering,Suburban,Binghamton University,2023
+,3bef91be-f1c2-4a4e-9b01-4c52f9a0377e,,2019-07-24T05:52:49Z,2019-07-24T05:52:49Z,Aarzoo Haideri,PE 1100,MATH 1110,ah699@cornell.edu,India,CHEM 2150,Debating,Writing,Acting,BIOMG 1350,8130702223,Biological Sciences,Urban,Binghamton University,2023
+,c4c09cb0-4a1a-46f3-b489-3f6eb11839db,,2019-07-24T04:09:06Z,2019-07-24T04:09:06Z,Daniel Abramson ,WRIT 111,MGMT 111,dabrams4@binghamton.edu,Florida,MATH 108,Music production ,Hanging out with friends ,Sports ,ECON 160,5614798979,Business Administration ,Suburban,Binghamton University,2023
+,a4dc3d45-98c5-4bf7-8800-96d9c3f46c87,,2019-07-24T03:34:50Z,2019-07-24T03:34:50Z,Rachel Horrigan,PHYS 1112,MATH 1920,rlh358@cornell.edu,Massachusetts,ENGRI 1620,dance,film,country music,PE 1260,7818985029,Computer Science,Suburban,Binghamton University,2023
+,8931ac79-6a01-491a-b403-bd48fd499762,,2019-07-24T03:12:08Z,2019-07-24T13:22:47Z,Jenny Liu,ENG 280P,CHIN 103,jliu234@binghamton.edu,New York,BIOL 114,playing games,eating,sleeping,ANTH 166,9176991720,Biological Sciences,Urban,Binghamton University,2023
+,b2e5c4fb-594d-4d69-aa16-13c61cbf6a1b,,2019-07-24T02:31:34Z,2019-07-24T02:31:34Z,Luke Yuan,ASIAN 2211,FRENCH 1210,ly94@cornell.edu,New York,CS 3110,Soccer,Tottenham Hotspur,Programming,CS 2800,4083869515,Computer Science,Urban,Binghamton University,2023
+,917804e5-ba82-480b-9225-3b8417b5c971,,2019-07-24T02:12:59Z,2019-07-24T15:40:49Z,Deanna Pellegrino,CQS 111,ECON 162,dpelleg1@binghamton.edu,New York,WRIT 111,music,Volunteering ,,GEOG 105,6467155268,Business Administration,Suburban,Binghamton University,2023
+,d4bd434b-39e1-4130-bd58-6766c31bd9c7,,2019-07-23T23:48:39Z,2019-07-24T15:40:51Z,Katie Tiao,CS 101 & 110 ,MATH 224/225,ktiao1@binghamton.edu,New Jersey,ANTH 111,Volleyball ,Baking,Photography ,GERM 101,9739700674,Computer Science,Suburban,Binghamton University,2023
+,01e9e61c-5a36-4edd-9682-ec17c34cfb50,,2019-07-23T22:27:07Z,2019-07-24T13:23:06Z,Isabella Ferraro,English ,Psychology,ferrarobella23@gmail.com,New York,Chemistry,Hanging with friends,Music,Lacrosse,Biology,9142166411,Biological Sciences,Suburban,Binghamton University,2023
+,23c1122c-ddc9-4c84-a986-bdebe21a2ae5,,2019-07-23T20:11:29Z,2019-07-24T15:40:54Z,Elena Billings,WRIT 111,CINE 121,ebillin1@binghamton.edu,New York,CHEM 107,running (mid distance or distance),music,food,MATH 224,6313566102,Biological Sciences,Suburban,Binghamton University,2023
+,ef9766fd-f782-4b53-9eed-df7628d8a252,,2019-07-23T19:47:51Z,2019-07-23T19:51:18Z,Jin Na,MATH 2930,ENGRI 1200,hjn28@cornell.edu,Georgia,ENGRD 2020,Drawing,Flute,,PHYS 2214,4044057217,Mechanical Engineering,Suburban,Binghamton University,2023
+,5447226e-460b-4075-b21a-ab62bcb56700,,2019-07-23T19:04:00Z,2019-07-23T19:24:13Z,Gregory Baynard,,ENGRI 1160,gmb246@cornell.edu,New York,CHEM 2090,Lacrosse,Movies,Swimming ,MATH 1940,9146469777,Undecided Engineering ,Suburban,Binghamton University,2023
+,2a79ac9a-f29b-46af-a886-317da15c6239,,2019-07-23T18:39:58Z,2019-07-23T18:40:59Z,Ankith Kurapati,MATH 1120,ECON 1110,ak775@cornell.edu,Texas,AEM 2200,Basketball ,Art,Reading,CHEM 1150,9729897287,Applied Economics and Management,Suburban,Binghamton University,2023
+,ef638354-50b6-4972-a50a-679d4ab88877,,2019-07-23T18:26:48Z,2019-07-23T18:40:31Z,Anson Yip,ASIAN 3389,BIOAP 3110,yy589@cornell.edu,Massachusetts,CHEM 2150,Gaming?,Board games,Eating...,MATH 2210,6173316803,Chemistry,Suburban,Binghamton University,2023
+,6caec546-be36-4aa8-b72b-a19625e87603,,2019-07-23T14:16:49Z,2019-07-23T14:18:24Z,Amelia Nash,,CHEM 2070,ain6@cornell.edu,New York,BIOG 1500,Parties,Animals,Health,BIOMG 1350,3473914343,Biological Sciences,Urban,Binghamton University,2023
+,9e9866bb-06e8-4530-a231-3b2fd911ec1c,,2019-07-23T13:27:07Z,2019-07-23T13:29:58Z,Emily Boldt,,AEM 2200,ecb235@Cornell.edu,New York,ECON 1120,Fitness,Riding horses,,MATH 1110,5857395118,Applied Economics and Management ,Rural,Binghamton University,2023
+,91fe531f-3e96-4d9b-99ed-05488f6a2813,,2019-07-23T04:30:01Z,2019-07-25T20:04:58Z,Tanvi Kapoor,,CS 1110 ,tk457@gmail.com,India,CHEM 2090,Dance,Traveling,Debate,MATH 1910,9619072725,Undecided Engineering ,Urban,Binghamton University,2023
+,06cd1bf3-1001-44cd-bb0d-018cbcf46a59,,2019-07-23T03:24:07Z,2019-07-23T13:04:53Z,Sadie Ravnitzky ,AEM 2600,BIOEE 1540,smr285@cornell.edu,Arizona,AEM 2210,Veganism ,Comedy ,Hiking,Intro to nutrition,6028819215,Applied Economics and Management,Suburban,Binghamton University,2022
+,73b1ea21-9150-4484-a4ce-db6c2fa3dbc9,,2019-07-23T02:47:50Z,2019-07-23T02:47:50Z,Maggie Quirk,PE 1480,ENGRI 1101,mrq7@cornell.edu,Pennsylvania,CHEM 2090,Skiing,Rowing,Reading,MATH 1910,2672342074,Operations Research Engineering,Suburban,Binghamton University,2023
+,a3b79023-fc32-478a-8da4-64ecff7b0547,,2019-07-23T02:15:49Z,2019-07-23T02:15:49Z,Melissa Montejo,BIOG 1140,PLSCS 1900,mbm254@cornell.edu,California,PLSCI 1101,Band,Singing,Politics,AGSC 1125,7608776859,Agricultural Sciences,Suburban,Binghamton University,2023
+,cc016ceb-d1fe-4926-9e66-26fc309b2207,,2019-07-22T21:43:38Z,2019-07-23T13:02:52Z,Aidan Maddigan,COGST 1500,MATH 1120,apm99@cornell.edu,New York,BIOG 1500,Running,Veganism,Pokemon,BIOMG 1350,7165250480,Biological Sciences,Suburban,Binghamton University,2023
+,79173afa-9963-4e8b-b99f-0bea0f3642a8,,2019-07-22T19:07:51Z,2019-07-22T19:07:51Z,Rocky An,,MATH 2940,ra474@cornell.edu,New Mexico,CS 1110,Microtonal Classical Guitar,Roadbiking,Birdwatching,ENGRI 1337,5055701319,Biological Engineering,Suburban,Binghamton University,2023
+,26609fe4-98b5-4b99-a3eb-2528547e13b8,,2019-07-22T18:56:06Z,2019-07-22T19:10:45Z,Sofia Loayza,ANTHR 1101,ILRST 2100,srl222@cornell.edu,New Jersey,COMM 1101,international relations / politics ,Music ,bts ,EAS 1540,3158060710,Communication ,Rural,Binghamton University,2023
+,8c338559-ac32-4326-bc96-29390da1418a,,2019-07-22T16:32:27Z,2019-07-22T16:46:49Z,EmilyJane Campese,WRIT 111,HIST 103,ecampes1@binghamton.edu,New York,CHEM 107,volleyball,volunteering ,,EDUC 101,9178374500,Undecided ,Suburban,Binghamton University,2023
+,24aafca7-1790-433b-a5d2-e898a71a86ae,,2019-07-22T14:04:16Z,2019-07-22T16:14:04Z,Allie Wu,ARTH 287F,HMRT 176,Awu75@binghamton.edu,New Jersey,PHIL 146,Debate,Painting,Graphic Design,HIST 104A,9734624707,"Politics, Philosophy, and Law",Suburban,Binghamton University,2023
+,bfe43557-6ea3-4f1c-8f77-3c96d1051262,,2019-07-22T04:25:01Z,2019-07-22T04:25:01Z,Naomi Fischoff,PE 1565,DEA 1500,nsf33@cornell.edu,Illinois,HD 1150,Soccer,Running,Spending time with friends with special needs,BIOG 1140,8475277425,Human Development,Suburban,Binghamton University,2023
+,50334fff-0384-4059-bdbb-f037d9be7efa,,2019-07-21T17:19:40Z,2019-07-22T12:42:01Z,Kristina Stenstrom,THEA 102,PSYC 111,kstenst1@binghamton.edu,New York,CHEM 107,Singing,Hiking,Basketball,ANTH 111,9173735726,Chemistry,Urban,Binghamton University,2023
+,402695db-552e-4f2d-b26a-9b32bd276326,,2019-07-21T14:06:54Z,2019-07-22T12:40:32Z,Matthew Russell,MATH 225,MATH 224,mrussel3@binghamton.edu,New York,CHEM 107,Soccer,Music,Science,WRIT 111,5162434710,Biological Sciences,Suburban,Binghamton University,2023
+,2b392c49-3743-4f18-8567-ea14509a6aef,,2019-07-21T00:42:46Z,2019-07-21T00:42:46Z,Alexander Popat,,ENGRI 1170,asp233@cornell.edu,New York,MATH 1910,Hockey,Watching Movies and TV,Hanging Out,CHEM 2090,7168489233,Mechanical Engineering,Urban,Binghamton University,2023
+,549b211e-aad6-4778-bb90-7e8a195f363f,,2019-07-20T21:08:53Z,2019-07-22T12:42:08Z,Grace Villar,PSYC 111,UNIV 280M,gvillar2@binghamton.edu,New York,CHEM 107,Music,Going to the gym,Travel,WRIT 111,6319837606,Biological Sciences,Suburban,Binghamton University,2023
+,544e4982-d34e-437a-9b22-ce566d142946,,2019-07-20T13:29:05Z,2019-07-22T12:42:14Z,Samantha Muscat,PHIL 101,ITAL 211,smuscat1@binghamton.edu,New York,WRIT 111,baking,skating,,PSYC 111,9178608599,Biochemistry ,Urban,Binghamton University,2023
+,b5169ec4-c74d-4a3e-8098-c87bd918c683,,2019-07-20T10:55:20Z,2019-07-22T12:42:17Z,Catherine Naylor,HDEV 100,ANTH 111,cnaylor1@binghamton.edu,New York,MATH 130,Psychology,Fitness,,SOC 100,5857474543,Human Development ,Suburban,Binghamton University,2023
+,ae7526a1-8829-41cc-9822-7bd8f76954ff,,2019-07-20T06:01:25Z,2019-07-22T12:44:27Z,Michael Koufakis,,FREN 115,mkoufak1@binghamton.edu,New York,MATH 224,Baseball,Chess,Guitar,MATH 225,9177342133,Economics,Urban,Binghamton University,2023
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,

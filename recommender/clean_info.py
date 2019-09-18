@@ -62,7 +62,8 @@ def clean_df(m0, features, primary, i_classes):
     for feature in [x for x in features if x != primary]:
         m0[feature] = m0[feature].apply(clean_data)
                 
-        if feature in i_classes + ['Major', 'Hometown','Study Habits','Campus Location']:
+        # if feature in i_classes + ['Major', 'Hometown','Study Habits','Campus Location']:
+        if feature in i_classes + ['Major', 'Hometown']:
             m0[feature] = m0[feature].apply(replace_space)
     m0[primary] = m0[primary].apply(trim_str)
     return m0

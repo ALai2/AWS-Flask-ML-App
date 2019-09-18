@@ -1,405 +1,387 @@
-Name,Gender,Major,Grad Year,Class 1,Class 2,Class 3,Class 4,Interest 1,Interest 2,Study Habits,Hometown,Campus Location,Race,Preferences,index
-Maya,Female,Anthropology,2021,ANTHR 1400,ANTHR 1200,ANTHR 1300,CS 4620,Food,Acting,I start my assignments closer to the deadline.,Virginia,North Campus (Other),4,,0
-Stanley,Prefer not to specify,Urban and Regional Studies,2021,CS 4420,ASTRO 1101,CS 4320,ENGL 1100,Reading/Writing,History,I start my assignments closer to the deadline.,Iowa,North Campus (Other),6,,1
-Maia,Female,Archaeology,2021,ARKEO 2165,ANTHR 1200,PSYCH 1101,ECON 1110,Government/Politics,Sports,I start my assignments the day they are released,Mississippi,Collegetown,6,,2
-Evan,Male,Computer Science,2021,ART 1500,CS 4820,CS 4700,FGSS 3721,Speaking,Social Media,I start my assignments closer to the deadline.,Maryland,North Campus (Other),1,,3
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jen,Other,Fine Arts,2022,ART 1504,ART 2201,SPAN 2090,,Nature,Government/Politics,I start my assignments in the middle of the week.,Oklahoma,North Campus (Freshmen Dorms),4,,4
-Emily,Female,Computer Science,2021,THETR 1510,HIST 2003,CS 4700,,Nature,Nature,I start my assignments the day they are released,South Carolina,Collegetown,1,,5
-Carmela,Female,Computer Science,2021,ASIAN 2202,CS 4820,ENGL 2681,,Language,Social Media,I start my assignments closer to the deadline.,Delaware,North Campus (Freshmen Dorms),1,,6
-Carlos,Male,Computer Science ,2021,CS 2800,MILS 4402,ENGRD 2190,,Sports,Dancing,I start my assignments in the middle of the week.,Georgia,Collegetown,2,,269
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Alexander,Male,Engineering Physics,2021,ASIAN 2202,CS 4620,PHIL 3310,,Space,Animals,I start my assignments in the middle of the week.,California,West Campus (Dorms),2,,7
-Jillian,Female,Computer Science,2020,ECON 3030,CS 4410,CS 4820,INFO 2300,Technology,Fashion,I start my assignments closer to the deadline.,Rhode Island,North Campus (Other),3,,138
-Seth,Male,Engineering Physics,2021,ASIAN 2202,CLASS 2603,CS 4700,,Stem,Food,I start my assignments the day they are released,Rhode Island,Other,2,,8
-Jordyn ,Female,Computer Science,2021,ASIAN 2202,CS 4820,ENGR 2700,,Singing,Martial Arts,I start my assignments closer to the deadline.,New York,Other,3,,9
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Tom,Male,Computer Science,2021,INDO 4432,CS 4700,INFO 2040,,Music,Music,I start my assignments the day they are released,Hawaii,West Campus (Dorms),3,,10
-Michelle,Female,Computer Science,2022,ASRC 1109,ORIE 3120,DEA 2150,HIST 2003,Knitting,Animals,I start my assignments in the middle of the week.,North Carolina,North Campus (Freshmen Dorms),2,,11
-Rebecca,Female,Africana Studies,2020,CS 4620,ASRC 1120,ECON 2040,PSYCH 1101,Biking,Hiking,I start my assignments closer to the deadline.,Oregon,Collegetown,3,,12
-Carson,Male,Computer Science,2021,ECON 4020,ECON 3130,CS 2800,,Nature,Soccer,I start my assignments in the middle of the week.,Washington,Other,4,,141
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Isabella,Female,Africana Studies,2021,ASRC 1121,ECON 1110,ECON 2040,CS 4620,Art,Art,I start my assignments the day they are released,Texas,Other,4,,13
-Frank,Male,Global and Public Health Sciences,2021,BIOEE 1180,CS 2800,CS 4320,ECON 3030,Community Service,Gambling,I start my assignments the day they are released,Turkey,Collegetown,3,,14
-Kevin,Other,Undecided,2021,BIOG 1440,EAS 1340,CHIN 1101,PSYCH 1101,Design,Reading/Writing,I start my assignments closer to the deadline.,Arkansas,North Campus (Freshmen Dorms),6,,15
-Kelly,Prefer not to specify,Earth and Atmospheric Sciences,2022,BIOMI 1120,CS 1110,BIOEE 1610,SPAN 2090,Technology,Space,I start my assignments the day they are released,California,North Campus (Other),6,,16
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jenna,Female,Undecided,2021,BME 4440,INFO 2300,ASIAN 3307,,History,Government/Politics,I start my assignments the day they are released,Tennessee,North Campus (Other),1,,17
-Quagmire,Male,Computer Science,2020,INDO 4432,CS 4740,AEM 4120,ECON 1110,Business,Nature,I start my assignments closer to the deadline.,Michigan,West Campus (Dorms),0,,18
-Ken,Male,Computer Science,2021,BTRY 3080,ECON 1110,CHEM 2080,PHYS 2213,Art,Stem,I start my assignments the day they are released,Kansas,Other,3,,19
-Ruby,Female,Biometry and Statistics,2021,FDSC 2500,MATH 2940,BTRY 3080,,Dancing,Singing,I start my assignments closer to the deadline.,New York,Other,1,,100
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Bart,Male,Computer Science,2020,BTRY 3080,CS 4410,INFO 2040,ECON 1110,Film,Animals,I start my assignments closer to the deadline.,Michigan,Other,6,,20
-Alice,Female,China and Asia-Pacific Studies,2022,CAPS 1622,CS 4620,CHIN 1101,STS 1101,Government/Politics,History,I start my assignments closer to the deadline.,Wyoming ,West Campus (Dorms),6,,21
-Bonnie,Female,Computer Science,2021,CHEM 2080,ENGRD 2700,HIST 2003,CS 2800,Government/Politics,Art,I start my assignments the day they are released,North Dakota,Collegetown,0,,22
-Jamie,Female,Computer Science,2021,CHEM 3570,ENGL 2681,ECON 4020,,,,I start my assignments in the middle of the week.,New York,Collegetown,3,,23
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Glenn,Male,Computer Science,2022,CHIN 1101,INFO 2040,CS 4820,,Music,Dancing,I start my assignments in the middle of the week.,Florida,North Campus (Freshmen Dorms),0,,24
-Joe,Male,German Studies,2021,GERST 1175,GERST 1210,ECON 1110,ENGRD 2220,Technology,Technology,I start my assignments closer to the deadline.,Thailand ,North Campus (Freshmen Dorms),3,,148
-Alisa,Female,Computer Science,2020,CHIN 1109,CS 4820,ILRIR 3820,,Technology,Technology,I start my assignments in the middle of the week.,Illinois,Other,3,,25
-Ian,Male,Computer Science,2021,CHIN 1110,AEM 4120,ORIE 3120,,Outdoor Activities,Social Media,I start my assignments in the middle of the week.,Massachusetts,North Campus (Other),2,,26
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Sal,Male,Electrical and Computer Engineering,2021,CHIN 1110,CS 4820,CS 4700,MATH 4820,Football,Lacrosse,I start my assignments in the middle of the week.,New York,West Campus (Dorms),4,,27
-Abby,Female,Comparative Literature,2022,COML 2030,COML 2050,CS 4420,DEA 1101,Running,Swimming,I start my assignments the day they are released,Virginia,North Campus (Other),4,,28
-Toby,Prefer not to specify,Undecided,2021,COML 2030,ANTHR 1200,ASTRO 1101,SPAN 2090,Reading/Writing,Art,I start my assignments the day they are released,Michigan,Other,6,,29
-Lauren,Female,Urban and Regional Planning,2021,CRP 1100,CRP 1101,CRP 2610,PHYS 1201,Religion,Religion,I start my assignments the day they are released,Montana,Other,4,,30
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Lucas,Male,Computer Science,2022,CRP 1101,CS 4820,INFO 2040,CS 3420,Baseball,Sports,I start my assignments closer to the deadline.,Kentucky,Collegetown,1,,31
-Kevin,Male,Computer Science ,2020,CS 2800,LAW 4131,ENGRD 2300,,Nature,Animals,I start my assignments in the middle of the week.,Idaho,Collegetown,2,,268
-Dante,Male,Economics,2022,CRP 3370,PHYS 2213,DEA 2150,,Business,Asian Food,I start my assignments the day they are released,New Hampshire,North Campus (Other),6,,32
-Erika,Female,Computer Science,2021,PAM 2000,CS 4820,ILRIR 4066,,Technology,Technology,I start my assignments closer to the deadline.,Delaware,West Campus (Dorms),1,,204
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Nate,Male,Operations Research,2022,CS 1110,MATH 1910,PHYS 1112,CHEM 2090,Tennis,Food,I start my assignments closer to the deadline.,New York,Other,3,,33
-Gabriella,Female,Undecided,2021,THETR 1510,CS 4700,DEA 1101,,Dancing,Acting,I start my assignments in the middle of the week.,Virginia,Other,0,,34
-Piper,Female,Computer Science,2021,BURM 1122,INFO 4240,MATH 2210,,Business,Business,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),0,,35
-Squidward,Male,Computer Science,2021,CS 2800,ORIE 3120,ORIE 3120,MUSIC 2112,History,Government/Politics,I start my assignments in the middle of the week.,Germany,Collegetown,0,,36
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Betty,Female,Computer Science,2022,CS 2800,CS 4700,DEA 1101,,Design,Dancing,I start my assignments in the middle of the week.,New York,West Campus (Dorms),1,,37
-Bugs,Male,Computer Science,2021,HE 4800,PSYCH 3420,ENGRD 2700,,Fashion,Fashion,I start my assignments closer to the deadline.,Florida,West Campus (Dorms),1,,154
-Nicole,Female,Undecided,2022,CS 2800,PHYS 2213,ORIE 3120,ENGRD 2300,Dancing,Rock music,I start my assignments the day they are released,Rhode Island,Other,1,,38
-Barney,Male,Computer Science,2021,KOREA 4402,INFO 2040,NAVS 1102,,Art,Design,I start my assignments the day they are released,California,West Campus (Dorms),1,,39
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-William,Male,Computer Science,2022,CS 2800,MATH 4710,FREN 2090,ENGRD 2700,Tennis,Cheerleading,I start my assignments the day they are released,Portugal,North Campus (Other),1,,40
-Jeff,Male,Nutritional Science,2021,NS 1150,ENGRD 2020,PLBIO 2400,BIOEE 1180,Winter Sports,Winter Sports,I start my assignments closer to the deadline.,Iowa,North Campus (Other),3,,197
-Chris,Male,Computer Science,2021,CS 2800,SPAN 2090,INFO 2040,PHYS 2213,Business,Business,I start my assignments closer to the deadline.,New Mexico,North Campus (Other),2,,41
-Jack,Male,Computer Science,2021,CS 4820,CHEM 3670,PSYCH 3420,ENGL 2681,Film,Art,I start my assignments in the middle of the week.,Rhode Island,North Campus (Freshmen Dorms),3,,116
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Chandler,Male,Music,2021,CS 2800,CHEM 2080,PSYCH 3420,MATH 4710,Film,Guitar,I start my assignments the day they are released,Nebraska,North Campus (Freshmen Dorms),2,,42
-Rachel,Female,Psychology,2021,ILRIR 4066,HINDI 1101,BIOEE 1610,ENGRD 2640,Food,Food,I start my assignments in the middle of the week.,New Mexico,Collegetown,2,,157
-Drew,Male,Computer Science,2022,CS 2800,ANTHR 1300,HINDI 1101,HIST 2003,Animals,Animals,I start my assignments in the middle of the week.,France,Other,3,,43
-Minnie,Female,Information Science,2020,INFO 2040,CS 4700,RUSSIA 1131,,Business,Rock music,I start my assignments in the middle of the week.,Oregon,Other,0,,158
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Joey,Male,Music,2021,CS 2800,CS 4410,PSYCH 3420,ART 1500,Music,Singing,I start my assignments in the middle of the week.,Ohio,North Campus (Other),3,,44
-Karen,Prefer not to specify,Computer Science,2022,DEA 1101,ILRIR 1100,CS 4700,PMA 1145,Nature,Travel,I start my assignments in the middle of the week.,Oregon,Other,6,,124
-Larry,Male,Philosophy ,2022,CS 2800,CHIN 1110,ART 1601,,Cooking,Technology,I start my assignments in the middle of the week.,Nebraska,North Campus (Freshmen Dorms),3,,45
-Winnie,Male,Information Science,2020,COGST 3660,CS 4620,ENGRD 2220,SPAN 2090,Food,Tennis,I start my assignments closer to the deadline.,Maine,North Campus (Freshmen Dorms),1,,160
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Pam,Female,Computer Science,2020,CS 2800,CS 4740,NBA 5550,HIST 2003,Stem,Acting,I start my assignments the day they are released,Massachusetts,Collegetown,3,,46
-Cameron,Female,Undecided,2020,INFO 2040,CS 4700,ASIAN 3307,SPAN 2090,Government/Politics,Art,I start my assignments in the middle of the week.,Connecticut,Collegetown,3,,161
-Olivia,Female,Sociology,2021,CS 2800,CHEM 2080,ASRC 1121,ARCH 2301,Business,Rap music,I start my assignments the day they are released,Portugal,Other,3,,47
-Wesley,Male,Computer Science ,2021,CS 4700,KANAD 1100,ECE 2300,,Photography,Outdoor Activities,I start my assignments in the middle of the week.,Iowa,Collegetown,2,,267
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Sophia,Female,Physics,2021,CS 2800,MATH 2940,PAM 2350,,Stem,Space,I start my assignments in the middle of the week.,Misouri,West Campus (Dorms),6,,48
-Max,Male,Computer Science,2022,THETR 1510,CS 4820,GOVT 3553,,Gaming,Yoga,I start my assignments closer to the deadline.,Rhode Island,North Campus (Freshmen Dorms),3,,49
-Theo,Male,Mathematics,2022,BURM 1122,MATH 4810,ECON 3130,CS 4620,Art,Piano,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),3,,50
-Taylor,Female,Computer Science ,2022,CS 4740,ILRIR 4023,CS 4700,BTRY 3080,Singing,Yoyo,I start my assignments closer to the deadline.,Nebraska,Collegetown,2,,266
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Caleb,Male,Mechanical Engineering,2021,COGST 3660,PSYCH 3420,CS 4620,NBA 5550,Technology,History,I start my assignments closer to the deadline.,Illinois,North Campus (Other),3,,51
-Maria,Female,Computer Science ,2021,CS 4700,HIST 3632,ENGRD 2190,ENGRD 2700,Sports,Music Production,I start my assignments closer to the deadline.,Hawaii,West Campus (Dorms),6,,265
-Leo,Male,Mechanical Engineering,2022,BIONB 3300,CHEM 3670,INFO 2040,CA 4740,Sports,Art,I start my assignments the day they are released,New York,West Campus (Dorms),3,,52
-Asher,Male,Computer Science,2021,CS 3420,ENGRD 2300,DEA 1500,ILRIR 4066,Space,Nature,I start my assignments closer to the deadline.,New York,West Campus (Dorms),4,,53
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Hunter,Male,Computer Science,2020,CS 3420,DEA 2150,PHIL 3310,,Sleeping,Soccer,I start my assignments the day they are released,New York,Collegetown,4,,54
-Lana,Female,Undecided,2021,CS 4230,PHYS 2213,HE 4700,ECON 4020,Reading/Writing,Tennis,I start my assignments the day they are released,Maine,West Campus (Dorms),1,,55
-Mason,Male,Computer Science,2021,CS 4320,HADM 4150,PHIL 3310,ECE 2300,Driving,Film,I start my assignments the day they are released,Pennsylvania,Other,1,,56
-Spongebob,Male,Computer Science,2021,CS 4410,ENGRD 2700,MATH 4710,GERST 1210,Language,Sports,I start my assignments the day they are released,New York,Other,0,,57
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Carter,Male,Computer Science,2022,CS 4410,ECE 3100,CS 4820,INFO 2040,Board Games,Fashion,I start my assignments in the middle of the week.,Idaho,North Campus (Freshmen Dorms),2,,58
-Sage,Female,Science and Technology Studies ,2021,CS 4410,ECE 3100,BTRY 3080,HIST 2672,Art,Art,I start my assignments closer to the deadline.,California ,North Campus (Freshmen Dorms),4,,59
-Plankton,Male,Computer Science,2020,CS 4420,ENGRD 2700,ENGRD 2700,AEM 4120,Sports,Nature,I start my assignments in the middle of the week.,Japan,North Campus (Other),1,,60
-Sophie,Female,Italian,2021,ITAL 1202,ITAL 1212,PSYCH 2020,,Stem,Stem,I start my assignments the day they are released,Vermont,North Campus (Other),6,,167
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Archie,Female,Undecided,2022,CS 4420,HE 4800,DEA 1101,,Dancing,Acting,I start my assignments closer to the deadline.,Virginia,Other,1,,61
-Theodore,Male,Landscape Architecture,2021,ENGRD 2300,LA 2010,DSOC 1101,PLSCI 1101,Sports,Comics,I start my assignments the day they are released,New York,Other,3,,168
-Aiden,Male,Computer Science,2021,CS 4420,CEE 3040,ENGRD 2700,AEM 4120,Sports,Sports,I start my assignments closer to the deadline.,Nebraska,North Campus (Other),2,,62
-Sandy,Female,Computer Science,2020,THETR 1510,PHYS 2213,DEA 2150,PAM 2300,Golf,Lacrosse,I start my assignments closer to the deadline.,Connecticut,North Campus (Other),0,,63
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Alex,Female,Undecided,2022,BURM 1122,CS 4700,DEA 1101,,Guitar,Piano,I start my assignments in the middle of the week.,New York,North Campus (Other),0,,64
-Leah,Female,Undecided,2022,CS 4620,PHYS 2213,ORIE 3120,,Nature,Hiking,I start my assignments closer to the deadline.,Iowa,North Campus (Other),1,,65
-Sarah,Female,Biometry and Statistics,2022,CS 4620,MATH 2940,ORIE 3120,AEM 4120,Nature,Nature,I start my assignments in the middle of the week.,Lousianna,Collegetown,1,,66
-Noah,Male,Computer Science,2022,COGST 3660,DANCE 1181,ECE 3110,,Cheerleading,Beach,I start my assignments closer to the deadline.,Spain,North Campus (Freshmen Dorms),1,,67
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Zoey,Female,Undecided,2022,CS 4620,CS 4700,ARCH 1502,,Football,Art,I start my assignments closer to the deadline.,Maryland,West Campus (Dorms),3,,68
-Stephen,Male,Linguistics,2021,LING 1101,ENGRD 2300,MATH 1110,,Business,Government/Politics,I start my assignments closer to the deadline.,South Dakota,West Campus (Dorms),5,,172
-Ellie,Female,Undecided,2021,CS 4620,CS 4700,MUSIC 2111,ENGRD 2190,Cheerleading,Basketball,I start my assignments the day they are released,Massachusetts,Collegetown,3,,69
-Jeffery,Male,Linguistics,2022,LING 3302,CS 2800,PAM 3550,,Technology,Board Games,I start my assignments closer to the deadline.,Iowa,West Campus (Dorms),3,,173
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Mort,Male,Computer Science,2021,CS 4620,ILRIR 1100,ECON 1120,,Business,Animals,I start my assignments the day they are released,Brazil,Other,5,,70
-Mrs. Puff,Female,Computer Science,2022,CS 4700,PHYS 2213,INFO 2040,,Government/Politics,Volleyball,I start my assignments closer to the deadline.,England,Other,0,,71
-Duck,Male,Computer Science,2022,CS 4700,PHYS 2213,BTRY 3080,ECON 1120,Business,Nature,I start my assignments closer to the deadline.,Illinois,Collegetown,0,,72
-Ed,Male,Economics,2022,MATH 2210,ECON 3040,ASIAN 3308,,Nature,Outdoor Activities,I start my assignments closer to the deadline.,Utah ,Collegetown,4,,175
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Mr. Krabs,Male,Computer Science,2021,HADM 6090,ORIE 3120,INFO 2040,CHIN 1101,Social Media,Social Media,I start my assignments the day they are released,China,North Campus (Freshmen Dorms),0,,73
-Mackenzie,Female,Computer Science ,2022,CS 4420,HD 4790,ENGRD 2640,,Reading/Writing,Reading/Writing,I start my assignments closer to the deadline.,South Dakota,West Campus (Dorms),6,,264
-Drake,Male,Computer Science,2022,CS 4700,ENGRD 2700,PHIL 3310,MATH 4710,Outdoor Activities,Art,I start my assignments closer to the deadline.,India ,West Campus (Dorms),1,,74
-Chase,Male,Computer Science ,2021,CS 4620,HD 2380,ENGRD 2300,,Outdoor Activities,Beach,I start my assignments closer to the deadline.,North Dakota,West Campus (Dorms),6,,263
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Darryl,Prefer not to specify,Computer Science,2022,CS 4700,MATH 2940,CRP 1101,,Dancing,Dancing,I start my assignments closer to the deadline.,New York,Collegetown,1,,75
-Edward,Male,Economics,2020,MATH 2210,ECON 4020,MUSIC 2111,PAM 2300,Design,Technology,I start my assignments the day they are released,Nevada,Other,4,,176
-Lois,Female,Computer Science,2020,CS 4700,JWST 1101,CS 4320,,Outdoor Activities,Sports,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),1,,76
-Adam,Male,Computer Science,2021,MATH 2940,CS 2800,PHYS 2213,ECE 2300,Nature,Nature,I start my assignments the day they are released,New Mexico,West Campus (Dorms),2,,177
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Nikki,Female,Undecided,2021,CS 4700,HIST 2451,HIST 2003,,Guitar,Singing,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),1,,77
-Brian,Male,Computer Science,2021,CS 4700,CS 4820,MATH 4710,SPAN 2090,Animals,Animals,I start my assignments in the middle of the week.,Wisconsin,North Campus (Other),2,,78
-Rachel,Female,Computer Science,2021,CS 4700,PHYS 2213,DEA 2150,,Art,Music Production,I start my assignments the day they are released,Mississippi,Other,2,,79
-Parker,Male,Computer Science ,2020,CS 2800,HIST 2672,ECE 2300,,Tennis,Golf,I start my assignments closer to the deadline.,Lousianna,West Campus (Dorms),6,,262
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Eliza,Female,Computer Science,2021,BIONB 3300,ENGRD 2700,ASIAN 3333,,Board Games,Fashion,I start my assignments closer to the deadline.,Rhode Island,North Campus (Other),2,,80
-Tyler,Male,Computer Science,2021,CS 4700,DANCE 1181,BTRY 3080,,Golf,Basketball,I start my assignments the day they are released,Korea,Collegetown,3,,81
-Aliza,Female,Mathematics,2022,CS 4700,ENGRD 2700,PHIL 3310,,Art,Art,I start my assignments closer to the deadline.,Pennsylvania,West Campus (Dorms),3,,82
-Cooper,Male,Operations Research,2020,CS 4740,PLBIO 2400,ENGRD 2190,,Outdoor Activities,Outdoor Activities,I start my assignments closer to the deadline.,Mississippi,Collegetown,4,,261
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jill,Female,Mathematics,2022,CS 4700,ASRC 1121,ORIE 3120,ENGRD 2300,Gambling,Gambling,I start my assignments in the middle of the week.,Connecticut,West Campus (Dorms),3,,83
-Paul,Male,Mathematics,2021,ECON 3040,CS 4320,PSYCH 3420,ECE 3100,Exercise,Sports,I start my assignments in the middle of the week.,Colorodo,West Campus (Dorms),4,,140
-Jackson,Male,Mathematics,2021,CS 4700,ENGRD 2700,ORIE 3120,,Humanities,Reading/Writing,I start my assignments closer to the deadline.,Vermont,North Campus (Other),4,,84
-Abigail,Female,English,2020,ENGL 1100,AMST 4194,ENGL 2080,ITAL 1201,Nature,Stem,I start my assignments the day they are released,Washington,West Campus (Dorms),5,,142
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Matthew,Male,Mathematics,2020,CS 4700,JWST 1101,ORIE 3120,,Humanities,Design,I start my assignments in the middle of the week.,Pennsylvania,Collegetown,4,,85
-Melanie,Female,Computer Science ,2022,CS 4700,ITAL 1212,ENGRD 2190,BTRY 3080,Art,Art,I start my assignments in the middle of the week.,Arkansas,Collegetown,4,,260
-Avery,Female,Science and Technology Studies ,2021,CS 4700,ECE 3100,ORIE 3100,,Technology,Technology,I start my assignments in the middle of the week.,Arizona,Other,4,,86
-Logan,Male,Engineering Physics,2021,MATH 4260,PHIL 3310,CS 4740,CS 4430,Business,Sports,I start my assignments the day they are released,Austrailia,North Campus (Other),2,,182
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Harrison,Male,Computer Science,2021,CS 4700,ENGRD 2700,MATH 4710,,Stem,Fashion,I start my assignments the day they are released,Kansas,Collegetown,5,,87
-Daffy,Female,Computer Science,2021,CS 2800,LAW 4051,ORIE 3120,LING 1111,Music,Martial Arts,I start my assignments in the middle of the week.,New Jersey,Collegetown,0,,88
-Alana,Female,Undecided,2020,CS 4820,PHYS 2213,ENGRD 2700,ECON 1120,Animals,Technology,I start my assignments in the middle of the week.,New York,Other,0,,89
-Brandon,Male,Computer Science ,2021,CS 4420,JWST 1101,ENGRD 2640,,Winter Sports,Winter Sports,I start my assignments in the middle of the week.,Kansas,Collegetown,4,,259
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Lindsay,Female,Undecided,2022,CS 4820,PHYS 2213,ORIE 3120,,Gaming,Technology,I start my assignments closer to the deadline.,Nebraska,North Campus (Freshmen Dorms),0,,90
-Brenden,Male,Computer Science ,2022,CS 4620,AEM 4120,ENGRD 2300,,Community Service,Shopping,I start my assignments in the middle of the week.,Kentucky,Collegetown,1,,258
-Mel,Female,Undecided,2021,CS 4820,PHYS 2213,ORIE 3120,ASRC 1108,Running,Exercise,I start my assignments closer to the deadline.,West Virginia,Collegetown,0,,91
-Austin,Male,Economics,2021,CS 2800,MUSIC 1105,ECE 2300,,Rap music,Rap music,I start my assignments in the middle of the week.,New Jersey,North Campus (Freshmen Dorms),1,,257
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Gabby,Female,Undecided,2022,CS 4820,PHYS 2213,ORIE 3120,ARCH 1501,Government/Politics,Lacrosse,I start my assignments the day they are released,Illinois,Other,0,,92
-Bunny,Male,Computer Science,2022,ENGRD 2190,SPAN 2090,ENGRD 2700,MILS 3301,Nature,Nature,I start my assignments the day they are released,Texas,Collegetown,0,,93
-Patrick,Male,Computer Science,2022,CS 4820,AS 1200,ART 3092,,Food,Food,I start my assignments in the middle of the week.,Wyoming ,North Campus (Freshmen Dorms),0,,94
-Peter,Male,Computer Science,2021,FDSC 2500,CS 4740,RUSSIA 1131,,Food,Horses,I start my assignments in the middle of the week.,Massachusetts,North Campus (Other),3,,185
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Mickey,Male,Information Science,2021,CS 4820,CS 4700,ASIAN 2202,ECON 3030,Music,Martial Arts,I start my assignments the day they are released,New Jersey,Other,1,,95
-Wilma,Female,Computer Science,2020,BIONB 3300,RUSSIA 1131,MUSIC 2111,,Technology,Music,I start my assignments closer to the deadline.,New Hampshire,North Campus (Other),1,,96
-Josephine,Female,Undecided,2020,CS 4820,CS 4620,ORIE 3120,ENGRD 2020,Soccer,Gaming,I start my assignments in the middle of the week.,California,West Campus (Dorms),1,,97
-Debby,Female,Computer Science ,2022,CS 4740,MUSIC 1100,ENGRD 2640,,Outdoor Activities,Hiking,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),1,,256
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Hannah,Female,Undecided,2021,CS 4820,PHYS 2213,PHIL 3310,,Acting,Acting,I start my assignments closer to the deadline.,California,Collegetown,1,,98
-Richard,Male,Hotel Administration,2021,HADM 1210,HADM 1360,CS 2800,,Drinking/Drugs,Food,I start my assignments the day they are released,West Virginia,North Campus (Other),4,,153
-Allison,Female,Applied Economics and Management,2020,CS 4820,NES 1201,ENGRD 2700,HIST 2003,Dancing,Animals,I start my assignments the day they are released,Nevada,North Campus (Other),1,,99
-Fred,Male,Computer Science,2021,CS 4820,PLBIO 2400,ASIAN 2202,,Food,Gaming,I start my assignments in the middle of the week.,Montana,North Campus (Other),1,,101
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Liam,Male,Computer Science,2022,CS 4820,ENGRD 2700,PHIL 3310,,Outdoor Activities,Hiking,I start my assignments in the middle of the week.,Ohio,Other,1,,102
-Melanie,Female,Computer Science ,2021,CS 4700,ASIAN 3333,ENGRD 2640,MATH 4710,Sports,Music,I start my assignments in the middle of the week.,California,West Campus (Dorms),1,,255
-Owen,Male,Computer Science,2022,COGST 3660,ECE 2300,CS 2800,,Art,Golf,I start my assignments closer to the deadline.,England,West Campus (Dorms),2,,103
-Nolan,Male,Computer Science,2022,CS 4820,PHYS 2213,PAM 2000,ECON 1110,Nature,Rap music,I start my assignments closer to the deadline.,Florida,West Campus (Dorms),2,,104
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Eva,Female,Biometry and Statistics,2022,CS 4820,CS 4700,CRP 3370,GERST 1210,Government/Politics,Travel,I start my assignments the day they are released,Vermont,North Campus (Freshmen Dorms),2,,105
-Robert,Male,Mathematics,2022,BIONB 3300,CS 4700 ,DEA 1101,BTRY 3080,Technology,Government/Politics,I start my assignments the day they are released,New York,North Campus (Other),4,,190
-Aria,Female,Undecided,2022,CS 4820,PSYCH 3420,ENGRD 2700,ECON 4020,Government/Politics,Business,I start my assignments in the middle of the week.,Tennessee,North Campus (Other),3,,106
-Zack,Male,Performing Arts,2020,PMA 2800,INDO 4432,SPAN 2090,ENGRD 2300,Space,Sports,I start my assignments the day they are released,Florida ,North Campus (Freshmen Dorms),3,,214
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Victoria,Female,Undecided,2021,CS 4820,ILROB 1220,ORIE 3120,ECON 1110,Government/Politics,Dancing,I start my assignments closer to the deadline.,New Jersey,North Campus (Other),3,,107
-Homer,Male,Computer Science,2021,INFO 2300,ECON 4020,ART 1500,,Business,Soccer,I start my assignments in the middle of the week.,Virginia,Other,6,,163
-Madison,Female,Undecided,2021,CS 4820,PHYS 2213,ECON 4020,ECON 1120,Singing,Government/Politics,I start my assignments the day they are released,Ohio,West Campus (Dorms),3,,108
-Pedro,Male,Computer Science,2021,MATH 4810,ECE 2300,ORIE 3120,ARCH 2301,Football,Outdoor Activities,I start my assignments closer to the deadline.,Delaware,Other,3,,192
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Bradley,Male,Economics,2022,CS 4820,ORIE 3120,ORIE 3120,ECON 1120,Fashion,Business,I start my assignments closer to the deadline.,Virginia,Collegetown,3,,109
-Lisa,Female,Computer Science,2021,MUSIC 1100,CS 2800,ENGRD 2700,CS 4700,Humanities,Travel,I start my assignments the day they are released,Oregon ,North Campus (Freshmen Dorms),6,,193
-Snoopy,Male,Information Science,2021,CS 4820,PSYCH 3420,HORT 2010,,Food,Martial Arts,I start my assignments the day they are released,Maine,North Campus (Other),3,,110
-Phoebe,Female,China and Asia-Pacific Studies,2021,HADM 6090,ECE 3100,ORIE 3100,,Food,Health and Wellness,I start my assignments closer to the deadline.,Maryland,West Campus (Dorms),3,,111
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Maddie,Female,Mathematics,2020,CS 4820,ENGRD 2700,PHIL 3310,EAS 3010,Government/Politics,Government/Politics,I start my assignments in the middle of the week.,Idaho,Other,3,,112
-Tony,Male,Computer Science,2021,MUSIC 2111,CS 4820,BTRY 2080,,Humanities,Reading/Writing,I start my assignments in the middle of the week.,New York ,Other,1,,195
-Kendall,Female,Mathematics,2022,CS 4820,PHYS 2213,ECON 3130,HD 2300,Board Games,Hiking,I start my assignments closer to the deadline.,Indianna,North Campus (Freshmen Dorms),3,,113
-Nathan,Male,Near Eastern Studies,2020,NES 1660,GOVT 1817,ECON 1120,ECON 2040,Sports,Basketball,I start my assignments in the middle of the week.,New York,Collegetown,3,,196
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-James,Male,Computer Science,2021,CS 4820,ENGRD 2700,HIST 2004,ARCH 1501,Knitting,Music Production,I start my assignments closer to the deadline.,Nevada,Collegetown,3,,114
-Susan,Female,Global and Public Health Sciences,2021,NS 1600,CHEM 2070,BIOG 1440,BIOEE 1180,Music Production,Tennis,I start my assignments the day they are released,New York,Collegetown,6,,198
-Jacob,Male,Computer Science,2021,CS 4820,ECE 3100,ORIE 3120,,Sports,Outdoor Activities,I start my assignments the day they are released,New Hampshire,Other,3,,115
-Clara,Female,Operations Research,2022,CS 4420,RUSSIA 1131,ENGRD 2640,BTRY 3080,Art,Art,I start my assignments the day they are released,Washington,Other,3,,254
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Johnny,Male,Electrical and Computer Engineering,2021,BIONB 3300,CHEM 3670,PSYCH 3420,,Design,Technology,I start my assignments closer to the deadline.,Arizona,Collegetown,4,,117
-Angela,Female,Computer Science,2021,ORIE 3120,CS 4820,CS 4700,,Music,Cooking,I start my assignments in the middle of the week.,California,North Campus (Other),0,,199
-Tucker,Male,Computer Science,2022,CS 4820,CS 2800,Chem 2090,ARCH 1502,Animals,Sports,I start my assignments in the middle of the week.,Texas,West Campus (Dorms),4,,118
-Creed,Prefer not to specify,Classics,2022,LATIN 1202,CLASS 1615,CLASS 2000,CLASS 2603,Sports,Food,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),6,,169
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Connor,Male,Economics,2022,CS 4820,ENGRD 2700,HINDI 1101,,Music,Lacrosse,I start my assignments in the middle of the week.,California,Other,5,,119
-Danny,Male,Operations Research,2021,ORIE 3120,CS 4740,AEM 4120,,Film,Sleeping,I start my assignments in the middle of the week.,Michigan,Other,3,,201
-Conrad,Male,Economics,2021,CS 4820,INFO 2040,CHEM 3670,,Soccer,Dancing,I start my assignments closer to the deadline.,Utah,North Campus (Freshmen Dorms),6,,120
-Leslie,Female,Electrical and Computer Engineering,2022,ENGRD 2020,COGST 3660,CHEM 2080,,Cooking,Cooking,I start my assignments in the middle of the week.,Washington,North Campus (Freshmen Dorms),1,,240
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-David,Male,Economics,2021,CS 4820,PHYS 2213,PAM 2550,,Sports,Basketball,I start my assignments in the middle of the week.,New York ,West Campus (Dorms),6,,121
-Ally,Female,Mathematics,2021,DANCE 1320,ENGRD 2700,PHIL 3310,,Golf,Tennis,I start my assignments the day they are released,Rhode Island,North Campus (Other),3,,122
-Holly,Prefer not to specify,Computer Science,2021,CS 4700,DEA 1110,DEA 1500,DSOC 1101,Acting,Government/Politics,I start my assignments the day they are released,Minnesota,Collegetown,1,,123
-Mark,Male,Computer Science ,2021,CS 4620,BME 4440,ENGRD 2640,,Martial Arts,Technology,I start my assignments the day they are released,California,Other,3,,253
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Roy,Prefer not to specify,Design and Environmental Analysis,2021,DEA 1101,HD 1150,DEA 1500,PAM 2040,History,Exercise,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),6,,125
-Henry,Male,Economics,2022,DEA 1200,ECON 4020,HD 2300,INFO 2040,Film,Baseball,I start my assignments closer to the deadline.,New York,North Campus (Freshmen Dorms),4,,126
-Caroline,Female,Sociology,2021,DSOC 1101,DSOC 1200,GERST 1210,,Language,Language,I start my assignments in the middle of the week.,Nevada,Other,1,,127
-Jeremy,Male,Mathematics,2021,EAS 1109,ECE 2300,MATH 4710,HIST 2672,Design,Technology,I start my assignments the day they are released,Connecticut,West Campus (Dorms),4,,128
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Dexter,Other,Undecided,2021,CS 4700,EAS 3050,ASRC 1121,BIOEE 1180,Travel,History,I start my assignments in the middle of the week.,Missouri,North Campus (Other),1,,129
-Craig,Male,Computer Science ,2022,CS 2800,FSAD 1250,ENGRD 2640,,Film,Technology,I start my assignments the day they are released,New York,Other,3,,252
-Alyssa,Female,Atmospheric Sciences,2022,EAS 1340,EAS 3050,AEM 2100,EAS 1340,History,History,I start my assignments in the middle of the week.,Oklahoma,Collegetown,5,,130
-Amanda,Female,Undecided,2022,PHIL 3310,CS 4700,CHIN 1110,DEA 2040,Language,Martial Arts,I start my assignments the day they are released,Spain,Collegetown,0,,206
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-White,Other,Undecided,2020,EAS 1340,EAS 2680,MATH 1110,EAS 3410,Space,Baseball,I start my assignments the day they are released,Alabama,North Campus (Freshmen Dorms),6,,131
-Julia,Female,Undecided,2021,ECE 2300,CS 4700,DEA 1101,DEA 2040,Humanities,Knitting,I start my assignments closer to the deadline.,Iowa,West Campus (Dorms),0,,132
-Trisha,Female,Computer Science,2021,ECE 2300,CS 2800,CHEM 2080,,Speaking,Social Media,I start my assignments closer to the deadline.,New York ,West Campus (Dorms),3,,133
-Jared,Male,Engineering Physics,2021,ECE 3100,CS 4820,ECE 3100,,Social Media,Sports,I start my assignments closer to the deadline.,Texas,Collegetown,2,,134
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Dylan,Male,Government,2021,ENGRD 2020,GOVT 1817,HIST 1700,GOVT 1111,Space,Biking,I start my assignments in the middle of the week.,Massachusetts,West Campus (Dorms),3,,135
-Carson,Female,Computer Science,2021,MATH 4710,ENGRD 2700,ECE 3100,CS 4740,Film,Food,I start my assignments closer to the deadline.,Delaware,West Campus (Dorms),3,,184
-Christopher,Male,Computer Science,2021,ECON 1120,FGSS 3721,CS 4700,,Humanities,Technology,I start my assignments the day they are released,New York ,North Campus (Other),1,,136
-Carter,Male,Computer Science,2020,COGST 3660,MATH 4710,ECE 3110,,Acting,Photography,I start my assignments the day they are released,Oklahoma,North Campus (Other),0,,137
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Cleveland,Male,Computer Science,2021,ECON 3030,CS 2800,ASIAN 2202,PHYS 2112,Football,Basketball,I start my assignments closer to the deadline.,California,Collegetown,5,,139
-Mandy,Female,Computer Science ,2021,ENGL 2681,FREN 3130,CS 4320,,Baseball,Design,I start my assignments closer to the deadline.,New Jersey,Collegetown,3,,143
-Maxwell,Male,Food Science,2020,FDSC 1101,FDSC 1500,DSOC 1101,HD 1150,Animals,Animals,I start my assignments the day they are released,Michigan,North Campus (Other),3,,144
-Steve,Male,"Feminist, Gender, and Sexuality Studies",2021,FGSS 2290,FGSS 2010,AIIS 1123,ASIAN 1192,Language,Film,I start my assignments closer to the deadline.,North Dakota,North Campus (Other),5,,145
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Pearl,Male,Computer Science,2020,FSAD 1250,PHYS 2213,PAM 2550,MUSIC 2112,Speaking,Comics,I start my assignments the day they are released,Lousianna,West Campus (Dorms),0,,146
-Walker,Other,Fiber Science and Apparel Design,2021,FSAD 1350,CS 4320,ART 1504,SPAN 1120,Stem,Food,I start my assignments closer to the deadline.,California,Other,6,,147
-Charles,Male,German Studies,2020,CS 4740,GERST 1210,ECON 1110,ENGRD 2020,Language,Soccer,I start my assignments closer to the deadline.,Illinois,North Campus (Freshmen Dorms),6,,149
-Laurie,Female,Computer Science,2021,GERST 1210,VIET 1121,CS 4700,CS 4320,Music,Dancing,I start my assignments in the middle of the week.,Massachusetts,North Campus (Freshmen Dorms),1,,150
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Phyllis,Other,Undecided,2020,GOVT 1111,ILRST 2100,CHIN 1101,DSOC 1101,Swimming,Reading/Writing,I start my assignments in the middle of the week.,North Carolina,Other,6,,151
-Oliver,Male,Computer Science,2020,GOVT 3553,BTRY 3080,MATH 4710,ENGRD 2700,Cooking,Animals,I start my assignments in the middle of the week.,Wisconsin,West Campus (Dorms),1,,152
-Grace,Female,Undecided,2021,HIST 2451,HE 4700,MATH 4710,,Business,Hiking,I start my assignments the day they are released,Colorado,North Campus (Freshmen Dorms),0,,155
-Anthony,Male,Industrial Labor Relations,2020,ILID 1700,ENGRD 2640,MATH 1120,AEM 2220,Tennis,Outdoor Activities,I start my assignments closer to the deadline.,Washington,Collegetown,3,,156
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Goofy,Male,Information Science,2021,INFO 2040,CS 4700,ASIAN 2202,CS 4320,Acting,Dancing,I start my assignments closer to the deadline.,Georgia,Other,1,,159
-Hailey,Female,Electrical and Computer Engineering,2022,CS 4420,INFO 5150,ENGR 2700,ENGRD 2220,Art,Knitting,I start my assignments closer to the deadline.,California,West Campus (Dorms),1,,226
-Naomi,Female,Applied Economics and Management,2021,INFO 2040,CS 4700,ENGRD 2700,,Animals,Animals,I start my assignments closer to the deadline.,Nevada,North Campus (Freshmen Dorms),3,,162
-Zachary,Male,Information Science,2020,INFO 2450,ASTRO 1101,INFO 2040,ILRST 2100,Fashion,Exercise,I start my assignments in the middle of the week.,New York,North Campus (Other),3,,164
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-John,Male,Engineering Physics,2021,INFO 4240,CS 4820,DEA 1101,CS 4430,Stem,Food,I start my assignments closer to the deadline.,Mississippi,North Campus (Freshmen Dorms),3,,165
-Joseph,Male,Italian,2020,ITAL 1202,ECON 1110,ENGRD 2300,BIOEE 1610,Space,Biking,I start my assignments the day they are released,South Carolina,North Campus (Other),3,,166
-Meredith,Prefer not to specify,English,2022,LATIN 2201,CLASS 1615,ENGL 1100,CLASS 2604,Film,Business,I start my assignments closer to the deadline.,New Hampshire,West Campus (Dorms),6,,170
-Gavin,Male,Linguistics,2021,LING 1101,SPAN 1120,ENGRD 2640,AMST 1585,Stem,Humanities,I start my assignments closer to the deadline.,North Carolina,Collegetown,4,,171
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Gabe,Prefer not to specify,Economics,2021,MATH 1110,GOVT 1817,PSYCH 1101,ECON 1110,Gaming,Basketball,I start my assignments in the middle of the week.,Connecticut,West Campus (Dorms),6,,174
-West,Male,Computer Science,2021,COGST 3660,CS 4820,PHYS 2213,ECE 2300,Cooking,Gaming,I start my assignments in the middle of the week.,Korea,West Campus (Dorms),3,,178
-Marge,Female,Applied Economics and Management,2020,MATH 2940,PHYS 2213,CS 2800,,Technology,Animals,I start my assignments in the middle of the week.,Kansas,North Campus (Freshmen Dorms),3,,179
-Ross,Male,Computer Science,2021,CS 4320,HADM 4380,ENGR 2700,ENGRD 2220,Social Media,Art,I start my assignments in the middle of the week.,China,Collegetown,4,,222
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Meg,Female,Computer Science,2020,MATH 2940,CS 4820,PHYS 2214,ENGRD 2700,Fashion,Fashion,I start my assignments the day they are released,New York,North Campus (Other),3,,180
-Jerry,Male,Computer Science ,2021,CS 4620,BIONB 3300,MATH 2940,,Film,Sleeping,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),3,,251
-Danielson,Male,Computer Science,2021,MATH 2940,Phys 2213,CS 2800,,Animals,Stem,I start my assignments in the middle of the week.,New Jersey,Collegetown,3,,181
-Rosie,Female,Sociology,2021,MATH 4710,HIST 2672,BIOMG 1350,CS 4320,Outdoor Activities,Reading/Writing,I start my assignments the day they are released,California,West Campus (Dorms),2,,183
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Liam,Male,Operations Research,2021,MATH 4710,ASIAN 3333,ECE 3100,CS 4740,Stem,Art,I start my assignments the day they are released,Kansas,Collegetown,3,,186
-Mellie,Female,Psychology,2021,WRIT 4860,JWST 1101,ORIE 3120,,Asian Food,Music,I start my assignments in the middle of the week.,Pennsylvania,North Campus (Freshmen Dorms),3,,187
-Margaret,Female,Biological Sciences,2021,MATH 4710,ENGRD 2700,ORIE 3120,BIOMG 1350,Gaming,Gaming,I start my assignments closer to the deadline.,Ohio,North Campus (Other),3,,188
-Pablo,Male,Computer Science,2021,MATH 4710,ECE 2300,ORIE 3120,,Music,Art,I start my assignments the day they are released,Oklahoma,North Campus (Freshmen Dorms),3,,189
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Monica,Female,Biological Sciences,2021,MATH 4810,ENGRD 2700,BIOEE 1610,,Gaming,Gaming,I start my assignments closer to the deadline.,Colorado,Other,2,,191
-Jan,Prefer not to specify,Music,2022,MUSIC 1105,MUSIC 1105,SPAN 2090,ASRC 1121,Art,Technology,I start my assignments closer to the deadline.,Kansas,Collegetown,5,,194
-Josh,Male,Computer Science,2022,ORIE 3120,INFO 2040,CHEM 3670,INFO 2300,Exercise,Board Games,I start my assignments the day they are released,Indonesia,Collegetown,1,,200
-Lily,Female,Mathematics,2021,ORIE 3120,INFO 2040,CHEM 3670,,Sports,Film,I start my assignments the day they are released,Alabama,Collegetown,3,,202
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Herbet,Male,Computer Science,2021,PAM 2000,CS 4700,CHEM 2080,ENGRD 2700,Art,Stem,I start my assignments closer to the deadline.,Montana,North Campus (Freshmen Dorms),0,,203
-Charlie,Male,Information Science,2021,VIET 1121,CS 4620,ASIAN 2202,SPAN 2090,Nature,Outdoor Activities,I start my assignments in the middle of the week.,Maine,North Campus (Freshmen Dorms),1,,220
-Sam,Male,Computer Science,2021,PAM 2000,CS 4820,ENGRD 2700,ECON 1110,Art,Soccer,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),3,,205
-Jan,Female,Operations Research,2022,ENGRD 2020,HADM 6090,MATH 2940,,Piano,Sports,I start my assignments closer to the deadline.,New York,North Campus (Freshmen Dorms),4,,246
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Timmy,Male,Computer Science,2022,PHIL 3310,PHYS 2213,CS 2800,,Singing,Sports,I start my assignments closer to the deadline.,New Jersey,Collegetown,2,,207
-Andy,Prefer not to specify,Undecided,2021,PHYS 1112,CS 1110,MATH 1120,PSYCH 1101,Guitar,Singing,I start my assignments in the middle of the week.,Louisiana,West Campus (Dorms),4,,208
-Joe,Male,Computer Science,2021,PHYS 2112,MATH 4260,CS 4700,BTRY 3080,Basketball,Golf,I start my assignments in the middle of the week.,New York,Collegetown,0,,209
-Jessica,Female,Engineering Physics,2021,PHYS 2208,MATH 1910,MATH 2210,ECON 1120,Travel,Nature,I start my assignments closer to the deadline.,Kenya,Collegetown,6,,210
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Velma,Female,Undecided,2021,PHYS 2213,MATH 2940,CS 2800,ASIAN 2260,Yoga,Photography,I start my assignments in the middle of the week.,Delaware,West Campus (Dorms),3,,211
-April,Female,Computer Science ,2022,CS 4420,COML 2350,ENGRD 2190,ENGRD 2700,Nature,Hiking,I start my assignments closer to the deadline.,New York,West Campus (Dorms),3,,250
-Stewie,Male,Computer Science,2021,PHYS 2214,MATH 2940,ECON 1110,,Music,Singing,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),1,,212
-Bella,Female,Viticulture and Enology,2021,PLSCI 1420,CHEM 1560,VIEN 1104,VIEN 2204,Language,Dancing,I start my assignments in the middle of the week.,Spain,West Campus (Dorms),4,,213
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jackie,Female,Religious Studies,2021,CS 4320,RELST 2157,GOVT 1111,,Government/Politics,Government/Politics,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),5,,215
-Tweety,Female,Information Science,2020,SOC 1900,CS 4820,ART 1500,MATH 4710,Reading/Writing,Reading/Writing,I start my assignments the day they are released,Washington,North Campus (Freshmen Dorms),0,,216
-Lucy,Female,Sociology,2022,SOC 2202,SPAN 1120,SOC 1101,ECON 2040,Driving,Golf,I start my assignments in the middle of the week.,Virginia,Other,3,,217
-Andy,Male,Computer Science ,2021,CS 2800,COML 2214,ENGRD 2190,MATH 4710,Hiking,Outdoor Activities,I start my assignments closer to the deadline.,China,North Campus (Other),4,,249
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Claire,Female,Spanish,2021,SPAN 2090,ART 1500 ,CS 4700,,Language,Technology,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),3,,218
-Doug,Male,Computer Science,2021,STS 1180,STS 1101,BIOEE 1540,ECON 1110,Singing,Music,I start my assignments the day they are released,New York,Collegetown,4,,219
-Daniela,Female,Computer Science,2021,CS 2800,GOVT 3847,ENGR 2700,ENGRD 2220,Dancing,Rap music,I start my assignments in the middle of the week.,Connecticut,Collegetown,3,,221
-Cam,Male,Computer Science ,2021,ECE 2300,HD 2820,MATH 2940,ENGRD 2220,Cooking,Board Games,I start my assignments closer to the deadline.,Japan,Collegetown,4,,223
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Mitchell,Male,Computer Science,2021,ECE 2300,IARD 6011,MATH 2940,ENGRD 2220,Design,Sports,I start my assignments in the middle of the week.,India,Collegetown,1,,224
-Linda,Female,Computer Science ,2020,CS 4420,THETR 1510,MATH 4710,ENGRD 2190,Sports,Outdoor Activities,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),3,,236
-Gloria,Female,Electrical and Computer Engineering,2022,ECE 2300,INDO 4432,ENGRD 2020,,Yoga,Exercise,I start my assignments in the middle of the week.,Germany,West Campus (Dorms),1,,225
-Renee,Female,Undecided,2022,CS 4420,KOREA 4402,ENGR 2700,ENGRD 2250,Sports,Reading/Writing,I start my assignments in the middle of the week.,Washington,West Campus (Dorms),6,,227
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jay,Male,Undecided,2020,CS 4320,LATIN 1201,BTRY 3080,ENGRD 2250,Gaming,Rap music,I start my assignments in the middle of the week.,Oregon,West Campus (Dorms),6,,228
-Erin,Female,Undecided,2021,ENGRD 2020,FSAD 1250,MATH 2210,,Nature,Guitar,I start my assignments closer to the deadline.,Korea ,North Campus (Freshmen Dorms),4,,245
-Manny,Male,Economics,2022,CS 4620,LSP 4677,BTRY 3080,ENGRD 2250,Magic,Film,I start my assignments closer to the deadline.,New Mexico,West Campus (Dorms),0,,229
-Candace,Female,Computer Science ,2022,CHEM 2080,SINHA 3301,MATH 2210,ENGRD 2300,Horses,Basketball,I start my assignments the day they are released,California,Collegetown,3,,234
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Luke,Male,Mathematics,2020,CS 2800,NAVS 2201,BTRY 3080,ENGRD 2250,Outdoor Activities,Outdoor Activities,I start my assignments in the middle of the week.,Illinois,West Campus (Dorms),0,,230
-Vanessa,Female,Computer Science ,2021,ENGRD 2020,SWAHL 2102,MATH 2210,,Sleeping,Film,I start my assignments in the middle of the week.,New York,West Campus (Dorms),3,,235
-Phil,Male,Computer Science ,2021,ECE 2300,NS 4630,MATH 4710,ENGRD 2250,Travel,Soccer,I start my assignments the day they are released,Kentucky,Collegetown,3,,231
-Phillip,Male,Computer Science ,2022,CHEM 2080,PERSN 1320,MATH 2940,ENGRD 2300,Sports,Biking,I start my assignments the day they are released,New York,Collegetown,3,,232
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Ferb,Male,Economics,2021,CHEM 2080,PMA 4220,MATH 2940,ENGRD 2300,Outdoor Activities,Beach,I start my assignments the day they are released,New Jersey,Collegetown,3,,233
-Mindy,Female,Undecided,2022,CS 4620,FDSC 2500,ENGRD 2190,,Soccer,Golf,I start my assignments closer to the deadline.,China,North Campus (Freshmen Dorms),1,,244
-Phineas,Male,Computer Science ,2020,CS 2800,WRIT 4860,MATH 4710,,Sports,Lacrosse,I start my assignments in the middle of the week.,California,West Campus (Dorms),3,,237
-Ron,Male,Computer Science ,2021,CS 4620,COML 2350,ENGRD 2190,,Football,Outdoor Activities,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),5,,239
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Perry,Male,Computer Science ,2022,CS 4320,COML 2214,MATH 4710,,Gambling,Gambling,I start my assignments in the middle of the week.,Washington,West Campus (Dorms),5,,238
-Sheldon,Male,Electrical and Computer Engineering,2021,ENGRD 2020,BURM 1122,LING 3315,ECE 2300,Board Games,Art,I start my assignments in the middle of the week.,India,West Campus (Dorms),1,,241
-Kramer,Male,Mathematics,2020,ENGRD 2020,BME 4440,NBA 5240,BTRY 3080,Board Games,Reading/Writing,I start my assignments in the middle of the week.,India,North Campus (Freshmen Dorms),1,,242
-Dwight,Male,Mathematics,2021,CS 2800,CLASS 2810,ENGRD 2190,,Reading/Writing,Basketball,I start my assignments closer to the deadline.,Japan,North Campus (Freshmen Dorms),1,,243
-Michael,Male,Computer Science ,2021,ENGRD 2190,ILRIC 4330,MATH 2210,,Outdoor Activities,Outdoor Activities,I start my assignments closer to the deadline.,Japan,North Campus (Other),4,,247
-Jim,Male,Computer Science ,2022,CS 4320,MILS 3301,ENGRD 2190,BTRY 3080,Exercise,Hiking,I start my assignments closer to the deadline.,Korea,North Campus (Other),4,,248
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Name,Major,Grad Year,Course 1,Course 2,Course 3,Course 4,Interest 1,Interest 2,Interest 3,Hometown,Email,Phone,index
+Teddy Klausner,Computer Science,2023,Math 1920,CS 2110,Ling 1100,Engrd 2140,food,art,,California,tjk223@cornell.edu,4156839885,61
+Felix Shi,Mechanical Engineering,2023,MATH 1920,CS 2110,ENGRI 1140,LING 1100,Travel,Tennis,Films,New York,fcs54@cornell.edu,6077935303,63
+Cameron Russell,Computer Science,2023,CS 2112,MATH 1920,CHEM 2090,,Hiking,Running,,Massachusetts,cfr59@cornell.edu,6177637748,250
+Ashok Arun,Computer Science,2022,CS 2112,ENGRI 1270,PHYS 1112,MATH 1920,Tennis,Golf,Coding,New Hampshire,aka68@cornell.edu,6032335545,153
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ryan Schanta,Environmental Engineering (CoE),2023,Ling 1100,Math 1920,Phys 1112,ENGRI 1160,Music (concert/marching),Foreign Languages,Trivia,Pennsylvania,rts94@cornell.edu,4845386128,84
+Donna Ilyukh,Computer Science,2023,MATH 1920,CS 2110,PHYS 1112,,Singing ,Animals,Crafts,Illinois,dri9@cornell.edu,2247233172,255
+Thorsten Joachims,computer science,2022,CS4780,cs5780,cs6780,cs7792,Machine Learning,Skiing,,Germany,tj36@cornell.edu,6078210000,14
+Rachel Horrigan,Computer Science,2023,ENGRI 1620,PE 1260,MATH 1920,PHYS 1112,dance,film,country music,Massachusetts,rlh358@cornell.edu,7818985029,103
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Caitlin O�Sullivan,Undecided Engineering,2023,MATH 1920,PHYS 1116,ENGRD 2110,ROMS 1113,Lacrosse,Running,Project teams,Massachusetts,ceo58@cornell.edu,9788444006,62
+William Sparks,Mathematics,2022,PHYS 1116,GERST 1210,ANTHR 1700,MATH 3230,Basketball,Math,Reading,Kentucky,wcs87@cornell.edu,8598689495,148
+Dominic Sprigg,Economics,2023,Econ 1110,Gerst 1210,Gerst 2700,Math 2210,History,Finance,Literature,California,dfs95@cornell.edu,8582436155,31
+Michael,Economics,2023,ECON 1110-002,ENGL 1168-104,FREN 2090-103,MATH 2210-004,Lacrosse,Fashion,VR,California,mw776@cornell.edu,9255198198,28
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sierra Yonko,Biomedical Engineering,2023,Math 224,Chem 111,Anth 280Z,EDD 111,Baking,Animals,Volunteering,New York,syonko1@binghamton.edu,3152567884,85
+ Julia Tsybysheva ,Mechanical engineering ,2023,Chem 111,EDD,Intro to Scenic Design,THEA 102,Musical Theatre,Baking ,Art,New York,jtsybys1@binghamton.edu,6317042007,42
+Bernadette McKiernan,Biomedical Engineering,2023,MATH 224,CHEM 107,EDD 111,EDD 103,hiking,going to concerts,,New York,bmckier1@binghamton.edu,6314160077,183
+Bohden Landis,Computer Engineering,2023,MATH 226,EDD 111,EDD 103,PLSC 113,Gaming,Audio,Technology,New York,blandis2@binghamton.edu,9146028042,79
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Thomas Lavin,Biological Sciences,2023,MATH 148,HIST 230,CINE 286L,CHEM 107,Video Games,Sleep,Music,New York,tommylav2001@gmail.com,6316246108,238
+Kristina Ferrara,Integrative Neurosciene,2023,Chem 107,Math 148 ,Harp 170,,Swimming,Video games,,New York,kferrar3@binghamton.edu,8455514492,24
+Sabrina Reba,"Chemistry, Psychology ",2023,MATH 224/225,PSYC 228,HARP 170,PLSC 117,Music,Reading,Watching YouTube Videos,New Jersey,sreba1@binghamton.edu,9739800668,161
+Michael Tortora,Biological Sciences,2023,CHEM 107,PSYC 111,HIST 230,HARP 170,Hockey,Music,Hanging out with friends,New York,mtortor1@binghamton.edu,6314164524,245
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Luke Yuan,Computer Science,2023,CS 3110,CS 2800,FRENCH 1210,ASIAN 2211,Soccer,Tottenham Hotspur,Programming,New York,ly94@cornell.edu,4083869515,105
+Naomi Fischoff,Human Development,2023,HD 1150,BIOG 1140,DEA 1500,PE 1565,Soccer,Running,Spending time with friends with special needs,Illinois,nsf33@cornell.edu,8475277425,125
+Haley Barkan,Biological Sciences,2023,CHEM 107,HEBR 101,Medical Anthropology,UNIV 101B,Volunteering,Food,Singing,Connecticut,hbarkan1@binghamton.edu,2035013670,75
+Amy Cao,ILR,2023,Econ 1120,Calc 1120,HD 1150�,ILROB1220,Eating ,Knitting ,Guitar ,New York,ac2564@cornell.edu,9178686965,13
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Janis Song,Undecided Engineering,2023,Chem 2090,Math 1910,Engri 1620,Phil 1110,dance,baking,working out,Pennsylvania,jjs468@cornell.edu,2157675757,56
+Ehi Esemuze,Electrical Engineering,2023,MATH 1910,CHEM 2090,CS 1110,PE 1260,reading,theatre,The 1975,Texas,ete26@cornell.edu,8326141581,167
+Maggie Quirk,Operations Research Engineering,2023,CHEM 2090,MATH 1910,ENGRI 1101,PE 1480,Skiing,Rowing,Reading,Pennsylvania,mrq7@cornell.edu,2672342074,118
+Sam Katz ,Biological engineering ,2023,CS 1110,MATH 1910,CHEM 2090,BIOG 1500,Fly fishing ,Baseball,,Colorado,sjk252@cornell.edu,3039410080,162
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jackson Kwon,Fashion Management & Design,2023,FSAD 1450,FSAD 2310,ARTH 1169,PE 1465,Any Art,Spikeball,Traveling,Texas,jk2689@cornell.edu,9726320410,51
+Ankith Kurapati,Applied Economics and Management,2023,AEM 2200,CHEM 1150,ECON 1110,MATH 1120,Basketball ,Art,Reading,Texas,ak775@cornell.edu,9729897287,112
+Sadie Ravnitzky ,Applied Economics and Management,2022,AEM 2210,Intro to nutrition,BIOEE 1540,AEM 2600,Veganism ,Comedy ,Hiking,Arizona,smr285@cornell.edu,6028819215,117
+Pranav V,Applied Economics and Management ,2023,ECON 1120,AEM 2200,AEM 1106,MATH 1120,Traveling,Hiking,Listening to Music,Missouri,pv96@cornell.edu,3142037924,257
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Caleb Biddulph ,Computer Science ,2023,JAPAN 2201,CS 2800,ENGRI 1101,MATH 1920,Reading,Baking,Anime,Texas,cdb229@cornell.edu,9723699049,247
+Julia Allen,Undecided Engineering,2023,MATH 1920,PHYS 2217,ENGRI 1101,,Running,Model UN,Engineering,New York,jra264@cornell.edu,5853557655,100
+Sam Rubin,Materials Science and Engineering,2023,Chem 2090,Math 2930,ENGRI 1140,NES 1950,Music/saxophone,Being outside,Sustainability,New York,sfr46@cornell.edu,9146290871,50
+Erika Katsumoto,"Music, Computer Science",2023,CS 1110,MATH 2210,JAPAN 2201,MUSIC 1101,Music,Swimming,Cooking,Maryland,emk275@cornell.edu,2403675124,136
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Michelle Davydov,Human Development ,2023,CHEM 107,SOC 100,COLI 214,HDEV 100,going to the gym,eating,watching Netflix/ youtube,New York,mdavydo2@binghamton.edu,9178068570,95
+Chloe yadegar ,Human Development,2023,PSYC 111,MATH 130 ,JUST 101,HDEV 100,Netflix ,Hanging with friends ,,New York,cyadega1@binghamton.edu,5163224819,143
+Emily Azimi,Human Development ,2023,MATH 130,ANTH 111,PSYC 111,THEA 101,musical theatre,singing,netflix ,New York,eazimi2@binghamton.edu,9145227782,184
+Megan Welch,Biological Sciences ,2023,CHEM 107,PSYC 111,ANTH 111,,Musical Theatre ,Working out,Fashion,New York,mwelch4@binghamton.edu,5854477247,198
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Chloe Metz,Biological Sciences,2023,CHEM 107,PSYC 111,GEOG 103,HARP 170,basketball,swimming/water sports,netflix,New York,cmetz2@binghamton.edu,3152240630,71
+Affan Siddiqui ,Biological Sciences,2023,CHEM 107,WRIT 111,HARP 170,PSYC 111,Basketball ,Soccer ,Movies ,New Jersey,asiddi12@Binghamton.edu,7323128164,145
+Madelyn  Collett-O'Brien,Nursing,2023, , , ,,hiking ,working out,water sports,New York,mcollet3@binghamton.edu,6074271561,217
+Grace Villar,Biological Sciences,2023,CHEM 107,WRIT 111,UNIV 280M,PSYC 111,Music,Going to the gym,Travel,New York,gvillar2@binghamton.edu,6319837606,129
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Max Brickman,Business Administration ,2023,MATH 223/224,WRIT 111,ECON 162,CQS 111,Guitar,Football,Comedy Movies,New York,maxbrickman123@icloud.com,9148158780,55
+Deanna Pellegrino,Business Administration,2023,WRIT 111,GEOG 105,ECON 162,CQS 111,music,Volunteering ,,New York,dpelleg1@binghamton.edu,6467155268,106
+Zack Wolfman,Undecided,2023,ECON 162,UNIV 101 ,WRIT 111,ARTH 270,Netflix,Basketball,Chilling,New York,zwolfma1@binghamton.edu,6317074416,229
+Seth Santiago,Economics,2023,MATH 108,ECON 162,WRIT 111,,Video Games,Smoking,Hanging Out,New York,safrica1@binghamton.edu,9175103591,196
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Christian Donovan,"Computer Science, Pre-med",2023,CHEM 2070-002,CS 1110-001,MATH 1110-002,MEDVL 1101-106,"Video Games, Computer Science, and Computer Hardware. My favorite games include Bloodborne, the Dark Souls series, Battlefield 4, Minecraft, and Monster Hunter World. ","Music (I was a jazz bassist for six years in middle and high school), especially anything to do with the bass guitar. Favorite genres include prog rock, metal, and jazz. ","History, of all types. I'm especially excited for the medieval history FWS I have. ",Connecticut,cjd237@cornell.edu,8609844296,23
+Ini Adeleye,Engineering Undecided,2023,CS 1110,MATH 1910,CHEM 2090,CS 1110 ,Movies,Ping Pong,Anime ,Texas,oea7@cornell.edu,9032627759,219
+Kenneth Trinh,Engineering,2023,CHEM 2090,MATH 1910,CS1110,ANTHR1101,Ice hockey,Gym,Food,Maryland,klt45@cornell.edu,3018520818,16
+Sofia Loayza,Communication ,2023,COMM 1101,EAS 1540,ILRST 2100,ANTHR 1101,international relations / politics ,Music ,bts ,New Jersey,srl222@cornell.edu,3158060710,122
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Margaret Keymakh,Biological Sciences,2023,Chem 2070,BioMG 1350,BioG 1500,Math 1120,Reading,Art,Politics,New York,mak448@cornell.edu,9177504922,40
+Amelia Nash,Biological Sciences,2023,BIOG 1500,BIOMG 1350,CHEM 2070,,Parties,Animals,Health,New York,ain6@cornell.edu,3473914343,114
+Sophie McComb,Biometry and Statistics,2023,BTRY 3010,BSOC 2101,SPAN 1230,MATH 1120,Kayaking/Outdoors,Netflix,Reading,Illinois,sm2397@cornell.edu,8157626951,248
+Aidan Maddigan,Biological Sciences,2023,BIOG 1500,BIOMG 1350,MATH 1120,COGST 1500,Running,Veganism,Pokemon,New York,apm99@cornell.edu,7165250480,120
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Allie Wu,"Politics, Philosophy, and Law",2023,PHIL 146,HIST 104A,HMRT 176,ARTH 287F,Debate,Painting,Graphic Design,New Jersey,Awu75@binghamton.edu,9734624707,124
+Amanda Doulos,English,2023,RHET 246,ANTH 111,SPAN 250,ENG 245,Art,Writing,Photography,New York,adoulos2@binghamton.edu,5168845737,82
+Samantha Maneri,undecided,2023,PHIL 147,HIST 104A,PLSC 117,SOC 100,marketing,business ,international affairs ,New York,smaneri1@binghamton.edu,5166695446,179
+Jacob Schwadron,Undecided ,2023,Hist 104A,Just 101,CLAS 280,Math 147,Basketball ,Animals ,Football ,New York,jschwad1@binghamton.edu,5164794648,26
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Christie Liguori,Nursing,2023,Writ 111,Psyc 111,Univ 101F,ANTH 221,Baking,Dance,Eating,New York,cliguor1@binghamton.edu,3474480500,47
+Trinee Weng,Undeclared,2023,WRIT 111,MATH 223,ANTH 221,SOC 100,Baking,Biking,Eating,New York,tweng3@binghamton.edu,7182882219,52
+Jack Oh,Undecided,2023,ENG 280,PSYC 111,ENVI 111,MATH 223,sports,music,,New Jersey,joh63@binghamton.edu,9088098485,220
+Becca Bialek,Human Development ,2023,WRIT 111,SOC 100,ENG 280,PSYC 111,Running,Youtube ,,New York,rbialek1@binghamton.edu,9144505630,174
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+charlotte desousa,biology,2023,Chem 107,Phil 201,Span 250,Schl 127,research,skiing,animals,New York,cdesous1@binghamton.edu,6313776979,20
+Miriam Franks,Biochemistry,2023,CHEM 107,BIOL 114,MATH 226,SPAN 250,music,makeup,cooking,Illinois,mfranks3@binghamton.edu,8152454484,140
+Alexis Bostick,Biological Sciences,2023,CHEM 107,BIOL 114,HIST 101A,,Music,Sunsets,Coffee,New York,abostic1@binghamton.edu,5855307679,187
+Kaylin Anest,Biological Sciences,2023,BIOL 114,CHEM 107,HIST 101A,HARP 170,Sports ,Food ,Watching Netflix ,New York,kanest1@binghamton.edu,5164974579,173
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+EmilyJane Campese,Undecided ,2023,CHEM 107,EDUC 101,HIST 103,WRIT 111,volleyball,volunteering ,,New York,ecampes1@binghamton.edu,9178374500,123
+Emily Granickas,Integrative Neuroscience,2023,CHEM 107,PSYC 111,ARTH 252,WRIT 111,Baking,Cheerleading,Traveling,New York,egranic1@binghamton.edu,5164685865,237
+Kyle Law,Undecided,2023,MATH 223,WRIT 111,CHEM 107,,Working Out,Movies,The Environment,New York,klaw6@binghamton.edu,9173993678,182
+jason mishkin,undecided,2023,JUST 201,CHEM 107,MATH 223,ARTH 252,sports,music,movies,New York,jmishki1@binghamton.edu,6319875233,240
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sarah Marshall,"English, Theatre",2023,WRIT 111,PLSC 117,THEA 101,UNIV 101X,thrifting,netflix,dancing,New York,smarsha3@binghamton.edu,5184231218,168
+bethany Miller,Biological Sciences,2023,ANTH 114,THEA 101 ,WRIT 111,BIOL 113,musical theater ,volleyball,singing,New York,bmille21@binghamton,3157152700,235
+Connor michael,undecided,2023,WRIT 111,MATH 147,PLSC 117,,soccer volleyball badminton,music,netflix,New York,cmichae9@binghamton.edu,8458200624,241
+Jerod Osika,Economics,2023,ECON 162,ARTH 252 ,PLSC 117,MATH 147,Music,Soccer ,Exercise,New York,josika1@binghamton.edu,5185383331,242
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Hannah Fuchs,Communication,2023,COMM 1101,DSOC 1101,CHEM 1150,ROMS 1109,Hanging out with friends,"Listening to music, going to concerts, making playlists","Meeting new people, traveling ",New York,hf254@cornell.edu,9143360320,65
+Isabella Ferraro,Biological Sciences,2023,Chemistry,Biology,Psychology,English ,Hanging with friends,Music,Lacrosse ,New York,ferrarobella23@gmail.com,9142166411,108
+Andrew Hyunshik Kim,Biological Sciences,2023,BIOG 1440,BIOG 1500,CHEM 2070,DSOC 1101,Sleeping,Ice hockey,Cello,New York,ahk94@cornell.edu,6072203882,70
+Brianna,Animal Science,2023,BIOAP 1100,ANSC 1101,DSOC 1101,CHEM 2070,Animal Care,Watching Movies,Crafts,Florida,bag98@cornell.edu,7543120126,157
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Madeline Rosenberg ,History ,2023,Psych 1101,GERST 2700,ENGL 1134,Spanish 2090,Writing/journalism,Running ,Drawing,New York,mrr227@cornell.edu,9147088000,36
+Veronica Stellings,Biology,2023,BIOMG 1350,BIOEE 1780,MATH 1110,PSYCH 1101,Hanging with friends ,Eating ,Netflix,New York,vs336@cornell.edu,9177442406,19
+Simran Surtani,Global and Public Health Sciences,2023,BIOMG 1350,CHEM 2070,AMST 3155,NS 1600,Tennis,Baking,Community Service,Ohio,sms633@cornell.edu,4408659266,233
+Briana Parris ,Global and Public Health Sciences ,2023,CHEM 2070,PSYCH 1101,NS 1600,BIOEE 1540,Fencing ,Music ,Food,New York,bcp44@cornell.edu,8456417338,158
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kushal Shah,Biological Sciences,2023,BIOL 100,CHEM 100,HARP 201,WRIT 111,Basketball,Volleyball,Running,New York,kshah36@binghamton.edu,5168170106,189
+Jesse Smith,Biological Sciences,2023,CHEM 107,MATH 223,WRIT 111,FRI NEUROSCIENCE,Soccer,Volleyball,EMS,New York,Jsmit127@binghamton.edu,8458205072,243
+Cathy Son,Biological Sciences,2023,CHEM 107,ENG 227,WRIT 111,MATH 224/225,hanging out with friends,going out,watching tv,New York,cson2@binghamton.edu,5164976464,211
+Elena Billings,Biological Sciences,2023,CHEM 107,MATH 224,CINE 121,WRIT 111,running (mid distance or distance),music,food,New York,ebillin1@binghamton.edu,6313566102,109
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Flora Lechtreck,HBHS,2023,CHEM 2070,BioG 1440,Weight lifting,Womxn of color writing their own stories,Volleyball,Basketball,Netflix,Georgia,fll27@cornell.edu,7063514371,9
+Otse Attah,Biological Sciences ,2023,BIOG 1440,BIOG 1500,ENGL 1111,BIOEE 1540 ,Violin ,Gaming ,Memes ,Georgia,oka22@cornell.edu,7704532599,0
+Samantha Fountain,"Human Biology, Health & Society",2023,CHEM 2070,NS 1150,BIOG 1440,PE 1272,Medicine,Baking,Research,Illinois,snf29@cornell.edu,8475710921,207
+Alexandra Li,"Human Biology, Health, and Society",2023,CHEM 2070,BIOG 1440,NS 1150,ENGL 1158,Watching films and TV shows,Reading,Baking,New Jersey,al985@cornell.edu,7327706565,48
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Thalia Feeney,"Philosophy, Politics, and Law",2023,PSYC 228,PLSC 111,SOC 100,SPAN 211, , ,,New York,tfeeney1@binghamton.edu,5166061575,199
+Amber Rivera,Biological Sciences,2023,MATH 148,CHEM 107,SPAN 211,SOC 100,Dancing,Volleyball,Baking,New York,ariver57@binghamton.edu,6468532315,197
+Bella Driesen,Undecided ,2023,PSYC 228,WRIT 111,ANTH 166,HWS 100,Swimming,Hanging out with friends,Netflix,New York,idriese1@binghamton.edu,9145887299,57
+Sebica Katel,Biological Sciences,2023,CHEM 107,MATH 148,ANTH 166,SPAN 211,Writing,Volleyball,Reading,New York,sebica.katel@jerichoapps.org,5164507860,134
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sojeet Narine Sharma,Biological Sciences,2023,BIOMG 1350,CHEM 2070,BIOG 1500,CLASS 1331,Archeology and Ancient Stuff,Music (I play the violin!),Traveling and Cultures,Florida,sns96@cornell.edu,8137668845,155
+Brandon Sells,Biological Sciences ,2023,BIOG 1500-001,BIOG 1500-416,BIOMG 1350-001,BIOMG 1350-208,Netflix,Sleeping,Music,Florida,bps79@cornell.edu,3524087121,35
+Ayomikun Oyemade,Biological Sciences,2023,BIOMG 1350,MATH 1110,,PE 1100,Playing volleyball,Singing ,Fashion,Maryland,aao64@cornell.edu,6672310561,154
+Aarzoo Haideri,Biological Sciences,2023,CHEM 2150,BIOMG 1350,MATH 1110,PE 1100,Debating,Writing,Acting,India,ah699@cornell.edu,8130702223,101
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Siena Larrick,Biological Sciences,2023,BIOMG 1350,CHEM 2070,SPAN 1230,PE 1440,Reading/Writing,"Volleyball, Ping-pong, Hiking, Biking, etc. ","Music (violin, ukelele, listening) ",Ohio,sll238@cornell.edu,3302721467,252
+Destiny Okoro ,Biological Sciences ,2023,BIOMG 1350,BIOG 1500,CHEM 2070,ASRC 2003,Listening to Music ,Soccer ,,New York,doo9@cornell.edu,3479448820,156
+Kiarra Coger,Biological Sciences ,2023,SPAN 1120,BIOG 1350,CHEM 2070,,Piano,Bowling for fun,Flute,Michigan,kjc246@cornell.edu,5868761705,205
+Athira  Lalu,Biological Sciences,2023,BIOG 1500 ,BIOMG 1305,CHEM 2070,STS 1101,Dancing,Running,Piano,New York,al934@cornell.edu,7189155554,218
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kelly Brozowski,Nutritional Sciences ,2023,NS 1150,BIOG 1440,CHEM 2070,PE 1260,Running,Hiking,Eating,New York,kqb2@cornell.edu,8459874545,253
+Grace Enright,Food Science ,2023,CHEM 2070,BIOMG 1350,PE 1260,,Exercise ,Hiking ,Food,Pennsylvania,gee27@cornell.edu,2159708039,160
+Cole Kwas,Biology,2023,chem 2070,bio 1440,math 1110,phil 1110,rowing,hockey,,New York,ctk54@cornell.edu,9175622577,8
+Yu te lee,"Human biology, health, and society",2023,Chem 2070,Bio 1440,Ns 1150,Fws,Movies & tv shows,Talking,Board games ,Taiwan,yl829@cornell.edu,6573871393,29
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Teresa Suh,Development Sociology,2021,CHEM 3570,BIOG 1440,DSOC 3130,DSOC 3010,disability,music,,California,tjs359@cornell.edu,8186899274,10
+Phylicia Christine A. Latorre,"Human Biology, Health, and Society",2023,DSOC 1200,PE 1340,BIOG 1440,CHEM 2079,Writing,Violin ,EMS,New York,pal238@cornell.edu,3154803149,92
+Katriana Galloway,Biology and Society,2023,BIOG 1440,CHEM 2070,AMST 2225,,violin,traveling,eating,California,kyg8@cornell.edu,3236956880,206
+Albert Charles,Food Science,2023,FDSC 1101,BIOG 1440,CHEM 2070,ENGL 1168,Food,Music,Gaming,Florida,acc286@cornell.edu,7863442760,25
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Zack Kozma,Biological Sciences,2023,BIOEE 1640,CHEM 2070,PLBIO 2300,PE 1571,Nature,Photography,Band ,New Jersey,ztk4@cornell.edu,9734549921,246
+Jonathan S Ebenezer,Biological Sciences,2023,BIOMG 1350,CHEM 2070,MATH 1120,NES 1963,Videogames,Netflix,Piano,Missouri,jsatyaraj14@gmail.com,6366281880,88
+John Ceske,Biological Sciences,2023,Biog 1440,Psych 1101,Biog 1500,Econ 1110,Weightlifting,Hiking,Reading,New York,rjc385@cornell.edu,9144143900,12
+Hannah Barnes,Biological Sciences,2023,BIOG 1440,BIOG 1500,CHEM 2070,SPAN 2090,Hiking,Tennis,Movies,North Carolina,hgb29@cornell.edu,7174806324,232
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Samantha Muscat,Biochemistry ,2023,WRIT 111,PSYC 111,ITAL 211,PHIL 101,baking,skating,,New York,smuscat1@binghamton.edu,9178608599,130
+Vincent Joaquin,Marketing,2023,GEOG 103,MATH 223/224,CQS 111,ECON 160,music,netflix,business,New York,vjoaqui1@binghamton.edu,5168135346,6
+Emily Piernick-Nazinitsky,"Graphic Design, Marketing ",2023,GEOL 102,HIST 150,WRIT 111,ECON 160,art,cooking,gym,New York,epierni1@binghamton.edu,5167251011,194
+Ethan Miller,Undecided,2023,ECON 160,MATH 224/225,MUS 112,WRIT 111,Music,sports,fun,New York,emille28@scarsdaleschools.org,9147144491,244
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Juliet Eshaghoff,Human Development,2023,MATH 130,ANTH 111,SOC 100,,baking,dogs,,New York,jeshagh1@binghamton.edu,5168170262,97
+Catherine Naylor,Human Development ,2023,MATH 130,SOC 100,ANTH 111,HDEV 100,Psychology,Fitness,,New York,cnaylor1@binghamton.edu,5857474543,131
+Kristina Stenstrom,Chemistry,2023,CHEM 107,ANTH 111,PSYC 111,THEA 102,Singing,Hiking,Basketball,New York,kstenst1@binghamton.edu,9173735726,126
+Matthew Chiffy,Biological Sciences,2023,BIOL 114,CHEM 107,THEA 102,PSYC 111,Soccer,Chilling with friends,,New York,mchiffy1@binghamton.edu,3155259253,227
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Valerie Staab,Business Administration ,2023,CQS 111,ECON 162,MGMT 111,RUSS 101,Tennis,Video games,Movies,Pennsylvania,vstaab1@binghamton.edu,4849874221,76
+Jeremy Tuckman,Accounting,2023,MGMT 111,CQS 111,ECON 162,WRIT 111,Public speaking,Movies,Running,New Jersey,jtuckma2@binghamton.edu,9739362903,180
+Daniel Abramson ,Business Administration ,2023,MATH 108,ECON 160,MGMT 111,WRIT 111,Music production ,Hanging out with friends ,Sports ,Florida,dabrams4@binghamton.edu,5614798979,102
+gabrielle knafelman,business administration,2023,MGMT 111,ECON 160,MATH 223/224,CQS 111,cooking,reading,music ,New Jersey,gknafel1@binghamton.edu,7324062885,77
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Barry Zou,Economics,2023,ECON 162,PHIL 101,PLSC 117,,Running ,Biking ,Chess,New York,bzou1@binghamton.edu,6465122133,33
+Brandon Lee,Undecided,2023,ECON 162,HIST 280N,PHIL 101,WRIT 111,Piano,Basketball,,New York,brandonps206@gmail.com,5162036663,209
+Patrick Valog,Undecided,2023,WRIT 111,ECON 162,MATH 226/227,CS 105,soccer,sports,,New York,Pvalog1@binghamton.edu,3152713817,231
+Priya Kaneria ,Undecided,2023,ECON 162,MATH 226/227,PSYC 101,WRIT 111,Tennis,Piano,Softball,New York,pkaneri1@binghamton.edu,6077524468,212
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Rachelle Casement,"Politics, Philosophy, Law ",2023,Eng 280M,Plsc 117,Phil 147,Thea 102,Surfing ,Swimming ,Mock trial/Law ,New York,rcaseme1@binghamton.edu,5164277673,17
+Taylor Buckley,"Philosophy, Politics and Law",2023,PLSC 117 ,RHET 246 ,HMRT 176 ,ENG 280M,Going out,Football,,New York,tbuckle9@binghamton.edu,6318305653,164
+Amanda Levix ,French,2023,FREN 215,PLSC 117,GEOG 212,ENG 245,violin,tennis ,baking ,New York,alevix1@binghamton.edu,6317458233,147
+Adrianna Henriquez,Biology,2023,Chem 107,Math 108,Univ Alchemy ,Eng 245 ,Volleyball,Singing,Traveling,New York,ahenriq3@binghamton.edu,9172576910,34
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Bryant Berkowitz,Undecided,2023,intro to polisci,WRIT 111,SPAN 250,MUS 113,ultimate frisbee,classic rock,watching sports,New York,bberkow1@binghamton.edu,8455452036,228
+Amanda Andreoli,Undecided,2023,CHEM 107,ENVI 101,MUS 113,EVOS 105,running/gym,clarinet,,New York,aandreo4@binghamton.edu,9143271591,135
+Erin Kilkenny,Biological Sciences,2023,CHEM 107,ANTH 227,SPAN 250,SCHIL 127,Dogs!,Swimming,Music,Massachusetts,ekilken1@binghamton.edu,9787609512,191
+Gianna Schiavone,Biological Sciences,2023,CHEM 107,BIOL 114,BIOL 105,SPAN 250,Cheerleading,Pre-Vet,Partying,New York,gschiav2@binghamton.edu,6318966566,181
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Simon Quinn,Environmental Science,2023,ENVI 101,GEOG 151,GEOL 116,SCHL 127 ,Tennis,Music,Basketball ,Rhode Island,squinn5@binghamton.edu,4016633387,138
+Sophie DiScala,Environmental Science,2023,CHEM 107,WRIT 111,ENVI 101,UNIV 101K,Environmental Studies,Music,American Sign Language ,New York,sdiscal1@binghamton.edu,5164971758,193
+Gianna Sisti,Integrative Neuroscience ,2023,BIOL 113,CHEM 107,WRIT 111,PHIL 101,Yoga,Music,Outdoor activities ,New York,gsisti2@binghamton.edu,3155705888,163
+Mike Bronikowski,Pre-Health,2023,BIOL 113,Math 225,WRIT 111,PSYC 111,Tennis,Badminton,Piano,New York,mbronik1@binghamton.edu,6076446464,210
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ajahni Lee,Computer Science,2022,CS 240,MATH 314,GEOG 101,HIST 103A,Musicals,Programming,Baking,New York,alee884@binghamton.edu,5164697517,49
+Donovan Kearney,Undecided,2023,WRIT 111,SOC 100,THEA 102,GEOG 101,hiking/skiing,sports,,New York,dkearne3@binghamton.edu,9802450315,224
+James Maine,Biochemistry ,2023,BIOL 114,CHEM 107,FREN 215,MATH 227,Music,Photography,Swimming,Pennsylvania,jmaine2@binghamton.edu,4847254528,190
+Gianna Paier,Biomedical engineering,2023,GEOG 101,MATH 227,MATH 226,BIOL114,Dancing,Reading,Watching movies,New York,gpaier1@binghamton.edu,5164928450,74
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Isaac Salazar,Environment & Sustainability ,2023,NTRES 1101,MATH 1110,CHEM 2070,BIOMG 1350,Activism ,Dancing ,Music ,Texas,is293@cornell.edu,5127872582,94
+Nadia Holcomb,Entomology,2023,ENTOM 2120,BIOEE 1781,PE 1155,,Art,Music,Fashion,Kentucky,nih23@cornell.edu,2709031601,169
+Brandon Restler ,Environment & Sustainability,2023,NTRES 1101,BIOEE 1610,BSOC 2420,COGST 1500,Cooking,Hiking,Survivor (the CBS TV show),New York,bnr29@cornell.edu,9143434432,83
+Brandon Davidson,Environmental and Sustainability Services ,2023,BIOEE 1610,GOVT 1111,PE 1610,NTRES 1101,Fishing ,Hanging out,Hiking,New York,bsd35@cornell.edu,5164176622,195
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Xihang Wang,Biological Sciences,2023,BIOG 1440,ECON 1120,CHEM 2150,SPAN 1230,Boating,Card games,Guitar,New Jersey,xw422@cornell.edu,8142064009,44
+Bianca Bryant,Biology & Society,2023,SPAN 1230,MATH 1110,LING 1100,BIOG 1440,lifting,music,trying new things,Pennsylvania,brb223@cornell.edu,2678151823,90
+Emily Xiao,Development Sociology,2023,Math 1110,Econ 1110,Dsoc 1101,Bioee 1540,Running/track,Singing,Art,New York,ex39@cornell.edu,6072326055,64
+Jessie ,Applied Economics & Management,2023,AEM 2200,Math 1110,ECON 1110,PE 1425,Running/exercise ,Watching dramas and Netflix shows ,Going to explore places and cafes ,New York,jc2925@cornell.edu,3474818598,251
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Julia Horowitz,Neuroscience,2022,Chem 231,Psych 223,Biol 114,Biol 323,Theater,Hiking,Music,New York,jhorowi8@binghamton.edu,3157496161,39
+Morgan Orzeck,Psychology/Theatre,2023,Psych 223,SOC 100,THEA 101,,Theatre,Psychology,A cappella,New Jersey,morzeck1@binghamton.edu,2015905909,46
+Kasey Chan,Biological Sciences,2023,BIOL 114,CHEM 107,PSYC 111,UNIV 101B,music,hang out with friends,,New York,kchan79@binghamton.edu,9178338261,208
+Julia Bansbach,Biological Sciences,2023,CHEM 107,BIOL 114,UNIV 101B,PLSC 113,Working Out,Tennis,Baking,New York,juliasitter@gmail.com,5855209301,144
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nicolette Cavallaro ,Integrative neuroscience ,2023,Chem 107 ,UNIV 101T,Astr 114,Hist 101A ,Soccer,Movies ,Music ,New York,ncavall1@binghamton.edu,7189863013,38
+Christina Kubicsko,Business Administration ,2023,ASTR 114/115,MGMT 111,CQS 111,ECON 160,volleyball,photography,,New York,ckubics1@binghamton.edu,9142685730,149
+Nicholas Frank,undecided,2023,MATH 226/227,intro polisci,ECON 160,PSYC 111,hockey,soccer,watching basketball,New York,nfrank3@binghamton.edu,3155205304,226
+Alexa Cole,"Mathematics, economics ",2023,ECON 160,MATH 226/227,PLSC 113,THEA 101,math,basketball ,greek life,New York,acole9@binghamton.edu,9145626827,146
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sadat Lawal,Urban and Regional Studies,2023,CRP 1100,ECON 1110,SOC 1101,EAS 1101,Music Production ,Basketball ,Track and Field ,Ghana,sml344@cornell.edu,9147270441,141
+Rohan Tyagi,Computer sCIENCE,2021,CS 4820,CS 4410,CS 4700,,Basketball,Board games,Piano,California,rt332@cornell.edu,9255963046,5
+Rebekah Ten Hagen,Industrial and Labor Relations,2023,PAM 2300,ECON 1110,ILROB 1220,ENGL 1191,Skiing ,Classic Rock,Golf,New Jersey,ret83@cornell.edu,6096513350,59
+Kassie Wang,Computer science,2023,CS 1110,ECON 1110,MATH 1920,CHEM 1560,Dance,Skiing,Listening to music,Maryland,klw242@cornell.edu,4435389438,67
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Tiffany Chou,Electrical and Computer Engineering,2023,PHYS 1116,MATH 1920,CS 1110,PE 1640 ,Cooking,Knitting,Violin,New York,tlc234@cornell.edu,5164794995,81
+David Wu,Physics,2023,MATH 1920,PHYS 1116,SPAN 2090,PHIL 1110,Tennis,Football,,Connecticut,dgw74@cornell.edu,8603387222,66
+Yahya Osman,Civil engineering,2023,MATH 1910,PHYS 1101,CS 1110,,Movies,Music ,Soccer,Arizona,yo93@cornell.edu,9287504712,159
+Max Li,Mechanical Engineering,2023,MATH 1920,CS 1110,PE 1100,PHYS 1101,Robotics,Court Stenography,Chess,Canada,max.d.li6438@gmail.com,4166711686,188
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Melissa Montejo,Agricultural Sciences,2023,PLSCI 1101,AGSC 1125,PLSCS 1900,BIOG 1140,Band,Singing,Politics,California,mbm254@cornell.edu,7608776859,119
+Macy Smith,plant sciences,2023,biog 1440,chem 1560,plsci 1101,plsci 1110,soccer,music,crafts,Ohio,mes422@cornell.edu,2168487942,11
+Angela Sem,Chemical Biology,2023,CHEM 2150,MATH120,FREN 2090,PE 1101,Listening to Music,Tennis,Choir,Minnesota,aas433@cornell.edu,7634000790,152
+Neel Mehta,English,2023,CHEM 2150,BIOG 1440,ENGL 2045,ENGL 2270,Hiking,Movies,Basketball,Ohio,nhm43@cornell.edu,4403173548,89
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Anson Yip,Chemistry,2023,CHEM 2150,MATH 2210,BIOAP 3110,ASIAN 3389,Gaming?,Board games,Eating...,Massachusetts,yy589@cornell.edu,6173316803,113
+Ron Laniado,Computer Science,2023,Calculus II,PHYS 121,ENG 101,Effective Speaking,Programming,Gaming,Napping,New York,laniado.ron@gmail.com,6464929374,69
+Julia Gibbons,Nursing ,2023, CHEM 101,PSYC 220,HIST 104A,AAAS 380I,softball,going to the gym,eating,New York,jgibbon2@binghamton.edu,5163171751,96
+James Hansen,Physics,2023,PHYS 121,CHEM 101,ENG 110,,Sports,Video games,Music,New York,jhansen2@binghamton.edu,5165892900,215
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sari Zimmerman,Physics,2023,PHYS 121,MATH 224,GEOG 151,,Hanging out with friends,Playing soccer,,New York,szimmer7@binghamton.edu,5166398723,186
+Emilia Hogg ,Physics,2023,PHYS 121,MATH 226,RUSS 101,THEA 101,Volleyball ,Baking,Netflix,New York,ehogg2@binghamton.edu,9148604284,150
+Jordan Curcio,Biological Sciences,2023,CHEM 107,MATH 224,GEOG 101,MUS 112,Basketball/soccer/football/baseball,Hip hop/Spanish/edm music,Video games ,New York,jcurcio7@binghamton.edu,9175386275,91
+Karl Hayden ,Idustrial and Systems Engineering,2023,MATH 224,PHYS 131,ENVI 105 ,Networking ,"Sports (Basketball, Soccer) ","Food ( Cooking, Nutrition) ",,New York,khayden1@binghamton.edu,6467049885,222
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Courtney Kraft ,Engineering,2023,BIOG 1500,MATH 1920,CHEM 2090,CS 1112,Cheerleading,Track and Field,Hanging out with friends,New Jersey,cjk234@cornell.edu,6099549386,32
+Meredith Bloss,Engineering Undecided,2023,CHEM 2090,CS 1112,MATH 1920,SPAN 2070,Running,Jazz,Chickens,Connecticut,mab543@cornell.edu,2039033518,204
+Jason Wilson,Mathematics,2023,MATH 2210,CS 1112,COML 1104,INFO 4240,Technology,Animals,Music,California,jrw355@cornell.edu,8052358593,87
+Jack waitz,Economiccs,2023,ECON 1110,INFO 2040,MATH 2210,,Ultimate frisbee,Yoga,Skiing,New Jersey,jhw265@cornell.edu,9732745838,185
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jonathan Kong,Human Development,2022,SOC 305,HDEV 355,OUT 180,HDEV 348,Taylor Swift,fitness,dance,New York,jkong21@binghamton.edu,9292617587,230
+Emily Boldt,Applied Economics and Management ,2023,ECON 1120,MATH 1110,AEM 2200,,Fitness,Riding horses,,New York,ecb235@Cornell.edu,5857395118,115
+Jenna,"Biological Sciences, Theater ",2023,CHEM 107,PSYC 111,THEA 208,FRI: Global & Public Health ,Theater,Dance,,New York,jcoope28@binghamton.edu,8456645160,201
+Lucas Quelle,Biological Sciences,2023,CHEM 107,PSYC 111,WRIT 111,,Sports,Music,,New York,lquelle1@binghamton.edu,5166554782,221
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Michelle Yang,Industrial Labor Relations,2022,AAS 2130,PSYCH 2750,AEM 2400,,Photography ,Chinese drama,"Games (Fire Emblem, Pokemon) ",New York,zy233@cornell.edu,9293553577,7
+Katie Tiao,Computer Science,2023,ANTH 111,GERM 101,MATH 224/225,CS 101 & 110 ,Volleyball ,Baking,Photography ,New Jersey,ktiao1@binghamton.edu,9739700674,107
+Kiera E Doherty,"Chemistry, Political Science",2023,CHEM 107,SPAN 211,MATH 224/225,PLSC 113,music,theatre,law,New York,kdoher10@binghamton.edu,9178624192,98
+Hallie Feldman,Chemistry ,2023,CHEM 111,MATH 224/225,PLSC 113 ,,Swimming,Schoolwork,Cards,New York,hfeldma1@binghamton.edu,6312458561,172
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Isabella Mineo,Undecided,2023,Psyc 228,Ital 111,Afst 280,Hist 280,Field hockey,Volleyball,,New York,imineo1@binghamton.edu,5165199315,53
+Elise Meluson,Biological Sciences,2023,Chem 107,Harp 170,Ital 111,Thea 101,Going to the gym,Broadway Shows,Crew,New York,emeluso1@binghamton.edu,8456634741,45
+Annalisa Zovich,Undecided,2023,PSYC 228,PLSC 113,UNIV 101L,,Politics,Dance,Food,New York,azovich1@binghamton.edu,5164776131,239
+Evan Clement,Political Science,2023,AFST 101,GEOG 212,PLSC 113,CINE 121,Politics,Soccer,Music,New York,eclemen3@binghamton.edu,5185906442,223
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Samantha Cole,Mechanical engineering ,2022,Mae 3780,Engrd 202,Engrd 2210,CEE 3040,Working out ,Hanging with friends,Cooking,Florida,scc243@cornell.edu,3059031833,2
+Linda Li,Biological and Environmental Engineering,2022,ENGRD 2020,ENGRD 2210,CEE 3040,BEE 2510,Music,Ice Hockey,Chimes,Minnesota,lyl24@cornell.edu,6514246014,3
+Emma Contiguglia,Undecided,2023,GOVT 1111,MATH 1110,ITAL 1201,ENGL 1147,Hanging out with friends,Exercising,Traveling,New York,egc54@cornell.edu,6467632355,93
+Ke Qing Wang,Computer Science,2023,CS 2112,MATH 1920,PHYS 1112,ENGL 1147,Mathematics ,Piano,Drawing,New York,kw433@cornell.edu,6465773785,27
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Victoria Ruiz,Psychology,2023,MUS 180C,PSYC 228,PSYC 330,SPAN 211,Music,Movies,Nature,New York,vruiz1@binghamton.edu,5167324334,99
+Lexie Crouse,Psychology,2023,PSYC 223,UNIV 101D,ANTH 166,UNIV 103B,Plants (succulents),Cooking/Baking,Music,New York,acrouse3@binghamton.edu,3156228072,236
+Colby Palmer,Development Sociology ,2022,BIOEE 1350,SOC 1110,pyhschology ,economics ,basketball,Hip Hop,,New York,cp534@cornell.edu,5164733385,37
+Grace Lari,undecided ,2023,SPAN 211,CHEM 107,RHET 246,PSYC 111,Singing,Baking,Makeup ,New York,glari1@binghamton.edu,3472073012,175
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Gregory Baynard,Undecided Engineering ,2023,CHEM 2090,MATH 1940,ENGRI 1160,,Lacrosse,Movies,Swimming ,New York,gmb246@cornell.edu,9146469777,111
+Alexander Popat,Mechanical Engineering,2023,MATH 1910,CHEM 2090,ENGRI 1170,,Hockey,Watching Movies and TV,Hanging Out,New York,asp233@cornell.edu,7168489233,128
+sabrina morse,engineering,2023,chem 2090,math 1910,engri 1165,roms 1120,going to sports games,going out,playing sports / being active,Massachusetts,slm346@cornell.edu,9788318927,21
+Tanvi Kapoor,Undecided Engineering ,2023,CHEM 2090,MATH 1910,CS 1110 ,,Dance,Traveling,Debate,India,tk457@gmail.com,9619072725,116
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Austin Couch,Architecture ,2023,ARCH 1101,ARCH 1501,ARCH 1611,ARCH 1801,Art (drawing/ painting),"Sports (football, basketball, soccer)",Traveling,Ohio,amc556@cornell.edu,6367446456,86
+Preston Sperduto,Biological Sciences,2023,CHEM 107,MATH 226/227,,ITAL 111,basketball,watching football,music,New York,psperdu1@binghamton.edu,3157373507,225
+Jenny Liu,Biological Sciences,2023,BIOL 114,ANTH 166,CHIN 103,ENG 280P,playing games,eating,sleeping,New York,jliu234@binghamton.edu,9176991720,104
+Sophia Mattern,Biochemistry,2023,CHEM 107,WRIT 111,BIOL 114,,Music/ theatre ,The environment/animals ,Arts and crafts/reading/ adventures ,New York,smatter1@binghamton.edu,6317930487,176
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Avery Bower,Government ,2023,GOVT 2432,GOVT 3082,HIST 1920,HIST 2969,Acting,Politics,Swimming ,New York,awb98@cornell.edu,3158708548,151
+Yael Gunter,Biological Sciences,2023,ANTH 111,BIOL 114,CINE 286G,JUST 201,Student Council,Ultimate Frisbee,Theater,New York,ygunter1@binghamton.edu,5854749083,58
+Olivia Prince,Psychology,2023,CLAS 280C,MATH 130,PSYC 220,UNIV 101C,Athletics,Food,Harry Potter,New York,oprince1@binghamton.edu,3152360048,234
+Jennifer Caruso,Human Development ,2023,MATH 130,PSYC 111,ANTH 111,ARTS 171,Basketball,Watching Sports ,Netflix ,New York,jcaruso4@binghamton.edu,9145647001,137
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Joseph Jordan,Computer Science,2020,CIS 455,CIS 350,MGMT 214,FNCE 219,Fantasy Football,Working Out,,New Jersey,josjord@seas.upenn.edu,2017396630,1
+Danielle Testani,Psychology,2023, , , , ,exercise,hiking,hiking,New York,dtestan1@binghamton.edu,6073729020,200
+lauren przybylski,Psychology,2022,ANTH 114,ANTH 200,PSYC 223,CHEM 107,rushing,Netflix,,New Jersey,lprzyby2@binghamton.edu,9734529473,22
+Madeleine Brennan,Integrative Neuroscience,2023,CHEM 107,PSYC 223,PHIL 101,UNIV 101S,Politics ,The environment ,Cinematography ,New Jersey,mbrenn17@binghamton.edu,2013128959,202
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Amanda Juan,Mechanical engineering,2022,PHYS 2213,ENGRD 2020,ENGRD 2210,MATH 2930,Fitness (weightlifting),Food!!,,New Jersey,ayj2@cornell.edu,6092162598,4
+Jin Na,Mechanical Engineering,2023,ENGRD 2020,PHYS 2214,ENGRI 1200,MATH 2930,Drawing,Flute,,Georgia,hjn28@cornell.edu,4044057217,110
+Dimitri Gouvoussis ,Computer Science,2023,CINE 286G,CS 120,PLSC 113,MATH 224/225,Basketball,Gym (working out),Movies,New York,dgouvou1@binghamton.edu,6315534548,171
+Dylan Yang,Computer Science,2023,CS 120,MATH 224,ARTH 270,WRIT 111,Music,Cooking,Badminton,New York,cyang58@binghamton.edu,9173652363,133
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Angelica Malyar,Pharmacy,2023,CHEM 107,BIOL 114,MATH 223,AFST 101,Golf,Swimming,Watching netflix,New York,amalyar1@binghamton.edu,7183097117,165
+Nicholas Stachelek,Biochemistry,2023,BIOL 114,MATH 223,CHEM 107,BIOL 241,Snowboarding ,Nights out,,New York,nstache1@binghamton.edu,8455450290,177
+Shaliwa,Undecided,2023,COML 3261,COML 2030,LATIN 1205,MATH 2210,Movies,Tennis,,China,sf452@cornell.edu,0,166
+Jennifer Butler,English,2023,COML 2030,SPAN 2090,BSOC 2101,AMST 3032,Board/Card Games,Music (Singing),Cooking ,Pennsylvania,jyb9@cornell.edu,2159109958,43
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Max Portnoy,Human Development ,2023,CHEM 2070,HD 2830,COGST 1500,HD 1150,NFL/NBA,Boxing,Video Games,New York,mmp222@cornell.edu,9148431926,249
+liam ordonez,Human Development ,2023,BIOG 1140-001,PE 1412-002,HD 1150-001,PSYCH 1101-001,Beach ,Running ,Volunteering ,Florida,lso26@cornell.edu,9417267091,18
+Jeremy Tuckman,Accounting ,2023,ECON 162,MATH 224/225,CQS 111,MGMT 111,Public speaking,Comedy,Movies,New Jersey,jtuckma2@binghamton.edu,9739362903,178
+Raquel Shapiro,Accounting,2023,ECON 160,WRIT 111,CQS 111,MGMT 111,dancing,singing,meeting new people,New Jersey,rshapir5@binghamton.edu,9738184362,203
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Matthew Russell,Biological Sciences,2023,CHEM 107,WRIT 111,MATH 224,MATH 225,Soccer,Music,Science,New York,mrussel3@binghamton.edu,5162434710,127
+Michael Koufakis,Economics,2023,MATH 224,MATH 225,FREN 115,,Baseball,Chess,Guitar,New York,mkoufak1@binghamton.edu,9177342133,132
+Rocky An,Biological Engineering,2023,CS 1110,ENGRI 1337,MATH 2940,,Microtonal Classical Guitar,Roadbiking,Birdwatching,New Mexico,ra474@cornell.edu,5055701319,121
+Elias Little,"Computer Science, Operations Research and Engineering",2023,CS 2110,CS 2090,MATH 2940,ENGRD 2700,"Music: Cello, Guitar",Educational Videos / Wikipedia,Witty Comedy,Texas,ejl242@cornell.edu,5127884349,170
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sahar Sami,Computer Science,2023,MATH 2940,PHYS 1112,CS 2112,PE 1180,coding,singing,art,New Jersey,ss2698@cornell.edu,8482006818,254
+Christopher Miliano,Computer Science,2023,MATH 221,CST,CHEM 101,HIstory ,skateboarding ,life ,,New York,cmilian1@binghamton.edu,5164242604,214
+Eric Shapiro,Computer Science,2023,HARP 170,CS 120,CS 140,MATH 230,Piano,Biking,Running,New York,eshapir9@binghamton.edu,5852871104,68
+Kyle Lai,Computer Science,2023,CS 2800,CS 2110,MATH 2940,CS 2850,Gaming,Food,Infrastructure,New York,kl655@cornell.edu,7183096432,80
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Anya Prabowo,Undecided Engineering,2023,MATH 1920,CHIN 1101,ENGRI 1200,PHIL 1110,Canoeing,Trekking,Karaoke,Indonesia,afp65@cornell.edu,9176013791,73
+Robert Choh Fleming,Electrical and Mechanical Engineering,2023,Chem 2090,Engri 1200,Ling 1100,Math 1910,Soccer,Comics,Video Games,Pennsylvania,rcf82@cornell.edu,6107577057,41
+Eitan Weinsteiner,Political Science,2023,ISRL 227,PLSC 113,LEAD 354,UNIV 101Y,Rugby,Football,Going out,New York,eweinst2@binghamton.edu,9177694605,15
+Jessica Sperling,Political Science,2023,WRIT 111,PLSC 113,ASTR 114,PSYC 111,Watching netflix,Listening to music,,New York,jsperli1@binghamton.edu,6319870796,192
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Amanda Q,Undecided,2023,CS 1110,BIOG 1440,AEM 2100,INFO 2040,Music,Travel,Food,New York,atq2@cornell.edu,8888888888,142
+Nandan Aggarwal,Information Science,2023,MATH 1710,ENGL 2800,INFO 2450,INFO 2040,Concerts,Driving,Eating,Florida,naggarwal19@miamicountryday.info,3055494084,256
+ivy lu,Cinema,2023,CINE 12,THEA 101,ANTH 167,GEOG 105,Movies,Books,Cooking,New York,ilu1@binghamton.edu,3475102900,72
+Sam Nesser,Cinema ,2023,COM 105,COM 145,ENG 110,HIST 131,Movies,Video Games,Music,New York,snesser1@binghamton.edu,9145360196,213
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mikayla Zion,Human Development ,2023,ARTH 110,ANTH 114,GEOL 116,PSYC 111,watching hockey,makeup,shopping,New York,mzion1@binghamton.edu,5164266245,78
+roberta vasili,Human Development,2023,ARTH 110,MATH 130,PSYC 111,HDEV 100,traveling,piano,shopping,New York,rvasili2@binghamton.edu,9147709609,139
+Maxwell Aftel,Hotel Administration,2023,HADM 1200,HADM 1350,HADM 1740,,Exercising ,Tennis,Watching Netflix,New York,mja256@cornell.edu,6316267029,30
+Amber Leung ,Hotel Administration ,2023,HADM 1360,HADM 1650,HADM 1740,HADM 1150,Food/eating (always down for new restaurants),"Exploring new cities/small towns (thrifting, art)","Netflix (Big Mouth, The Office, Black Mirror, Rick and Morty)",New Jersey,al993@cornell.edu,9175870839,60
+Lyla O�Hara,Undecided,2023,FREN 111,UNIV 280M,THEA 289K,ARTH 225,Art,Theater,Travel,New York,lohara4@binghamton.edu,3155705270,54
+Eli Meltzer,Undecided,2023,MUS 113,UNIV 280M,HIST 280G,ENVI 105,Baseball,Guitar,Reading,Massachusetts,emeltze3@binghamton.edu,5082838159,216
+-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+
