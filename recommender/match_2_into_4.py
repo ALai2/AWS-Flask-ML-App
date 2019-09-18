@@ -7,7 +7,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # Import linear_kernel
 from sklearn.metrics.pairwise import linear_kernel
 
-import json # for testing
 import clean_info as ci 
 import model_selection as ms 
 import speed_up_ms as sums
