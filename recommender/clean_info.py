@@ -58,12 +58,11 @@ def trim_str(x):
 
 import pandas as pd 
 # Load data from csv and organize
-def clean_df(m0, features, primary, i_classes):
+def clean_df(m0, features, primary, clean):
     for feature in [x for x in features if x != primary]:
         m0[feature] = m0[feature].apply(clean_data)
                 
-        # if feature in i_classes + ['Major', 'Hometown','Study Habits','Campus Location']:
-        if feature in i_classes + ['Major', 'Hometown']:
+        if feature in clean:
             m0[feature] = m0[feature].apply(replace_space)
     m0[primary] = m0[primary].apply(trim_str)
     return m0

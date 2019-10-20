@@ -23,7 +23,7 @@ speed_model = False
 
 # data of people to be paired
 # csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
-csv = 'Cornell Students Sept 16 Invalid Emails Deleted.csv'
+csv = '4820Data (1).csv'
 
 # round one variables
 num = 2
@@ -39,10 +39,12 @@ do_random2 = True
 # features
 # features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
 # weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
-i_classes = ['Course 1','Course 2','Course 3','Course 4']
-interests = ['Interest 1','Interest 2','Interest 3']
-# features = ['Name','Gender','Major','Grad Year'] + i_classes + interests + ['Study Habits','Hometown','Campus Location','Race','Preferences']
-features = ['Name','Major','Grad Year'] + i_classes + interests + ['Hometown']
+i_classes = ['Course1','Course2','Course3','Course4']
+interests = ['Interest1','Interest2']
+features = ['Name','Gender','Major','GradYear'] + i_classes + interests + ['StudyHabits','Hometown','CampusLocation','Race','Pref']
+# features = ['Name','Major','Grad Year'] + i_classes + interests + ['Hometown']
+replace_space = i_classes + ['Major', 'Hometown','StudyHabits','CampusLocation']
+# replace_space = i_classes + ['Major', 'Hometown']
 replace_list = interests
 combine = {'Classes 1': i_classes,  'Interests': interests}
 c_weight = 16
@@ -60,7 +62,7 @@ else:
 def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
     # apply clean_df function to features
     m1 = group.copy()
-    m1 = ci.clean_df(m1, features, primary, i_classes)
+    m1 = ci.clean_df(m1, features, primary, replace_space)
     
     if use_model: # how to make this work for second round?
         cosine_sim = ms.construct_similarity(m1, model_num, combine)
@@ -145,43 +147,28 @@ def convert_csv_to_matrix(csv, num):
             matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
     # print(matches)
     if pair_groups:
-        # prepare first round pairings for second round pairings
-        two_classes = []
-        for n in range(0, num):
-            two_classes += [ 'Class '+str((n*len(i_classes))+i) for i in range(1, len(i_classes)+1)]
-        
-        pair_features = ['Name'] + two_classes
+        # prepare first round pairings for second round pairingsd
+        pair_features = ['Name'] + i_classes
         df = pd.DataFrame(columns=pair_features)
         for pair in matches:
+            lists = [[]] * len(i_classes)
             str_pair = [ str(x) for x in pair ]
             total_name = ", ".join(str_pair)
 
             data = [total_name]
             for i in pair:
                 for feature in i_classes:
-                    data.append(m0[feature][m0['index'] == i].iloc[0])
-            
-            # take care of extra data
-            while(len(data) > len(pair_features)):
-                c1 = data[len(data)-1]
-                if not isinstance(c1, str):
-                    data.remove(c1)
-                else:
-                    c2 = data[len(data)-2]
-                    if not isinstance(c2, str):
-                        data.remove(c2)
-                    else:
-                        data.append(c1 + "," + c2)
-                        data.remove(c1)
-                        data.remove(c2)
-            
-            # take care of missing data
-            while(len(data) < len(pair_features)):
-                data.append("")
-
+                    add = m0[feature][m0['index'] == i].iloc[0]
+                    if add == add:
+                        lists[i_classes.index(feature)].append(m0[feature][m0['index'] == i].iloc[0])
+            # print(lists)
+            for i in lists:
+                # print(i)
+                data.append(", ".join(i))
             pair_df = pd.DataFrame([data], columns=pair_features)
             df = pd.concat([df, pair_df], sort=False)
         df = df.reset_index().drop('index', axis=1).reset_index()
+        two_classes = i_classes
 
         # complete second round pairings
         combine['Classes 2'] = two_classes
