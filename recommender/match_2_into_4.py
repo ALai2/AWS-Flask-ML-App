@@ -23,7 +23,7 @@ speed_model = False
 
 # data of people to be paired
 # csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
-csv = '4820Data (1).csv'
+csv = 'Algo Final Data - Sheet1.csv'
 
 # round one variables
 num = 2
@@ -49,9 +49,9 @@ replace_list = interests
 combine = {'Classes 1': i_classes,  'Interests': interests}
 c_weight = 16
 i_weight = 8
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'Grad Year': 7, 
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'GradYear': 7, 
     'Interest 1': i_weight, 'Interest 2': i_weight, 
-    'Study Habits': 11, 'Hometown': 3, 'Campus Location': 10, 'Race': 0, 'Preferences': 0}
+    'StudyHabits': 11, 'Hometown': 3, 'CampusLocation': 10, 'Race': 0, 'Pref': 0}
 if pair_groups:
     for n in range(0, num):
         weights.update({ 'Course '+str((n*len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
