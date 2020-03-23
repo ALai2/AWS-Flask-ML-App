@@ -1,0 +1,121 @@
+Name,Gender,Major,GradYear,Course1,Course2,Course3,Course4,Interest1,Interest2,StudyHabits,Hometown,CampusLocation,Race,Pref,Email,Phone,index
+Thaalank Ranjan,Male,Computer Science,2021,BIOEE1540,INFO4430,CS4701,,Basketball,Videogames,I typically study near the Engineering Quad,New Jersey,West Campus (Dorms),Asian American,,tr329@cornell.edu,5514040025,67
+Zoltan Csaki,Male,Computer Science,2022,ECE 2300,,MATH 2940,PHYSICS 2213,Computer Science ,Sports,I typically study near the Engineering Quad,New York,West Campus (Dorms),Caucasian,,zcc6@cornell.edu,6072800335,55
+Anusha Choudhury,Female,Computer Science,2022,,ECE 2300,Math 2940,CS 2850,Dancing ,Watching Movies,I typically study near the Arts Quad,India,West Campus (Other),Other,,ac978@cornell.edu,6073795263,45
+Haichen Wang,Male,Computer Science,2022,,CS 2800,MATH 2210,PHYS 1112,"Music (guitar, piano) & dance",Swimming,I typically study near the Arts Quad,North Carolina,West Campus (Dorms),Asian American,,hw595@cornell.edu,8622226488,75
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Matthew Epstein,Male,Computer Science,2021,BTRY 3080,AEM 3220,CS 4701,ANTHR 4390,sleeping,youtube,I typically study near the Engineering Quad,Florida,West Campus (Other),Bi/Multicultural,,me382@cornell.edu,8135085022,52
+Rachel Green,Female,Computer Science,2022,ENGL 1100,PYSCH 1101,BIOEE 1500,ECON 1110,running,cooking/baking,I typically study near the Engineering Quad,Virginia,West Campus (Other),Caucasian,,reg246@cornell.edu,7039438797,39
+Tushar Khan,Male,Computer Science,2022,,CS 4780,CS 2850,BTRY 3080,Motorcycles,Basketball,I study anywhere,New Jersey,West Campus (Dorms),Asian American,,tak62@cornell.edu,7325895392,10
+Maxine Nzegwu,Female,Computer Science,2022,BTRY 3080,CS 2850 ,Math 2940,EDUC 2610,Running,Singing,I study anywhere,New Jersey,West Campus (Dorms),African American,,man227@cornell.edu,9736529952,3
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Test brickman,Male,Anthropology,2021,cs 4700,cs 3333,cs 333,,baking,basketball,I typically study near the Agriculture Quad,Arizona,North Campus (Other),Caucasian,,sab389@cornell.edu,9148157914,58
+Mimi Goldberg,Female,Industrial and Labor Relations,2021,ILRLLR 4027,ECON 3830,ILRLR 2810,SOC 6180,Cooking/Baking,Reading,I typically study near the Arts Quad,Arizona,North Campus (Other),Bi/Multicultural,,mmg234@cornell.edu,4807072640,12
+Nicholas Laurence Yuwono,Male,Computer Science,2022,CS 2850,CS 2024,CS 4700,,Finance,Math,I typically study in Collegetown,Singapore,Collegetown,Asian American,,nly7@cornell.edu,9293627690,4
+Jamie Lai,Female,Computer Science,2020,ENGRD 2700,LING 1101,HADM 4300,,games,food,I typically study in Collegetown,Taiwan,Collegetown,Asian American,,jl2825@cornell.edu,6108889095,48
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Vinita Sinha,,Computer Science,2022,,CS 2850,MATH 2940,ENGRD 2300,Reading,Music,I typically study near the Engineering Quad,India,Collegetown,Other,,vs339@cornell.edu,6072808743,71
+Katelin Chan,Female,Computer Science,2022,,MATH 2940,PHYS 2213,INFO 2040,Volleyball,Baking,I typically study near the Engineering Quad,Virginia,Collegetown,Asian American,,ktc33@cornell.edu,7036279267,70
+Xueshi Su,Male,Operations Research and Engineering,2021,CS 4410,ORIE 4630,ORIE 4580,CS 4320,Rock Climbing,Hiking,I typically study near the Engineering Quad,New York,Other,Asian American,,xs232@cornell.edu,6465090395,14
+Destiny Nwafor,Female,Computer Science,2021,MATH 2940,INFO 2040,INFO 1300,PMA 4230,dance,Christianity,I typically study near the Engineering Quad,New Jersey,Collegetown,African American,,dcn42@cornell.edu,8627547445,17
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jonghyun Chung,Male,Computer Science,2021,ECON 3030,EAS 1540,S0C 3750,GERST 4260,films,music,I typically study near the Engineering Quad,Korea,Collegetown,Other,,jc2739@cornell.edu,6072277498,47
+Kyra Ratusnik,Female,Computer Science,2021,CS 4700,CS 4701,CS 4740,,ultimate frisbee,surfing,I typically study near the Engineering Quad,California,Collegetown,Bi/Multicultural,,kr463@cornell.edu,8185159099,57
+Andre Lee,Male,Computer Science,2020,CS 4750,CS 4740,CS 4320,AEM 2241,baking,languages,I typically study on West Campus,New York,West Campus (Dorms),Asian American,,ael226@cornell.edu,3154477182,42
+Daniel McNeary,Male,Computer Science,2022,MATH 2940,MATH 2930,HD 1150,,Video Games,Anime,I typically study on West Campus,New York,West Campus (Dorms),Asian American,,dnm56@cornell.edu,9178162617,2
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Aaron Buchwald,Male,Computer Science,2022,BIOEE 1780,ECON 3130,PHIL 1100,MATH 2220,Weightlifting,Blockchain,I typically study near the Arts Quad,Virginia,Other,Caucasian,,ab2244@cornell.edu,7036776661,26
+Yalu Cai,Male,Biological Engineering,2020,,CS4820,,,Literature,Soccer,I typically study near the Arts Quad,China,Collegetown,Other,,yc2454@cornell.edu,6072297431,33
+Sophia Gunluk,Female,Computer Science,2022,PHIL 1100,PHIL 1950,MATH 2930,,Hiking,Photography,I typically study on West Campus,New York,West Campus (Other),Caucasian,,sg764@cornell.edu,9174994150,23
+Joshua Lomasney,Male,Computer Science,2022,CS 3220,CS 4700,CS 4740,ECON 3130,Gaming,Language Learning,I typically study on West Campus,Massachusetts,West Campus (Other),Bi/Multicultural,,jll329@cornell.edu,6175195615,7
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Eric Plass,Male,Computer Science,2022,MATH 2930,PHIL 2310,BTRY 3080,PHYS 2213,Chess,Martial Arts,I study anywhere,Florida,North Campus (Other),African American,,eap269@cornell.edu,7862417157,21
+Luke Yuan,Male,Computer Science,2022,,CS 2800,HIST 1102,,Soccer,Cars,I study anywhere,California,North Campus (Freshmen Dorms),Asian American,,ly94@cornell.edu,4083869515,79
+David Siher,Male,Computer Science,2022,PHIL 2310,CS 2850,PHIL 2621,MATH 4410,Rock Climbing,Cooking,I study anywhere,Florida,West Campus (Dorms),Hispanic American,,das568@cornell.edu,9542321388,30
+Lorenzo Scotto di Vettimo,Male,Computer Science,2022,ITAL 2201,BTRY 3080,CS 2850,PHYS 2213,edm,photography,I study anywhere,California,West Campus (Dorms),Bi/Multicultural,,ls769@cornell.edu,4155096101,41
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Chris Park,Male,Computer Science,2022,Math 2930,ECE 2300,,,church,volleyball,I typically study near the Engineering Quad,Georgia,Collegetown,Asian American,,csp78@cornell.edu,4703311954,40
+Donal Lowsley-Williams,Male,Hotel Administration,2021,HADM 3010,HADM 3870,,,Music,Skiing,I typically study in Collegetown,Connecticut,Collegetown,Caucasian,,dml333@cornell.edu,2038222219,27
+Sandhya Sriram,Female,Computer Science,2022,ECE 2300,FREN 2095,ECON 1110,CS 1300,Music,Pixar,I study anywhere,Pennsylvania,North Campus (Other),Asian American,,ss3769@cornell.edu,6107396972,76
+Courtney Manbeck,Female,Computer Science,2022,CS 1620,ECE 2720,MATH 2940,PMA 4841,Art,Creative Writing,I study anywhere,New York,North Campus (Other),Bi/Multicultural,,clm333@cornell.edu,9143348139,9
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kelly Xavier,Female,Computer Science,2022,,CS 2800,CS 2850,ECON 1110,skiing,listening to music,I typically study near the Engineering Quad,Maryland,Collegetown,Asian American,,kgx2@cornell.edu,3013182620,6
+Yuqi Shi,Female,Computer Science,2022,MATH 4310,MATH 4710,MATH 3230,LING 1101,Painting,Dancing,I typically study near the Engineering Quad,China,Collegetown,Other,,ys833@cornell.edu,6072624509,1
+Erika Hauschild,Female,Computer Science,2022,CS 2800,PSYCH 1500 Intro to Environmental Psych,COGST 2621,,Singing,Piano,I typically study near the Engineering Quad,Connecticut,Other,Bi/Multicultural,,esh79@cornell.edu,2035504672,20
+Yuqi Shi,Female,Computer Science,2022,MATH 4310,MATH 4710,MATH 3230,LING 1101,dancing,painting,I typically study near the Engineering Quad,China,Collegetown,Prefer not to specify,,ys833@cornell.edu,6072624509,77
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Emily Weed,Female,Statistical Science,2022,BTRY 3080,MATH 1920,SPAN 1210,INFO 1998,Volleyball,Hiking,I typically study near the Arts Quad,New York,Collegetown,Caucasian,,emw232@cornell.edu,5859534410,22
+Onur Basar,Male,Computer Science,2021,CS 4700,ECON 3110,ECON 3830,ECON 4260,Chess,Billiards,I typically study near the Arts Quad,New Jersey,Collegetown,Caucasian,,ob87@cornell.edu,2019948525,78
+Brendan Boyer,Male,Computer Science,2022,CS 2800,INFO 2040,MATH 1920,PHYS 1112,Reading,Environment/ Climate Change,I typically study in Collegetown,Pennsylvania,Collegetown,Caucasian,,bab356@cornell.edu,5705816563,69
+Vivian Li,Female,Information Science,2020,INFO 4320,INFO 4340,FREN 4745,,hiking,reading,I typically study in Collegetown,California,Collegetown,Asian American,,vml39@cornell.edu,4084767782,72
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Christine Ahn,Female,Electrical and Computer Engineering,2020,ECE 5750,ECE 5725,JAPAN 3301,ENGRC 3500,anime,manga,I typically study near the Engineering Quad,Maryland,Collegetown,Asian American,,cya6@cornell.edu,3018205991,37
+Henri Clarke,Other,Electrical and Computer Engineering,2020,ECE 4760,ECE 4950,PLHRT 3910,,plants,art,I typically study near the Engineering Quad,Virginia,Collegetown,Bi/Multicultural,,hxc2@cornell.edu,8042413093,49
+Jonathan Duque,Male,Computer Science,2022,CS 2800,CS 2850,COGST 2621,,gaming,civilization 6,I typically study near the Arts Quad,Massachusetts,West Campus (Dorms),Hispanic American,,jd849@cornell.edu,7813548065,8
+Kevin Huang,Male,Computer Science,2022,,CS 4820,CS 4320,CS 2850,Anime,Politics,I typically study near the Arts Quad,New York,West Campus (Dorms),Asian American,,kqh3@cornell.edu,5167548885,61
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ein Chang,Female,Computer Science,2022,MATH 2940,ECON 3130,PHYS 2213,,music concerts,hiking,I study anywhere,Washington,Collegetown,Prefer not to specify,,ec629@cornell.edu,4254492148,62
+Ellery Reyes,Male,Computer Science,2021,ECON 3130,CS 4620,,,Video Games,Music ,I study anywhere,New York,Collegetown,Hispanic American,,ejr243@cornell.edu,6312769008,15
+Alina,Female,Computer Science,2022,CS 2850,ENGRD 2720,MATH 2940,ECON 3130,cooking,listening to music,I typically study near the Engineering Quad,Washington,West Campus (Other),Asian American,,ak778@cornell.edu,4253726773,50
+Tiantian Shi,Female,Computer Science,2022,CS 2800,ECE 2300,MATH 2930,ASRC 2003,cooking,music,I typically study near the Engineering Quad,China,West Campus (Other),Prefer not to specify,,ts544@cornell.edu,6072802775,32
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kendall Lane,Female,Computer Science,2022,CS 2800,BIOEE 1540,AMST 1500,,TV and Movies,Music,I typically study near the Arts Quad,California,West Campus (Dorms),African American,,kal255@cornell.edu,4248324577,36
+Timothy Chue,Male,Computer Science,2021,,MATH 2940,STSCI 3080,PSYCH 4030,Basketball,Psychology,I typically study near the Arts Quad,China,West Campus (Dorms),Other,,tmc267@cornell.edu,8572773934,63
+Mitchell Lin,Male,Computer Science,2022,CS 2800,ASIAN 2245,BIOEE 1540,INFO 1300,singing,basketball,I study anywhere,New York,West Campus (Other),Asian American,,ml887@cornell.edu,9179298687,46
+Frederick Driver,Male,Computer Science,2020,,Math 3850,LATIN 1205,BTRY 3010,Movies,"Video games",I study anywhere,Massachusetts,West Campus (Other),Bi/Multicultural,,fwd26@cornell.edu,3397933443,0
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Demi Chang,Female,Architecture,2020,CS 4820,,,,reading,sewing whales,I typically study near the Arts Quad,China,North Campus (Other),Asian American,,dc834@cornell.edu,6073797797,43
+Kevin,Male,Computer Science,2021,CS 2800,ITAL 2203,MATH 1120,,artificial intelligence,cognitive science,I typically study near the Arts Quad,New Jersey,North Campus (Other),Hispanic American,,ka383@cornell.edu,9736523348,24
+Felipe Shiwa,Male,Electrical and Computer Engineering,2021,CS4820,CS4410,ECE4750,ECE3400,Video Games,Cooking,I typically study near the Engineering Quad,Brazil,Collegetown,Prefer not to specify,,fs383@cornell.edu,9546101073,5
+Winnie Chan,Female,Electrical and Computer Engineering,2020,ECE 3400,CS 4410,CS 4420,HD 3660,Board games,Baking,I typically study near the Engineering Quad,California,Collegetown,Asian American,,wc397@cornell.edu,9256395362,68
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jack Stettner,Male,Computer Science,2022,BTRY 3080,ASTRO 1101,,,Sam Brickman,Samuel Brickland,I typically study near the ILR Quad,New York,Other,Caucasian,,jws397@cornell.edu,9178550515,54
+Aarushi Agarwal,Female,Computer Science,2022,MATH 2940,JAPAN 1101,MAE 4760,,Anime,Martial Arts,I typically study on West Campus,New York,West Campus (Dorms),Asian American,,aa2277@cornell.edu,6466392381,53
+Michael George zhou,Male,Computer Science,2022,CS 2800,CS 2850,,,Oboe + English horn,Alpine Hiking,I typically study on West Campus,China,West Campus (Dorms),Prefer not to specify,,mgz27@cornell.edu,4253246122,13
+Haomiao Liu,Female,Computer Science,2022,,CS 4820,CS 4620,BTRY 3080,basketball,gym,I typically study on West Campus,China,West Campus (Dorms),Other,,hl745@cornell.edu,6073795391,25
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Gloria Zhang,Female,Mathematics,2022,Math 3110,Math 4710,AAS 2130,EAS 1101,Art,Music,I typically study near the Arts Quad,Massachusetts,North Campus (Other),Asian American,,gyz2@cornell.edu,8604619683,64
+Sean Vaysburd,Male,Computer Science,2022,PSYCH 1101,ASIAN 2299,MATH 2220,RUSSA 2203,Nature,Hiking,I typically study on North Campus,New York,North Campus (Other),Caucasian,,sv348@cornell.edu,9178875360,28
+Crystal Tang,Female,Computer Science,2022,CS 2800,MATH 3110,ENGRD 2720,FSAD 1250,Baking,Volleyball,I typically study near the Engineering Quad,New Jersey,North Campus (Other),Asian American,,cxt3@cornell.edu,6092160717,74
+Rishitha Thambireddy,Prefer not to specify,Computer Science,2022,ENGRD 2140,CS 2850,MATH 2940,ENGRI 1270,Music,Baking,I typically study near the Engineering Quad,New Jersey,North Campus (Other),Prefer not to specify,,rt457@cornell.edu,6096650847,44
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Afnan Arshad,Male,Computer Science,2021,CS 4320,ECON 3830,BIOG 1140,PHIL 1100,Reading ,Soccer,I study anywhere,Pakistan,West Campus (Other),Other,,aa2439@cornell.edu,6073797003,16
+Madalyn Redding,Female,Computer Science,2022,CS 2024,MATH 2220,BTRY 3010,LING 1101,Swimming,Cello,I typically study near the Engineering Quad,Rhode Island,West Campus (Dorms),Caucasian,,mjr369@cornell.edu,4018293939,59
+Justin Lee,Male,Chemical Engineering,2021,CHEME2880,CHEME 3240,CHEME 3130,,Ice Skating,Eating,I typically study near the Engineering Quad,New York,Collegetown,Asian American,,jl3524@cornell.edu,6465088932,18
+Xuyang Xiao,Prefer not to specify,Chemical Engineering,2020,,CS 4620,,,Wacthing movies,music,I typically study near the Engineering Quad,China,Other,,,xx284@cornell.edu,6072624681,31
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Dmitry Shlyapnikov,Male,Computer Science,2022,ECON 3130,ECON 1110,AEM 2400,BIOEE 1540,Netflix,Food,I study anywhere,New Jersey,West Campus (Dorms),Caucasian,,ds2226@cornell.edu,3472048165,35
+Adam Wang,Male,Computer Science,2022,CS 2800,MATH 2220,ECON 4220,ECON 3040,Movies,Music,I study anywhere,New York,West Campus (Dorms),Asian American,,adw74@cornell.edu,6318770168,38
+Ishika Jain,Female,Computer Science,2022,ECON 3130,ECON 1110,PSYCH 1101,BIOEE 1540,Hiking,Cooking ,I typically study on West Campus,Virginia,West Campus (Dorms),Asian American,,ij36@cornell.edu,5713329347,11
+Jeffrey Shen,Male,Computer Science,2022,STSCI 2200,JAPAN 1101,EAS 1101,,History,Hiking,I typically study on West Campus,New Jersey,West Campus (Dorms),Asian American,,jcs528@cornell.edu,7323075628,34
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Adrian Chu,Prefer not to specify,Computer Science,2022,ECON 3040,ECON 3800,,,MMA,Film,I typically study on West Campus,California,West Campus (Dorms),Prefer not to specify,,ahc249@cornell.edu,6502292038,19
+Chukwuemeka Ubakanma,Male,Computer Science,2022,MATH 2940,PHYS 2213,CS 2850,ECE 2300,Rock Climbing,Food,I typically study on West Campus,New York,West Campus (Dorms),African American,,cnu2@cornell.edu,8457297691,60
+Haoshen Li,Male,Computer Science,2022,MATH 3320,CS 2850,AEM 2400,NBA 6150,soccer ,music ,I study anywhere,China,Collegetown,Prefer not to specify,,hl2239@cornell.edu,6072625095,51
+Frank Omullo,Male,Computer Science,2021,CS 2800,ECE 2720,,,Everything,Anything,I study anywhere,Maryland,Other,African American,,foo6@cornell.edu,6073795275,66
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Charu Murugesan,Female,Computer Science,2022,MATH 2940,CS 2800,ILRID 1700,CS 2024,music,service,I typically study near the Engineering Quad,California,West Campus (Dorms),Asian American,,csm246@cornell.edu,5103042005,29
+Radha Patel,Female,Computer Science,2022,CS 2800,GOV 3152,BTRY 3080,,"Music - listening, singing, playing piano, dancing",Harry Potter,I typically study near the Engineering Quad,New York,West Campus (Dorms),Asian American,,rdp89@cornell.edu,5122840684,65
+Teresa J Datta,Female,Chemistry and Chemical Biology,2020,CS 4780,HADM 4300,PMA 2800,,Cooking,Bachelor in Paradise,I typically study in Collegetown,Texas,Collegetown,Asian American,,td334@cornell.edu,2812219742,56
+Sam Brickman,Male,Computer Science,2021,CS 4620,ASTRO 1700,NBA 3000,SPAN 1230,guitar,tennis,I typically study on West Campus,New York,West Campus (Dorms),Caucasian,,sab389@cornell.edu,9148157914,73
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+

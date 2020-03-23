@@ -23,7 +23,7 @@ speed_model = False
 
 # data of people to be paired
 # csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
-csv = 'Algo Final Data - Sheet1.csv'
+csv = '2110Data.csv'
 
 # round one variables
 num = 2

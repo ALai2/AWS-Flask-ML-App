@@ -1,97 +1,63 @@
 Name,Gender,Major,GradYear,Course1,Course2,Course3,Course4,Interest1,Interest2,StudyHabits,Hometown,CampusLocation,Race,Pref,Email,Phone,index
-Jorge Inamagua,Male,Computer Science,2020,,ANTHR 4256,CS 4700,,Music Production,Video games,I start my assignments in the middle of the week.,New York,North Campus (Other),Hispanic American,,jai46@cornell.edu,(347)-574-4495,28
-Erie,Male,Computer Science,2020,,CS 4701,CS 4750,,Guitar,Latin Dance,I start my assignments in the middle of the week.,New York,North Campus (Other),Hispanic American,,ema82@cornell.edu,(347)-485-7600,17
-Katie Schretter,Female,Computer Science,2020,,CS4820,CS 4700,,Rowing,Outdoors,I start my assignments in the middle of the week.,Illinois,Collegetown,Caucasian,,kvs46@cornell.edu,(513)-633-5307,32
-Emily Leng,Female,Computer Science,2020,,CS 4820,CS 4780,CS 4740,Music,Badminton,I start my assignments in the middle of the week.,Illinois,Collegetown,Asian American,,el629@cornell.edu,(847)-730-7023,16
+Jonathan Temkin,Male,Economics,2022,CS 2110,CS 2800,MATH 1120,INFO 1200,writing ,politics ,I start my assignments in the middle of the week.,New York,Collegetown,Caucasian,,jmt348@cornell.edu,5165874756,23
+Cameron Hsieh,Male,Nutritional Sciences,2020,AEM 4060,AEM 2241,,,Running,Scuba diving,I start my assignments in the middle of the week.,New York,Collegetown,Asian American,,cch222@cornell.edu,9173021912,32
+Larina Fu,Female,Information Science,2023,BIOEE 1610,ENGL 2901,INFO 1200,STSCI 3200,books,music,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),Asian American,,lrf59@cornell.edu,8567963446,25
+Adam Ali Abbas Kadhim,Male,Computer Science,2023,CS 2110,CS 2800,MUSIC 1350,MUSIC 4616,Music,Film,I start my assignments in the middle of the week.,North Carolina,North Campus (Freshmen Dorms),Other,,ak779@cornell.edu,9195225095,9
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Luis Londono,Male,Computer Science,2021,,CS 2850,CS 4820,,League of Legends,Cooking,I start my assignments closer to the deadline.,Colombia,Collegetown,Hispanic American,,lhl49@cornell.edu,(646)-832-6772,39
-Shreeya Gad,Female,Computer Science,2021,,CS 4820,CS 4780,,dancing,reading,I start my assignments closer to the deadline.,California,Collegetown,Asian American,,sg988@cornell.edu,(408)-507-7280,52
-Tristan Engst,,Computer Science,2021,,CS 2850,CS 4780,FREN 2091,Artificial Intelligence—mostly neural nets,Internationalism,I start my assignments the day they are released,New York,North Campus (Other),,,tme28@cornell.edu,(607)-319-9597,58
-AtreyaIyer,,Computer Science,2021,,CS 3410,BTRY 3080,,machine learning,basketball,I start my assignments the day they are released,New York,North Campus (Other),,,avi8@cornell.edu,(609)-414-3508,7
+Shashank Pathak,Male,Electrical and Computer Engineering,2020,ECE 4200,ORIE 4742,ORIE 6125,BEE 4120,Soccer,Cooking,I start my assignments in the middle of the week.,India,Collegetown,Other,,sp2534@cornell.edu,6072624645,13
+Joanna Li,Female,Global & Public Health Sciences,2020,CS2110,INFO 2950,,,volleyball,movies,I start my assignments in the middle of the week.,New Jersey,Collegetown,Asian American,,jl2886@cornell.edu,6098512188,24
+Eva Zhang,Female,Operations Research and Engineering,2023,ENGRD 2110,ENGRD 2700,MATH 2930,MATH 2940,Waterpolo,Volleyball,I start my assignments in the middle of the week.,Connecticut,North Campus (Other),Asian American,,yz544@cornell.edu,8608789777,10
+Shiang Chin,Male,Operations Research and Engineering,2021,CS 2110,Info 2950,Math 2940,,Camping,Basketball,I start my assignments in the middle of the week.,California,Other,Asian American,,sc2983@cornell.edu,4159329095,33
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Sam Boardman,Male,Mathematics,2021,,CS 4820,MATH 4330,MATH 3610,Surfing,Gaming,I start my assignments in the middle of the week.,New Jersey,Collegetown,Caucasian,,stb89@cornell.edu,(609)-709-8453,48
-Junlin Yi,Male,Computer Science,2022,,CS 4820,CS 4820,,Cooking,Writing,I start my assignments in the middle of the week.,New Jersey,Collegetown,Asian American,,jy633@cornell.edu,(732)-678-6013,30
-Marcus,Male,Chemistry and Chemical Biology,2020,,CS 4740,CS 4820,CS 4700,Archery,Rock Climbing,I start my assignments in the middle of the week.,New York,North Campus (Other),Other,,mn444@cornell.edu,(607)-379-8267,40
-Demi Chang,Female,Architecture,2020,,CS 4820,CS 3110,,"Drawing, Sewing, Cooking",Sci-fi and non-fiction books,I start my assignments the day they are released,China,North Campus (Other),Asian American,,dc834@cornell.edu,(607)-379-7797,14
+Qiming Sun,Male,Civil Engineering,2021,CS2110,CS2111,CS1110,CEE3080,Singing,Volleyball,I start my assignments in the middle of the week.,Singapore,West Campus (Dorms),,,qs38@cornell.edu,6072626939,36
+James Buzaid,Male,Economics,2022,ECON 3140,CS 2800,ITAL 1202,ASIAN 2222,Macroeconomic Research,Urban Economics,I start my assignments the day they are released,New York,West Campus (Dorms),Caucasian,Why does gender/race matter for matchmaking?,jjb422@cornell.edu,9143277539,17
+Anna Effenberger,Female,Statistical Science,2023,CS2110,ECON3040,ECON3140,MATH2220,Golf,Art,I start my assignments the day they are released,New Jersey,North Campus (Freshmen Dorms),Bi/Multicultural,,ae347@cornell.edu,9089077416,41
+Winnie Chow,Female,Computer Science,2023,CS 2110,CS 2802,MATH 2940,ENGRD 2700,Photography,Basketball,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),Asian American,,wc459@cornell.edu,6072626690,22
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Yash Mundra,,Computer Science,2021,,CS 4820,CS 4740,,Movies,Technology,I start my assignments in the middle of the week.,India,Collegetown,,,ym267@cornell.edu,(929)-525-7770,59
-Ansh Godha,Male,Computer Science,2022,,CS 2850,MATH 2940,ENGRD 2700,Playing Squash,Working on small side projects,I start my assignments in the middle of the week.,India,Collegetown,Asian American,,ag759@cornell.edu,(607)-379-5441,2
-Scott Wang,,Computer Science,2022,,cs 4820,orchestra,ML,cello,video games,I start my assignments in the middle of the week.,New Jersey,West Campus (Dorms),Asian American,,sw754@cornell.edu,(732)-306-1820,50
-Junyoung Lee,Male,Computer Science,2020,,CS 4820,CS 4820,CS 4820,Socccer,Cooking,I start my assignments in the middle of the week.,Ohio,West Campus (Dorms),Asian American,,jl3252@cornell.edu,(216)-287-4366,31
+Chelci,Female,Computer Science,2022,CS 2110,CS 2800,,,Watching Netflix,Violin,I start my assignments in the middle of the week.,Korea,Other,Other,,cl868@gmail.com,6072622390,37
+Kassie Wang,Female,Computer Science,2023,CS2110,ENGRD2700,CS2800,AMST2000,dancing,foodie,I start my assignments in the middle of the week.,Maryland,North Campus (Freshmen Dorms),Asian American,,klw242@cornell.edu,4435389438,7
+Emily Bai,Female,Computer Science,2023,CS 2110,Math 2930,Phys 2213,Gerst 1220,Wushu (Chinese Kungfu),Language,I start my assignments closer to the deadline.,China,North Campus (Freshmen Dorms),Asian American,,sb875@cornell.edu,6073792927,11
+Claire Zhou,,Computer Science,2023,CS2110,Math2940,CS2800,PHYS2213,video games,reading,I start my assignments closer to the deadline.,China,North Campus (Freshmen Dorms),,,xz256@cornell.edu,6072629374,34
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Hunter Kong,Male,Computer Science,2020,,CS4820,CS4410,INFO4240,Baking,Solving puzzles,I start my assignments the day they are released,New York,West Campus (Dorms),Asian American,,htk25@cornell.edu,(917)-392-5218,21
-Josh Zheng,Male,Computer Science,2021,,CS 4810,CS 4780,COGST 2230,Languages,Piano,I start my assignments the day they are released,New York,West Campus (Dorms),Prefer not to specify,,jz786@cornell.edu,(607)-262-2406,29
-Souleiman Benhida,Male,Computer Science,2021,,CS 4820,CS 4410,,religion,tennis,I start my assignments closer to the deadline.,Massachusetts,North Campus (Other),Bi/Multicultural,,sb2342@cornell.edu,(617)-615-9609,54
-Giorgio Lo,Male,Computer Science,2021,,CS 4820,cs 4700,,art,historical research,I start my assignments closer to the deadline.,New York,West Campus (Dorms),Other,,gbl45@cornell.edu,(425)-208-5150,18
+Frances Wang,Female,Hotel Administration,2021,CS1133,CS2110,math2940,PE1162,Photography,Swimming,I start my assignments in the middle of the week.,Nevada,Collegetown,Asian American,,xw568@cornell.edu,7027679785,39
+Frances,Female,Hotel Administration,2021,CS2110,CS1133,nba6070,PE1162,PHOTOGRAPHY,CLUBBING,I start my assignments in the middle of the week.,China,Collegetown,Asian American,,xw568@cornell.edu,7027679785,0
+Hailin Lu,Female,Computer Science,2023,cs 2110,cs 2800,math 2940,,ballroom dancing,working out,I start my assignments the day they are released,Connecticut,North Campus (Other),Other,,hl793@cornell.edu,6175103903,30
+Summer Hu ,Female,Electrical and Computer Engineering,2023,MATH 2930,CS 2110,JAPAN 1102,ROMS 1102,Manga and Anime,Recreational Sports,I start my assignments the day they are released,China,North Campus (Freshmen Dorms),Other,,zh338@cornell.edu,6072620745,12
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Chris Pardee,Male,Computer Science,2020,,CS 4710,Grad CV,Info Research,Music,,I start my assignments closer to the deadline.,New York,Collegetown,Prefer not to specify,,csp73@cornell.edu,(917)-993-2249,12
-Jia Yi Wang,Female,Computer Science,2020,,CS 4820,CS 3410,,Manga,Food,I start my assignments closer to the deadline.,New York,Collegetown,Asian American,,jw2295@cornell.edu,(646)-374-9681,25
-Sawanth Eswaraprasad,Male,Computer Science,2020,,CS 4820,CS 4780,CS 4700,Hiking,Photography,I start my assignments in the middle of the week.,India,West Campus (Dorms),Other,,se354@cornell.edu,(607)-262-9013,49
-Anthony Yang,Male,Computer Science,2022,,CS 4820,CS 3410,JAPAN 1101,Web Dev,Anime,I start my assignments the day they are released,Connecticut,West Campus (Dorms),Asian American,,ay339@cornell.edu,(646)-639-3765,3
+Aerien Huang,Prefer not to specify,Undecided,2023,CS 2110,MATH 2210,BIOMG 1350,INFO 2950,Music,Films,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Prefer not to specify,,jh2664@cornell.edu,6073792770,27
+Liz Espinoza,,Computer Science,2023,CS 2110,MATH 1110,SOC 1101,COML 1106,videography ,photography ,I start my assignments in the middle of the week.,Texas,North Campus (Freshmen Dorms),Hispanic American,,eae65@cornell.edu,2107654626,40
+Jenna,Female,Electrical and Computer Engineering,2023,CS 2110,MATH 2930,PHYS 1112,ENGRD 2300,music,baking,I start my assignments in the middle of the week.,Maryland,North Campus (Freshmen Dorms),Caucasian,,jkm242@cornell.edu,2404372068,1
+Ruyu Yan,Female,Electrical and Computer Engineering,2023,CS 2110,MATH 1920,PHYS 2213,PHIL 1100,Cooking,Backpacking,I start my assignments in the middle of the week.,China,North Campus (Freshmen Dorms),Prefer not to specify,,ry233@cornell.edu,6072799524,15
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Diana Bank,Female,Physics,2020,,GOVT 3091,ENGL 2785,ASIAN 2299,cooking,art,I start my assignments in the middle of the week.,Florida,Collegetown,Bi/Multicultural,,dmb469@cornell.edu,(954)-376-2451,15
-April Ye,Female,Computer Science,2021,,CS 4820,CS 4320,CS 5306,cooking noodles,drinking coffee,I start my assignments in the middle of the week.,California,Collegetown,Asian American,,yy459@cornell.edu,(408)-218-2559,4
-Helen Liang,,Computer Science,2021,,CS 4320,CS 4410,,watching tv,talking,I start my assignments in the middle of the week.,Illinois,Collegetown,Asian American,,hl973@cornell.edu,(224)-427-0088,20
-Sneha Kumar,Female,Computer Science,2020,,CS 4820,CS 4780,,Watching Movies,Dancing,I start my assignments in the middle of the week.,Ohio,Collegetown,Asian American,,sk2279@cornell.edu,(614)-602-9545,53
+Ian Huang,Male,Mathematics,2023,ECON 1120 (Intro to Macroeconomics),MATH 2220 (Multivariable Calculus),MATH 3040 (Prove It),ECON 3110 (Probability Models),Baseball,Eating ,I start my assignments in the middle of the week.,Taiwan,North Campus (Freshmen Dorms),Other,,ih228@cornell.edu,6467093266,21
+Ian Huang,Male,Mathematics,2023,MATH 2220 (Multivariable Calculus),ECON 1120 (Intro to Macroeconomics),MATH 3040 (Prove It),ECON 3110 (Probability Models ),Baseball,Watching Youtube,I start my assignments in the middle of the week.,Taiwan,North Campus (Freshmen Dorms),Asian American,,ih228@cornell.edu,6467093266,20
+Yinglin Gao,Prefer not to specify,Electrical and Computer Engineering,2020,CS 2110,ECE 4200,ECE 4450,NBA 6010,swimming,hiking,I start my assignments in the middle of the week.,China,Other,Prefer not to specify,,yg486@cornell.edu,6072621493,19
+Jacky Jin,Male,Policy Analysis and Management,2023,PMA 2800,ECON 3040,ECON 3110,CS 2110,Basketball,TV shows,I start my assignments in the middle of the week.,China,North Campus (Freshmen Dorms),Asian American,,zj53@cornell.edu,3476104597,28
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Thomas Koconis,Male,Computer Science,2021,,CS 4820,CS 4620,ECON 3030,video games,sports,I start my assignments the day they are released,Pennsylvania,West Campus (Dorms),Caucasian,,tck35@cornell.edu,(717)-608-3364,56
-Iain Pile,Male,Computer Science,2021,,CS 4820,CS 3410,LING 3303,Video Games,Role-Playing,I start my assignments the day they are released,New York,West Campus (Dorms),Caucasian,,imp25@cornell.edu,(347)-410-4747,22
-Jordyn Goldzweig,Female,Computer Science,2021,,INFO 3450,CS 4620,NBA 3000,netflix,entrepreneurship,I start my assignments in the middle of the week.,New Jersey,Collegetown,Caucasian,,jg779@cornell.edu,(301)-974-7799,27
-Rachel Lee,Female,Computer Science,2020,,CS 4320,CS 4620,CS 4820,computer science,movies/netflix/kdrama,I start my assignments in the middle of the week.,California,Collegetown,Asian American,,sl2863@cornell.edu,(949)-610-6174,45
+Timur Beletskii,Male,Information Science,2023,CS 2800,INFO 1200,DSOC 1101,HADM 2230,Dota 2 ,Hiphop,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Bi/Multicultural,,tab282@cornell.edu,9193457038,18
+Fatima Mahmoud,Female,Information Science,2022,CS 2110,Info 2300,Info 1200,Ling 1101,makeup,tv,I start my assignments in the middle of the week.,Illinois,North Campus (Freshmen Dorms),African American,,fam76@cornell.edu,3096601981,29
+Hali Shin,Female,Computer Science,2022,PHYS 2213,MATH 2940,,,Art/Design/Fashion,Philosophy/Self-Improvement,I start my assignments in the middle of the week.,Pennsylvania,Collegetown,Asian American,"No gender preference (for groups, prefer even mix), racial preference is non-white (slight preference for Asian)",hbs59@cornell.edu,4844327403,31
+Aurora Zhang,Female,Information Science,2022,CS 2110,INFO 1200,INFO 2300,SOC 3040,Dancing,Tea,I start my assignments in the middle of the week.,China,Collegetown,Other,,yz549@cornell.edu,6073798478,38
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Yuting Xue,Female,Computer Science,2021,CS 4780,CS 4620,ORIE 3300,ORIE 3150,running,reading,I start my assignments in the middle of the week.,China,Collegetown,Other,,ytxue9@gmail.com,(919)-928-7571,62
-Rachel Lee,Female,Computer Science,2020,,INFO 2040,CS 4320,VIEN 1104,Netflix,Cooking,I start my assignments in the middle of the week.,New York,Collegetown,Asian American,,sl2863@cornell.edu,(949)-610-6174,44
-Jonathan,Male,Computer Science,2021,,CS 4780,CS 4620,JAPAN 2201,Rock Climbing,Gaming,I start my assignments the day they are released,New York,Other,Hispanic American,,jjc368@cornell.edu,(917)-502-7007,26
-Longxiulin Deng,Female,Computer Science,2021,,CS 4820,CS 4620,ORIE 6334,Brazilian Jiu-jitsu,Cooking,I start my assignments the day they are released,China,Other,Other,Chinese,ld469@cornell.edu,(607)-262-1082,36
+Danyu Hu,Female,Electrical and Computer Engineering,2022,CS 2110,PHYS 2214,MATH 2940,ECE 2200,exploring new restaurants,music,I start my assignments closer to the deadline.,China,Collegetown,Asian American,,dh573@cornell.edu,2033900628,4
+Lenhard Thomas,Male,Computer Science,2023,CS 2110,CS 2800,ECE 2300,MATH 2940,gaming,anime,I start my assignments closer to the deadline.,New Jersey,North Campus (Freshmen Dorms),African American,,lot5@cornell.edu,5512040970,26
+Carleigh Roche,Female,Computer Science,2023,CS 2110,PHIL 1112,MATH 2930,ASTRO 1102,Running,Video Games,I start my assignments in the middle of the week.,Pennsylvania,North Campus (Freshmen Dorms),Caucasian,,cgr52@cornell.edu,7176155710,5
+Caleb Biddulph,Male,Computer Science,2023,CS 2110,MATH 2930,MATH 2940,JAPAN 2202,Reading,Video games,I start my assignments in the middle of the week.,Texas,North Campus (Freshmen Dorms),Caucasian,,cdb229@cornell.edu,9723699049,35
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Rebecca Helling,Female,Computer Science,2021,,CS 4820,CS 3140,,baking,cats,I start my assignments the day they are released,Georgia,West Campus (Dorms),Caucasian,Would prefer females.,lrh73@cornell.edu,(706)-833-9173,46
-Kira Segenchuk,Prefer not to specify,Computer Science,2022,,CS 4820,ECON 4220,HIST 2749,cycling,cooking,I start my assignments the day they are released,Massachusetts,West Campus (Dorms),Prefer not to specify,male,kms453@cornell.edu,(508)-277-6893,34
-Hanjun,Female,Statistical Science,2020,,STSCI 5030,CS 4820,CS 5740,Hiking & Jogging,food lol,I start my assignments in the middle of the week.,New York,Collegetown,Asian American,,hj447@cornell.edu,(917)-561-9755,19
-Yifan,Male,Computer Science,2021,,CS 4820,CS 4700,,Software Engineer,Startups,I start my assignments in the middle of the week.,New York,Collegetown,Other,,yz348@cornell.edu,(518)-650-4083,61
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Athena Cheung,Prefer not to specify,Computer Science,2021,,ENGRD 2720,CS 4110,CS 4411,cyber security,video games,I start my assignments in the middle of the week.,New York,Other,Prefer not to specify,,afc65@cornell.edu,(516)-710-6508,6
-Logan,Male,Computer Science,2020,,CS 4820,CS 4700,ORIE 3500,Cooking,Video Games,I start my assignments in the middle of the week.,New York,Other,Asian American,,lsl85@cornell.edu,(509)-201-7461,35
-Mohammad Kamil,Male,Operations Research and Engineering,2021,,CS 4820,MATH 3110,,Reading,Basketball,I start my assignments in the middle of the week.,New York,Collegetown,Asian American,,mk848@cornell.edu,(347)-901-7169,42
-Rohan,Male,Computer Science,2021,,CS 4410,CS 4700,,Basketball,Boxing,I start my assignments in the middle of the week.,California,Collegetown,Asian American,,rt332@cornell.edu,(925)-596-3046,47
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-J'La Major,Female,Computer Science,2021,,CS 4820,CS 4410,,Traveling,Netflix,I start my assignments in the middle of the week.,New York,Collegetown,Hispanic American,,jm2335@cornell.edu,(585)-474-0181,24
-Betsy Vasquez Valerio,Female,Computer Science,2021,,CS 4820,CS 3410,CS 4210,sleeping,netflix,I start my assignments in the middle of the week.,New York,Collegetown,Hispanic American,,blv9@cornell.edu,(917)-520-8970,8
-Akane Edwards,Female,Computer Science,2021,,CS 4820,JAPAN 3301,CS 4320,Video Games,Drawing,I start my assignments the day they are released,Connecticut,Collegetown,Asian American,Female,aae32@cornell.edu,(203)-564-0098,0
-Akane Edwards,Female,Computer Science,2021,,CS 4820,CS 4320,JAPAN 3301,Video Games,Drawing,I start my assignments the day they are released,Connecticut,Collegetown,Asian American,Female,aae32@cornell.edu,(203)-564-0098,1
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Chukwuemeka Egbulumba,Male,Computer Science,2021,,CS 2850,CS 3110,,Running,Gym,I start my assignments in the middle of the week.,Ghana,Collegetown,African American,,cee2828@cornell.edu,(607)-446-9008,13
-Lucy Xu,Female,Computer Science,2021,,BTRY 3080,CS 4410,CS 4701,Cooking,Drawing,I start my assignments the day they are released,Massachusetts,Collegetown,Asian American,,llx2@cornell.edu,(781)-228-9951,38
-Stephanie Hoyt,Female,Computer Science,2020,,btry 3080,CS 4775,biomg 4400,nyt crossword,bio research,I start my assignments in the middle of the week.,New York,Collegetown,Caucasian,,shh89@cornell.edu,(607)-280-5183,55
-Shreeya,Female,Computer Science,2021,,CS 4820,CS 4780,BTRY 3080,Dancing,Reading,I start my assignments in the middle of the week.,California,Collegetown,Asian American,,sg988@cornell.edu,(408)-507-7280,51
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Lucas,Male,Computer Science,2020,,CS 4810,CS 4780,,Soccer,Traveling,I start my assignments in the middle of the week.,Massachusetts,Collegetown,Caucasian,,ljj35@cornell.edu,(781)-640-8434,37
-Brett Jamieson,Prefer not to specify,Computer Science,2021,,Econ 2040,Cs 4700,BTRY 3010,Video games,Basketball,I start my assignments in the middle of the week.,Massachusetts,Collegetown,Caucasian,,bj229@cornell.edu,(617)-842-7381,9
-Kevin Huang,Male,Computer Science,2022,,CS 4820,CS 4320,CS 3110,anime,politics,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Asian American,,kqh3@cornell.edu,(516)-754-8885,33
-Megan Yin,Female,Computer Science,2022,,ORIE 3150,ORIE 3300,ECE 2400,Music,Traveling,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Asian American,,my474@cornell.edu,(347)-361-5006,41
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Ivana Terziyska,Female,Computer Science,2020,,PSYCH 3420,CS 4780,ENGL 2800,cooking,music,I start my assignments the day they are released,Ohio,Other,Caucasian,,it76@cornell.edu,(440)-570-3645,23
-Yiduo Ke,Female,Computer Science,2022,,CS 4820,CS 4780,GERST 2000,reading,swimming,I start my assignments the day they are released,New York,Other,Asian American,,yk467@cornell.edu,(860)-531-8645,60
-Canhui Yu,Male,Mechanical Engineering,2020,,CS 4820,ECE 5470,CS 5780,Rock Climbing,Chilling,I start my assignments in the middle of the week.,China,Other,Other,,cy428@cornell.edu,(917)-683-6080,11
-Zhou Zhou,Female,Information Science,2020,,CS 4820,CS 2024,,Movie,Gaming,I start my assignments in the middle of the week.,China,Other,,,zz622@cornell.edu,(607)-262-4779,63
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Nathan,Male,Computer Science,2021,,CS 4820,CS 4320,,Sports,Music,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),Caucasian,,nathanstack24@gmail.com,(585)-441-2588,43
-Tim,Male,Computer Science,2021,,MATH 2210,BIOEE 1540,,school,bodybuilding,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Bi/Multicultural,no,tcw74@cornell.edu,(631)-740-6692,57
-Bryan Min,Male,Computer Science,2020,,INFO 4430,CS 5306,,basketball,Computer Science,I start my assignments the day they are released,California,Collegetown,Asian American,,km567@cornell.edu,(949)-486-9112,10
-Arthur Burke,Male,Computer Science,2021,,CS 4780,PHYS 3327,ITAL 1201,Cooking,Physics,I start my assignments the day they are released,New York,Collegetown,Caucasian,,amb556@cornell.edu,(914)-275-3625,5
+Akimasa Ihara,Male,Physics,2023,MATH 2930,MATH 2940,PHYS 2217,ANTHR 1101,Soccer,Violin,I start my assignments in the middle of the week.,Japan,North Campus (Freshmen Dorms),Other,,ai239@cornell.edu,6073792730,16
+Rishi Malhotra,Male,Computer Science,2023,CS 2110,CS 2800,MATH 1920,FWS,Chess,Table Tennis,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Asian American,,rm725@cornell.edu,6072799804,3
+Aron Zhao,Male,Computer Science,2023,CS 2110,CHEM 2090,ENGRI 1130,,Aviation,Cooking/Baking,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Asian American,,az355@cornell.edu,9145367934,14
+Anushka,Female,Computer Science,2023,CS 2110,MATH 1920,PHYS 1112,ENGRI 1130,going out,Netflix and chill,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Asian American,,am2265@cornell.edu,8182237088,2
+Hameedah Khadar,Female,Information Science,2021,CS 2110,INFO 2300,INFO 2950,INFO 1200,travel,entrepreneurship ,I start my assignments in the middle of the week.,Maryland,West Campus (Dorms),African American,,hjk63@cornell.edu,2403461759,6
+Ann Gao,Female,Information Science,2022,CS 2110,ENTOM 2011,INFO 2300,INFO 2950,Going to the gym,Going on walks,I start my assignments in the middle of the week.,Massachusetts,West Campus (Dorms),Asian American,,ag743@cornell.edu,7816989775,8
 -,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
 +,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
