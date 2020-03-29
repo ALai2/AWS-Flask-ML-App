@@ -13,12 +13,10 @@ import clean_info as ci
 tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = True)
 # tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = False)
 
-primary = 'Name'
 # groupby = 'Race'
 groupby = None     
 
 # data of people to be paired
-# csv = 'Prof Clarkson Test Data - Sheet1 (1).csv'
 csv = '2110Data.csv'
 
 # round one variables
@@ -27,38 +25,38 @@ rand_num = 4
 do_random = False 
 
 # round two variables
-pair_groups = True 
 num2 = 2
 rand_num2 = 3
 do_random2 = True  
 
-# features
-# features = ['Name', 'Major','Class 1','Class 2','Class 3','Class 4','Interest 1','Interest 2','Interest 3','Hometown','Hometype']
-# weights = {'Name': 0, 'Major': 30, 'Class 1': 20, 'Class 2': 20, 'Class 3': 20, 'Class 4': 20, 'Interest 1': 12, 'Interest 2': 12, 'Interest 3': 12, 'Hometown': 18, 'Hometype': 0}
+# important variable groups are features, replace, and weights
+
+# feature groups - only for making manual editting easier
 i_classes = ['Course1','Course2','Course3','Course4']
 interests = ['Interest1','Interest2']
-features = ['Name','Gender','Major','GradYear'] + i_classes + interests + ['StudyHabits','Hometown','CampusLocation','Race','Pref']
-# features = ['Name','Major','Grad Year'] + i_classes + interests + ['Hometown']
+
+# features
+features = ['Gender','Major','GradYear'] + i_classes + interests + ['StudyHabits','Hometown','CampusLocation','Race','Pref']
+pair_features = i_classes # only needed if pair_groups is true
+final_features = ['Name', 'Email', 'Phone'] + features
+
+# replace
 replace_space = i_classes + ['Major', 'Hometown','StudyHabits','CampusLocation']
-# replace_space = i_classes + ['Major', 'Hometown']
-replace_list = interests
-combine = {'Classes 1': i_classes,  'Interests': interests}
+replace_key = interests
+
+# weights
 c_weight = 16
 i_weight = 8
-weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'GradYear': 7, 
-    'Interest 1': i_weight, 'Interest 2': i_weight, 
+weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'GradYear': 7,
     'StudyHabits': 11, 'Hometown': 3, 'CampusLocation': 10, 'Race': 0, 'Pref': 0}
-if pair_groups:
-    for n in range(0, num):
-        weights.update({ 'Course '+str((n*len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
-else:
-    weights.update({ 'Course '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
+weights.update({ 'Course '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
+weights.update({ 'Interest '+str((len(interests))+i): i_weight for i in range(1, len(interests)+1) })
 
 # construct similarity matrix for group according to features and return pairings
-def func_pairs(features, group, num, rand_num, do_random, i_classes, model_num):
+def func_pairs(features, group, num, rand_num, do_random):
     # apply clean_df function to features
     m1 = group.copy()
-    m1 = ci.clean_df(m1, features, primary, replace_space)
+    m1 = ci.clean_df(m1, features, replace_space, replace_key)
     
     # BEGINNING ------------------------------------------------------------
     m1 = m1.assign(score = [''] * len(m1))
@@ -86,12 +84,10 @@ def convert_csv_to_matrix(csv, num):
     # Load data from csv
     metadata = pd.read_csv(csv)
 
-    final = metadata[features + ['Email','Phone']]
+    final = metadata[final_features]
     final = final.reset_index()
 
     m0 = metadata[features]
-    for feature in replace_list:
-        m0[feature] = m0[feature].apply(ci.key_replace)
 
     m0 = m0.reset_index()
     matches = []
@@ -107,7 +103,7 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches += func_pairs(features, group, num, rand_num, do_random, i_classes, 1)
+                matches += func_pairs(features, group, num, rand_num, do_random)
         
         if len(ones) != 0:
             if len(ones) == 1:
@@ -126,57 +122,61 @@ def convert_csv_to_matrix(csv, num):
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                matches += func_pairs(features, df, num, rand_num, do_random, i_classes, 1)
+                matches += func_pairs(features, df, num, rand_num, do_random)
     else:
-        matches = func_pairs(features, m0, num, rand_num, do_random, i_classes, 1)
-    # print(matches)
-    if pair_groups:
-        # prepare first round pairings for second round pairingsd
-        pair_features = ['Name'] + i_classes
-        df = pd.DataFrame(columns=pair_features)
+        matches = func_pairs(features, m0, num, rand_num, do_random)
+    
+    if pair_features != []:
+        # prepare first round pairings for second round pairings
+        second_features = list.copy(pair_features)
+
+        df = pd.DataFrame(columns=['unique_id'] + second_features)
         for pair in matches:
-            lists = [[]] * len(i_classes)
+            lists = []
+            for _ in range(len(second_features)):
+                lists.append([])
             str_pair = [ str(x) for x in pair ]
             total_name = ", ".join(str_pair)
 
             data = [total_name]
             for i in pair:
-                for feature in i_classes:
+                for feature in second_features:
                     add = m0[feature][m0['index'] == i].iloc[0]
                     if add == add:
-                        lists[i_classes.index(feature)].append(m0[feature][m0['index'] == i].iloc[0])
-            # print(lists)
+                        lists[second_features.index(feature)].append(m0[feature][m0['index'] == i].iloc[0])
+            
             for i in lists:
-                # print(i)
+                if i != [] and not isinstance(i[0], str):
+                    for elem in range(len(i)):
+                        i[elem] = str(i[elem])
                 data.append(", ".join(i))
-            pair_df = pd.DataFrame([data], columns=pair_features)
+
+            pair_df = pd.DataFrame([data], columns=['unique_id'] + second_features)
             df = pd.concat([df, pair_df], sort=False)
+ 
         df = df.reset_index().drop('index', axis=1).reset_index()
-        two_classes = i_classes
 
         # complete second round pairings
-        combine['Classes 2'] = two_classes
-        result = func_pairs(pair_features, df, num2, rand_num2, do_random2, two_classes, 2)
-
+        result = func_pairs(['unique_id'] + second_features, df, num2, rand_num2, do_random2)
         print_out = []
         for four in result:
-            str_four = [ df[primary][df['index'] == x].iloc[0] for x in four ]
+            str_four = [ df[df['index'] == x].iloc[0][1] for x in four ]
             print_out.append(", ".join(str_four))
     else:
         print_out = [ ", ".join([ str(y) for y in x ]) for x in matches ] 
     
     # get the data of the people represented by indices to insert into csv
-    pairs = pd.DataFrame(columns=features + ['Email','Phone','index'])
+    pairs = pd.DataFrame(columns=final_features + ['index'])
     for group in print_out:
         index_list = group.split(", ")
         for i in index_list:
             pairs = pairs.append(final[final['index'] == int(float(i))].iloc[0])
-        data = [['-'] * (len(features)+3)]
-        data2 = [['+'] * (len(features)+3)]
+        data = [['-'] * (len(final_features)+1)]
+        data2 = [['+'] * (len(final_features)+1)]
 
         # for spacing
-        extra = pd.DataFrame(data, columns=features + ['Email','Phone','index'])
-        extra2 = pd.DataFrame(data2, columns=features + ['Email','Phone','index'])
+        extra = pd.DataFrame(data, columns=final_features + ['index'])
+        extra2 = pd.DataFrame(data2, columns=final_features + ['index'])
         pairs = pd.concat([pairs, extra, extra2], sort=False)
 
     # print this, output
@@ -249,6 +249,20 @@ def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num, do_random):
             list_to_remove.sort(reverse=True)
     return pairs
 
-def run_file(csv):
+def run_file(csv, lists, we):
+    global features
+    global pair_features
+    global final_features
+    global replace_space
+    global replace_key
+    global weights
+
+    features = lists[0]
+    pair_features = lists[1]
+    replace_key = lists[2]
+    replace_space = lists[3]
+    final_features = lists[4]
+    weights = we
+    
     df = convert_csv_to_matrix(csv, num)
     df.to_csv('testing.csv', index=False)

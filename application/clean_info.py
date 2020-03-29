@@ -10,33 +10,6 @@ def key_replace(x):
     else:
         return ''
 
-'''
-def format_course(x):
-    txt = str.upper(x.replace(" ", ""))
-    for i in range(len(txt)-1, -1, -1):
-        if not txt[i].isdigit():
-            return txt[0:i+1] + " " + txt[i+1:]
-    return txt 
-
-def course_replace(x):
-    if isinstance(x, str):
-        x = format_course(x)
-        courses = kd.get_courses()
-        for c in courses:
-            if x in courses[c]:
-                return c
-        return x
-    else:
-        return ''
-
-def replace_df(m0):
-    for feature in ['Interest 1','Interest 2']:
-        m0[feature] = m0[feature].apply(key_replace)
-    for feature in ['Class 1','Class 2','Class 3','Class 4']:
-        m0[feature] = m0[feature].apply(course_replace)
-    return m0
-'''
-
 # Function to convert all strings to lower case and strip names of spaces
 def clean_data(x):
     if isinstance(x, list):
@@ -58,13 +31,15 @@ def trim_str(x):
 
 import pandas as pd 
 # Load data from csv and organize
-def clean_df(m0, features, primary, clean):
-    for feature in [x for x in features if x != primary]:
+def clean_df(m0, features, clean, key):
+    for feature in features:
         m0[feature] = m0[feature].apply(clean_data)
                 
         if feature in clean:
             m0[feature] = m0[feature].apply(replace_space)
-    m0[primary] = m0[primary].apply(trim_str)
+        
+        if feature in key:
+            m0[feature] = m0[feature].apply(key_replace)
     return m0
 
 # mylist = ['one','two','three']
