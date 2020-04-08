@@ -3,13 +3,38 @@ from tkinter import filedialog
 import match_2_into_4 as match
 import pandas as pd
 
-root= tk.Tk()
 size_w = 600
 size_h = 500
-canvas1 = tk.Canvas(root, width = size_w, height = size_h)
-canvas1.pack()
+root= tk.Tk()
+root.geometry(str(size_w) + "x" + str(size_h))
+myframe = tk.Frame(root, bd=1)
+canvas1 = tk.Canvas(myframe)
+scrollbar = tk.Scrollbar(myframe, orient="vertical", command=canvas1.yview)
+scrollable_frame = tk.Frame(canvas1, width=size_w, height=size_h)
+
+scrollable_frame.bind(
+    "<Configure>",
+    lambda e: canvas1.configure(
+        scrollregion=canvas1.bbox("all")
+    )
+)
+
+canvas1.bind_all(
+    "<MouseWheel>",
+    lambda e: canvas1.yview_scroll(
+        -1*int((e.delta/120)),"units"
+    )
+)
+
+canvas1.create_window((0,0), window=scrollable_frame, anchor="nw")
+canvas1.configure(yscrollcommand=scrollbar.set)
+
+myframe.pack(fill="both", expand=True)
+canvas1.pack(side="left", fill="both", expand=True)
+scrollbar.pack(side="right", fill="y")
+
 update_text = tk.StringVar()
-label1 = tk.Label(root, textvariable = update_text, fg='green', font=('helvetica', 12, 'bold'), wraplength=size_w)
+label1 = tk.Label(canvas1, textvariable = update_text, fg='green', font=('helvetica', 12, 'bold'), wraplength=size_w)
 canvas1.create_window(size_w/2, 110, window=label1)
 previous_columns = []
 in_path = ""
@@ -36,17 +61,18 @@ def hello ():
                 label.destroy()
             previous_columns = column_list
 
-            if len(column_list) > 13:
-                canvas1.config(height=size_h + 25*(len(column_list)-13))
+            default_height = 11
+            #if len(column_list) > default_height:
+            #    canvas1.config(height=size_h + 25*(len(column_list)-default_height))
             
             titles = ['First Round','Second Round','Replace Key','Remove Space','CSV Output','Feature Weight']
             for x in range(6):
-                title = tk.Label(root, text = titles[x], fg='green', font=('helvetica', 12, 'bold'), wraplength=70)
+                title = tk.Label(canvas1, text = titles[x], fg='green', font=('helvetica', 12, 'bold'), wraplength=70)
                 canvas1.create_window((size_w/6 - 30) + 65*(x+2), 150, window=title)
                 labels_list.append(title)
 
             for i in range(0, len(column_list)):
-                label = tk.Label(root, anchor=tk.E, text=column_list[i], fg='green', font=('helvetica', 12, 'bold'), width=20)
+                label = tk.Label(canvas1, anchor=tk.E, text=column_list[i], fg='green', font=('helvetica', 12, 'bold'), width=20)
                 canvas1.create_window(size_w/6 - 40, start_int + (i*25), window=label)
                 labels_list.append(label)
 
@@ -54,14 +80,45 @@ def hello ():
                     var = tk.IntVar()
                     var.set(0)
                     vars.append(var)
-                    cb = tk.Checkbutton(root, var=var, highlightthickness=1, onvalue=1, offvalue=0)
+                    cb = tk.Checkbutton(canvas1, var=var, highlightthickness=1, onvalue=1, offvalue=0)
                     labels_list.append(cb)
                     canvas1.create_window(((size_w/6 - 30) + 65*(x+2), start_int + (i*25)), window=cb)
 
-                we = tk.Entry(root, width=3)
+                we = tk.Entry(canvas1, width=3)
                 vars.append(we)
                 canvas1.create_window((size_w/6 - 30) + 65*(5+2), start_int + (i*25), window=we)
                 labels_list.append(we)
+            
+            # amount of people for each round
+            amount_label = tk.Label(canvas1, anchor=tk.E, text="How many?", fg='red', font=('helvetica', 12, 'bold'), width=20)
+            canvas1.create_window(size_w/6 - 40, start_int + (len(column_list)*25), window=amount_label)
+            labels_list.append(amount_label)
+
+            first_entry = tk.Entry(canvas1, width=3)
+            canvas1.create_window((size_w/6 - 30) + 65*(0+2), start_int + (len(column_list)*25), window=first_entry)
+            
+            second_entry = tk.Entry(canvas1, width=3)
+            canvas1.create_window((size_w/6 - 30) + 65*(1+2), start_int + (len(column_list)*25), window=second_entry)
+            
+            vars.append(first_entry)
+            vars.append(second_entry)
+            labels_list.append(first_entry)
+            labels_list.append(second_entry)
+
+            # choose random?
+            random_label = tk.Label(canvas1, anchor=tk.E, text="Random out of...?", fg='red', font=('helvetica', 12, 'bold'), width=20)
+            canvas1.create_window(size_w/6 - 40, start_int + ((len(column_list)+1)*25), window=random_label)
+            labels_list.append(amount_label)
+
+            rand_e = tk.Entry(canvas1, width=3)
+            canvas1.create_window((size_w/6 - 30) + 65*(0+2), start_int + ((len(column_list) + 1)*25), window=rand_e)
+            labels_list.append(rand_e)
+            vars.append(rand_e)
+            
+            rand_e2 = tk.Entry(canvas1, width=3)
+            canvas1.create_window((size_w/6 - 30) + 65*(1+2), start_int + ((len(column_list) + 1)*25), window=rand_e2)
+            labels_list.append(rand_e2)
+            vars.append(rand_e2)
 
         button2.lift()
 
@@ -71,6 +128,7 @@ canvas1.create_window(size_w/2, 30, window=button1)
 def submit():
     weights = {}
     list_of_lists = [[],[],[],[],[]]
+    current_var = 0
     for i in range(0, len(previous_columns)):
         for x in range(6):
             input = vars[6*i + x].get()
@@ -79,8 +137,16 @@ def submit():
                     list_of_lists[x].append(previous_columns[i])
             elif input != "":
                 weights[previous_columns[i]] = int(input)
-            
-    match.run_file(in_path, list_of_lists, weights)
+            current_var+=1
+    
+    options_list = []
+    for i in range(4):
+        if vars[current_var + i].get() != "":
+            options_list.append(int(vars[current_var + i].get()))
+        else:
+            options_list.append(0)
+
+    match.run_file(in_path, list_of_lists, weights, options_list)
     update_text.set("Done")
 
 button2 = tk.Button(text="Submit",command=submit, bg='brown',fg='white')

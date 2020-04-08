@@ -249,7 +249,7 @@ def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num, do_random):
             list_to_remove.sort(reverse=True)
     return pairs
 
-def run_file(csv, lists, we):
+def run_file(csv, lists, we, options):
     global features
     global pair_features
     global final_features
@@ -257,12 +257,31 @@ def run_file(csv, lists, we):
     global replace_key
     global weights
 
+    global num
+    global rand_num
+    global do_random
+
+    global num2
+    global rand_num2
+    global do_random2 
+
     features = lists[0]
     pair_features = lists[1]
     replace_key = lists[2]
     replace_space = lists[3]
     final_features = lists[4]
     weights = we
-    
+
+    num = options[0]
+    num2 = options[1]
+    rand_num = options[2]
+    do_random = True
+    do_random2 = True
+    if rand_num == 0 or rand_num <= num:
+        do_random = False
+    rand_num2 = options[3]
+    if rand_num2 == 0 or rand_num2 <= num2:
+        do_random2 = False
+
     df = convert_csv_to_matrix(csv, num)
     df.to_csv('testing.csv', index=False)
