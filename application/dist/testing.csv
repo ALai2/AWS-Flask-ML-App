@@ -1,100 +1,316 @@
-Name,Email,Phone,index
-Chris Pardee,csp73@cornell.edu,9179932249,8
-Josh Zheng,jz786@cornell.edu,6072622406,6
-Sneha Kumar,sk2279@cornell.edu,6146029545,17
-Sawanth Eswaraprasad,se354@cornell.edu,6072629013,14
--,-,-,-
-+,+,+,+
-Rebecca Helling,lrh73@cornell.edu,7068339173,47
-Junyoung Lee,jl3252@cornell.edu,2162874366,31
-Souleiman Benhida,sb2342@cornell.edu,6176159609,1
-Hunter Kong,htk25@cornell.edu,9173925218,62
--,-,-,-
-+,+,+,+
-Stephanie Hoyt,shh89@cornell.edu,6072805183,24
-Lucy Xu,llx2@cornell.edu,7812289951,7
-AtreyaIyer,avi8@cornell.edu,6094143508,23
-Jia Yi Wang,jw2295@cornell.edu,6463749681,2
--,-,-,-
-+,+,+,+
-Jordyn Goldzweig,jg779@cornell.edu,3019747799,64
-Anthony,ay339@cornell.edu,6466393765,39
-Canhui Yu,cy428@cornell.edu,9176836080,56
-Anthony Yang,ay339@cornell.edu,6466393765,40
-Anthony,ay339@cornell.edu,2017857051,35
--,-,-,-
-+,+,+,+
-Helen Helen,hl973@cornell.edu,2244270088,20
-Helen Liang,hl973@cornell.edu,2244270088,30
-Kevin Wang,kw534@cornell.edu,4086667881,51
-April Ye,yy459@cornell.edu,4082182559,57
--,-,-,-
-+,+,+,+
-Sam Boardman,stb89@cornell.edu,6097098453,58
-Sawanth Prasad,se354@cornell.edu,6072629013,13
-Nathan,nathanstack24@gmail.com,5854412588,44
-Rachel Lee,sl2863@cornell.edu,9496106174,49
--,-,-,-
-+,+,+,+
-Kira Segenchuk,kms453@cornell.edu,5082776893,5
-Diana,dmb469@cornell.edu,9543762451,4
-Akane Edwards,aae32@cornell.edu,2035640098,66
-Thomas Koconis,tck35@cornell.edu,7176083364,65
--,-,-,-
-+,+,+,+
-Marcus,mn444@cornell.edu,6073798267,15
-Yash Mundra,ym267@cornell.edu,9295257770,61
-Arthur Burke,amb556@cornell.edu,9142753625,54
-Emily Leng,el629@cornell.edu,8477307023,27
--,-,-,-
-+,+,+,+
-Logan,lsl85@cornell.edu,5092017461,45
-Katie Schretter,kvs46@cornell.edu,5136335307,53
-Jorge Inamagua,jai46@cornell.edu,3475744495,12
-Yifan,yz348@cornell.edu,5186504083,28
--,-,-,-
-+,+,+,+
-Hanjun,hj447@cornell.edu,9175619755,43
-Akane Edwards,aae32@cornell.edu,2035640098,63
-Kevin Huang,kqh3@cornell.edu,5167548885,21
-Demi Chang,dc834@cornell.edu,6073797797,59
--,-,-,-
-+,+,+,+
-Megan Yin,my474@cornell.edu,3473615006,10
-Yuting Xue,ytxue9@gmail.com,9199287571,46
-Ivana Terziyska,it76@cornell.edu,4405703645,60
-Yuting Xue,yx288@cornell.edu,9199287571,48
--,-,-,-
-+,+,+,+
-Jonathan,jjc368@cornell.edu,9175027007,37
-Longxiulin Deng,ld469@cornell.edu,6072621082,50
-Lucas,ljj35@cornell.edu,7816408434,18
-Josh Zheng,jz786@cornell.edu,6072622406,38
--,-,-,-
-+,+,+,+
-Bryan Min,km567@cornell.edu,9494869112,22
-Erie,ema82@cornell.edu,3474857600,25
-Athena Cheung,afc65@cornell.edu,5167106508,26
-Rachel Lee,sl2863@cornell.edu,9496106174,0
--,-,-,-
-+,+,+,+
-Betsy Vasquez Valerio,blv9@cornell.edu,9175208970,34
-Iain Pile,imp25@cornell.edu,3474104747,32
-Tim,tcw74@cornell.edu,6317406692,16
-Ansh Godha,ag759@cornell.edu,6073795441,3
--,-,-,-
-+,+,+,+
-Scott,sw754@cornell.edu,7323061820,9
-Emily Leng,el629@cornell.edu,8477307023,52
-Hunter Kong,htk25@cornell.edu,9173925218,11
-Rohan,rt332@cornell.edu,9255963046,33
--,-,-,-
-+,+,+,+
-Diana Bank,dmb469@cornell.edu,9543762451,36
-Zhou Zhou,zz622@cornell.edu,6072624779,19
-Tristan Engst,tme28@cornell.edu,6073199597,29
-Yiduo Ke,yk467@cornell.edu,8605318645,55
-Jorge Inamagua,jai46@cornell.edu,3475744495,42
-Brett Jamieson,bj229@cornell.edu,6178427381,41
--,-,-,-
-+,+,+,+
+Name,Age,Gender,AgePref,index
+Karen Embry,60+,Female,60+,87
+Abbe,60+,Female,60+,7
+LISA Barbarino,60+,Female,60+,10
+-,-,-,-,-
++,+,+,+,+
+Kenneth ,29-34,Male,29-34,97
+Hans,29-34,Male,29-34,69
+Kevin Christopher Leonard,29-34,Male,29-34,98
+-,-,-,-,-
++,+,+,+,+
+Sara Pondolfino,60+,Female,60+,173
+Anna,60+,Female,60+,17
+Barbara Brienze,60+,Female,60+,23
+-,-,-,-,-
++,+,+,+,+
+Ally,23-28,Female,23-28,14
+Ally O,23-28,Female,23-28,19
+Brittney T,23-28,Female,23-28,28
+-,-,-,-,-
++,+,+,+,+
+Ray,41-49,Male,41-49,158
+Phil,41-49,Male,41-49,2
+Blaine,41-49,Male,41-49,27
+-,-,-,-,-
++,+,+,+,+
+Skye Scott,41-49,Female,41-49,169
+Danielle Beckman,41-49,Female,41-49,1
+Aimee,41-49,Female,41-49,11
+-,-,-,-,-
++,+,+,+,+
+Christina,29-34,Female,29-34,39
+Alicia Struble,29-34,Female,"23-28, 29-34",5
+Alison,29-34,Female,29-34,13
+-,-,-,-,-
++,+,+,+,+
+Liam,18-22,Other,18-22,148
+bruh,18-22,Female,18-22,3
+drea,18-22,Female,18-22,4
+-,-,-,-,-
++,+,+,+,+
+Kellie Kennedy,50-59,Female,50-59,106
+MaryAnn Hortas,50-59,Female,50-59,0
+Elizabeth R. Sher,50-59,Female,50-59,8
+-,-,-,-,-
++,+,+,+,+
+Marina Barci,23-28,Female,23-28,127
+Christina Papaleo,23-28,Female,23-28,40
+Camly,23-28,Female,23-28,46
+-,-,-,-,-
++,+,+,+,+
+Sean Martinelli,23-28,Male,23-28,165
+Robert Szott,23-28,Male,23-28,32
+Tom Reilly ,23-28,Male,23-28,181
+-,-,-,-,-
++,+,+,+,+
+Maria,35-40,Female,35-40,121
+Amy,35-40,Female,35-40,15
+Anna Elisabeth Wheeler,35-40,Female,35-40,16
+-,-,-,-,-
++,+,+,+,+
+Cyndi,50-59,Female,50-59,47
+Anu Chathampally,50-59,Female,50-59,9
+Aimee Siperek,50-59,Female,50-59,21
+-,-,-,-,-
++,+,+,+,+
+Chris,41-49,Male,41-49,34
+Christopher Coyle,41-49,Male,41-49,42
+Eric,41-49,Male,41-49,55
+-,-,-,-,-
++,+,+,+,+
+BRIDGET SULLIVAN,50-59,Female,50-59,30
+Sue,50-59,Female,50-59,22
+Barbara Kaiser,50-59,Female,50-59,26
+-,-,-,-,-
++,+,+,+,+
+Barbara O'Connor,60+,Female,60+,67
+Christine Allgeier,60+,Female,60+,41
+Dana Asher,60+,Female,60+,48
+-,-,-,-,-
++,+,+,+,+
+Sophia ,18-22,Female,18-22,172
+Ari,18-22,Female,18-22,20
+Kim Minju ,18-22,Female,18-22,31
+-,-,-,-,-
++,+,+,+,+
+Sofia,18-22,Female,18-22,44
+Chelsey  Jewett,18-22,Female,18-22,36
+Sarolta Deak,18-22,Female,18-22,51
+-,-,-,-,-
++,+,+,+,+
+Susan,50-59,Female,50-59,126
+cheryl,50-59,Female,50-59,37
+Connie Cutler,50-59,Female,50-59,43
+-,-,-,-,-
++,+,+,+,+
+Maho,23-28,Female,23-28,120
+Eileen Mangan,23-28,Female,23-28,57
+Kayla Rudess,23-28,Female,23-28,94
+-,-,-,-,-
++,+,+,+,+
+Loretta Obee,23-28,Female,23-28,113
+McKayla,23-28,Female,23-28,129
+lauren miller,23-28,Female,23-28,138
+-,-,-,-,-
++,+,+,+,+
+Joanne Eichel,60+,Female,60+,78
+Daryl,60+,Female,60+,53
+Andrea Kane,60+,Female,60+,62
+-,-,-,-,-
++,+,+,+,+
+M,60+,Female,60+,117
+Cheri Foti,60+,Female,60+,64
+"Gladstone, Gail",60+,Female,60+,66
+-,-,-,-,-
++,+,+,+,+
+Brandon,18-22,Male,18-22,29
+Aayush Vohra,18-22,Male,18-22,6
+LI AO,18-22,Male,18-22,107
+-,-,-,-,-
++,+,+,+,+
+Kathy Alongi,41-49,Female,41-49,90
+Alanna,41-49,Female,41-49,12
+Anne Law,41-49,Female,41-49,18
+-,-,-,-,-
++,+,+,+,+
+Rosalia Duarte,41-49,Female,41-49,157
+Stephenie ,41-49,Female,41-49,24
+Christine Delaney ,41-49,Female,41-49,33
+-,-,-,-,-
++,+,+,+,+
+Keeley Fitzgerald,29-34,Female,29-34,95
+Christa,29-34,Female,29-34,38
+Julienne,29-34,Female,29-34,85
+-,-,-,-,-
++,+,+,+,+
+Shama Zehra,41-49,Female,41-49,166
+Judith E Sheahan,41-49,Female,41-49,84
+Katy,41-49,Female,41-49,91
+-,-,-,-,-
++,+,+,+,+
+Hrair N Seropian,41-49,Male,41-49,59
+Eric,41-49,Male,41-49,56
+Mark,41-49,Male,41-49,123
+-,-,-,-,-
++,+,+,+,+
+Kristine Hokseng,18-22,Female,18-22,102
+Charlotte Deak,18-22,Female,18-22,52
+Dora ,18-22,Female,18-22,54
+-,-,-,-,-
++,+,+,+,+
+Melissa,41-49,Female,41-49,130
+Kobi,41-49,Female,41-49,100
+Jen,41-49,Female,41-49,103
+-,-,-,-,-
++,+,+,+,+
+Marty Grabow,60+,Male,60+,131
+Carlos,60+,Male,60+,45
+Marjorie F.,60+,Female,60+,73
+-,-,-,-,-
++,+,+,+,+
+McRae ,35-40,Female,35-40,111
+Michelle Anthony,35-40,Female,35-40,35
+Emily Sokolow,35-40,Female,35-40,60
+-,-,-,-,-
++,+,+,+,+
+Natalie Mary ,50-59,Female,50-59,152
+Hayley Gorenberg,50-59,Female,50-59,70
+Jennie ,50-59,Female,50-59,72
+-,-,-,-,-
++,+,+,+,+
+Mellani ,50-59,Female,50-59,139
+Jay,50-59,Female,50-59,77
+Jeannette,50-59,Female,50-59,79
+-,-,-,-,-
++,+,+,+,+
+Kate Farrell,18-22,Female,18-22,89
+Ela Ursu,18-22,Female,18-22,58
+emily ,18-22,Female,18-22,61
+-,-,-,-,-
++,+,+,+,+
+Seamus Blair,18-22,Male,18-22,164
+Nadav Herstik,18-22,Male,18-22,143
+Will,18-22,Male,18-22,144
+-,-,-,-,-
++,+,+,+,+
+Francis M Whritenour,35-40,Male,35-40,65
+Michael,35-40,Male,35-40,136
+Safwan Zokari,35-40,Male,35-40,162
+-,-,-,-,-
++,+,+,+,+
+Jenny Walrath ,29-34,Female,29-34,116
+Karina,29-34,Female,29-34,88
+Madonna,29-34,Female,29-34,119
+-,-,-,-,-
++,+,+,+,+
+SharynFurman ,60+,Female,60+,176
+Linda Geldres ,60+,Female,60+,74
+Teri A Cranston,60+,Female,60+,75
+-,-,-,-,-
++,+,+,+,+
+sonia ,41-49,Female,41-49,171
+Laytisha Collins-Smith,41-49,Female,41-49,105
+Denise,41-49,Female,41-49,108
+-,-,-,-,-
++,+,+,+,+
+Martha ,50-59,Female,50-59,124
+Laini Kavaloski,50-59,Female,50-59,92
+Siobhan,50-59,Female,50-59,96
+-,-,-,-,-
++,+,+,+,+
+Kay ,60+,Female,60+,93
+Lori,60+,Female,60+,76
+Jennifer Georgino,60+,Female,60+,80
+-,-,-,-,-
++,+,+,+,+
+Marina ,29-34,Female,29-34,161
+Staci Kohlhagen,29-34,Female,29-34,174
+Fiona,29-34,Female,29-34,179
+-,-,-,-,-
++,+,+,+,+
+Tony Trahan,50-59,Male,50-59,153
+Murat,50-59,Male,50-59,25
+David Reid,50-59,Male,50-59,49
+-,-,-,-,-
++,+,+,+,+
+ROBERTA KEOGAN,60+,Female,60+,156
+Diane Cohen,60+,Female,60+,83
+Michael and Linda Paciello,60+,Female,60+,99
+-,-,-,-,-
++,+,+,+,+
+Michaella,18-22,Female,18-22,132
+Elly Southey,18-22,Female,18-22,63
+Hannah,18-22,Female,18-22,68
+-,-,-,-,-
++,+,+,+,+
+Justine Nguyen,41-49,Female,41-49,180
+Lisa,41-49,Female,41-49,110
+Macy Diekman Richards,41-49,Female,41-49,118
+-,-,-,-,-
++,+,+,+,+
+Nola C Booth,23-28,Female,23-28,145
+Jillian,23-28,Female,23-28,168
+wei li,23-28,Male,23-28,185
+-,-,-,-,-
++,+,+,+,+
+Maaike Callan,60+,Female,60+,128
+Liz Kovall,60+,Female,60+,109
+Lucille Gherardi,60+,Female,60+,115
+-,-,-,-,-
++,+,+,+,+
+Mike,29-34,Male,29-34,134
+Ion disdy,29-34,Male,29-34,114
+Sam T Schachter,29-34,Male,29-34,163
+-,-,-,-,-
++,+,+,+,+
+Judith,60+,Female,60+,150
+Mary Ann Starbuck,60+,Female,60+,125
+Mindy Fradkin,60+,Female,60+,133
+-,-,-,-,-
++,+,+,+,+
+Lavern,50-59,Female,50-59,187
+Laurie Gifford Adams,50-59,Female,50-59,104
+Laura S Noselli,50-59,Female,50-59,112
+-,-,-,-,-
++,+,+,+,+
+Rita Boratav,50-59,Female,50-59,160
+April,50-59,Female,50-59,142
+Michelle,50-59,Female,50-59,167
+-,-,-,-,-
++,+,+,+,+
+Bryn,35-40,Female,35-40,151
+Heather,35-40,Female,35-40,71
+Jessica Marsico,35-40,Female,35-40,81
+-,-,-,-,-
++,+,+,+,+
+David,50-59,Male,50-59,50
+Nelson,50-59,Male,50-59,147
+Christine,50-59,Female,50-59,186
+-,-,-,-,-
++,+,+,+,+
+Rose,60+,Female,60+,184
+Molly ,60+,Female,60+,140
+Nina Candido,60+,Female,60+,146
+-,-,-,-,-
++,+,+,+,+
+Nico,18-22,Female,18-22,149
+Kamile,18-22,Female,18-22,86
+Kaily,18-22,Female,18-22,101
+-,-,-,-,-
++,+,+,+,+
+Grace,60+,Female,60+,178
+Patricia,60+,Female,60+,155
+sharon maydet,60+,Female,60+,170
+-,-,-,-,-
++,+,+,+,+
+Amy,35-40,Female,35-40,137
+Jessica,35-40,Female,35-40,82
+Haydee,35-40,Female,35-40,141
+-,-,-,-,-
++,+,+,+,+
+Yana Siganur Dushko,29-34,Female,29-34,188
+Vanessa,29-34,Female,29-34,182
+Maria,18-22,Female,18-22,122
+-,-,-,-,-
++,+,+,+,+
+Veronica ,60+,Female,60+,183
+Tally Poulin,60+,Female,60+,177
+Mishel Rubin,18-22,Female,18-22,135
+-,-,-,-,-
++,+,+,+,+
+Petr Václav Kukrál,18-22,Male,18-22,154
+Gina,41-49,Female,41-49,159
+Suzanne Nelson,41-49,Female,41-49,175
+-,-,-,-,-
++,+,+,+,+

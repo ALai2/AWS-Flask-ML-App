@@ -52,6 +52,8 @@ weights = {'Name': 0, 'Gender': 0, 'Major': 5, 'GradYear': 7,
 weights.update({ 'Course '+str((len(i_classes))+i): c_weight for i in range(1, len(i_classes)+1) })
 weights.update({ 'Interest '+str((len(interests))+i): i_weight for i in range(1, len(interests)+1) })
 
+preferences = {}
+
 # construct similarity matrix for group according to features and return pairings
 def func_pairs(features, group, num, rand_num, do_random):
     # apply clean_df function to features
@@ -196,12 +198,7 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num,
     # Get the employee indices
     emp_indices = []
     emp_sims = []
-    if do_random:
-        group_num = rand_num 
-    else:
-        group_num = num + 1
     for i in sim_scores:
-        if (len(emp_indices) == group_num): break
         if i[0] not in list_to_remove and i[0] != idx:
             emp_indices.append(i[0])
             emp_sims.append(i[1])
@@ -213,17 +210,44 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num,
 
 import random 
 # choose partners from list of top similar people from get_recommendations
-def get_random(mylist, num, do_random): # num = number of people per group
+def get_random(idx, m0, mylist, num, do_random): # num = number of people per group
     if (len(mylist) > num):
         inds = list(mylist.index)
         result = pd.DataFrame(columns=features)
+        cur_size = 0
+        already_selected = []
+
+        if preferences != {}:
+            for i in inds:
+                already_added = False
+                for feature in preferences:
+                    idx_feature = m0[m0.index==idx][feature].iloc[0]
+                
+                    if mylist[mylist.index == i][preferences[feature]].iloc[0] == idx_feature:
+                        already_added = True
+                if already_added:
+                    result = pd.concat([result, mylist[mylist.index == i]], sort=False)
+                    already_selected.append(i)
+                    cur_size = cur_size + 1
+                    if cur_size == num-1:
+                        return result
         if do_random:
             rand_inds = random.sample(inds, num-1)
             for i in rand_inds:
-                result = pd.concat([result, mylist[mylist.index == i]], sort=False)
+                if i not in already_selected:
+                    already_selected.append(i)
+                    result = pd.concat([result, mylist[mylist.index == i]], sort=False)
+                    cur_size = cur_size + 1
+                    if cur_size == num-1:
+                        return result
         else:
             for i in range(0, num-1):
-                result = pd.concat([result, mylist[mylist.index == inds[i]]], sort=False)
+                if inds[i] not in already_selected:
+                    already_selected.append(i)
+                    result = pd.concat([result, mylist[mylist.index == inds[i]]], sort=False)
+                    cur_size = cur_size + 1
+                    if cur_size == num-1:
+                        return result
     else:
         result = mylist
     return result
@@ -235,7 +259,7 @@ def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num, do_random):
     
     for e in emplist:
         if indices[e] not in list_to_remove:
-            partner = list(get_random(get_recommendations(e, indices, cosine_sim, list_to_remove, m0, rand_num, do_random), num, do_random)['index'])
+            partner = list(get_random(indices[e], m0, get_recommendations(e, indices, cosine_sim, list_to_remove, m0, rand_num, do_random), num, do_random)['index'])
             name0 = e
             pair = [name0]
             
@@ -249,13 +273,15 @@ def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num, do_random):
             list_to_remove.sort(reverse=True)
     return pairs
 
-def run_file(csv, lists, we, options):
+def run_file(csv, lists, we, pf, options):
     global features
     global pair_features
     global final_features
     global replace_space
     global replace_key
     global weights
+    global preferences
+    global groupby
 
     global num
     global rand_num
@@ -271,6 +297,7 @@ def run_file(csv, lists, we, options):
     replace_space = lists[3]
     final_features = lists[4]
     weights = we
+    preferences = pf
 
     num = options[0]
     num2 = options[1]
@@ -282,6 +309,12 @@ def run_file(csv, lists, we, options):
     rand_num2 = options[3]
     if rand_num2 == 0 or rand_num2 <= num2:
         do_random2 = False
+    
+    groupby = None
+    if options[4] != None:
+        print("HHH")
+        print(options[4])
+        groupby = options[4]
 
     df = convert_csv_to_matrix(csv, num)
     df.to_csv('testing.csv', index=False)

@@ -3,7 +3,7 @@ from tkinter import filedialog
 import match_2_into_4 as match
 import pandas as pd
 
-size_w = 600
+size_w = 900
 size_h = 500
 root= tk.Tk()
 root.geometry(str(size_w) + "x" + str(size_h))
@@ -41,6 +41,8 @@ in_path = ""
 labels_list = []
 vars = []
 
+titles = ['First Round','Second Round','Replace Key','Remove Space','CSV Output','Feature Weight','Pref Target']
+
 start_int = 180
 def hello ():  
     global in_path
@@ -62,11 +64,8 @@ def hello ():
             previous_columns = column_list
 
             default_height = 11
-            #if len(column_list) > default_height:
-            #    canvas1.config(height=size_h + 25*(len(column_list)-default_height))
             
-            titles = ['First Round','Second Round','Replace Key','Remove Space','CSV Output','Feature Weight']
-            for x in range(6):
+            for x in range(len(titles)):
                 title = tk.Label(canvas1, text = titles[x], fg='green', font=('helvetica', 12, 'bold'), wraplength=70)
                 canvas1.create_window((size_w/6 - 30) + 65*(x+2), 150, window=title)
                 labels_list.append(title)
@@ -88,6 +87,11 @@ def hello ():
                 vars.append(we)
                 canvas1.create_window((size_w/6 - 30) + 65*(5+2), start_int + (i*25), window=we)
                 labels_list.append(we)
+
+                pref = tk.Entry(canvas1, width=10)
+                vars.append(pref)
+                canvas1.create_window((size_w/6 - 30) + 65*(6+2), start_int + (i*25), window=pref)
+                labels_list.append(pref)
             
             # amount of people for each round
             amount_label = tk.Label(canvas1, anchor=tk.E, text="How many?", fg='red', font=('helvetica', 12, 'bold'), width=20)
@@ -120,6 +124,16 @@ def hello ():
             labels_list.append(rand_e2)
             vars.append(rand_e2)
 
+            # groupby?
+            groupby_label = tk.Label(canvas1, anchor=tk.E, text="Groupby", fg='red', font=('helvetica', 12, 'bold'), width=20)
+            canvas1.create_window(size_w/6 - 40, start_int + ((len(column_list)+2)*25), window=groupby_label)
+            labels_list.append(groupby_label)
+
+            group_e = tk.Entry(canvas1, width=10)
+            canvas1.create_window((size_w/6 - 30) + 65*(0+2), start_int + ((len(column_list) + 2)*25), window=group_e)
+            labels_list.append(group_e)
+            vars.append(group_e)
+
         button2.lift()
 
 button1 = tk.Button(text="Choose CSV",command=hello, bg='brown',fg='white')
@@ -129,14 +143,17 @@ def submit():
     weights = {}
     list_of_lists = [[],[],[],[],[]]
     current_var = 0
+    prefs = {}
     for i in range(0, len(previous_columns)):
-        for x in range(6):
-            input = vars[6*i + x].get()
+        for x in range(len(titles)):
+            input = vars[len(titles)*i + x].get()
             if x < 5:
                 if (input == 1):
                     list_of_lists[x].append(previous_columns[i])
-            elif input != "":
+            elif input != "" and titles[x] == "Feature Weight":
                 weights[previous_columns[i]] = int(input)
+            elif input != "" and titles[x] == "Pref Target":
+                prefs[previous_columns[i]] = input
             current_var+=1
     
     options_list = []
@@ -145,8 +162,14 @@ def submit():
             options_list.append(int(vars[current_var + i].get()))
         else:
             options_list.append(0)
+    current_var += 4
+    input = vars[current_var].get()
+    if input != "":
+        options_list.append(input)
+    else:
+        options_list.append(None)
 
-    match.run_file(in_path, list_of_lists, weights, options_list)
+    match.run_file(in_path, list_of_lists, weights, prefs, options_list)
     update_text.set("Done")
 
 button2 = tk.Button(text="Submit",command=submit, bg='brown',fg='white')

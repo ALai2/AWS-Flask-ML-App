@@ -1,100 +1,316 @@
-Name,Email,Phone,GradYear,Course1,Course2,Course3,Course4,Interest1,Interest2,StudyHabits,Hometown,CampusLocation,Gender,Race,Major,Pref,index
-Diana,dmb469@cornell.edu,9543762451,2020,,CS 4820,GOVT 3091,,cooking,art,I start my assignments in the middle of the week.,New York,Collegetown,Female,Bi/Multicultural,Physics,,4
-Diana Bank,dmb469@cornell.edu,9543762451,2020,,GOVT 3091,ENGL 2785,ASIAN 2299,cooking,art,I start my assignments in the middle of the week.,Florida,Collegetown,Female,Bi/Multicultural,Physics,,36
-Kira Segenchuk,kms453@cornell.edu,5082776893,2022,,CS 4820,ECON 4220,HIST 2749,cycling,cooking,I start my assignments the day they are released,Massachusetts,West Campus (Dorms),Prefer not to specify,Prefer not to specify,Computer Science,male,5
-Junyoung Lee,jl3252@cornell.edu,2162874366,2020,,CS 4820,CS 4820,CS 4820,Socccer,Cooking,I start my assignments in the middle of the week.,Ohio,West Campus (Dorms),Male,Asian American,Computer Science,,31
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Zhou Zhou,zz622@cornell.edu,6072624779,2020,,CS 4820,CS 2024,,Movie,Gaming,I start my assignments in the middle of the week.,China,Other,Female,,Information Science,,19
-Sam Boardman,stb89@cornell.edu,6097098453,2021,,CS 4820,MATH 4330,MATH 3610,Surfing ,Gaming,I start my assignments in the middle of the week.,New Jersey,Collegetown,Male,Caucasian,Mathematics,,58
-Nathan,nathanstack24@gmail.com,5854412588,2021,,CS 4820,CS 4320,,Sports,Music,I start my assignments the day they are released,New York,North Campus (Freshmen Dorms),Male,Caucasian,Computer Science,,44
-Akane Edwards,aae32@cornell.edu,2035640098,2021,,CS 4820,JAPAN 3301,CS 4320,Video Games,Drawing,I start my assignments the day they are released,Connecticut,Collegetown,Female,Asian American,Computer Science,Female,63
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Akane Edwards,aae32@cornell.edu,2035640098,2021,,CS 4820,CS 4320,JAPAN 3301,Video Games,Drawing,I start my assignments the day they are released,Connecticut,Collegetown,Female,Asian American,Computer Science,Female,66
-Kevin Wang,kw534@cornell.edu,4086667881,2020,,CS 4820,CS 4320,COMM 4860,Video games,Basketball,I start my assignments in the middle of the week.,California,Collegetown,Male,Asian American,Information Science,,51
-Thomas Koconis,tck35@cornell.edu,7176083364,2021,,CS 4820,CS 4620,ECON 3030,video games,sports,I start my assignments the day they are released,Pennsylvania,West Campus (Dorms),Male,Caucasian,Computer Science,,65
-Rachel Lee,sl2863@cornell.edu,9496106174,2020,,CS 4320,CS 4620,CS 4820,computer science,movies/netflix/kdrama,I start my assignments in the middle of the week.,California,Collegetown,Female,Asian American,Computer Science,,49
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Yiduo Ke,yk467@cornell.edu,8605318645,2022,,CS 4820,CS 4780,GERST 2000,reading,swimming,I start my assignments the day they are released,New York,Other,Female,Asian American,Computer Science,,55
-Sneha Kumar,sk2279@cornell.edu,6146029545,2020,,CS 4820,CS 4780,,Watching Movies,Dancing,I start my assignments in the middle of the week.,Ohio,Collegetown,Female,Asian American,Computer Science,,17
-Emily Leng,el629@cornell.edu,8477307023,2020,,CS 4820,CS 4780,CS 4740,Music,Badminton,I start my assignments in the middle of the week.,Illinois,Collegetown,Female,Asian American,Computer Science,,27
-Emily Leng,el629@cornell.edu,8477307023,2020,,cs 4740,cs 4780,,music,badminton,I start my assignments in the middle of the week.,Illinois,Collegetown,Female,Asian American,Computer Science,,52
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Brett Jamieson,bj229@cornell.edu,6178427381,2021,,Econ 2040,Cs 4700,BTRY 3010,Video games,Basketball,I start my assignments in the middle of the week.,Massachusetts,Collegetown,Prefer not to specify,Caucasian,Computer Science,,41
-Yifan,yz348@cornell.edu,5186504083,2021,,CS 4820,CS 4700,,Software Engineer,Startups,I start my assignments in the middle of the week.,New York,Collegetown,Male,Other,Computer Science,,28
-Logan,lsl85@cornell.edu,5092017461,2020,,CS 4820,CS 4700,ORIE 3500,Cooking,Video Games,I start my assignments in the middle of the week.,New York,Other,Male,Asian American,Computer Science,,45
-Jorge Inamagua,jai46@cornell.edu,3475744495,2021,,CS 4820,CS 4700,,Video Games,Theater,I start my assignments in the middle of the week.,New York,North Campus (Other),Male,Hispanic American,Computer Science,,12
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Rohan,rt332@cornell.edu,9255963046,2021,,CS 4410,CS 4700,,Basketball,Boxing,I start my assignments in the middle of the week.,California,Collegetown,Male,Asian American,Computer Science,,33
-Hunter Kong,htk25@cornell.edu,9173925218,2020,,CS4820,CS4410,,Coding,Basketball,I start my assignments the day they are released,New York,West Campus (Dorms),Male,Prefer not to specify,Information Science,,62
-Yash Mundra,ym267@cornell.edu,9295257770,2021,,CS 4820,CS 4740,,Movies,Technology,I start my assignments in the middle of the week.,India,Collegetown,,,Computer Science,,61
-Helen Liang,hl973@cornell.edu,2244270088,2021,,CS 4320,CS 4410,,watching tv,talking,I start my assignments in the middle of the week.,Illinois,Collegetown,,Asian American,Computer Science,,30
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Arthur Burke,amb556@cornell.edu,9142753625,2021,,CS 4780,PHYS 3327,ITAL 1201,Cooking,Physics,I start my assignments the day they are released,New York,Collegetown,Male,Caucasian,Computer Science,,54
-Ivana Terziyska,it76@cornell.edu,4405703645,2020,,PSYCH 3420 ,CS 4780,ENGL 2800,cooking,music ,I start my assignments the day they are released,Ohio,Other,Female,Caucasian,Computer Science,,60
-Athena Cheung,afc65@cornell.edu,5167106508,2021,,ENGRD 2720,CS 4110,CS 4411,cyber security,video games,I start my assignments in the middle of the week.,New York,Other,Prefer not to specify,Prefer not to specify,Computer Science,,26
-Jonathan,jjc368@cornell.edu,9175027007,2021,,CS 4780,CS 4620,JAPAN 2201,Rock Climbing,Gaming,I start my assignments the day they are released,New York,Other,Male,Hispanic American,Computer Science,,37
-Yuting Xue,yx288@cornell.edu,9199287571,2021,,CS 4820,CS 4780,CS 4620,running,reading,I start my assignments in the middle of the week.,China,Collegetown,Female,Other,Computer Science,,48
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Lucas,ljj35@cornell.edu,7816408434,2020,,CS 4810,CS 4780,,Soccer,Traveling,I start my assignments in the middle of the week.,Massachusetts,Collegetown,Male,Caucasian,Computer Science,,18
-Josh Zheng,jz786@cornell.edu,6072622406,2021,,CS 4810,CS 4780,COGST 2230,Languages,Piano,I start my assignments the day they are released,New York,West Campus (Dorms),Male,Prefer not to specify,Computer Science,,38
-Sawanth Eswaraprasad,se354@cornell.edu,6072629013,2020,,CS 4820,CS 4780,CS 4700,Hiking,Photography,I start my assignments in the middle of the week.,India,West Campus (Dorms),Male,Other,Computer Science,,14
-Katie Schretter,kvs46@cornell.edu,5136335307,2020,,CS4820,CS 4700,,Rowing ,Outdoors,I start my assignments in the middle of the week.,Illinois,Collegetown,Female,Caucasian,Computer Science,,53
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Anthony,ay339@cornell.edu,6466393765,2022,,CS 3410,MATH 3230,JAPAN 1101,Web Dev,Anime,I start my assignments the day they are released,Connecticut,West Campus (Dorms),Male,Asian American,Computer Science,,39
-Iain Pile,imp25@cornell.edu,3474104747,2021,,CS 4820,CS 3410,LING 3303,Video Games,Role-Playing,I start my assignments the day they are released,New York,West Campus (Dorms),Male,Caucasian,Computer Science,,32
-Anthony Yang,ay339@cornell.edu,6466393765,2022,,CS 4820,CS 3410,JAPAN 1101,Web Dev,Anime,I start my assignments the day they are released,Connecticut,West Campus (Dorms),Male,Asian American,Computer Science,,40
-Anthony,ay339@cornell.edu,2017857051,2022,,CS 3410,JAPAN 1101,,Web Development,Anime,I start my assignments the day they are released,Connecticut,West Campus (Dorms),Male,Asian American,Computer Science,,35
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Canhui Yu,cy428@cornell.edu,9176836080,2020,,CS 4820,ECE 5470,CS 5780,Rock Climbing,Chilling ,I start my assignments in the middle of the week.,China,Other,Male,Other,Mechanical Engineering,,56
-Rachel Lee,sl2863@cornell.edu,9496106174,2020,,INFO 2040,CS 4320,VIEN 1104,Netflix,Cooking,I start my assignments in the middle of the week.,New York,Collegetown,Female,Asian American,Computer Science,,0
-April Ye,yy459@cornell.edu,4082182559,2021,,CS 4820,CS 4320,CS 5306,cooking noodles,drinking coffee,I start my assignments in the middle of the week.,California,Collegetown,Female,Asian American,Computer Science,,57
-Bryan Min,km567@cornell.edu,9494869112,2020,,INFO 4430,CS 5306,,basketball,Computer Science,I start my assignments the day they are released,California,Collegetown,Male,Asian American,Computer Science,,22
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Megan Yin,my474@cornell.edu,3473615006,2022,,ORIE 3150,ORIE 3300,ECE 2400,Music,Traveling,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Female,Asian American,Computer Science,,10
-Yuting Xue,ytxue9@gmail.com,9199287571,2021,,CS 4620,ORIE 3300,ORIE 3150,running,reading,I start my assignments in the middle of the week.,China,Collegetown,Female,Other,Computer Science,,46
-Ansh Godha,ag759@cornell.edu,6073795441,2022,,CS 2850,MATH 2940,ENGRD 2700,Playing Squash,Working on small side projects,I start my assignments in the middle of the week.,India,Collegetown,Male,Asian American,Computer Science,,3
-Tristan Engst,tme28@cornell.edu,6073199597,2021,,CS 2850,CS 4780,FREN 2091,Artificial Intelligence—mostly neural nets,Internationalism,I start my assignments the day they are released,New York,North Campus (Other),,,Computer Science,,29
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Scott,sw754@cornell.edu,7323061820,2022,,CS 4780,DTI,,Music,reddit,I start my assignments closer to the deadline.,New Jersey,West Campus (Dorms),Male,Asian American,Computer Science,,9
-Josh Zheng,jz786@cornell.edu,6072622406,2021,,ASL 1101,CS 4780,,Netflix,Piano,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Male,,Computer Science,,6
-Hunter Kong,htk25@cornell.edu,9173925218,2020,,INFO4240,CS4410,INFO2450,Solving puzzles,Anime + manga,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Male,Asian American,Computer Science,"No preference. But it will be nice to have a diverse group, some guys and some girls.",11
-Helen Helen,hl973@cornell.edu,2244270088,2021,,CS 4320,CS 4410,,Watching TV,Napping,I start my assignments in the middle of the week.,New York,Collegetown,Female,Asian American,Computer Science,,20
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Souleiman Benhida,sb2342@cornell.edu,6176159609,2021,,CS 4820,CS 4410,,religion,tennis,I start my assignments closer to the deadline.,Massachusetts,North Campus (Other),Male,Bi/Multicultural,Computer Science,,1
-Chris Pardee,csp73@cornell.edu,9179932249,2020,,AI Prac,Grad CV,Info Research,Making Music,??,I start my assignments closer to the deadline.,New York,Collegetown,Male,Prefer not to specify,Computer Science,,8
-Jia Yi Wang,jw2295@cornell.edu,6463749681,2020,,CS 4820,CS 3410,,Manga,Food,I start my assignments closer to the deadline.,New York,Collegetown,Female,Asian American,Computer Science,,2
-Betsy Vasquez Valerio,blv9@cornell.edu,9175208970,2021,,CS 4820,CS 3410,CS 4210,sleeping,netflix,I start my assignments in the middle of the week.,New York,Collegetown,Female,Hispanic American,Computer Science,,34
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Rebecca Helling,lrh73@cornell.edu,7068339173,2021,,CS 4820,CS 3140,,baking,cats,I start my assignments the day they are released,Georgia,West Campus (Dorms),Female,Caucasian,Computer Science,Would prefer females. ,47
-Lucy Xu,llx2@cornell.edu,7812289951,2021,,BTRY 3080,CS 4410,CS 4701,Cooking,Drawing,I start my assignments the day they are released,Massachusetts,Collegetown,Female,Asian American,Computer Science,,7
-Hanjun,hj447@cornell.edu,9175619755,2020,,STSCI 5030,CS 4820,CS 5740,Hiking & Jogging,food lol,I start my assignments in the middle of the week.,New York,Collegetown,Female,Asian American,Statistical Science,,43
-Sawanth Prasad,se354@cornell.edu,6072629013,2020,,CS 4820,CS 5780,,Adventures,Photography,I start my assignments in the middle of the week.,India,Other,Male,Other,Computer Science,,13
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Jorge Inamagua,jai46@cornell.edu,3475744495,2020,,ANTHR 4256,CS 4700,,Music Production,Video games,I start my assignments in the middle of the week.,New York,North Campus (Other),Male,Hispanic American,Computer Science,,42
-Marcus,mn444@cornell.edu,6073798267,2020,,CS 4740,CS 4820,CS 4700,Archery,Rock Climbing,I start my assignments in the middle of the week.,New York,North Campus (Other),Male,Other,Chemistry and Chemical Biology,,15
-Stephanie Hoyt,shh89@cornell.edu,6072805183,2020,,btry 3080,CS 4775,biomg 4400,nyt crossword,bio research,I start my assignments in the middle of the week.,New York,Collegetown,Female,Caucasian,Computer Science,,24
-AtreyaIyer,avi8@cornell.edu,6094143508,2021,,CS 3410,BTRY 3080,,machine learning,basketball,I start my assignments the day they are released,New York,North Campus (Other),,,Computer Science,,23
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
-Longxiulin Deng,ld469@cornell.edu,6072621082,2021,,CS 4820,CS 4620,ORIE 6334,Brazilian Jiu-jitsu,Cooking,I start my assignments the day they are released,China,Other,Female,Other,Computer Science,Chinese,50
-Jordyn Goldzweig,jg779@cornell.edu,3019747799,2021,,INFO 3450,CS 4620,NBA 3000,netflix,entrepreneurship,I start my assignments in the middle of the week.,New Jersey,Collegetown,Female,Caucasian,Computer Science,,64
-Demi Chang,dc834@cornell.edu,6073797797,2020,,CS 4820,CS 3110,,"Drawing, Sewing, Cooking",Sci-fi and non-fiction books,I start my assignments the day they are released,China,North Campus (Other),Female,Asian American,Architecture,,59
-Kevin Huang,kqh3@cornell.edu,5167548885,2022,,CS 4320,CS 3110,,Anime,Politics,I start my assignments in the middle of the week.,New York,West Campus (Dorms),Male,Asian American,Computer Science,,21
-Erie,ema82@cornell.edu,3474857600,2020,,CS 4701,CS 4750,,Guitar,Latin Dance,I start my assignments in the middle of the week.,New York,North Campus (Other),Male,Hispanic American,Computer Science,,25
-Tim,tcw74@cornell.edu,6317406692,2021,,MATH 2210,BIOEE 1540,,school,bodybuilding,I start my assignments in the middle of the week.,New York,North Campus (Freshmen Dorms),Male,Bi/Multicultural,Computer Science,no,16
--,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
-+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Name,Age,Gender,AgePref,GenderPref,index
+Mike,29-34,Male,29-34,,134
+Hans,29-34,Male,29-34,,69
+Kenneth ,29-34,Male,29-34,,97
+-,-,-,-,-,-
++,+,+,+,+,+
+Maaike Callan,60+,Female,60+,,128
+Abbe,60+,Female,60+,,7
+LISA Barbarino,60+,Female,60+,,10
+-,-,-,-,-,-
++,+,+,+,+,+
+Julienne,29-34,Female,29-34,Female,85
+MaryAnn Hortas,50-59,Female,50-59,,0
+Danielle Beckman,41-49,Female,41-49,,1
+-,-,-,-,-,-
++,+,+,+,+,+
+David Reid,50-59,Male,50-59,,49
+Murat,50-59,Male,50-59,,25
+David,50-59,Male,50-59,,50
+-,-,-,-,-,-
++,+,+,+,+,+
+Lucille Gherardi,60+,Female,60+,,115
+Anna,60+,Female,60+,,17
+Barbara Brienze,60+,Female,60+,,23
+-,-,-,-,-,-
++,+,+,+,+,+
+Liz Kovall,60+,Female,60+,,109
+Christine Allgeier,60+,Female,60+,,41
+Daryl,60+,Female,60+,,53
+-,-,-,-,-,-
++,+,+,+,+,+
+Ray,41-49,Male,41-49,,158
+Phil,41-49,Male,41-49,,2
+Blaine,41-49,Male,41-49,,27
+-,-,-,-,-,-
++,+,+,+,+,+
+Sarolta Deak,18-22,Female,18-22,Male,51
+Nico,18-22,Female,18-22,Male,149
+Aayush Vohra,18-22,Male,18-22,,6
+-,-,-,-,-,-
++,+,+,+,+,+
+Kamile,18-22,Female,18-22,,86
+bruh,18-22,Female,18-22,,3
+drea,18-22,Female,18-22,,4
+-,-,-,-,-,-
++,+,+,+,+,+
+Jen,41-49,Female,41-49,,103
+Aimee,41-49,Female,41-49,,11
+Alanna,41-49,Female,41-49,,12
+-,-,-,-,-,-
++,+,+,+,+,+
+Michael,35-40,Male,35-40,,136
+Francis M Whritenour,35-40,Male,35-40,,65
+Safwan Zokari,35-40,Male,35-40,,162
+-,-,-,-,-,-
++,+,+,+,+,+
+"Gladstone, Gail",60+,Female,60+,,66
+Andrea Kane,60+,Female,60+,,62
+Cheri Foti,60+,Female,60+,,64
+-,-,-,-,-,-
++,+,+,+,+,+
+Hannah,18-22,Female,18-22,,68
+Ari,18-22,Female,18-22,,20
+Kim Minju ,18-22,Female,18-22,,31
+-,-,-,-,-,-
++,+,+,+,+,+
+Maho,23-28,Female,23-28,,120
+Ally,23-28,Female,23-28,,14
+Ally O,23-28,Female,23-28,,19
+-,-,-,-,-,-
++,+,+,+,+,+
+Mindy Fradkin,60+,Female,60+,,133
+Barbara O'Connor,60+,Female,60+,,67
+Marjorie F.,60+,Female,60+,,73
+-,-,-,-,-,-
++,+,+,+,+,+
+Macy Diekman Richards,41-49,Female,41-49,,118
+Anne Law,41-49,Female,41-49,,18
+Stephenie ,41-49,Female,41-49,,24
+-,-,-,-,-,-
++,+,+,+,+,+
+Patricia,60+,Female,60+,,155
+Linda Geldres ,60+,Female,60+,,74
+Teri A Cranston,60+,Female,60+,,75
+-,-,-,-,-,-
++,+,+,+,+,+
+Robert Szott,23-28,Male,23-28,,32
+Sean Martinelli,23-28,Male,23-28,,165
+Tom Reilly ,23-28,Male,23-28,,181
+-,-,-,-,-,-
++,+,+,+,+,+
+SharynFurman ,60+,Female,60+,,176
+Lori,60+,Female,60+,,76
+Joanne Eichel,60+,Female,60+,,78
+-,-,-,-,-,-
++,+,+,+,+,+
+Christine Delaney ,41-49,Female,41-49,,33
+Judith E Sheahan,41-49,Female,41-49,,84
+Kathy Alongi,41-49,Female,41-49,,90
+-,-,-,-,-,-
++,+,+,+,+,+
+Seamus Blair,18-22,Male,18-22,,164
+Brandon,18-22,Male,18-22,,29
+LI AO,18-22,Male,18-22,,107
+-,-,-,-,-,-
++,+,+,+,+,+
+Anna Elisabeth Wheeler,35-40,Female,35-40,,16
+Amy,35-40,Female,35-40,,15
+Michelle Anthony,35-40,Female,35-40,,35
+-,-,-,-,-,-
++,+,+,+,+,+
+Suzanne Nelson,41-49,Female,41-49,Male,175
+Chris,41-49,Male,41-49,,34
+Christopher Coyle,41-49,Male,41-49,,42
+-,-,-,-,-,-
++,+,+,+,+,+
+Keeley Fitzgerald,29-34,Female,29-34,,95
+Alicia Struble,29-34,Female,"23-28, 29-34",,5
+Alison,29-34,Female,29-34,,13
+-,-,-,-,-,-
++,+,+,+,+,+
+Staci Kohlhagen,29-34,Female,29-34,,174
+Christa,29-34,Female,29-34,,38
+Christina,29-34,Female,29-34,,39
+-,-,-,-,-,-
++,+,+,+,+,+
+Rita Boratav,50-59,Female,50-59,,160
+Elizabeth R. Sher,50-59,Female,50-59,,8
+Anu Chathampally,50-59,Female,50-59,,9
+-,-,-,-,-,-
++,+,+,+,+,+
+Connie Cutler,50-59,Female,50-59,,43
+Aimee Siperek,50-59,Female,50-59,,21
+Sue,50-59,Female,50-59,,22
+-,-,-,-,-,-
++,+,+,+,+,+
+Haydee,35-40,Female,35-40,,141
+Emily Sokolow,35-40,Female,35-40,,60
+Heather,35-40,Female,35-40,,71
+-,-,-,-,-,-
++,+,+,+,+,+
+Jeannette,50-59,Female,50-59,,79
+Barbara Kaiser,50-59,Female,50-59,,26
+BRIDGET SULLIVAN,50-59,Female,50-59,,30
+-,-,-,-,-,-
++,+,+,+,+,+
+Mary Ann Starbuck,60+,Female,60+,,125
+Jennifer Georgino,60+,Female,60+,,80
+Diane Cohen,60+,Female,60+,,83
+-,-,-,-,-,-
++,+,+,+,+,+
+Ela Ursu,18-22,Female,18-22,,58
+Chelsey  Jewett,18-22,Female,18-22,,36
+Sofia,18-22,Female,18-22,,44
+-,-,-,-,-,-
++,+,+,+,+,+
+Kay ,60+,Female,60+,,93
+Karen Embry,60+,Female,60+,,87
+Michael and Linda Paciello,60+,Female,60+,,99
+-,-,-,-,-,-
++,+,+,+,+,+
+Kayla Rudess,23-28,Female,23-28,Male,94
+Brittney T,23-28,Female,23-28,Male,28
+Christina Papaleo,23-28,Female,23-28,Male,40
+-,-,-,-,-,-
++,+,+,+,+,+
+Jay,50-59,Female,50-59,,77
+cheryl,50-59,Female,50-59,,37
+Cyndi,50-59,Female,50-59,,47
+-,-,-,-,-,-
++,+,+,+,+,+
+Maria,18-22,Female,18-22,,122
+Charlotte Deak,18-22,Female,18-22,Female,52
+Dora ,18-22,Female,18-22,,54
+-,-,-,-,-,-
++,+,+,+,+,+
+Marty Grabow,60+,Male,60+,,131
+Carlos,60+,Male,60+,,45
+Dana Asher,60+,Female,60+,Male,48
+-,-,-,-,-,-
++,+,+,+,+,+
+lauren miller,23-28,Female,23-28,,138
+Camly,23-28,Female,23-28,,46
+Eileen Mangan,23-28,Female,23-28,,57
+-,-,-,-,-,-
++,+,+,+,+,+
+Yana Siganur Dushko,29-34,Female,29-34,,188
+Karina,29-34,Female,29-34,,88
+Jenny Walrath ,29-34,Female,29-34,,116
+-,-,-,-,-,-
++,+,+,+,+,+
+sonia ,41-49,Female,41-49,,171
+Katy,41-49,Female,41-49,,91
+Kobi,41-49,Female,41-49,,100
+-,-,-,-,-,-
++,+,+,+,+,+
+Nelson,50-59,Male,50-59,,147
+Tony Trahan,50-59,Male,50-59,,153
+Hayley Gorenberg,50-59,Female,50-59,,70
+-,-,-,-,-,-
++,+,+,+,+,+
+Denise,41-49,Female,41-49,,108
+Laytisha Collins-Smith,41-49,Female,41-49,,105
+Lisa,41-49,Female,41-49,,110
+-,-,-,-,-,-
++,+,+,+,+,+
+Liam,18-22,Other,18-22,,148
+emily ,18-22,Female,18-22,,61
+Elly Southey,18-22,Female,18-22,,63
+-,-,-,-,-,-
++,+,+,+,+,+
+Sam T Schachter,29-34,Male,29-34,,163
+Kevin Christopher Leonard,29-34,Male,29-34,,98
+Ion disdy,29-34,Male,29-34,,114
+-,-,-,-,-,-
++,+,+,+,+,+
+April,50-59,Female,50-59,,142
+Jennie ,50-59,Female,50-59,,72
+Laini Kavaloski,50-59,Female,50-59,,92
+-,-,-,-,-,-
++,+,+,+,+,+
+Kaily,18-22,Female,18-22,,101
+Kate Farrell,18-22,Female,18-22,,89
+Kristine Hokseng,18-22,Female,18-22,,102
+-,-,-,-,-,-
++,+,+,+,+,+
+Lavern,50-59,Female,50-59,,187
+Siobhan,50-59,Female,50-59,,96
+Laurie Gifford Adams,50-59,Female,50-59,,104
+-,-,-,-,-,-
++,+,+,+,+,+
+Susan,50-59,Female,50-59,,126
+Kellie Kennedy,50-59,Female,50-59,,106
+Laura S Noselli,50-59,Female,50-59,,112
+-,-,-,-,-,-
++,+,+,+,+,+
+ROBERTA KEOGAN,60+,Female,60+,,156
+M,60+,Female,60+,,117
+Molly ,60+,Female,60+,,140
+-,-,-,-,-,-
++,+,+,+,+,+
+Skye Scott,41-49,Female,41-49,,169
+Melissa,41-49,Female,41-49,,130
+Rosalia Duarte,41-49,Female,41-49,,157
+-,-,-,-,-,-
++,+,+,+,+,+
+Natalie Mary ,50-59,Female,50-59,,152
+Martha ,50-59,Female,50-59,,124
+Mellani ,50-59,Female,50-59,,139
+-,-,-,-,-,-
++,+,+,+,+,+
+Nadav Herstik,18-22,Male,18-22,,143
+Will,18-22,Male,18-22,,144
+Petr Václav Kukrál,18-22,Male,18-22,,154
+-,-,-,-,-,-
++,+,+,+,+,+
+Loretta Obee,23-28,Female,23-28,,113
+Marina Barci,23-28,Female,23-28,,127
+McKayla,23-28,Female,23-28,,129
+-,-,-,-,-,-
++,+,+,+,+,+
+Judith,60+,Female,60+,,150
+Nina Candido,60+,Female,60+,,146
+sharon maydet,60+,Female,60+,,170
+-,-,-,-,-,-
++,+,+,+,+,+
+Hrair N Seropian,41-49,Male,41-49,,59
+Eric,41-49,Male,41-49,,55
+Eric,41-49,Male,41-49,,56
+-,-,-,-,-,-
++,+,+,+,+,+
+Sophia ,18-22,Female,18-22,,172
+Michaella,18-22,Female,18-22,,132
+Mishel Rubin,18-22,Female,18-22,,135
+-,-,-,-,-,-
++,+,+,+,+,+
+Shama Zehra,41-49,Female,41-49,,166
+Gina,41-49,Female,41-49,,159
+Justine Nguyen,41-49,Female,41-49,,180
+-,-,-,-,-,-
++,+,+,+,+,+
+Amy,35-40,Female,35-40,,137
+Jessica Marsico,35-40,Female,35-40,,81
+Jessica,35-40,Female,35-40,,82
+-,-,-,-,-,-
++,+,+,+,+,+
+Bryn,35-40,Female,35-40,,151
+McRae ,35-40,Female,35-40,,111
+Maria,35-40,Female,35-40,,121
+-,-,-,-,-,-
++,+,+,+,+,+
+Nola C Booth,23-28,Female,23-28,,145
+Jillian,23-28,Female,23-28,,168
+wei li,23-28,Male,23-28,,185
+-,-,-,-,-,-
++,+,+,+,+,+
+Grace,60+,Female,60+,,178
+Sara Pondolfino,60+,Female,60+,,173
+Tally Poulin,60+,Female,60+,,177
+-,-,-,-,-,-
++,+,+,+,+,+
+Christine,50-59,Female,50-59,,186
+Michelle,50-59,Female,50-59,,167
+Madonna,29-34,Female,29-34,,119
+-,-,-,-,-,-
++,+,+,+,+,+
+Vanessa,29-34,Female,29-34,,182
+Marina ,29-34,Female,29-34,,161
+Fiona,29-34,Female,29-34,,179
+-,-,-,-,-,-
++,+,+,+,+,+
+Mark,41-49,Male,41-49,,123
+Veronica ,60+,Female,60+,,183
+Rose,60+,Female,60+,,184
+-,-,-,-,-,-
++,+,+,+,+,+
