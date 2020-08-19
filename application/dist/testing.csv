@@ -1,316 +1,905 @@
-Name,Age,Gender,AgePref,index
-Karen Embry,60+,Female,60+,87
-Abbe,60+,Female,60+,7
-LISA Barbarino,60+,Female,60+,10
--,-,-,-,-
-+,+,+,+,+
-Kenneth ,29-34,Male,29-34,97
-Hans,29-34,Male,29-34,69
-Kevin Christopher Leonard,29-34,Male,29-34,98
--,-,-,-,-
-+,+,+,+,+
-Sara Pondolfino,60+,Female,60+,173
-Anna,60+,Female,60+,17
-Barbara Brienze,60+,Female,60+,23
--,-,-,-,-
-+,+,+,+,+
-Ally,23-28,Female,23-28,14
-Ally O,23-28,Female,23-28,19
-Brittney T,23-28,Female,23-28,28
--,-,-,-,-
-+,+,+,+,+
-Ray,41-49,Male,41-49,158
-Phil,41-49,Male,41-49,2
-Blaine,41-49,Male,41-49,27
--,-,-,-,-
-+,+,+,+,+
-Skye Scott,41-49,Female,41-49,169
-Danielle Beckman,41-49,Female,41-49,1
-Aimee,41-49,Female,41-49,11
--,-,-,-,-
-+,+,+,+,+
-Christina,29-34,Female,29-34,39
-Alicia Struble,29-34,Female,"23-28, 29-34",5
-Alison,29-34,Female,29-34,13
--,-,-,-,-
-+,+,+,+,+
-Liam,18-22,Other,18-22,148
-bruh,18-22,Female,18-22,3
-drea,18-22,Female,18-22,4
--,-,-,-,-
-+,+,+,+,+
-Kellie Kennedy,50-59,Female,50-59,106
-MaryAnn Hortas,50-59,Female,50-59,0
-Elizabeth R. Sher,50-59,Female,50-59,8
--,-,-,-,-
-+,+,+,+,+
-Marina Barci,23-28,Female,23-28,127
-Christina Papaleo,23-28,Female,23-28,40
-Camly,23-28,Female,23-28,46
--,-,-,-,-
-+,+,+,+,+
-Sean Martinelli,23-28,Male,23-28,165
-Robert Szott,23-28,Male,23-28,32
-Tom Reilly ,23-28,Male,23-28,181
--,-,-,-,-
-+,+,+,+,+
-Maria,35-40,Female,35-40,121
-Amy,35-40,Female,35-40,15
-Anna Elisabeth Wheeler,35-40,Female,35-40,16
--,-,-,-,-
-+,+,+,+,+
-Cyndi,50-59,Female,50-59,47
-Anu Chathampally,50-59,Female,50-59,9
-Aimee Siperek,50-59,Female,50-59,21
--,-,-,-,-
-+,+,+,+,+
-Chris,41-49,Male,41-49,34
-Christopher Coyle,41-49,Male,41-49,42
-Eric,41-49,Male,41-49,55
--,-,-,-,-
-+,+,+,+,+
-BRIDGET SULLIVAN,50-59,Female,50-59,30
-Sue,50-59,Female,50-59,22
-Barbara Kaiser,50-59,Female,50-59,26
--,-,-,-,-
-+,+,+,+,+
-Barbara O'Connor,60+,Female,60+,67
-Christine Allgeier,60+,Female,60+,41
-Dana Asher,60+,Female,60+,48
--,-,-,-,-
-+,+,+,+,+
-Sophia ,18-22,Female,18-22,172
-Ari,18-22,Female,18-22,20
-Kim Minju ,18-22,Female,18-22,31
--,-,-,-,-
-+,+,+,+,+
-Sofia,18-22,Female,18-22,44
-Chelsey  Jewett,18-22,Female,18-22,36
-Sarolta Deak,18-22,Female,18-22,51
--,-,-,-,-
-+,+,+,+,+
-Susan,50-59,Female,50-59,126
-cheryl,50-59,Female,50-59,37
-Connie Cutler,50-59,Female,50-59,43
--,-,-,-,-
-+,+,+,+,+
-Maho,23-28,Female,23-28,120
-Eileen Mangan,23-28,Female,23-28,57
-Kayla Rudess,23-28,Female,23-28,94
--,-,-,-,-
-+,+,+,+,+
-Loretta Obee,23-28,Female,23-28,113
-McKayla,23-28,Female,23-28,129
-lauren miller,23-28,Female,23-28,138
--,-,-,-,-
-+,+,+,+,+
-Joanne Eichel,60+,Female,60+,78
-Daryl,60+,Female,60+,53
-Andrea Kane,60+,Female,60+,62
--,-,-,-,-
-+,+,+,+,+
-M,60+,Female,60+,117
-Cheri Foti,60+,Female,60+,64
-"Gladstone, Gail",60+,Female,60+,66
--,-,-,-,-
-+,+,+,+,+
-Brandon,18-22,Male,18-22,29
-Aayush Vohra,18-22,Male,18-22,6
-LI AO,18-22,Male,18-22,107
--,-,-,-,-
-+,+,+,+,+
-Kathy Alongi,41-49,Female,41-49,90
-Alanna,41-49,Female,41-49,12
-Anne Law,41-49,Female,41-49,18
--,-,-,-,-
-+,+,+,+,+
-Rosalia Duarte,41-49,Female,41-49,157
-Stephenie ,41-49,Female,41-49,24
-Christine Delaney ,41-49,Female,41-49,33
--,-,-,-,-
-+,+,+,+,+
-Keeley Fitzgerald,29-34,Female,29-34,95
-Christa,29-34,Female,29-34,38
-Julienne,29-34,Female,29-34,85
--,-,-,-,-
-+,+,+,+,+
-Shama Zehra,41-49,Female,41-49,166
-Judith E Sheahan,41-49,Female,41-49,84
-Katy,41-49,Female,41-49,91
--,-,-,-,-
-+,+,+,+,+
-Hrair N Seropian,41-49,Male,41-49,59
-Eric,41-49,Male,41-49,56
-Mark,41-49,Male,41-49,123
--,-,-,-,-
-+,+,+,+,+
-Kristine Hokseng,18-22,Female,18-22,102
-Charlotte Deak,18-22,Female,18-22,52
-Dora ,18-22,Female,18-22,54
--,-,-,-,-
-+,+,+,+,+
-Melissa,41-49,Female,41-49,130
-Kobi,41-49,Female,41-49,100
-Jen,41-49,Female,41-49,103
--,-,-,-,-
-+,+,+,+,+
-Marty Grabow,60+,Male,60+,131
-Carlos,60+,Male,60+,45
-Marjorie F.,60+,Female,60+,73
--,-,-,-,-
-+,+,+,+,+
-McRae ,35-40,Female,35-40,111
-Michelle Anthony,35-40,Female,35-40,35
-Emily Sokolow,35-40,Female,35-40,60
--,-,-,-,-
-+,+,+,+,+
-Natalie Mary ,50-59,Female,50-59,152
-Hayley Gorenberg,50-59,Female,50-59,70
-Jennie ,50-59,Female,50-59,72
--,-,-,-,-
-+,+,+,+,+
-Mellani ,50-59,Female,50-59,139
-Jay,50-59,Female,50-59,77
-Jeannette,50-59,Female,50-59,79
--,-,-,-,-
-+,+,+,+,+
-Kate Farrell,18-22,Female,18-22,89
-Ela Ursu,18-22,Female,18-22,58
-emily ,18-22,Female,18-22,61
--,-,-,-,-
-+,+,+,+,+
-Seamus Blair,18-22,Male,18-22,164
-Nadav Herstik,18-22,Male,18-22,143
-Will,18-22,Male,18-22,144
--,-,-,-,-
-+,+,+,+,+
-Francis M Whritenour,35-40,Male,35-40,65
-Michael,35-40,Male,35-40,136
-Safwan Zokari,35-40,Male,35-40,162
--,-,-,-,-
-+,+,+,+,+
-Jenny Walrath ,29-34,Female,29-34,116
-Karina,29-34,Female,29-34,88
-Madonna,29-34,Female,29-34,119
--,-,-,-,-
-+,+,+,+,+
-SharynFurman ,60+,Female,60+,176
-Linda Geldres ,60+,Female,60+,74
-Teri A Cranston,60+,Female,60+,75
--,-,-,-,-
-+,+,+,+,+
-sonia ,41-49,Female,41-49,171
-Laytisha Collins-Smith,41-49,Female,41-49,105
-Denise,41-49,Female,41-49,108
--,-,-,-,-
-+,+,+,+,+
-Martha ,50-59,Female,50-59,124
-Laini Kavaloski,50-59,Female,50-59,92
-Siobhan,50-59,Female,50-59,96
--,-,-,-,-
-+,+,+,+,+
-Kay ,60+,Female,60+,93
-Lori,60+,Female,60+,76
-Jennifer Georgino,60+,Female,60+,80
--,-,-,-,-
-+,+,+,+,+
-Marina ,29-34,Female,29-34,161
-Staci Kohlhagen,29-34,Female,29-34,174
-Fiona,29-34,Female,29-34,179
--,-,-,-,-
-+,+,+,+,+
-Tony Trahan,50-59,Male,50-59,153
-Murat,50-59,Male,50-59,25
-David Reid,50-59,Male,50-59,49
--,-,-,-,-
-+,+,+,+,+
-ROBERTA KEOGAN,60+,Female,60+,156
-Diane Cohen,60+,Female,60+,83
-Michael and Linda Paciello,60+,Female,60+,99
--,-,-,-,-
-+,+,+,+,+
-Michaella,18-22,Female,18-22,132
-Elly Southey,18-22,Female,18-22,63
-Hannah,18-22,Female,18-22,68
--,-,-,-,-
-+,+,+,+,+
-Justine Nguyen,41-49,Female,41-49,180
-Lisa,41-49,Female,41-49,110
-Macy Diekman Richards,41-49,Female,41-49,118
--,-,-,-,-
-+,+,+,+,+
-Nola C Booth,23-28,Female,23-28,145
-Jillian,23-28,Female,23-28,168
-wei li,23-28,Male,23-28,185
--,-,-,-,-
-+,+,+,+,+
-Maaike Callan,60+,Female,60+,128
-Liz Kovall,60+,Female,60+,109
-Lucille Gherardi,60+,Female,60+,115
--,-,-,-,-
-+,+,+,+,+
-Mike,29-34,Male,29-34,134
-Ion disdy,29-34,Male,29-34,114
-Sam T Schachter,29-34,Male,29-34,163
--,-,-,-,-
-+,+,+,+,+
-Judith,60+,Female,60+,150
-Mary Ann Starbuck,60+,Female,60+,125
-Mindy Fradkin,60+,Female,60+,133
--,-,-,-,-
-+,+,+,+,+
-Lavern,50-59,Female,50-59,187
-Laurie Gifford Adams,50-59,Female,50-59,104
-Laura S Noselli,50-59,Female,50-59,112
--,-,-,-,-
-+,+,+,+,+
-Rita Boratav,50-59,Female,50-59,160
-April,50-59,Female,50-59,142
-Michelle,50-59,Female,50-59,167
--,-,-,-,-
-+,+,+,+,+
-Bryn,35-40,Female,35-40,151
-Heather,35-40,Female,35-40,71
-Jessica Marsico,35-40,Female,35-40,81
--,-,-,-,-
-+,+,+,+,+
-David,50-59,Male,50-59,50
-Nelson,50-59,Male,50-59,147
-Christine,50-59,Female,50-59,186
--,-,-,-,-
-+,+,+,+,+
-Rose,60+,Female,60+,184
-Molly ,60+,Female,60+,140
-Nina Candido,60+,Female,60+,146
--,-,-,-,-
-+,+,+,+,+
-Nico,18-22,Female,18-22,149
-Kamile,18-22,Female,18-22,86
-Kaily,18-22,Female,18-22,101
--,-,-,-,-
-+,+,+,+,+
-Grace,60+,Female,60+,178
-Patricia,60+,Female,60+,155
-sharon maydet,60+,Female,60+,170
--,-,-,-,-
-+,+,+,+,+
-Amy,35-40,Female,35-40,137
-Jessica,35-40,Female,35-40,82
-Haydee,35-40,Female,35-40,141
--,-,-,-,-
-+,+,+,+,+
-Yana Siganur Dushko,29-34,Female,29-34,188
-Vanessa,29-34,Female,29-34,182
-Maria,18-22,Female,18-22,122
--,-,-,-,-
-+,+,+,+,+
-Veronica ,60+,Female,60+,183
-Tally Poulin,60+,Female,60+,177
-Mishel Rubin,18-22,Female,18-22,135
--,-,-,-,-
-+,+,+,+,+
-Petr Václav Kukrál,18-22,Male,18-22,154
-Gina,41-49,Female,41-49,159
-Suzanne Nelson,41-49,Female,41-49,175
--,-,-,-,-
-+,+,+,+,+
+Name,Phone,Email,Age,Gender,Industry,Qtine Loc,State,AgePref,GenderPref,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,Video Game Buddy,Crafting Buddy,Parent,Nothing Specific,index
+Péter,+36303998128,csizipeti0723@gmail.com,18-22,Male,I'm a student!,Hungary,Fejér,18-22,Female,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,328
+Katie,9789679539,katieneves03@gmail.com,18-22,Female,I'm a student!,United States of America,Massachusetts,18-22,No Preference,,,TV Buddy,,Complain,,Someone to talk to,,,,,,197
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Toma,957242146,toma.vrgy@gmail.com,18-22,Male,Other,Croatia,Splitsko-dalmatinska,18-22,Female,,,,,,,Someone to talk to,,,,,,297
+Michaela,5194750598,yourekrillingme@gmail.com,18-22,Female,I'm a student!,Canada,ON,No Preference,Female,,,,,,,Someone to talk to,,,,,,284
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+John Suarez,3393098966,jonnathan.suarezpena@gmail.com,18-22,Male,Construction,United States of America,Massachusetts,18-22,Female,,,,,,,Someone to talk to,,,,,,192
+Skyla,9784081005,puppiesrcute305@gmail.com,18-22,Female,Other,United States of America,Massachusetts ,18-22,No Preference,,,,,Complain,,Someone to talk to,,,,,,243
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Emilie,6077789569,emziekay11@gmail.com,18-22,Female,I'm a student!,United States of America,New York,18-22,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,374
+Mara,3157489072,byeab59@gmail.com,18-22,Female,I'm a student!,United States of America,New York,18-22,No Preference,,,TV Buddy,,Complain,,Someone to talk to,,,,,,438
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Emma,,ededrick23@icloud.com,18-22,Female,I'm a student!,United States of America,New York,18-22,Female,,,,,,,Someone to talk to,,,,,,444
+Malakobama,16173876342,pizzatimestops1@outlook.com,18-22,Female,I'm a student!,United States of America,New York,18-22,Male,,,,,,,Someone to talk to,,,,,,100
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jason ,,fleenhide@gmail.com,18-22,Male,I'm a student!,Phillipines,,18-22,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,,301
+Yin,,rezhalgurd@gmail.com,18-22,Male,I'm a student!,,,,,,,,,,,,,,,,,6
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Renate,611736991,renate253x@gmail.com,18-22,Female,Other,Neatherlands,Friesland,No Preference,No Preference,,,,,,,,,,,,,228
+Mayka Vogelzang,,maykavogelzang@gmail.com,18-22,Female,I'm a student!,Neatherlands,Drenthe ,18-22,Male,,,,,,The One,Someone to talk to,,,,,,370
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Crystal Rose,7816989921,crystalrose97@yahoo.com,18-22,Female,I'm a student!,United States of America,Massachusetts,18-22,No Preference,,,,,,,Someone to talk to,,,,,,273
+Megan VanDyke,9782574009,18megan.vandyke@gmail.com,18-22,Female,I'm a student!,United States of America,Massachusetts,18-22,Female,,,,,,,Someone to talk to,,,,,,195
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Luke J,5743837629,ljerzak67c@gmail.com,18-22,Male,I'm a student!,United States of America,,18-22,Female,,,,,,,,,,,,,381
+Laura ,3219985476,lmduquec@hotmail.com,18-22,Female,I'm a student!,Colombia,,18-22,Male,,,,,,The One,,,,,,,315
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+August,,augustfung828@gmail.com,18-22,Female,I'm a student!,China,Hong Kong,18-22,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,362
+updog,+,Im.sad.whale@gmail.com,18-22,Other,I'm a student!,Russia,,18-22,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,289
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Vivian Zhu,469007728,vivian_zhu2001@hotmail.com,18-22,Female,I'm a student!,Australia,NSW,18-22,Female,,,TV Buddy,,Complain,,Someone to talk to,,,,,,18
+Janessa Curran,9788884819,curran00j@gmail.com,18-22,Female,I'm a student!,United States of America,,18-22,Female,Workout Buddy,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,256
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lucas,5082781646,bubbalulucas@comcast.net,18-22,Male,I'm a student!,United States of America,Massachusetts,No Preference,No Preference,,,,,,,,,,,,,146
+Dylan Phillips,781 600 9566,Pimasterdylan@gmail.com,18-22,Male,I'm a student!,United States of America,Massachusetts,18-22,Female,,,,,,,,,,,,,238
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ólafur Reynir,7637565,olafur.r.s@gmail.com,18-22,Male,I'm a student!,Iceland,Reykjavík,18-22,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,Art Buddy,63
+Lucy Arrigo,9784960530,lucy.arrigo@yahoo.com,18-22,Male,I'm a student!,United States of America,Massachusetts,23-28,Male,,Music Buddy,TV Buddy,,,The One,,,,,,Art Buddy,174
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+John,6173194277,yoloballer700@gmail.com,18-22,Male,I'm a student!,United States of America,Massachusetts,18-22,Female,,,,,,,Someone to talk to,,,,,,188
+taylor ,3392362137,tledversis@gmail.com,18-22,Female,I'm a student!,United States of America,massachusetts,18-22,Male,,,,,,,Someone to talk to,,,,,,172
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kevin,7818565793,kdeeb934@g.rwu.edu,18-22,Male,I'm a student!,United States of America,Massachusetts,23-28,Male,,Music Buddy,,,Complain,,Someone to talk to,,,,,,274
+Derek Iversen,9788028529,iversenderek@gmail.com,18-22,Male,I'm a student!,United States of America,Massachusetts,,No Preference,,,TV Buddy,,Complain,,Someone to talk to,,,,,,227
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Camryn,9084587997,camryngraf21@gmail.com,18-22,Female,Health/Fitness,United States of America,New Jersey,18-22,No Preference,,,,,,,,,,,,,55
+Stephanie Valle,9788723943,vallestephanie26@gmail.com,18-22,Female,Hospital/Health Care,United States of America,Massachusetts,23-28,Female,,,,,Complain,The One,Someone to talk to,,,,,,96
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jessica,4066910855,jrose03142008@gmail.com,18-22,Female,I'm a student!,United States of America,Montana ,18-22,No Preference,,,TV Buddy,,,,,,,Crafting Buddy,,,410
+Miyu,+8801971323020,bello3977@gmail.com,18-22,Female,I'm a student!,Bangladesh,,No Preference,Male,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,Crafting Buddy,,Art Buddy,290
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Matías,+56957153348,matiasmartinez@live.cl,18-22,Male,I'm a student!,Chile,Valparaiso,18-22,Female,,Music Buddy,,,,,Someone to talk to,,,,,,341
+arisa,,akaringo7161@gmail.com,18-22,Female,I'm a student!,Japan,,No Preference,Male,,Music Buddy,,,,,Someone to talk to,,,,,,386
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Indra Nur Fajry,895700852009,callmeindra04@gmail.com,18-22,Male,I'm a student!,Indonesia,South Borneo,18-22,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,340
+Cody S,5852982233,codysirii@icloud.com,18-22,Male,I'm a student!,United States of America,New York,18-22,Female,,,,,,,Someone to talk to,,,,,Art Buddy,81
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Daryl,7903861789,darylbristow@live.co.uk,18-22,Male,I'm a student!,United Kingdom,Cornwall,No Preference,No Preference,,,,,,,,,,,,,379
+Akari,,kpjmuw@icloud.com,18-22,Female,I'm a student!,Japan,,18-22,No Preference,,,,,,,,,,,,,387
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Gui Felix,82996978765,guizzfelix2@hotmail.com,18-22,Male,I'm a student!,Brazil,Alagoas/Maceió,No Preference,Female,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,Art Buddy,283
+Meg,6176998059,megahearn8@gmail.com,18-22,Female,I'm a student!,United States of America,Massachusetts ,18-22,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,Art Buddy,32
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Anna,,namegirlme@gmail.com,18-22,Female,I'm a student!,United States of America,New Jersey,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,,,52
+Alex Kalogerou,3475468359,wolflord.kalogerou@gmail.com,18-22,Male,I'm a student!,United States of America,New Jersey ,No Preference,Female,,,,,,,,,,,,,334
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Loewi Ibrahim,5512674172,loewiibrahim@gmail.com,18-22,Male,I'm a student!,United States of America,New Jersey,18-22,Female,,,,,,,Someone to talk to,,,,,Art Buddy,309
+Sam,,samstacy24@gmail.com,18-22,Female,I'm a student!,United States of America,New York,18-22,No Preference,,,,,Complain,,Someone to talk to,,,,,Art Buddy,443
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lauren McCarthy,6072057676,altosax1114@gmail.com,18-22,Female,I'm a student!,United States of America,New York ,18-22,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,404
+Sam Katsnelson,8458030322,skatsnelson@yahoo.com,18-22,Male,I'm a student!,United States of America,New York,18-22,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,,336
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+stevenzamora2013@gmail.com,2017374479,stevenzamora2013@gmail.com,18-22,Male,I'm a student!,United States of America,New Jersey,18-22,Female,Workout Buddy,Music Buddy,TV Buddy,,,The One,Someone to talk to,Cook,,Crafting Buddy,,,361
+Dakota Powell,16038326390,codabanks@gmail.com,18-22,Female,Other,United States of America,New Hampshire,18-22,Female,,,,,,,Someone to talk to,Cook,,Crafting Buddy,,Art Buddy,205
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Rishabh Sheet,+918839904439,rishabhsheet2407@gmail.com,18-22,Male,I'm a student!,India,Chhattisgarh,18-22,No Preference,Workout Buddy,,,,Complain,,Someone to talk to,,,,,,278
+Lily ,6176532364,liltran01@gmail.com,18-22,Female,I'm a student!,United States of America,,18-22,,Workout Buddy,,,,,,Someone to talk to,,,,,,234
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Alisha,2032727248,tedescoalisha5@gmail.com,18-22,Female,I'm a student!,United States of America,Connecticut,18-22,No Preference,,,TV Buddy,,Complain,,Someone to talk to,,,,,,33
+Jasmine ,5013581877,jasmineinquarantine@gmail.com,18-22,Female,I'm a student!,United States of America,AR,18-22,No Preference,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,435
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Teddy,2604508544,theodorenicholast@gmail.com,18-22,Male,I'm a student!,United States of America,Indiana,18-22,Female,Workout Buddy,,TV Buddy,,Complain,,Someone to talk to,,,,,,326
+Kayla Atwood ,8025951511,kaylaatwood0416@gmail.com,18-22,Female,I'm a student!,,,,,Workout Buddy,,,,,,,,,,,,263
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jon,,totallynotanillithid@gmail.com,18-22,Male,I'm a student!,Brazil,São Paulo,18-22,Female,,Music Buddy,,,Complain,The One,,Cook,,,,,0
+Alyssa,6198525697,antolin_alyssa@yahoo.com,18-22,Female,I'm a student!,United States of America,California,No Preference,Female,,Music Buddy,,,Complain,,Someone to talk to,,,,,,377
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+hari,8870664030,hariramvs@gmail.com,18-22,Male,I'm a student!,India,Tamil Nadu,No Preference,No Preference,,,,,,,,,,,,,11
+Giuliana Barletta,6172710830,giulibarlettaxo@gmail.com,18-22,Female,I'm a student!,United States of America,Massachusetts ,18-22,Male,,,,,,,Someone to talk to,,,,,,267
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Leah,2152873932,pennstatewolf@gmail.com,18-22,Female,Government,United States of America,Pennsylvania ,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,Cook,,,,,368
+Madison,3397888898,mlp2298@gmail.com,18-22,Female,Other,United States of America,Massachusetts ,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,161
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Madison ,5087688736,madisonsherman@icloud.com,18-22,Female,I'm a student!,United States of America,Massachusetts ,18-22,Male,,,,,,The One,,Cook,,,,,199
+Austin ,2025550137,Spacebears03@gmail.com,18-22,Male,I'm a student!,United States of America,New york,18-22,Female,,Music Buddy,TV Buddy,,Complain,The One,,Cook,,,,,302
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Blake Guterman,240-469-9498,blguterman22@gmail.com,18-22,Male,I'm a student!,United States of America,Maryland,18-22,No Preference,Workout Buddy,,TV Buddy,,Complain,,Someone to talk to,Cook,,Crafting Buddy,,,348
+Edward Viernes,,edward.viernes16@gmail.com,18-22,Male,I'm a student!,United States of America,California,18-22,Female,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,,221
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Peter,12981522986,pedrovidal2703@gmail.com,18-22,Male,Computer Software/Engineering,Brazil,São Paulo,18-22,No Preference,,,,,,The One,,,,,,Art Buddy,373
+Peter ,6479394145,peterchou410@gmail.com,18-22,Male,Computer Software/Engineering,Canada,Ontario,18-22,Female,,,,,,The One,,,,,,Art Buddy,86
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Vivian,8045137524,conestoga@usa.com,18-22,Female,I'm a student!,United States of America,Virginia,18-22,No Preference,,,,,Complain,The One,Someone to talk to,,,,,,369
+Jacob,5409077225,styxjr2005@gmail.com,18-22,Male,I'm a student!,United States of America,Virginia ,18-22,Female,,,,,,The One,,,,,,,416
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+David,6785109025,jonesdav98@gmail.com,18-22,Male,I'm a student!,United States of America,Georgia,18-22,Male,,,,,Complain,The One,Someone to talk to,,,,,,346
+Sven,,fake@gmail.com,18-22,Male,I'm a student!,United States of America,California,No Preference,No Preference,,,,Drinking Buddy,Complain,,,,,,,Art Buddy,112
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mathis,,mathis_descoteaux2001@hotmail.com,18-22,Male,I'm a student!,Canada,Québec,18-22,Female,,,,,,,Someone to talk to,,,,,,380
+Wendy,3233142234,wbarrios99@gmail.com,18-22,Female,I'm a student!,United States of America,California,18-22,Female,,,,,,,Someone to talk to,,,,,,150
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jack ,17641544913,jack@dennisowens.com,18-22,Male,I'm a student!,Germany,NRW,18-22,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,207
+Ramya Parthipan,2144986595,ramya09@gmail.com,18-22,Female,I'm a student!,United States of America,Texas,23-28,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,,,,,,,424
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Razmik,6263714831,ryegyan@gmail.com,18-22,Male,I'm a student!,United States of America,California ,18-22,Female,,,,,,,Someone to talk to,,,,,,58
+Alayna,5859781189,alayna3510@gmail.com,18-22,Female,I'm a student!,United States of America,New York,18-22,No Preference,,,,,Complain,The One,Someone to talk to,,,,,,414
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Marius,+4794287760,mariusolden@hotmail.com,18-22,Male,Information Technology,Norway,Møre og Romsdal,18-22,Female,,,,,,The One,,,,,,,355
+Sarah Goodwin,+1 (267) 644-7074,S_goodwin21@outlook.com,18-22,Female,I'm a student!,United States of America,Pennsylvania ,18-22,Male,,,,,,The One,,,,,,,402
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jenny,7818170501,jenniferdimitrov@gmail.com,18-22,Female,I'm a student!,United States of America,MA/Middlesex ,18-22,No Preference,,,,,Complain,,Someone to talk to,,,,,,182
+Jennifer,2817056677,jenniferwhitehead1997@gmail.com,18-22,Female,I'm a student!,United States of America,Texas,18-22,Female,,,,,Complain,,Someone to talk to,,,,,,363
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lee,,leeofelswhere@gmail.com,18-22,Male,Other,United States of America,New Jersey,18-22,,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,321
+Kelsi,3045501970,kellyw1998@yahoo.com,18-22,Female,Other,United States of America,New York,18-22,Female,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,Art Buddy,449
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jaden Wang,6477829588,jadenyjw@gmail.com,18-22,Male,Computer Software/Engineering,Canada,Ontario,18-22,No Preference,,,,,,,Someone to talk to,,,,,,316
+HaoHao,6132762899,hdu2899@gmail.com,18-22,Male,Computer Software/Engineering,Canada,Ontario,18-22,Female,,,,,,,Someone to talk to,,,,,,324
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Helixmalus,,ilyassaklaf@gmail.com,18-22,Male,I'm a student!,Morocco,Casablanca ,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,Art Buddy,322
+Kofi ,4415195473,kcdill@logic.bm,18-22,Male,Other,Canada,,18-22,Female,Workout Buddy,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,222
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Colten,5038165027,shawnnastarr@yahoo.com,18-22,Male,I'm a student!,United States of America,Oregon,18-22,Male,,,,,,,Someone to talk to,,,,,,398
+Jake,3184466258,scherereta1234@gmail.com,18-22,Male,I'm a student!,United States of America,Louisiana,18-22,Female,,,,,,The One,,,,,,,213
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+James,5172136411,harnsjr@gmail.com,18-22,Male,I'm a student!,United States of America,Michigan ,18-22,Female,,,,,,The One,,,,,,,356
+Noel ,4403826291,henri282.nd@gmail.com,18-22,Female,I'm a student!,United States of America,Ohio,18-22,Female,Workout Buddy,,,,,,Someone to talk to,,,,,,345
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Cincere Koonce,7049356458,kooncincererashawn@gmail.com,18-22,Male,I'm a student!,United States of America,North Carolina,18-22,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,405
+Michael Herrera,6179555448,michael1herrera@icloud.com,18-22,Male,I'm a student!,United States of America,Massachusettes,18-22,Female,Workout Buddy,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,187
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nicole Keith,5086417572,nicoleek16@gmail.com,18-22,Female,Marketing/Advertising/Sales,United States of America,Massachusetts,23-28,Male,,Music Buddy,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,Art Buddy,78
+Uriah Dyson,210866851,Uriahdyson41@gmail.com,18-22,Male,Other,New Zealand,Northland,18-22,,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,Crafting Buddy,Parent,,310
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ana,63631832,analucic964@gmail.com,18-22,Female,Other,Bosnia and Herzegovina,,18-22,No Preference,Workout Buddy,,,,,,Someone to talk to,,,,,,388
+CG Ness,2622275712,pcgness@gmail.com,18-22,Female,Other,United States of America,Wisconsin,No Preference,Male,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,313
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kevin Vega,5512003061,kevinnv121@gmail.com,18-22,Male,Transportation,United States of America,New Jersey,No Preference,Female,,Music Buddy,,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,53
+Sabrina,6039987970,sbspices@outlook.com,18-22,Female,I'm a student!,United States of America,New Hampshire ,18-22,No Preference,,Music Buddy,,,Complain,,Someone to talk to,,,,,,24
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Brendan Straub ,8567011450,brendanstraub12@gmail.com,18-22,Male,Media,United States of America,New York ,18-22,Male,,,,Drinking Buddy,Complain,,Someone to talk to,,,,,,437
+Wilbur,,Sharkboy1601@gmail.com,18-22,Male,Other,Canada,Ontario,18-22,Female,,Music Buddy,,,Complain,The One,Someone to talk to,,,,,,298
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Natasha M Maclin,9018309980,natashamaclin@gmail.com,18-22,Female,Other,United States of America,Tennessee,18-22,No Preference,,Music Buddy,,,,,Someone to talk to,,,,,,299
+Karla Marshall,5044447377,karladarlene17@gmail.com,18-22,Female,I'm a student!,United States of America,Louisiana,18-22,Male,,Music Buddy,,Drinking Buddy,,,Someone to talk to,,,,,,333
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Erin,7813001132,e.dalton9712@gmail.com,18-22,Female,Hospital/Health Care,United States of America,Massachusetts,23-28,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,176
+Charlotte,8567392018,charlottejmhall98@gmail.com,18-22,Female,Computer/Network Security,United States of America,New Jersey,23-28,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,,Cook,,Crafting Buddy,,,45
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Yuval ,558830303,kkyy173@gmail.com,18-22,Male,Other,Israel,,18-22,No Preference,,,,,,,,,,,,,347
+Summer Rose,,summerrose9700@gmail.com,18-22,Female,Other,United States of America,Kentucky,No Preference,No Preference,,,,,,,,,,,,,229
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sylvia ,,sylviavfedak@gmail.com,23-28,Female,Marketing/Advertising/Sales,Venezuela,Florida,29-34,Male,,,TV Buddy,Drinking Buddy,,,,Cook,,,,,337
+Nikhil,,theblogic2018@gmail.com,23-28,Male,Marketing/Advertising/Sales,India,,No Preference,Female,Workout Buddy,,TV Buddy,,,,,,,,,,215
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mica,9655963998,mgtesselate@gmail.com,23-28,Female,Marketing/Advertising/Sales,Phillipines,,,,Workout Buddy,Music Buddy,,,,,Someone to talk to,,,,,Art Buddy,288
+Sam Jones,7891684420,s2500@hotmail.co.uk,23-28,Male,Marketing/Advertising/Sales,United Kingdom,London,23-28,Female,,,TV Buddy,,,,Someone to talk to,,,,,,338
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Skylar,2293002063,skylar.davis1997@gmail.com,23-28,Female,Other,United States of America,Colorado,No Preference,Female,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,360
+Courtney,9789943695,courtney.linehan77@gmail.com,23-28,Female,Education,United States of America,Colorado,23-28,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,Crafting Buddy,,Art Buddy,231
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Allyson Welch ,254-722-5235,alliewelch16@yahoo.com,23-28,Female,Other,United States of America,Texas,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,Cook,,Crafting Buddy,,,28
+Brooklyn,2102877533,ohmygaga5@gmail.com,23-28,Female,Other,United States of America,Texas,No Preference,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,Crafting Buddy,,,390
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jho Francisco,2292890353,jhoanieliefrancisco014@gmail.com,23-28,Prefer not to specify,I'm a student!,United States of America,Missouri,23-28,No Preference,,,,Drinking Buddy,,,Someone to talk to,,,,,Art Buddy,29
+Michaela ,9145623285,m.rodican@gmail.com,23-28,Female,I'm a student!,United States of America,New York,23-28,Female,,,TV Buddy,,,,Someone to talk to,,,,,Art Buddy,159
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Alex,9737156734,a.samuely@gmail.com,23-28,Female,Finance,United States of America,New York,29-34,Female,,,TV Buddy,,,,Someone to talk to,,,,,,22
+Jessica O'Connor,(716) 218-3032,dsp.ak1986@gmail.com,23-28,Female,Finance,United States of America,New York,23-28,No Preference,Workout Buddy,Music Buddy,,,Complain,,,Cook,,,,,131
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Armando,956736607,armadofernandez28@gmail.com,23-28,Male,Other,Peru,Lima,No Preference,No Preference,,,,,,,,,,,,,141
+Henry Ellis,9737475718,hsegalell@gmail.com,23-28,Male,Other,United States of America,New Jersey,23-28,No Preference,,,,,,,Someone to talk to,,,,,,43
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Gabby McBride,9182826022,gabby13mcbride@gmail.com,23-28,Female,Food/Beverages,United States of America,Oklahoma,23-28,Male,,,,,,,Someone to talk to,,,,Parent,,366
+Joshua,9784576403,joshuaharper63@gmail.com,23-28,Male,Food/Beverages,United States of America,Massachusetts,23-28,Female,,,,,,,,,,,,,99
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Katie Zehr,3158773499,katiezehr@icloud.com,23-28,Female,Health/Fitness,United States of America,New York,23-28,Female,Workout Buddy,Music Buddy,TV Buddy,,,,Someone to talk to,,,Crafting Buddy,,,427
+Quianna,6462212000,taylorquianna@gmail.com,23-28,Female,Hospital/Health Care,United States of America,New York/ NY,23-28,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,412
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+K,7732602674,kkoelkk@gmail.com,23-28,Female,Real Estate,United States of America,Illinois,23-28,Female,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,123
+Carmen Bello,2177994729,crmnbello@gmail.com,23-28,Female,Computer Software/Engineering,United States of America,Illinois,23-28,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,113
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Samuel Badilla,2405878890,baduff15@gmail.com,23-28,Male,Media,United States of America,Maryland,23-28,Female,,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,211
+Rachel Solomon,,rgmssubs@gmail.com,23-28,Female,Media,United Arab Emirates,Dubai,29-34,Female,,,,,Complain,The One,Someone to talk to,Cook,,,,,139
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Harsh,5106767353,harshsrinivas1@gmail.com,23-28,Male,Finance,United States of America,Illinois,23-28,Female,Workout Buddy,Music Buddy,TV Buddy,,,The One,Someone to talk to,Cook,,,,Art Buddy,126
+Sai,,stbroderick@gmail.com,23-28,Female,Finance,United States of America,North Carolina,23-28,Female,,,,Drinking Buddy,Complain,,Someone to talk to,,,,,,279
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Gre,4045095723,den987@live.com,23-28,Male,I'm a student!,United States of America,Georgia,23-28,Female,,,TV Buddy,,,The One,Someone to talk to,,,,,,293
+Brianna McGillis,7744069024,bmmcgillis@gmail.com,23-28,Female,I'm a student!,United States of America,Massachusetts ,23-28,Male,,,,,,The One,,,,,,,189
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Teresa,6474613522,gaman-all@protonmail.com,23-28,Female,Information Technology,Canada,ON,29-34,No Preference,,,TV Buddy,,Complain,,Someone to talk to,,,,,,357
+Ben Weissman,9252001048,ben.r.weissman@gmail.com,23-28,Male,Information Technology,United States of America,Massachusetts,23-28,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,102
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Dennis James Taylor,2016737619,Dennisofnj93@aol.com,23-28,Male,Other,United States of America,New Jersey,23-28,Female,,,TV Buddy,,,The One,Someone to talk to,,,Crafting Buddy,,,339
+Caroline Mandaro,6318273087,cmandaro@gmail.com,23-28,Female,Education,United States of America,,23-28,Female,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,Crafting Buddy,,,201
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Signe,765817686,rojjalbaby@gmail.com,23-28,Female,Hospitality,Lativa,Riga,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,Art Buddy,384
+Ed,743861175,malcomkreatley@gmail.com,23-28,Male,Other,Romania,,No Preference,Male,Workout Buddy,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,Crafting Buddy,,,282
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Laura  Hicks,7817104190,lchicks@crimson.ua.edu,23-28,Female,I'm a student!,United States of America,Massachusetts ,23-28,No Preference,,,,,,,,,,,,,266
+Matt Mayers ,6312206500,gtp2456@yahoo.com,23-28,Male,I'm a student!,United States of America,New York,23-28,Male,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,136
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Zach,9705603464,zacharyfrizzell27@gmail.com,23-28,Male,Accounting,United States of America,Colorado,23-28,Female,,,,,,The One,Someone to talk to,,,,,,212
+Jess,3145201204,notfromnewgirlJess@gmail.com,23-28,Female,Accounting,United States of America,,23-28,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,129
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Aston,,smalllegacy@protonmail.com,23-28,Male,Media,United Kingdom,London,No Preference,No Preference,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,Art Buddy,367
+Adam,,adamnovember77@gmail.com,23-28,Male,Education,United States of America,New York,23-28,Male,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,Art Buddy,364
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Byron ,6178770603,byronnash60@yahoo.com,23-28,Male,Other,United States of America,Massachusetts,No Preference,Female,Workout Buddy,,TV Buddy,,,The One,Someone to talk to,,,,,,5
+Kristen Kelly,7742650672,krisckelly@gmail.com,23-28,Female,Other,United States of America,Massachusetts,29-34,,Workout Buddy,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,Cook,,,,,204
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Rory,9788313070,RoryB72@aol.com,23-28,Male,Entertainment/Movie Production,United States of America,Massachusetts,23-28,Female,,,,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,271
+Nicole,6094428603,pandemonium825@gmail.com,23-28,Female,Entertainment/Movie Production,United States of America,New York,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,,37
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Watson,5178423212,watsonm146@gmail.com,23-28,Male,Education,United States of America,New Jersey,23-28,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,Cook,,,,,48
+Steph Kearney,9085101595,kearney.steph3@gmail.com,23-28,Female,Education,United States of America,New Jersey,23-28,Male,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,,The One,,Cook,,,,,415
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sean Coristine,4434046209,kappa123itssean@gmail.com,23-28,Male,Other,United States of America,Maryland,23-28,Female,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,382
+Rebecca Smith,+447930537722,rls2910@icloud.com,23-28,Female,Other,United Kingdom,Oxfordshire,No Preference,Female,,Music Buddy,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,,106
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+mahnoor,3478069207,mjk392@cornell.edu,23-28,Female,Legal Services,,,23-28,Female,,,,,,,,,,,,,351
+Tammy,4134952522,stevens110tammy@gmail.com,23-28,Female,Education,United States of America,Massachusetts ,23-28,Female,,,,Drinking Buddy,,,Someone to talk to,,,,,,260
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Peter Rod,8565777422,supercellsucks@gmail.com,23-28,Male,Other,United States of America,Texas ,23-28,Female,,,,,,The One,,,,,,,88
+Belinda Mo,9726979885,bells.mok@gmail.com,23-28,Female,Education,United States of America,Texas,23-28,No Preference,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,Cook,,Crafting Buddy,,,349
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Christine Miranda,5187281321,mirachri15@gmail.com,23-28,Female,Consulting,United States of America,New York,23-28,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,,191
+tyytyy367,2017857649,tyyytyyy367@gmail.com,23-28,Male,Other,United States of America,new york,,Female,Workout Buddy,,,Drinking Buddy,,,Someone to talk to,,,,,,292
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Edgar S.,7144086617,esolis09@gmail.com,23-28,Male,I'm a student!,United States of America,California,23-28,No Preference,,Music Buddy,TV Buddy,,,,,,,,,,217
+Krystal,,titahoran@gmail.com,23-28,Female,I'm a student!,United States of America,California,23-28,No Preference,,,,Drinking Buddy,Complain,,Someone to talk to,,,Crafting Buddy,,Art Buddy,90
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Dan Andressi,7277553806,dandressi88@gmail.com,23-28,Male,Architecture,United States of America,,No Preference,Female,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,Art Buddy,1
+Alexandria H.,6177975523,alexandria.huntington@gmail.com,23-28,Female,Education,United States of America,Massachusetts ,23-28,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,268
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jenn,9783979060,torresjenn22@gmail.com,23-28,Female,Hospital/Health Care,United States of America,Massachusetts,29-34,Male,,,,,,The One,Someone to talk to,,,,,,169
+Matthew Sepe,5082414616,sepematt95@gmail.com,23-28,Male,Hospital/Health Care,United States of America,Massachusetts/ Foxboro ,23-28,No Preference,Workout Buddy,,TV Buddy,,,The One,Someone to talk to,,,,,Art Buddy,107
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Shaheryaar Javaid,3154677626,assasinscreed2012@gmail.com,23-28,Male,Computer Software/Engineering,Pakistan,Sindh,23-28,Female,,,,,,The One,Someone to talk to,,,,,,359
+Vanessa Mukes,5866752369,vmukes96@gmail.com,23-28,Female,Computer Software/Engineering,United States of America,Michigan,23-28,No Preference,,,,,,,Someone to talk to,,,,,,200
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Chinmay Kulkarni,5854349206,chinmay.040993@gmail.com,23-28,Male,Computer Software/Engineering,United States of America,Massachusetts ,23-28,Female,Workout Buddy,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,Cook,,,,,23
+Madison Welch,9784894808,mkwelch15@gmail.com,23-28,Female,Hospital/Health Care,United States of America,Massachusetts,23-28,No Preference,Workout Buddy,Music Buddy,,Drinking Buddy,,,,Cook,,,,,183
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Joe,6098026308,joe.michel25@gmail.com,23-28,Male,Finance,United States of America,New Jersey,18-22,Male,,,TV Buddy,,,The One,Someone to talk to,,,,,Art Buddy,60
+Tony,8627741023,tvl.prinxe@yahoo.com,23-28,Male,Other,United States of America,New Jersey,23-28,Male,,,,Drinking Buddy,,,Someone to talk to,,,Crafting Buddy,,,19
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jeremiah Dunn,5593055211,kapnkronch@yahoo.com,23-28,Male,Retail,United States of America,Oregon,No Preference,Female,,,,,,,Someone to talk to,,,,,,138
+Becka,7818356133,rideorrdiee1995@gmail.com,23-28,Female,Retail,United States of America,Massachusetts ,23-28,Female,,,TV Buddy,,,,Someone to talk to,,,,,Art Buddy,158
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+kyle kitlinski,7742083699,kyle@kkitlinski.com,23-28,Male,Computer Software/Engineering,United States of America,Rhode Island,23-28,Female,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,Art Buddy,181
+Angel,7202996763,hernandezangel96@hotmail.com,23-28,Female,I'm a student!,United States of America,Colorado,No Preference,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,Crafting Buddy,,,111
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Anthony Paolella ,,paolellaanthony@gmail.com,23-28,Male,Government,United States of America,Michigan ,29-34,Male,,,,,,,Someone to talk to,,,,,,73
+Puneet,7322412164,pkumisc@gmail.con,23-28,Male,Other,United States of America,New York,23-28,Female,Workout Buddy,,,Drinking Buddy,,The One,Someone to talk to,Cook,,Crafting Buddy,,Art Buddy,77
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Faith,,des.keam5@gmail.com,23-28,Female,I'm a student!,Canada,Ontario ,23-28,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,376
+Ken Arias,8484200037,Ariasken411@gmail.com,23-28,Male,I'm a student!,United States of America,New Jersey,No Preference,Female,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,10
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Aaron Girard,1718448061,aaron@girardmail.de,23-28,Male,Information Technology,Germany,Niedersachsen,18-22,Female,,,,,,,Someone to talk to,,,,,Art Buddy,303
+Ashley ,9789943123,aleva07@live.com,23-28,Female,Hospital/Health Care,United States of America,New Hampshire ,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,Parent,,3
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Zack,3024760583,tgodzack@gmail.com,23-28,Male,Food/Beverages,United States of America,Delaware,23-28,Male,,Music Buddy,,Drinking Buddy,,The One,,,,,,,42
+Mackenzie,3035521574,mackenzieblood@yahoo.com,23-28,Male,Marketing/Advertising/Sales,United States of America,Colorado,23-28,Female,,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,Parent,,114
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Faissal,+213559131766,faissalabs@gmail.com,23-28,Male,Retail,Algeria,,23-28,Female,,,TV Buddy,,,The One,Someone to talk to,,,,,,300
+Michael,7276569329,jbirdcorbin@gmail.com,23-28,Female,I'm a student!,United States of America,Florida,18-22,Female,Workout Buddy,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,358
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Trisha Cornaire,3159559013,cornairetrisha@gmail.com,23-28,Female,Hospital/Health Care,United States of America,New York,23-28,No Preference,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,436
+Khyrstal ,6077596265,khyrstal@aol.com,23-28,Female,Hospital/Health Care,United States of America,,No Preference,No Preference,,,,Drinking Buddy,,The One,Someone to talk to,,,,,,395
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Test,,pub589@hotmail.fr,23-28,Male,Education,Belgium,Brussels,23-28,Female,,,,,,,Someone to talk to,,,,,,425
+Rebecca Garrity,7815306087,rgarrity10@gmail.com,23-28,Female,Education,United States of America,Massachusetts,23-28,No Preference,,,,Drinking Buddy,,,Someone to talk to,,,,,,269
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Brijesh,2019933141,bjp0015151@gmail.com,23-28,Male,Computer Software/Engineering,United States of America,New Jersey,23-28,Female,,,,,Complain,The One,,,,,,,417
+Rachel,5852701742,r_sheehan@outlook.com,23-28,Female,I'm a student!,United States of America,New York,23-28,Female,,,TV Buddy,,Complain,,Someone to talk to,Cook,,,,,151
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Tara,423087310,as_is_life@hotmail.com,23-28,Female,I'm a student!,Australia,New South Wales,23-28,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,286
+Colleen Kurecka,9892844436,cakurecka@gmail.com,23-28,Female,Automotive,United States of America,Michigan,No Preference,No Preference,Workout Buddy,,,,,The One,Someone to talk to,Cook,,Crafting Buddy,,,421
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Brian,778 316 4919,brianhylee99@gmail.com,23-28,Other,Computer Software/Engineering,Canada,BC,23-28,Female,,,TV Buddy,,Complain,,Someone to talk to,Cook,,,,,59
+Chelsy Devon,9072279109,chelsy.m.devon@gmail.com,23-28,Female,Construction,United States of America,alaska,23-28,Male,,,,Drinking Buddy,Complain,,Someone to talk to,,,,,,82
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+knives,7988999768,poisonious64@gmail.com,23-28,Other,Entertainment/Movie Production,United Kingdom,,23-28,,,,,,Complain,The One,Someone to talk to,,,,,,57
+Xiaobin Ran,4125198207,xiaobinran@gmail.com,23-28,Male,Computer Software/Engineering,China,Sichuan,18-22,Female,,,,,,,,,,,,,428
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+R,,rliss0310@gmail.com,41-49,Female,Other,United States of America,,41-49,Male,,,,,,The One,Someone to talk to,,,,Parent,Art Buddy,36
+Matthew Morley,8573262714,xxmightymattiexx@gmail.com,41-49,Male,Other,United States of America,Massachusetts,23-28,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,Art Buddy,258
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nathalie ,9492980958,nat1216@hotmail.com,41-49,Female,Other,United States of America,California,41-49,No Preference,,,,,,,,,,,,Art Buddy,391
+Melissa,6179134477,sorrentolis@gmail.com,41-49,Female,Other,United States of America,Massachusetts ,No Preference,No Preference,Workout Buddy,,,,,,Someone to talk to,Cook,,,Parent,Art Buddy,134
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Aspen,,aspengalbanum@comcast.net,41-49,Other,Retired,United States of America,Massachusetts,No Preference,No Preference,,,,,,The One,Someone to talk to,,,,,Art Buddy,118
+Elizabeth,3602184992,rustlingwoods-sweaters@yahoo.com,41-49,Female,Retired,United States of America,Texas,41-49,Male,,,TV Buddy,,,The One,Someone to talk to,Cook,,,,,80
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kathy Morris,6094324254,catmomkathy@yahoo.com,41-49,Female,Hospital/Health Care,United States of America,New Jersey,50-59,Male,,,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,,,54
+John Cintron,,john.cintron@yahoo.com,41-49,Male,Hospital/Health Care,United States of America,Massachusetts,41-49,No Preference,,,,,,,,,,,,,132
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Thom Smith,,temptds1976@gmail.com,41-49,Male,Food/Beverages,United States of America,Massachusetts,,Female,,,TV Buddy,,,The One,Someone to talk to,,,,,,249
+Christi,5125076906,cmgaustin@yahoo.com,41-49,Female,Food/Beverages,United States of America,Texas,No Preference,No Preference,,,,Drinking Buddy,,,Someone to talk to,,,Crafting Buddy,,,103
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Marina,4056266745,marina.s.ogden@gmail.com,41-49,Female,Hospital/Health Care,United States of America,Texas ,41-49,No Preference,,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,Parent,Art Buddy,20
+Julia Girouard,9704450686,juliachangrn@live.com,41-49,Female,Hospital/Health Care,United States of America,Colorado,41-49,No Preference,,,,Drinking Buddy,Complain,The One,Someone to talk to,,,,Parent,,61
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mike ,6179824616,mmedeiros533@gmail.com,41-49,Male,Retail,,"Boston,ma",No Preference,Female,,,TV Buddy,,,,,,,,,,105
+Tarnisia Haliburton ,2543499512,nishavelli@yahoo.com,41-49,Female,Other,United States of America,Texas,41-49,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,,332
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Claire,5163991876,ClaireDav905@gmx.com,41-49,Female,Finance,United States of America,New York,,Male,,,,,Complain,,Someone to talk to,,,,,,418
+Rich De Leo,,rdeleo729@gmail.com,41-49,Male,Construction,United States of America,New York,41-49,Female,,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,331
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Adriana Flores,,adrianafaponte@gmail.com,41-49,Female,Marketing/Advertising/Sales,United States of America,Washington,,Female,,,,,,,Someone to talk to,,,,,,352
+Cora,,peaches_1213@yahoo.com,41-49,Female,Marketing/Advertising/Sales,United States of America,Massachusetts,41-49,,,Music Buddy,,,Complain,The One,Someone to talk to,,,,Parent,Art Buddy,202
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jim,9542404511,jimnckan@gmail.com,41-49,Male,Other,United States of America,North Carolina ,35-40,Female,,,,,,The One,Someone to talk to,,,,,,296
+Te'Aira Thomas,7036790386,maishell510@gmail.com,41-49,Female,Other,United States of America,Virginia,60+,,,,,,Complain,,Someone to talk to,,,,,,371
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Daniela,,checktondaniela@gmail.com,41-49,Female,Education,France,,41-49,Male,,Music Buddy,TV Buddy,,,The One,Someone to talk to,Cook,,,,,375
+Scott A King,9784061057,ozzman1371@gmail.com,41-49,Male,Other,United States of America,Massachusetts,41-49,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,Crafting Buddy,Parent,,178
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Tessa Hiller,,tammoeb54@gmail.com,41-49,Female,Consulting,United States of America,Massachusetts,41-49,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,240
+Heather Bates,,heatherjbates@gmail.com,41-49,Female,Consulting,United States of America,California ,41-49,No Preference,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,,393
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Beth,5085250566,batyson11@gmail.com,41-49,Female,Education,United States of America,Massachusetts ,41-49,Male,Workout Buddy,,,Drinking Buddy,,The One,,,,,,,193
+Mike Foster,2019261621,iceman_86345@hotmail.com,41-49,Male,Other,United States of America,New Jersey,No Preference,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,431
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Otto,8642378211,ottogsell@icloud.com,41-49,Male,Food/Beverages,United States of America,New Jersey,No Preference,Female,,,,,,,,,,,,Art Buddy,49
+Kathy,,kathymk616-personal@yahoo.com,41-49,Female,Education,United States of America,New Jersey,,,,,TV Buddy,,,,Someone to talk to,,,,,,21
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Shawn mackay,5596602468,mackay.shawn@gmail.com,41-49,Male,Construction,United States of America,california ,41-49,Female,,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,15
+Christine,4087188552,cr@catfinks.com,41-49,Female,Information Technology,United States of America,California,41-49,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,420
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Shawnna,5038165027,shawnna@gmail.com,41-49,Female,Hospital/Health Care,United States of America,Oregon,41-49,No Preference,,,,,,,Someone to talk to,,,,,,397
+Evelyn Fuentes,8572301090,evefuentes2016@gmail.com,41-49,Female,Hospital/Health Care,United States of America,Massachusetts,No Preference,No Preference,,,,,,,,,,,,,244
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Spencer,,spencer.kuehl@hotmail.com,41-49,Prefer not to specify,Computer Software/Engineering,United States of America,Oregon,No Preference,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,408
+Zachary Kessin,5087457940,zkessin@gmail.com,41-49,Male,Computer Software/Engineering,United States of America,Massachusetts,41-49,Female,Workout Buddy,,TV Buddy,,Complain,The One,Someone to talk to,Cook,,Crafting Buddy,,,98
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Caroline Tanner,19782391334,serendipityct@aol.com,41-49,Female,Veterinary,,Massachusetts,41-49,No Preference,,,,,,The One,,,,,,,160
+Amy Parker,6177844053,aparker24@yahoo.com,41-49,Female,Other,United States of America,Massachusetts,41-49,No Preference,,,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,Parent,,247
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Tasha,6178527204,tpleasant3@gmail.com,41-49,Female,Education,United States of America,Massachusetts ,41-49,No Preference,Workout Buddy,,TV Buddy,,Complain,,Someone to talk to,,,,,,162
+Angela,,angelam02170@gmail.com,41-49,Female,Education,United States of America,Massachusetts ,,,,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,Art Buddy,226
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mimi Dunn,,mimico1970@gmail.com,41-49,Female,Retired,United States of America,Missouri ,41-49,Male,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,401
+Matthew Malloy,6173087535,mdm775@gmail.com,41-49,Male,Law Enforcement,United States of America,Massachusetts,No Preference,No Preference,,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,,137
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Dan,6179067449,dans143@aol.com,41-49,Male,Accounting,United States of America,Massachusetts,50-59,Female,,,,Drinking Buddy,,,,,,,,,4
+Ellen Ruiz,617-905-5578,ellentruiz@gmail.com,41-49,Female,Accounting,United States of America,Massachusetts,41-49,Male,,,,,Complain,The One,Someone to talk to,,,,Parent,Art Buddy,152
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sarah,5065033862,squid52@gmail.com,41-49,Female,Education,Canada,Yukon,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,Parent,,16
+Leigh ,9738017756,lgarwin@ymail.com,41-49,Female,Education,United States of America,New Jersey,41-49,Male,,,,,,,Someone to talk to,,,,,,2
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Rommel Jean-Louis,9547360746,jeanlouisrommel2003@gmail.com,41-49,Male,Hospitality,United States of America,Florida,35-40,,,Music Buddy,,,,,,,,,,,389
+scott richard jr,9854026322,sjr072@yahoo.com,41-49,Male,Food/Beverages,United States of America,new hampshire,41-49,Female,,Music Buddy,,,,The One,Someone to talk to,,,,,,223
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Noemia,6179979272,nonoca@gmail.com,41-49,Female,Legal Services,Brazil,PR,41-49,Female,,,,,,,Someone to talk to,,,,,,71
+Mary,6177217522,mbaniecki@gmail.com,41-49,Female,Biotechnology,United States of America,Massachusetts ,,,,,,,,The One,Someone to talk to,,,,,,433
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Cida Freitas,,cassiausa@gmail.com,41-49,Female,Other,United States of America,Falmouth ,No Preference,Male,,,TV Buddy,,,,,,,,,,184
+Jonathan Hatch,7815885424,jonathan.hatch@newbury.edu,41-49,Male,Food/Beverages,,Massachusetts,No Preference,No Preference,,,TV Buddy,,,,Someone to talk to,Cook,,,,,248
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+China rowe,5127977232,chinarowe@me.com,41-49,Female,Information Technology,United States of America,Texas,No Preference,No Preference,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,Cook,,Crafting Buddy,Parent,,287
+Kim Smith,,Kimmariesmith40@gmail.com,41-49,Female,Health/Fitness,United States of America,MASSACHUSETTS,41-49,No Preference,,,,,Complain,,Someone to talk to,,,,,,239
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mike,7743689906,mikeywtaylor1970@gmail.com,50-59,Male,Construction,,,,,,Music Buddy,TV Buddy,Drinking Buddy,,The One,Someone to talk to,Cook,,,,,250
+Mark,8573993225,mark.omarra@gmail.com,50-59,Male,Construction,United States of America,Massachusetts,No Preference,Female,,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,Parent,,155
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Shelley LaRue ,,dogluvr1964@gmail.com,50-59,Female,Hospital/Health Care,United States of America,New York,50-59,Male,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,,,Someone to talk to,Cook,,Crafting Buddy,,,448
+Shazd,2483466789,sf7860@gmail.com,50-59,Male,Hospital/Health Care,United States of America,Michigan,No Preference,Female,,,,,,The One,Someone to talk to,,,,,Art Buddy,275
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jacky McCurdy,9086729717,dacqueri@aol.com,50-59,Female,Retired,United States of America,Pennsylvania,50-59,No Preference,,,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,Parent,,17
+Barbara,9405941285,beedge2@outlook.com,50-59,Female,Retired,United States of America,,No Preference,No Preference,,Music Buddy,,,Complain,,Someone to talk to,,,,,,344
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Camille Manzo,7816034426,cmanzo8@comcast.net,50-59,Female,Legal Services,United States of America,Massachusetts ,50-59,Male,,,TV Buddy,,,The One,,,,,,Art Buddy,252
+Ron,2153701080,rikapron@gmail.com,50-59,Male,Legal Services,United States of America,Pennsylvania,50-59,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,,142
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Susan,5082655006,selfcaresuki@gmail.com,50-59,Female,Other,United States of America,Massachusetts,No Preference,Female,,,,,,,,,,,,,153
+Jordan,,Star1109@msn.com,50-59,Female,Retired,United States of America,Massachusetts,No Preference,No Preference,,,,,,,,,,,,,241
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+RODNEY LISLE,407-222-4787  PREFER TEXT,RODLISLE@GMAIL.COM,50-59,Male,Retired,United States of America,FLORIDA,50-59,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,65
+Melanie ,7815689456,whatstheword@aol.com,50-59,Female,Retired,United States of America,Massachusetts,50-59,Male,,,,,,,Someone to talk to,,,,,,264
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Elizabeth ,617-510-3107,zillymack@gamil.com,50-59,Female,Hospital/Health Care,United States of America,Massachusetts,50-59,No Preference,,,,,Complain,,Someone to talk to,,,,,,95
+Deborah Abichaker ,6179976487,mamascatdog@gmail.com,50-59,Female,Hospital/Health Care,United States of America,Massachusetts,50-59,Female,,Music Buddy,,,Complain,,Someone to talk to,Cook,,,Parent,,166
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Scott A Borgman,9786016788,froggie4491@live.com,50-59,Male,Retired,United States of America,Massachusetts,No Preference,No Preference,,Music Buddy,,Drinking Buddy,,,,,,,,,257
+Kevin Horn,8574068698,kevinhorn83@yahoo.com,50-59,Male,Retired,United States of America,Massachusetts,No Preference,Male,,Music Buddy,TV Buddy,,,The One,Someone to talk to,Cook,,,,,203
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Craig,,bagger762@gmail.com,50-59,Male,Other,United States of America,Massachusetts,No Preference,Male,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,,93
+Bill,7817069873,fdcs1958@hotmail.com,50-59,Male,Marketing/Advertising/Sales,United States of America,Massachusetts,No Preference,Male,,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,233
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lisa Arrigo,19784904505,lisaarrigo@comcast.net,50-59,Female,Education,United States of America,Massachusetts,No Preference,No Preference,,,TV Buddy,,,,,Cook,,,,,180
+Denise,5084853424,dgp102960@gmail.com,50-59,Female,Education,United States of America,Massachusetts ,50-59,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,,214
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Yvonbe,2108845431,cg103102@yahoo.com,50-59,Female,Other,United States of America,,No Preference,No Preference,Workout Buddy,,,,,,Someone to talk to,,,Crafting Buddy,,,312
+Mary Beach ,7608073503,mbbeach99@gmail.com,50-59,Female,Retail,United States of America,Massachusetts,50-59,Male,Workout Buddy,Music Buddy,,Drinking Buddy,Complain,The One,Someone to talk to,,,Crafting Buddy,Parent,,190
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nancy,,nantaisnancy@gmail.com,50-59,Female,Retired,Canada,Ontario,60+,Male,,,,,,The One,,,,,,,320
+Steve Armstrong,6148094441,bs.armstrong70@gmail.com,50-59,Male,Other,United States of America,Ohio,35-40,Female,,,,,,,,,,,,,411
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jenny Schultz ,720-301-0046,slojen2000@hotmail.com,50-59,Female,Retired,United States of America,Colorado ,50-59,Female,,,,,,,Someone to talk to,,,,,,325
+Kelly,5089853209,sherbra7777@gmail.com,50-59,Female,Retired,United States of America,Massachusetts,41-49,No Preference,,Music Buddy,TV Buddy,,,The One,Someone to talk to,Cook,,,,,230
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Carol Zoubek,6175102677,cjsailor@comcast.net,50-59,Female,Farming,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,,,Drinking Buddy,Complain,,Someone to talk to,Cook,,,,,79
+Laurie,6176804448,glasser.laurie@gmail.com,50-59,Female,Other,United States of America,Massachusetts,50-59,Male,Workout Buddy,Music Buddy,,Drinking Buddy,,The One,Someone to talk to,,,,,,168
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Andrew,2462607398,bowmanston@gmail.com,50-59,Male,Hospitality,United States of America,Massachusetts,,Male,Workout Buddy,,,,,,Someone to talk to,,,,,,255
+David Garcia-Solorzano,,davidg704@gmail.com,50-59,Male,Hospitality,United States of America,California,No Preference,No Preference,,,,,,,,,,,,,27
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mark Bluzer,5162363991,markbluzer@gmail.com,50-59,Male,Accounting,United States of America,NEW YORK,50-59,Female,,,,,,,,,,,,Art Buddy,422
+Debra Buell,5185862597,adirondakdeb@gmail.com,50-59,Female,Other,United States of America,New York,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,173
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Melissa waller,6035815314,wallermelissa792@gmail.com,50-59,Female,Retired,United States of America,New Hampshire,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,85
+Gina,5512583258,gina20888@gmail.com,50-59,Female,Other,United States of America,New Jersey ,,,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,Art Buddy,46
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Blossom Bingham,6179553176,bblossom090@gmail.com,50-59,Female,Education,United States of America,Massachusetts,50-59,Male,,,,,,,,,,,,,156
+David Clifford,508-476-5300,DaveCl569@Gmail.com,50-59,Male,Retail,United States of America,MA - Massachusetts,41-49,Female,,,,,,The One,Someone to talk to,,,,,,144
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Spencer Kuehl,5035228437,kuehl@ymail.com,50-59,Other,Information Technology,United States of America,Oregon,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,394
+Teresa Carroll,585-734-6730,tcarroll@rpochester.rr.com,50-59,Female,Information Technology,United States of America,New York,No Preference,No Preference,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,Art Buddy,327
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+sara,,cuteginger12@gmail.com,50-59,Female,Food/Beverages,United States of America,Florida,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,419
+DarleneSharon Stone,3212251830,darlenesharonstone@gmail.com,50-59,Female,Education,United States of America,Florida,50-59,No Preference,,,,,,,Someone to talk to,,,,,,306
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Cindi Stewart,,cindi.stewart@verizon.net,50-59,Female,Retired,United States of America,Maryland,50-59,Female,,,,,,,Someone to talk to,Cook,,,Parent,,365
+Marie Kline,,kline.tam@gmail.com,50-59,Female,Retired,United States of America,Washington State,50-59,Male,,,TV Buddy,,,The One,Someone to talk to,,,,,,329
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Liz Boeder,4159608700,lizboeder@gmail.com,50-59,Female,Other,United States of America,California,,,,,,,,The One,Someone to talk to,,,,,,76
+MELBA FOSTER,615-202-9331,MELBADF5@AOL.COM,50-59,Female,Other,United States of America,Tennessee,50-59,Male,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,319
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Mary Ellen Dishaw,,yankeefool51166@yahoo.com,50-59,Female,Education,United States of America,New York,No Preference,No Preference,,,,,,,,,,,,,430
+Gina ,2015826070,ginaa082020@yandex.com,50-59,Female,Marketing/Advertising/Sales,United States of America,New Jersey ,50-59,Male,,,,,,The One,Someone to talk to,,,,,,7
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Carol W.,617-834-5833,singanddance22@yahoo.com,50-59,Female,Legal Services,United States of America,Massachusetts,50-59,No Preference,,,,,,,,,,,,,206
+Jaleh,8182741483,jalehsamani@yahoo.com,50-59,Female,Legal Services,United States of America,,50-59,Male,,,,,,,Someone to talk to,,,,,,128
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Yvonne Anderson,2108845431,jengee68@yahoo.com,50-59,Female,Environmental Services,United States of America,Texas,No Preference,No Preference,Workout Buddy,,,Drinking Buddy,Complain,,Someone to talk to,Cook,,Crafting Buddy,,,219
+Rosemary Sadler,3394406578,rosemary.sadler32@gmail.com,50-59,Female,Retail,United States of America,Massachusetts,,,,,TV Buddy,,,,Someone to talk to,Cook,,,,Art Buddy,220
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Michelle Murphy ,,michellemurphy16@aol.con,50-59,Female,I'm a student!,United States of America,Massachusetts,50-59,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,167
+Ola,8087375554,nameaola@icloud.com,50-59,Female,Consulting,United States of America,Hawaii,50-59,Male,,,,,,,Someone to talk to,,,,,Art Buddy,311
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Diane ,6179354965,chirodiane@msn.com,50-59,Female,Hospital/Health Care,United States of America,Massachusetts ,50-59,Male,,,TV Buddy,,,The One,Someone to talk to,,,,,,259
+Frank,,ampsfrank72@gmail.com,50-59,Male,Computer Software/Engineering,United States of America,Massachusetts,41-49,Female,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,125
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lisa Brennan,5084518761,dolphinsong@comcast.net,50-59,Female,Automotive,United States of America,Massachusetts,50-59,Male,,,TV Buddy,,,The One,,,,,,,97
+Annette,9194230208,beasia2920@yahoo.com,50-59,Female,Hospital/Health Care,United States of America,North Carolina ,50-59,Male,,,,,Complain,The One,Someone to talk to,,,,,,406
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sean,9786087101,slflannery@gmail.com,29-34,Male,Hospital/Health Care,United States of America,Massachusetts,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,,Art Buddy,34
+Becca ,5082075512,rebecca.medeiros@aol.com,29-34,Female,Hospital/Health Care,United States of America,Massachusetts ,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,170
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Amanda Harold,9783956691,aleigh.harold@gmail.com,29-34,Female,Finance,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,,8
+Brandon,2159624042,brandon.wiegand12@gmail.com,29-34,Male,Finance,United States of America,Pennsylvania,29-34,Female,,,TV Buddy,Drinking Buddy,,,Someone to talk to,,,,,,84
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Paul V. Sheridan,3132775095,pvs6@cornell.edu,29-34,Male,Consulting,United States of America,New York,,,,,,,,,,,,,,,400
+Katheryn,8142423809,ketressler@gmail.com,29-34,Female,Consulting,United States of America,Illinois,No Preference,,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,Cook,,,,,115
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Bill ,6072801025,titan.construction14@gmail.com,29-34,Male,Information Technology,United States of America,New York ,No Preference,Female,Workout Buddy,,TV Buddy,,,The One,Someone to talk to,,,,,,434
+Anna Khardina-Vaisman,4159610175,akvaisman@gmail.com,29-34,Female,Information Technology,United States of America,California,No Preference,No Preference,Workout Buddy,,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,,,392
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Katherine,+15853095223,findthesilverlining@gmail.com,29-34,Female,Hospital/Health Care,United States of America,New York,35-40,No Preference,,,,Drinking Buddy,Complain,,Someone to talk to,,,,,,124
+Maloree,3157786021,maloreed@gmail.com,29-34,Female,Hospital/Health Care,,New York,35-40,Male,Workout Buddy,,TV Buddy,Drinking Buddy,,The One,Someone to talk to,,,,,,447
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Matthew Morin,6033518255,matthewnh87@yahoo.com,29-34,Male,Insurance,United States of America,New Hampshire ,No Preference,No Preference,,,,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,127
+Monique LaMontagne,,mlm42089@gmail.com,29-34,Female,Other,United States of America,New York,,,,,,,Complain,,Someone to talk to,,,,,Art Buddy,439
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Annie,6138755521,buynsell613@gmail.com,29-34,Female,Other,Canada,Ontario,29-34,Female,,,,,,,Someone to talk to,Cook,,,Parent,,67
+Niko,,nikokawaja@yahoo.com,29-34,Female,Other,United States of America,TEXAS,No Preference,No Preference,,,,,,,Someone to talk to,,,,Parent,,350
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Emilee,5633790002,eernst@foundation2.org,29-34,Female,Hospital/Health Care,United States of America,Iowa,29-34,Male,,Music Buddy,TV Buddy,,,,Someone to talk to,Cook,,,,Art Buddy,314
+Alain,5852784427,alainj21@gmail.com,29-34,Male,Hospital/Health Care,United States of America,New Jersey ,29-34,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,,Someone to talk to,Cook,,,Parent,,69
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Melissa Martinez,5053669008,miss_martinez26@yahoo.com,29-34,Female,Education,United States of America,New Mexico,29-34,Male,,Music Buddy,TV Buddy,Drinking Buddy,,The One,Someone to talk to,Cook,,,,,429
+Peterson Pierre,,peterson1687@gmail.com,29-34,Male,Other,United States of America,Massachusetts,,Female,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,,Cook,,Crafting Buddy,Parent,,121
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Julius,,julius_ruaya@hotmail.com,29-34,Male,Other,Australia,NSW,23-28,Female,Workout Buddy,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,Art Buddy,39
+Melissa Hoyt,9783322184,mleaho009@gmail.com,29-34,Female,Other,United States of America,Massachusetts,No Preference,Male,Workout Buddy,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,,,254
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Laura,,lauradepue@hotmail.com,29-34,Female,I'm a student!,United States of America,California,29-34,No Preference,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,110
+Siraj Ali,3472498103,sza@alum.mit.edu,29-34,Male,I'm a student!,United States of America,Illinois,29-34,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,,108
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Adam Wisocky,7742405137,adamwisocky@yahoo.com,29-34,Male,Construction,United States of America,Massachusetts,23-28,Female,,,TV Buddy,Drinking Buddy,Complain,The One,,Cook,,,,,253
+GEMMA,422453446,gemma.graham@live.com,29-34,Female,Other,Australia,QLD,29-34,Female,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,Cook,,,,,35
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jarod swindle ,4322096845,eknievel5@gmail.com,29-34,Male,I'm a student!,United States of America,Texas,23-28,Female,Workout Buddy,,,,,The One,Someone to talk to,,,,,,441
+Azza,,wahadaazza152@gmail.com,29-34,Female,I'm a student!,Canada,Britishs Columbia,29-34,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,12
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Natasha,,watford.natasha87@gmail.com,29-34,Female,Environmental Services,,Florida,,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,,The One,Someone to talk to,Cook,,Crafting Buddy,Parent,,409
+Jessie Cordova,7609078505,graphicmystic@gmail.com,29-34,Female,Other,United States of America,California,,Female,Workout Buddy,Music Buddy,,,Complain,,Someone to talk to,,,Crafting Buddy,,,62
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Daniel Diaz,4159009777,dj_diaz@icloud.com,29-34,Male,Government,United States of America,California ,29-34,Female,Workout Buddy,Music Buddy,,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,413
+Kayla,7143453633,kbruner313@yahoo.com,29-34,Female,Education,United States of America,California,29-34,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,87
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jeffrey Forbes,9783357222,jforbes984@aol.com,29-34,Male,Health/Fitness,United States of America,Massachusetts ,23-28,Female,,,TV Buddy,,,,,,,,,,9
+Lorena,5073389603,lorenagalvan.m@gmail.com,29-34,Female,Hospital/Health Care,United States of America,,35-40,,,,,,,,Someone to talk to,,,,,,198
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jacquelyn Anderson,3868713234,zeldabean16@gmail.com,29-34,Female,Food/Beverages,,Florida ,No Preference,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,Parent,,305
+Miranda ,497014684,zippythepapillon@gmail.com,29-34,Female,Hospital/Health Care,Australia,Victoria,29-34,No Preference,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,Cook,,,,Art Buddy,40
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+gio,,giovanni.calculli9@gmail.com,29-34,Male,Other,Italy,CONSTANTA,29-34,No Preference,,Music Buddy,,,,The One,Someone to talk to,,,,,,276
+Jacqueline,6034932233,jkgeis@gmail.com,29-34,Female,Media,United States of America,,No Preference,Male,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,225
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Justin,6132905434,justinsapplleiphone@gmail.com,29-34,Male,Media,Canada,Ontario,29-34,Male,,,,,,,,,,,,,135
+Jason Wheeler,9286425277,jasondwheeler1991@gmail.com,29-34,Male,Media,United States of America,Arizona,23-28,Female,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,,,,,,140
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ryan Philbin ,5206618431,ryanphilbin@gmail.com,29-34,Male,Computer/Network Security,United States of America,Colorado ,No Preference,Male,,Music Buddy,TV Buddy,,Complain,,,,,,,Art Buddy,109
+Steven,303-815-8492,steven.a.jordal@hotmail.com,29-34,Male,Other,United States of America,Colorado ,No Preference,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,Art Buddy,342
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Patricia,,fizxwhiz@yahoo.com,29-34,Female,Cosmetics,United States of America,Kentucky,No Preference,No Preference,,Music Buddy,,,Complain,,Someone to talk to,,,,Parent,,31
+JJ,6313393312,jessica.v.embry@gmail.com,29-34,Female,Hospital/Health Care,United States of America,Washington ,29-34,No Preference,,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,,,407
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Emily,3236303238,rubyslippers21@hotmail.com,29-34,Female,Entertainment/Movie Production,United States of America,California,No Preference,No Preference,,,TV Buddy,Drinking Buddy,,,Someone to talk to,Cook,,,,,13
+Garrett Beelow,8473720929,garrettbeelow@gmail.com,29-34,Male,Entertainment/Movie Production,United States of America,Illinois,23-28,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,Art Buddy,117
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sophie,3602232106,sophie.wiseman1@gmail.com,29-34,Female,Education,United States of America,Oregon,29-34,Female,,,TV Buddy,,,The One,Someone to talk to,,,,,Art Buddy,281
+Jillian Michniewicz,5086887768,jillmich@yahoo.com,29-34,Female,Education,United States of America,Massachusetts,29-34,Male,,Music Buddy,,,,The One,,,,,,Art Buddy,83
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jay,7816828291,JJMos2020@gmail.com,29-34,Male,Information Technology,United States of America,Ma Boston,29-34,,,,,,,The One,,,,,,,147
+Emma Flock,4157577616,Emmaf9@gmail.com,29-34,Female,Information Technology,United States of America,Florida,No Preference,Female,Workout Buddy,,,,,,,Cook,,,,,432
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jill H,6313563853,jillian.a.hyman@gmail.com,29-34,Female,Pharmaceuticals,United States of America,New York,29-34,Female,Workout Buddy,,TV Buddy,,,,Someone to talk to,,,,,,196
+Ashley,9086250453,manzashl@gmail.com,29-34,Female,Public Relations/PR,United States of America,New Jersey,No Preference,No Preference,,Music Buddy,,,Complain,The One,Someone to talk to,,,,,Art Buddy,47
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Michael McDonald,,mikeymcdonald87@gmail.com,29-34,Male,Media,United States of America,Massachusetts,29-34,No Preference,Workout Buddy,,,,,,,,,Crafting Buddy,,,133
+Enrique,4088213467,enrique@radrique.com,29-34,Male,Electrical/Electronic Manufacturing,,California,29-34,Female,Workout Buddy,Music Buddy,TV Buddy,Drinking Buddy,Complain,The One,,Cook,,Crafting Buddy,,,101
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Sebastian Ramos-Currah,4388886546,sebastianforaday@gmail.com,29-34,Male,Hospital/Health Care,Canada,Quebec,18-22,Female,Workout Buddy,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,,,,171
+Angeles,3136145735,ameneses518@gmail.com,29-34,Female,Legal Services,United States of America,Michigan,29-34,Female,,,TV Buddy,,Complain,,,,,,,Art Buddy,218
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+John Campi,5059771281,johncampi.contact@gmail.com,29-34,Male,Entertainment/Movie Production,United States of America,New Mexico,No Preference,No Preference,,,,,,,,,,,,,91
+Kerri Fitzpatrick,6179660794,kfitz087@gmail.com,29-34,Female,Other,United States of America,Massachusetts,29-34,No Preference,,,,,,,,,,,,,272
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Aaron,7042139893,bludking32@yahoo.com,29-34,Male,Retail,United States of America,North Carolina,29-34,Female,,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,70
+Natasha ,3017936440,cnatasha1905@gmail.com,29-34,Female,I'm a student!,India,Goa/Maharashtra,29-34,Male,,,,,,The One,,,,,,,72
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jesse,7818793880,jesse.kajko@gmail.com,29-34,Male,I'm a student!,United States of America,Massachusetts ,No Preference,No Preference,Workout Buddy,,,,,,,,,,,,262
+Frank White,5719694209,8itches.R.us@gmail.com,29-34,Male,Electrical/Electronic Manufacturing,United States of America,Wisconsin,No Preference,No Preference,,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,,,Crafting Buddy,,,277
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Michelle,4438017153,michelleoffit@gmail.com,35-40,Female,Education,United States of America,Maryland,35-40,Female,,,,,Complain,,Someone to talk to,,,,Parent,,304
+Becca,5083673624,bdeaouza82@yahoo.com,35-40,Female,Education,United States of America,Massachusetts,35-40,No Preference,,,TV Buddy,,,The One,Someone to talk to,,,,Parent,,235
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+J,,javlen76@hotmail.com,35-40,Male,Other,United States of America,New York ,35-40,Female,,,,,,,Someone to talk to,,,,,,440
+Ro,,Inboxroh@gmail.com,35-40,Female,Other,United States of America,New York,41-49,Male,,,,,,,Someone to talk to,,,,,Art Buddy,385
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kat,,geor3663@chawk.cecil.edu,35-40,Female,I'm a student!,United States of America,Maryland,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,157
+Jessica Tsay,8606922098,jesstsay@gmail.com,35-40,Female,Other,United States of America,Massachusetts,35-40,No Preference,,,,,,,Someone to talk to,,,,,,149
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jeff,6178169807,jeff1227b@yahoo.com,35-40,Male,Accounting,United States of America,Massachusetts,41-49,No Preference,,,,,Complain,,Someone to talk to,,,,,,89
+Riley,2532245349,rileykaimiller38@gmail.com,35-40,Female,Other,United States of America,Washington,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,,,354
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+shawn,,usaafrica1@yahoo.com,35-40,Male,Other,United States of America,California,18-22,Female,,,,,,,,,,,,,353
+Christina Zucconi,6194059780,christina.zucconi@gmail.com,35-40,Female,Education,United States of America,California ,41-49,Male,,,TV Buddy,,,The One,Someone to talk to,,,,,Art Buddy,323
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Amy McKinley,7819130748,amymckinley1819@gmail.com,35-40,Female,Retired,United States of America,Massachusetts,No Preference,Female,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,Crafting Buddy,,,251
+Lindsey,3176434866,lwhittak531@gmail.com,35-40,Female,Other,United States of America,California,35-40,Female,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,Crafting Buddy,,,104
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Monae ,2157606714,jacqmonea25@gmail.com,35-40,Female,Other,United States of America,,41-49,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,,,399
+AJ,2342055500,wekossjones@gmail.com,35-40,Male,Other,United States of America,Ohio,No Preference,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,Crafting Buddy,Parent,,294
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Catherine,,cathsara273@yahoo.com,35-40,Female,Legal Services,United States of America,New York ,41-49,Female,Workout Buddy,Music Buddy,,,Complain,,Someone to talk to,,,,,,285
+Clare Sherry,19293310256,clareandromeda@gmail.com,35-40,Female,Other,United States of America,New York,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,,,145
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Zac,6692470381,blueshadows4077@gmail.com,35-40,Male,Electrical/Electronic Manufacturing,United States of America,California,35-40,No Preference,,Music Buddy,,Drinking Buddy,Complain,,Someone to talk to,,,,Parent,,68
+Jo ,972091715,joanna_nichole83@yahoo.com,35-40,Female,Other,United States of America,Washington,No Preference,No Preference,,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,Parent,,14
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lauren,6515002818,lel2017@aol.com,35-40,Female,Other,United States of America,Minnesota ,No Preference,No Preference,,,TV Buddy,,Complain,The One,Someone to talk to,,,,,,372
+Raymund,7134977125,iamrafaga@yahoo.com,35-40,Male,Other,Phillipines,,No Preference,Male,Workout Buddy,,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,,451
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Steve ,7732312383,theartofdadhood@gmail.com,35-40,Male,Retail,United States of America,Illinois,No Preference,Female,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,,Parent,Art Buddy,122
+Kelda,5042615200,keldabookie@icloud.com,35-40,Female,Entertainment/Movie Production,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,Music Buddy,,,Complain,The One,Someone to talk to,,,,Parent,Art Buddy,143
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Bing Chen,5086491881,bing113917@gmail.com,35-40,Male,Information Technology,United States of America,Massachusetts,No Preference,Female,,,TV Buddy,,,The One,Someone to talk to,,,,,,74
+LeeAnn,5099908731,alysialeeann80@gmail.com,35-40,Female,Information Technology,United States of America,Washington ,No Preference,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,378
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kenny Millroy,7324254995,kennethmillroyjr@gmail.com,35-40,Male,Transportation,United States of America,New Jersey,35-40,No Preference,,Music Buddy,TV Buddy,,,,Someone to talk to,,,,Parent,Art Buddy,30
+Robert Fredericks Jr.,9737698758,bfred1126@gmail.com,35-40,Male,Other,United States of America,New Jersey ,35-40,No Preference,Workout Buddy,Music Buddy,,,,,Someone to talk to,,,,,,56
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Kimberly Uitto,7052882344,dahfishie@gmail.com,35-40,Female,Other,Canada,ONTARIO,35-40,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,,116
+Gregory Hansen,7749938109,gph480@aol.com,35-40,Male,Other,United States of America,Massachusetts,41-49,Male,,,TV Buddy,,,The One,,,,,,,265
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Izzy,8478456532,izzy.z.0610@gmail.com,35-40,Male,Construction,United States of America,Illinois,No Preference,No Preference,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,Someone to talk to,,,,,,66
+Brian Schwartz,6317909006,wittyreaderli@gmail.com,35-40,Male,Other,United States of America,New York ,35-40,Male,Workout Buddy,Music Buddy,TV Buddy,,Complain,The One,Someone to talk to,Cook,,,,,50
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Prasheel Gopal,6133043020,prasheelg@yahoo.com,35-40,Male,Computer Software/Engineering,Canada,Ontario,No Preference,No Preference,,,,,,,,,,,,,120
+Maureen Hawlik,9549511059,mahljh@aol.com,35-40,Female,Computer Software/Engineering,United States of America,Florida,35-40,Female,,,TV Buddy,,Complain,,Someone to talk to,Cook,,Crafting Buddy,,,64
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Karen Cooper,2543492532,karencooper226@yahoo.com,35-40,Female,Hospitality,United States of America,Texas,,,,,,,,,Someone to talk to,,,,,,307
+Joshua ,4407596209,jfahler@gmail.com,35-40,Male,Education,United States of America,Texas,35-40,Male,Workout Buddy,,,Drinking Buddy,Complain,,Someone to talk to,,,,Parent,,92
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nick,6065858384,nw_lewis@hotmail.com,35-40,Male,Retail,United States of America,Kentucky,No Preference,Female,,Music Buddy,,,,The One,Someone to talk to,,,,,Art Buddy,291
+Nina,607-342-4793,ntrautmann@gmail.com,35-40,Female,Education,United States of America,New York,No Preference,No Preference,Workout Buddy,,,,,,,Cook,,Crafting Buddy,,,383
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Patrick,9162959750,giantsfan2482@gmail.com,35-40,Male,Entertainment/Movie Production,United States of America,California,No Preference,No Preference,,,,,,,,,,,,,75
+Leandro,6178400856,leandrobrusa1@gmail.com,35-40,Male,Other,United States of America,Massachusetts ,No Preference,,,,,,,,,,,,,Art Buddy,94
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Cynthia C Finney,16173591398,ccfinney5@gmail.com,60+,Female,Retired,United States of America,Massachusetts,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,,,208
+Karen Jacob,9784677509,rinflea69@aol.com,60+,Female,Retired,United States of America,Massachusetts,60+,No Preference,,Music Buddy,,,Complain,,Someone to talk to,,,,,Art Buddy,246
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Chris Maw,803-262-8646,chrisemaw.2015@gmail.com,60+,Female,Marketing/Advertising/Sales,United States of America,South Carolina,60+,Male,,,,,,,Someone to talk to,,,,,Art Buddy,318
+Marc,7325393081,mlaurano@gmail.com,60+,Male,Retired,United States of America,Florida,No Preference,No Preference,,,,,,,,,,,,Art Buddy,51
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Laurie Haug,978-458-7664,haug89@comcast.net,60+,Female,Retired,United States of America,Massachusetts,60+,No Preference,Workout Buddy,,TV Buddy,,,The One,Someone to talk to,,,Crafting Buddy,,,236
+Jennifer M Hatfield,5083952333,abbeyrd1011@comcast.net,60+,Female,Pharmaceuticals,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,,Complain,,Someone to talk to,,,Crafting Buddy,,Art Buddy,38
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Ellie Griffin ,6172793134,eleanorgriffin5@gmail.com,60+,Female,Hospital/Health Care,United States of America,Massachusetts,60+,No Preference,,,TV Buddy,,,The One,Someone to talk to,,,,,,175
+Barbars Sullivan,,nightingale02132@yahoo.com,60+,Female,Hospital/Health Care,United States of America,Massachusetts,60+,No Preference,,,,,,,Someone to talk to,,,,,,41
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Maravia,757-679-0617,reidx2@cox.net,60+,Female,Law Enforcement,United States of America,Virginia,No Preference,Male,Workout Buddy,Music Buddy,,Drinking Buddy,,The One,Someone to talk to,Cook,,,,,442
+Skip Goldberg,6178184600,skipgoldberg@comcast.net,60+,Male,Retired,United States of America,Massachusetts,50-59,Female,,Music Buddy,TV Buddy,Drinking Buddy,Complain,,,,,,,,261
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Joy,4107821389,wfamily09@verizon.net,60+,Female,Government,United States of America,,60+,No Preference,,,,,,,Someone to talk to,,,,,,426
+Evelyn,6172308961,eviepinto55@gmail.com,60+,Female,Other,United States of America,Massachusetts,60+,No Preference,,,,,,,Someone to talk to,,,,,,245
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Barbara Donohue,9782634961,bdonohue@alum.mit.edu,60+,Female,Electrical/Electronic Manufacturing,United States of America,Florida,,,,Music Buddy,,,,,Someone to talk to,Cook,,,,,335
+Daniel swett,9787193400,hockey363957@live.com,60+,Male,Retired,United States of America,Massachusetts,60+,Female,,Music Buddy,TV Buddy,,Complain,,,Cook,,,,,163
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+SPITZER DENISE,,spitzer@optonline.net,60+,Female,Apparel/Fashion,United States of America,Florida,60+,Male,Workout Buddy,,,,,,Someone to talk to,,,,,,308
+Daniel F Cetrone,9787932012,dancet62@yahoo.com,60+,Male,Retired,United States of America,Massachusetts,No Preference,No Preference,,Music Buddy,,,,,Someone to talk to,,,,,,216
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jeanette Rabideau,3152768657,songbirdj48@live.com,60+,Female,Retired,United States of America,New York,60+,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,445
+Nora Fischbach,818-343-5281,nora.fischbach@yahoo.com,60+,Female,Retired,United States of America,Arizona,No Preference,No Preference,,,,,,,Someone to talk to,,,,,Art Buddy,330
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Pam,,ptee1863@gmail.com,60+,Female,Retired,United States of America,,60+,No Preference,,,,,,,,,,,,,165
+Patsy,5084410923,slk321@ail.com,60+,Female,Retired,United States of America,,60+,,,,,,,,,,,,,,237
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Patricia A Garcia,5083698127,patgarcia07@gmail.com,60+,Female,Hospital/Health Care,United States of America,New Hampshire,No Preference,No Preference,,,,,,,,,,,,,119
+Kathleen Finnerty,3157781863,kfinnerty9@aol.com,60+,Female,Hospital/Health Care,United States of America,New York,,,,,,,,,,,,,,,446
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+CHARLOTTE R STEVENS,3392444911,charlottestevensnewman3@yahoo.com,60+,Female,Marketing/Advertising/Sales,United States of America,Massachusetts,No Preference,No Preference,,,,,,The One,Someone to talk to,,,,,,270
+Ebi,,waterflower.meadowbrook@gmail.com,60+,Female,Retired,United States of America,Massachusetts ,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,179
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Nancy  Cyrus,5085213571,lady_stardust7242@yahoo.com,60+,Female,Retired,United States of America,Brockton  Massachuttess,No Preference,No Preference,,,,,,,,,,,,,242
+Wanda Henry,610-505-5955,jwhenry520@aol.com,60+,Female,Retired,United States of America,,60+,Female,,,,,,,,,,,,,423
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Melody ,6073426660,missustoad@aol.com,60+,Female,Education,United States of America,New York,No Preference,No Preference,,,,,Complain,,Someone to talk to,,,,Parent,,25
+Robin Stauffer,8328753035,shhgrr@comcast.net,60+,Female,Education,United States of America,Texas,60+,Female,,,TV Buddy,,Complain,,Someone to talk to,,,,,,44
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Judy Stein,,judystein_@hotmail.com,60+,Female,Hospital/Health Care,United States of America,Arizona,No Preference,No Preference,Workout Buddy,,,,Complain,,,,,,,,295
+Lisa,5086997099,lmhoffmanlmhc@outlook.com,60+,Female,Hospital/Health Care,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,Music Buddy,TV Buddy,,,The One,Someone to talk to,,,,,,130
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+George,,GreatDancr@aol.com,60+,Male,Health/Fitness,United States of America,Nevada,No Preference,No Preference,,Music Buddy,TV Buddy,,,The One,,,,,,,450
+Diane Kilburn,3157713301,dkilburn1@twcny.rr.com,60+,Male,Health/Fitness,United States of America,New York ,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,343
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Donita Gross,,donitamax8@gmail.com,60+,Female,Retired,United States of America,Arizona,No Preference,No Preference,,,,,,,,,,,,,224
+Chris,6179683974,coginz@comcast.net,60+,Female,Retired,United States of America,Massachusetts,No Preference,No Preference,,,,,,,Someone to talk to,,,,,,185
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Diane Moz,,kewlchnge@aol.com,60+,Female,Retired,United States of America,Massachusetts,60+,Male,,,,,,,Someone to talk to,,,,,,194
+RALPH SNYDER,9195635870,rsnyder24@triad.rr.com,60+,Male,Retired,United States of America,NC,60+,Female,,,,,,,Someone to talk to,,,,,,26
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Maggie O'Brien,617-429-2835,mmo40@yahoo.com,60+,Female,Other,United States of America,28,No Preference,No Preference,,,,Drinking Buddy,,The One,,,,,,,232
+Anne ,16178758334,amcbig@yahoo.com,60+,Female,Other,United States of America,Massachusetts,60+,Male,,,,Drinking Buddy,,The One,,,,,,,154
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Eugene Long,7032619181,genefreeheart@gmail.com,60+,Male,Retired,United States of America,Oregon,,,,,,,,,Someone to talk to,,,,,,403
+Ellen Stone,,Brat1936@aol.com,60+,Female,Retired,United States of America,Massachusetts,60+,No Preference,,,,,,,Someone to talk to,,,,,,210
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+John Tinger,6175926899,jtinger4@yahoo.com,60+,Male,Real Estate,United States of America,Massachusetts,,,,,,,,,,,,,,,164
+June A Bourgault Meier GMail  ,978-401-7227,Junebug@ma.com,60+,Female,Retired,Canada,Massachusetts ,60+,No Preference,,,TV Buddy,,,,Someone to talk to,,,,,,177
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Jody Erdman,6099332870,jerdman@pds.org,60+,Female,Other,United States of America,New Jersey,,,,,,,,The One,Someone to talk to,,,,,,317
+Carol,6038905406,doggymom39@yahoo.com,60+,Female,Retired,United States of America,New Hampshire,60+,No Preference,,,,,Complain,,Someone to talk to,,,,,,148
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Janice Knox,2623824411,toldyso@suddenlink.net,60+,Female,Retired,United States of America,North Carolina,60+,Male,,,,,,The One,Someone to talk to,Cook,,,Parent,,209
+John  Donohue ,8606182513,jdonohue1052@gmail.com,60+,Male,Retired,United States of America,Connecticut ,50-59,Female,,,,,,,Someone to talk to,,,,,,396
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+
+Lynette,575-496-9304,moonbird07@gmail.com,60+,Female,Retired,United States of America,North Carolina,No Preference,No Preference,,Music Buddy,TV Buddy,,Complain,,Someone to talk to,Cook,,,,,280
+Kaysi,6172915649,Kaysiparks@yahoo.com,60+,Female,Retired,United States of America,Massachusetts,No Preference,No Preference,Workout Buddy,,TV Buddy,Drinking Buddy,Complain,The One,Someone to talk to,Cook,,,,,186
+-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
++,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+,+

@@ -53,6 +53,7 @@ weights.update({ 'Course '+str((len(i_classes))+i): c_weight for i in range(1, l
 weights.update({ 'Interest '+str((len(interests))+i): i_weight for i in range(1, len(interests)+1) })
 
 preferences = {}
+no_pref = "No preference"
 
 # construct similarity matrix for group according to features and return pairings
 def func_pairs(features, group, num, rand_num, do_random):
@@ -198,10 +199,14 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num,
     # Get the employee indices
     emp_indices = []
     emp_sims = []
+    number = 0
     for i in sim_scores:
+        if number == 20:
+            break
         if i[0] not in list_to_remove and i[0] != idx:
             emp_indices.append(i[0])
             emp_sims.append(i[1])
+            number = number + 1
 
     # Return the top group_num most similar people not already paired
     result = m0.iloc[emp_indices]
@@ -222,9 +227,18 @@ def get_random(idx, m0, mylist, num, do_random): # num = number of people per gr
                 already_added = False
                 for feature in preferences:
                     idx_feature = m0[m0.index==idx][feature].iloc[0]
+                    idx_preference = m0[m0.index==idx][preferences[feature]].iloc[0]
+                    cur_feature = mylist[mylist.index == i][feature].iloc[0]
+                    cur_preference = mylist[mylist.index == i][preferences[feature]].iloc[0]
                 
-                    if mylist[mylist.index == i][preferences[feature]].iloc[0] == idx_feature:
+                    if idx_preference == no_pref or idx_preference == "":
                         already_added = True
+                        continue
+
+                    if (cur_preference == idx_feature or cur_preference == no_pref or cur_preference == "") and idx_preference == cur_feature:
+                        already_added = True
+                        continue
+                
                 if already_added:
                     result = pd.concat([result, mylist[mylist.index == i]], sort=False)
                     already_selected.append(i)
@@ -312,8 +326,6 @@ def run_file(csv, lists, we, pf, options):
     
     groupby = None
     if options[4] != None:
-        print("HHH")
-        print(options[4])
         groupby = options[4]
 
     df = convert_csv_to_matrix(csv, num)
