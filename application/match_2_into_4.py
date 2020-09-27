@@ -96,6 +96,8 @@ def convert_csv_to_matrix(csv, num):
     matches = []
     ones = []
 
+    print_out = []
+    groups_to_match = []
     if groupby is not None:
         courses = m0[groupby].unique() # list of all unique department names
         
@@ -106,67 +108,33 @@ def convert_csv_to_matrix(csv, num):
             if len(group) == 1:
                 ones.append(group)
             else:
-                matches += func_pairs(features, group, num, rand_num, do_random)
+                matches = func_pairs(features, group, num, rand_num, do_random)
+                if pair_features != []:
+                    print_out += second_round(matches, m0)
+                else:
+                    print_out += [ ", ".join([ str(y) for y in x ]) for x in matches ] 
         
         if len(ones) != 0:
             if len(ones) == 1:
-                for match in matches:
-                    if len(ones) == 0: break
-                    else:
-                        while len(match) < num:
-                            if len(ones) != 0:
-                                match.append(int(ones.pop(0)['index']))
-                            else: break
-                if len(ones) > 0:
-                    matches[0].append(int(ones.pop(0)['index']))
+                print_out[0] += ", " + str(ones.pop(0)['index'].iloc[0])
             else:
                 df = pd.DataFrame(columns=features + ['index'])
                 
                 for one in ones:
                     df = df.append(one, sort=False)
                 df = df.reset_index().drop('level_0', axis=1)
-                matches += func_pairs(features, df, num, rand_num, do_random)
+                matches = func_pairs(features, df, num, rand_num, do_random)
+                if pair_features != []:
+                    print_out += second_round(matches, m0)
+                else:
+                    print_out += [ ", ".join([ str(y) for y in x ]) for x in matches ] 
     else:
         matches = func_pairs(features, m0, num, rand_num, do_random)
     
-    if pair_features != []:
-        # prepare first round pairings for second round pairings
-        second_features = list.copy(pair_features)
-
-        df = pd.DataFrame(columns=['unique_id'] + second_features)
-        for pair in matches:
-            lists = []
-            for _ in range(len(second_features)):
-                lists.append([])
-            str_pair = [ str(x) for x in pair ]
-            total_name = ", ".join(str_pair)
-
-            data = [total_name]
-            for i in pair:
-                for feature in second_features:
-                    add = m0[feature][m0['index'] == i].iloc[0]
-                    if add == add:
-                        lists[second_features.index(feature)].append(m0[feature][m0['index'] == i].iloc[0])
-            
-            for i in lists:
-                if i != [] and not isinstance(i[0], str):
-                    for elem in range(len(i)):
-                        i[elem] = str(i[elem])
-                data.append(", ".join(i))
-
-            pair_df = pd.DataFrame([data], columns=['unique_id'] + second_features)
-            df = pd.concat([df, pair_df], sort=False)
- 
-        df = df.reset_index().drop('index', axis=1).reset_index()
-
-        # complete second round pairings
-        result = func_pairs(['unique_id'] + second_features, df, num2, rand_num2, do_random2)
-        print_out = []
-        for four in result:
-            str_four = [ df[df['index'] == x].iloc[0][1] for x in four ]
-            print_out.append(", ".join(str_four))
-    else:
-        print_out = [ ", ".join([ str(y) for y in x ]) for x in matches ] 
+        if pair_features != []:
+            print_out = second_round(matches, m0)
+        else:
+            print_out = [ ", ".join([ str(y) for y in x ]) for x in matches ] 
     
     # get the data of the people represented by indices to insert into csv
     pairs = pd.DataFrame(columns=final_features + ['index'])
@@ -185,32 +153,78 @@ def convert_csv_to_matrix(csv, num):
     # print this, output
     return pairs 
 
+def second_round(matches, m0):
+    # prepare first round pairings for second round pairings
+    second_features = list.copy(pair_features)
+
+    df = pd.DataFrame(columns=['unique_id'] + second_features)
+    for pair in matches:
+        lists = []
+        for _ in range(len(second_features)):
+            lists.append([])
+        str_pair = [ str(x) for x in pair ]
+        total_name = ", ".join(str_pair)
+
+        data = [total_name]
+        for i in pair:
+            for feature in second_features:
+                add = m0[feature][m0['index'] == i].iloc[0]
+                if add == add:
+                    lists[second_features.index(feature)].append(m0[feature][m0['index'] == i].iloc[0])
+            
+        for i in lists:
+            if i != [] and not isinstance(i[0], str):
+                for elem in range(len(i)):
+                    i[elem] = str(i[elem])
+            data.append(", ".join(i))
+
+        pair_df = pd.DataFrame([data], columns=['unique_id'] + second_features)
+        df = pd.concat([df, pair_df], sort=False)
+ 
+    df = df.reset_index().drop('index', axis=1).reset_index()
+
+    # complete second round pairings
+    result = func_pairs(['unique_id'] + second_features, df, num2, rand_num2, do_random2)
+    print_out = []
+    for four in result:
+        str_four = [ df[df['index'] == x].iloc[0][1] for x in four ]
+        print_out.append(", ".join(str_four))
+    return print_out
+
 # Function that takes in movie title as input and outputs most similar movies
-def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, rand_num, do_random):
+def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, num):
     # Get the index of the employee that matches the name
     idx = indices[name]
 
     # Get the pairwsie similarity scores of all employees with that employee
     sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = [(key, val) for (key, val) in sim_scores if key not in list_to_remove]
     
+    # Increase similarity scores for people who idx prefers
+    idx_pref = m0[m0.index==idx]["GenderPref"].iloc[0]
+    if (idx_pref == idx_pref):
+        pref_df = m0.query('Gender == "' + idx_pref + '"')[["index"]]
+        pref_indices = pref_df.index.values.tolist()
+        ratio_inc = 1
+        sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
+    
+    # Increase similarity scores for people who prefer idx
+    idx_gender = m0[m0.index==idx]["Gender"].iloc[0]
+    if (idx_pref == idx_pref):
+        pref_df = m0.query('GenderPref == "' + idx_gender + '"')[["index"]]
+        pref_indices = pref_df.index.values.tolist()
+        ratio_inc = 1
+        sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
+
     # Sort the employees based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-
-    # Get the employee indices
-    emp_indices = []
-    emp_sims = []
-    number = 0
-    for i in sim_scores:
-        if number == 20:
-            break
-        if i[0] not in list_to_remove and i[0] != idx:
-            emp_indices.append(i[0])
-            emp_sims.append(i[1])
-            number = number + 1
+    num_indices = [key for (key, val) in sim_scores[0:num+1]]
+    
+    num_sims = [val for (key, val) in sim_scores[0:num+1]]
 
     # Return the top group_num most similar people not already paired
-    result = m0.iloc[emp_indices]
-    result = result.assign(Similarity = emp_sims) # still need this?
+    result = m0.iloc[num_indices]
+    result = result.assign(Similarity = num_sims) # still need this?
     return result 
 
 import random 
@@ -222,29 +236,6 @@ def get_random(idx, m0, mylist, num, do_random): # num = number of people per gr
         cur_size = 0
         already_selected = []
 
-        if preferences != {}:
-            for i in inds:
-                already_added = False
-                for feature in preferences:
-                    idx_feature = m0[m0.index==idx][feature].iloc[0]
-                    idx_preference = m0[m0.index==idx][preferences[feature]].iloc[0]
-                    cur_feature = mylist[mylist.index == i][feature].iloc[0]
-                    cur_preference = mylist[mylist.index == i][preferences[feature]].iloc[0]
-                
-                    if idx_preference == no_pref or idx_preference == "":
-                        already_added = True
-                        continue
-
-                    if (cur_preference == idx_feature or cur_preference == no_pref or cur_preference == "") and idx_preference == cur_feature:
-                        already_added = True
-                        continue
-                
-                if already_added:
-                    result = pd.concat([result, mylist[mylist.index == i]], sort=False)
-                    already_selected.append(i)
-                    cur_size = cur_size + 1
-                    if cur_size == num-1:
-                        return result
         if do_random:
             rand_inds = random.sample(inds, num-1)
             for i in rand_inds:
@@ -273,11 +264,11 @@ def get_pairs(emplist, indices, cosine_sim, m0, num, rand_num, do_random):
     
     for e in emplist:
         if indices[e] not in list_to_remove:
-            partner = list(get_random(indices[e], m0, get_recommendations(e, indices, cosine_sim, list_to_remove, m0, rand_num, do_random), num, do_random)['index'])
+            list_to_remove.append(indices[e])
+            partner = list(get_random(indices[e], m0, get_recommendations(e, indices, cosine_sim, list_to_remove, m0, num), num, do_random)['index'])
             name0 = e
             pair = [name0]
             
-            list_to_remove.append(indices[e])
             for p in partner:
                 pair.append(p)
                 list_to_remove.append(indices[p])
