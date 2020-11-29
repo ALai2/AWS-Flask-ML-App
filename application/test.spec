@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['test.py'],
-             pathex=['C:\\Users\\Alisa\\Documents\\GitHub\\AWS-Flask-ML-App\\application'],
+             pathex=['C:\\Users\\Alisa\\Documents\\GitHub\\AWS-FLASK-ML-APP\\application'],
              binaries=[],
              datas=[],
              hiddenimports=[],

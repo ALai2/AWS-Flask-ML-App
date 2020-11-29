@@ -8,6 +8,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 import clean_info as ci 
+import gender_pref_grps as gpg
 
 # Define a TF-IDF Vectorizer Object. Remove all english stop words such as 'the', 'a'
 tfidf = TfidfVectorizer(token_pattern=u'(?ui)\\b\\w*[a-z]+\\w*\\b', stop_words='english', use_idf = True)
@@ -60,7 +61,8 @@ def func_pairs(features, group, num, rand_num, do_random):
     # apply clean_df function to features
     m1 = group.copy()
     m1 = ci.clean_df(m1, features, replace_space, replace_key)
-    
+    if m1.empty:
+        return []
     # BEGINNING ------------------------------------------------------------
     m1 = m1.assign(score = [''] * len(m1))
     for feature in features:
@@ -69,7 +71,10 @@ def func_pairs(features, group, num, rand_num, do_random):
                 m1['score'] = m1['score'] + " " + m1[feature]
         else:
             m1['score'] = m1['score'] + " " + m1[feature]
+        #to_add = m1[[feature]*weights[feature]].apply(lambda x: ' '.join(x), axis=1)
+        #m1['score'] = m1['score'].str.cat(to_add, sep=" ", na_rep = "")
         
+    print(m1)
     #Construct the required TF-IDF matrix by fitting and transforming the data
     tfidf_matrix = tfidf.fit_transform(m1['score'])
 
@@ -83,15 +88,11 @@ def func_pairs(features, group, num, rand_num, do_random):
     return get_pairs(group['index'].sample(frac=1), indices, cosine_sim, group, num, rand_num, do_random)
 
 # minimize number of global variables
-def convert_csv_to_matrix(csv, num):
-    # Load data from csv
-    metadata = pd.read_csv(csv)
-
+def convert_csv_to_matrix(metadata, num):
     final = metadata[final_features]
     final = final.reset_index()
 
     m0 = metadata[features]
-
     m0 = m0.reset_index()
     matches = []
     ones = []
@@ -137,21 +138,15 @@ def convert_csv_to_matrix(csv, num):
             print_out = [ ", ".join([ str(y) for y in x ]) for x in matches ] 
     
     # get the data of the people represented by indices to insert into csv
-    pairs = pd.DataFrame(columns=final_features + ['index'])
+    total = []
     for group in print_out:
         index_list = group.split(", ")
+        pairs = pd.DataFrame(columns=final_features + ['index'])
         for i in index_list:
             pairs = pairs.append(final[final['index'] == int(float(i))].iloc[0])
-        data = [['-'] * (len(final_features)+1)]
-        data2 = [['+'] * (len(final_features)+1)]
-
-        # for spacing
-        extra = pd.DataFrame(data, columns=final_features + ['index'])
-        extra2 = pd.DataFrame(data2, columns=final_features + ['index'])
-        pairs = pd.concat([pairs, extra, extra2], sort=False)
-
+        total.append(pairs)
     # print this, output
-    return pairs 
+    return total 
 
 def second_round(matches, m0):
     # prepare first round pairings for second round pairings
@@ -200,21 +195,23 @@ def get_recommendations(name, indices, cosine_sim, list_to_remove, m0, num):
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = [(key, val) for (key, val) in sim_scores if key not in list_to_remove]
     
-    # Increase similarity scores for people who idx prefers
-    idx_pref = m0[m0.index==idx]["GenderPref"].iloc[0]
-    if (idx_pref == idx_pref):
-        pref_df = m0.query('Gender == "' + idx_pref + '"')[["index"]]
-        pref_indices = pref_df.index.values.tolist()
-        ratio_inc = 1
-        sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
+    # general preferences, not just GenderPref
     
-    # Increase similarity scores for people who prefer idx
-    idx_gender = m0[m0.index==idx]["Gender"].iloc[0]
-    if (idx_pref == idx_pref):
-        pref_df = m0.query('GenderPref == "' + idx_gender + '"')[["index"]]
-        pref_indices = pref_df.index.values.tolist()
-        ratio_inc = 1
-        sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
+    ratio_inc = 1
+    for pref in preferences:
+        # Increase similarity scores for people who idx prefers
+        idx_pref = m0[m0.index==idx][pref].iloc[0]
+        if (idx_pref == idx_pref):
+            pref_df = m0.query(str(preferences[pref]) + ' == "' + str(idx_pref) + '"')[["index"]]
+            pref_indices = pref_df.index.values.tolist()
+            sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
+        
+        # Increase similarity scores for people who prefer idx
+        idx_gender = m0[m0.index==idx][preferences[pref]].iloc[0]
+        if (idx_pref == idx_pref):
+            pref_df = m0.query(str(pref) + ' == "' + str(idx_gender) + '"')[["index"]]
+            pref_indices = pref_df.index.values.tolist()
+            sim_scores = [(key, val) if key not in pref_indices else (key, val + ratio_inc) for (key, val) in sim_scores]
 
     # Sort the employees based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
@@ -246,13 +243,7 @@ def get_random(idx, m0, mylist, num, do_random): # num = number of people per gr
                     if cur_size == num-1:
                         return result
         else:
-            for i in range(0, num-1):
-                if inds[i] not in already_selected:
-                    already_selected.append(i)
-                    result = pd.concat([result, mylist[mylist.index == inds[i]]], sort=False)
-                    cur_size = cur_size + 1
-                    if cur_size == num-1:
-                        return result
+            return mylist.head(num-1)
     else:
         result = mylist
     return result
@@ -319,5 +310,42 @@ def run_file(csv, lists, we, pf, options):
     if options[4] != None:
         groupby = options[4]
 
-    df = convert_csv_to_matrix(csv, num)
-    df.to_csv('testing.csv', index=False)
+    old_df = pd.read_csv(csv)
+    new_groups = gpg.split_into_groups(old_df)  #
+
+    new_df_lst = []
+    #new_df_lst.extend(convert_csv_to_matrix(old_df, num))  #
+    
+    for i in range(len(new_groups)):   #
+        use_num = num                  #
+        if i == 1:                     #
+            pair_features = lists[0]   #
+            use_num = 2                #
+            num2 = int(num / 2)        #
+        else:                          #
+            pair_features = []         #
+        new_df_lst.extend(convert_csv_to_matrix(new_groups[i], use_num))   #
+    
+    data = [['-'] * (len(final_features)+1)]
+    data2 = [['+'] * (len(final_features)+1)]
+
+    # for spacing
+    extra = pd.DataFrame(data, columns=final_features + ['index'])
+    extra2 = pd.DataFrame(data2, columns=final_features + ['index'])
+    #pairs = pd.concat([pairs, extra, extra2], sort=False)
+    fours = []
+    others = []
+    for group in new_df_lst:
+        if len(group) == 4:
+            fours.append(group)
+            fours.append(extra)
+            fours.append(extra2)
+        else:
+            others.append(group)
+            others.append(extra)
+            others.append(extra2)
+    
+    fours_df = pd.concat(fours)
+    others_df = pd.concat(others)
+    total_df = pd.concat([fours_df, others_df], sort=False)
+    total_df.to_csv('testing.csv', index=False)

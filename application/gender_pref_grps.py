@@ -8,9 +8,7 @@ female_female_str = '(Gender == "Female" & GenderPref == "Female")'
 male_female_str = '(Gender == "Male" & GenderPref == "Female")'
 female_male_str = '(Gender == "Female" & GenderPref == "Male")'
 
-def split_into_groups(in_path):
-    df = pd.read_csv(in_path)
-
+def split_into_groups(df):
     male_male_df = df.query(male_male_str)
     #print(male_male_df)
     female_female_df = df.query(female_female_str)
@@ -49,9 +47,15 @@ def split_into_groups(in_path):
     
     return [male_male_df, male_female_female_male_df, female_female_df, other_pref_df]
 
-new_groups = split_into_groups(in_path)
-total_df = pd.concat(new_groups)
-new_groups[0].to_csv('mm_output_grps.csv', index=False)
-new_groups[1].to_csv('mf_output_grps.csv', index=False)
-new_groups[2].to_csv('ff_output_grps.csv', index=False)
-new_groups[3].to_csv('other_output_grps.csv', index=False)
+#df = pd.read_csv(in_path)
+#new_groups = split_into_groups(df)
+#total_df = pd.concat(new_groups)
+#new_groups[0].to_csv('mm_output_grps.csv', index=False)
+#new_groups[1].to_csv('mf_output_grps.csv', index=False)
+#new_groups[2].to_csv('ff_output_grps.csv', index=False)
+#new_groups[3].to_csv('other_output_grps.csv', index=False)
+
+#df = df.assign(score = [''] * len(df))
+#to_add = df[['Gender']*3].apply(lambda x: ' '.join(x), axis=1)
+#df['score'] = df['score'].str.cat(to_add, sep=" ", na_rep = "")
+#print(df['score'])
