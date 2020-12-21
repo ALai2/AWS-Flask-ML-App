@@ -311,20 +311,23 @@ def run_file(csv, lists, we, pf, options):
         groupby = options[4]
 
     old_df = pd.read_csv(csv)
-    new_groups = gpg.split_into_groups(old_df)  #
 
     new_df_lst = []
-    #new_df_lst.extend(convert_csv_to_matrix(old_df, num))  #
     
-    for i in range(len(new_groups)):   #
-        use_num = num                  #
-        if i == 1:                     #
-            pair_features = lists[0]   #
-            use_num = 2                #
-            num2 = int(num / 2)        #
-        else:                          #
-            pair_features = []         #
-        new_df_lst.extend(convert_csv_to_matrix(new_groups[i], use_num))   #
+    useZing = False
+    if useZing:
+        new_df_lst.extend(convert_csv_to_matrix(old_df, num))  #
+    else:
+        new_groups = gpg.split_into_groups(old_df)
+        for i in range(len(new_groups)):   #
+            use_num = num                  #
+            if i == 1:                     #
+                pair_features = lists[0]   #
+                use_num = 2                #
+                num2 = int(num / 2)        #
+            else:                          #
+                pair_features = []         #
+            new_df_lst.extend(convert_csv_to_matrix(new_groups[i], use_num))   #
     
     data = [['-'] * (len(final_features)+1)]
     data2 = [['+'] * (len(final_features)+1)]
